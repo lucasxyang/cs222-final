@@ -1,0 +1,110 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx, float}
+\usepackage{tabularx}
+\usepackage{fullpage}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\begin{document}
+\begin{center}
+\Large\textbf{CS222 Project Proposal \\ Data Compression on Wireless Sensor Networks}
+
+\bigskip
+
+Jason Waterman \\ Daniel Shteremberg \\
+\medskip
+March 31st 2009
+\end{center}
+
+\section{Introduction}
+
+Wireless Sensor Networks present a unique computing environment due to
+their limited resources. Many traditionally accepted paradigms must be
+reexamined in this new context. One important contraint is energy,
+which often requires reengineering of old techniques to meet the new
+energy requirements. Compresseion is an example of such a
+technique. Most compression schemes were designed with performance and
+compression ratios as the primary metrics of success. Rarely was
+energy efficiency a metric in the design of such schemes. In Wireless
+Sensor Networks, energy efficiency is vital and any compression
+implementation must be tested for energy efficiency as well as
+performance and compression ratios. 
+
+We propose to implement several compression schemes on a wireless
+sensor mote. We will test the energy efficiency, as well as
+compression and performance, directly on the mote. These experiments
+will tell us how feasable it would be to use traditional compression
+schemes in Wireless Sensor Networks. We will determine which schemes
+are the most energy efficient, or if new compression schemes must be
+designed with energy efficiency in mind. Due to sensor motes' limied
+memory resources, we will also determine if it is possible to
+implement these compression schemes on such small memory devices. 
+
+\section{Related Work}
+
+Many papers in the Wireless Sensor Network field deal with compression
+on the side rather than as the primary focus
+\cite{habitat}\cite{structural}. Xu et al. \cite{structural} mention
+compression and briefly describe a wavelet compression scheme, but
+never implement it on a mote. These scheme transmits wavelet
+compressed (lossy) data, but stores the raw uncompressed data in
+flash. They also propose quantization and thresholding as a simple way
+to achieve lossy compression. These techniques might be well suited
+for wireless sensor networks, but this is not the primary focus of
+their paper.
+
+Mainwaring et al. \cite{habitat} also mention compression in their
+paper as a side note. They state that compression is a trade off
+between the cost of data processing and the cost of data
+transmission. We believe this is the right approach when examining
+compression schemes on motes. They present anecdotal evidence that was
+obtained using compression schemes run on Unix. They compare various
+resolutions of data, delta encoding, Huffman encoding, gzip, and
+bzip2. Although these results are a good first step, they never
+implement any of these algorithms on a mote and do not measure the
+energy cost of these algorithms. 
+
+Barr et al. \cite{energyaware} perform a thorough energy analysis of
+several compression schemes. This analysis would be applicable to
+Wireless Wensor Networks if they performed their experiments on mote
+class devices. Instead they use a StrongARM/Linux based platform with
+an 802.11 wireless interface. We intend to mimic the type of analyis
+that these authors performed, on a mote class device, with a TinyOS
+implementation of the compression schemes studied. In addition, these
+authors used data from the Calgary Corpus. This corpus contains many
+english texts and is not representative of the type of data
+encountered in Wireless Sensor Networks. We will use a more
+appropriate corpus for our experiments.
+
+\section{Proposed Approach} 
+
+First we will implement the LZW \cite{lzw} compression algorithm in
+TinyOS. This type of sliding window algorithm is well suited for the
+low memory constraints of a sensor mote. Implementing this algorithm
+on such a small memory will be an important challenge and one of the
+goals of this project.
+
+Using sensor data obtained through previous experiments, we will run
+experiments to determine the cost of compressing away one bit of
+information. Due to the multi-hop nature of many wireless sensor
+networks, we believe that the cost of compressing one bit will be
+amortized over many hops. The one bit compression cost will help
+determine the optimal routing tree depth in terms of reducing
+compression cost. 
+
+Once we have finished implementing LZW we will investigate if other
+popular compression schemes are suitable for implementation on
+motes. If so, we will implement them as we did LZW and perform the
+same type of energy analysis. 
+
+\section{Resources}
+
+We will need at least two tMote Sky devices and the TinyOS
+toolchain. We have these devices and tools available and the
+experience necessary to work with this platform. We might also want to
+run experiments on MoteLab, which is a 184 mote platform available to
+us. We will also need a tool to measure the energy expended by the
+motes, which we also have available. 
+
+\bibliographystyle{plain}
+\bibliography{proposal}
+\end{document}
