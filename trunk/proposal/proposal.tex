@@ -21,7 +21,7 @@ Wireless Sensor Networks present a unique computing environment due to
 their limited resources. Many traditionally accepted paradigms must be
 reexamined in this new context. One important contraint is energy,
 which often requires reengineering of old techniques to meet the new
-energy requirements. Compresseion is an example of such a
+energy requirements. Compression is an example of such a
 technique. Most compression schemes were designed with performance and
 compression ratios as the primary metrics of success. Rarely was
 energy efficiency a metric in the design of such schemes. In Wireless
@@ -45,11 +45,11 @@ Many papers in the Wireless Sensor Network field deal with compression
 on the side rather than as the primary focus
 \cite{habitat}\cite{structural}. Xu et al. \cite{structural} mention
 compression and briefly describe a wavelet compression scheme, but
-never implement it on a mote. These scheme transmits wavelet
+never implement it on a mote. This scheme transmits wavelet
 compressed (lossy) data, but stores the raw uncompressed data in
 flash. They also propose quantization and thresholding as a simple way
 to achieve lossy compression. These techniques might be well suited
-for wireless sensor networks, but this is not the primary focus of
+for Wireless Sensor Networks, but this is not the primary focus of
 their paper.
 
 Mainwaring et al. \cite{habitat} also mention compression in their
@@ -77,11 +77,13 @@ appropriate corpus for our experiments.
 
 \section{Proposed Approach} 
 
-First we will implement the LZW \cite{lzw} compression algorithm in
+First we will implement the LZ77 \cite{lz77} compression algorithm in
 TinyOS. This type of sliding window algorithm is well suited for the
 low memory constraints of a sensor mote. Implementing this algorithm
 on such a small memory will be an important challenge and one of the
-goals of this project.
+goals of this project. We will investigate the energy efficiency of
+LZ77 while changing the window size in order to find an optimal window
+size within the limited memory constraints.
 
 Using sensor data obtained through previous experiments, we will run
 experiments to determine the cost of compressing away one bit of
@@ -91,10 +93,10 @@ amortized over many hops. The one bit compression cost will help
 determine the optimal routing tree depth in terms of reducing
 compression cost. 
 
-Once we have finished implementing LZW we will investigate if other
+Once we have finished implementing LZ77 we will investigate if other
 popular compression schemes are suitable for implementation on
-motes. If so, we will implement them as we did LZW and perform the
-same type of energy analysis. 
+motes. If so, we will implement them as we did LZ77 and perform the
+same type of energy analysis.
 
 \section{Resources}
 
