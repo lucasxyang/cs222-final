@@ -1,0 +1,83 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx, float}
+\usepackage{tabularx}
+\usepackage{fullpage}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+\begin{document}
+\begin{center}
+\Large\textbf{CS222 Project Update \\ Data Compression on Wireless Sensor Networks}
+
+\bigskip
+
+Jason Waterman \\ Daniel Shteremberg \\
+\medskip
+April 30th 2009
+\end{center}
+
+\section{Recap}
+
+The goal of this project is to analyze the performance and energy
+costs of compression in Wireless Sensor Networks. We proposed to
+implement the LZ77 compression algorithm on a mote and measure the energy
+associated with compressing one bit of information. We also proposed
+to examine three data sets obtained from real life Wireless Sensor
+Network deployments and determine their compressibility. Finally,
+armed with compression ratios for real life data, and energy costs
+associated with compression, we proposed to examine the trade-offs
+related to compression. We want to answer the question of \"Will
+compressing data result in energy savings when the data will be
+transmitted?\" In addition, we proposed to consider multi-hop routing
+topologies. If it is more expensive (energy wise) to compress the
+data than to send the uncompressed data, we proposed to examine how
+deep the routing trees must be in order to amortize the energy savings
+over the entire network as the compressed packet moves up the tree. 
+
+\section{Accomplished Tasks}
+
+We have obtained three data sets from real-life Wireless Sensor
+Network deployments. The first is a set of accelerometer and gyro data
+from a body sensor network. The second is the acoustic data of marmot
+sounds. The third is the seismic data of a network deployed to monitor
+a volcano. We have calculated the entropy of some of these data sets
+and found that so far they are not very compressible. However, it is
+theoretically possible to compress this data by 25\%. 
+
+We have an LZ77 implementation on a mote. We are currently in the
+process of loading the data sets into the flash memory of the mote
+devices and running the compression algorithms on the motes. 
+
+We have implemented a simulator that will help us examine the
+trade-offs once we have the energy data. This simulator will make this
+analysis easier because we will no longer have to be running
+experiments on the motes, which is often a tedious and time consuming
+task. 
+
+\section{Future Tasks}
+
+We plan to measure the energy associated with compressing this data
+directly from the mote. We will remove the overhead of reading and
+writing to flash by performing the experiment without
+compression. Then we will run the experiment with compression and take
+the difference to remove the overhead.
+
+Once we have the energy data, we will use our simulator to examine the
+trade-offs related to compression. Our simulator will also help us
+examine multiple routing topologies and determine if compression is
+worth the radio power savings under these circumstances. One common
+problem in Wireless Sensor Networks is that a node is not usually able
+to transmit power to a neighbor if the neighbor requires it. However,
+with compression we can do something similar. If a node has data to
+transmit, it can compress the data (even if it will waste more
+energy), but the next node in the routing tree will save energy
+because the data is not as large. In essence, a node is able to pass
+on the energy savings of compression to another node and this is a
+useful mechansim that we want to explore in our simulations. 
+
+We have about 2 weeks left to finish our project, which we believe is
+sufficient time to accomplish our future tasks and write the paper.
+
+
+%\bibliographystyle{plain}
+%\bibliography{update}
+\end{document}
