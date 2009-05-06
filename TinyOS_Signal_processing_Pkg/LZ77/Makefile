@@ -1,5 +1,5 @@
 COMPONENT=Lz77AppC
-LAGS += -DPRINTF_BUFFER_SIZE=1000
+LAGS += -DPRINTF_BUFFER_SIZE=2000
 CFLAGS += -I$(TOSDIR)/lib/printf
 BUILD_EXTRA_DEPS += PrintfMsg.class PrintfClient.class
 

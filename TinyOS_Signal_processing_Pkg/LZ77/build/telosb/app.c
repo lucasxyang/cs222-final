@@ -3,7 +3,55 @@
 #define dbg(mode, format, ...) ((void)0)
 #define dbg_clear(mode, format, ...) ((void)0)
 #define dbg_active(mode) 0
-# 38 "/opt/msp430/msp430/include/sys/inttypes.h"
+# 151 "/usr/lib/gcc-lib/msp430/3.2.3/include/stddef.h" 3
+typedef int ptrdiff_t;
+#line 213
+typedef unsigned int size_t;
+#line 325
+typedef int wchar_t;
+# 8 "/usr/lib/ncc/deputy_nodeputy.h"
+struct __nesc_attr_nonnull {
+}  ;
+#line 9
+struct __nesc_attr_bnd {
+#line 9
+  void *lo, *hi;
+}  ;
+#line 10
+struct __nesc_attr_bnd_nok {
+#line 10
+  void *lo, *hi;
+}  ;
+#line 11
+struct __nesc_attr_count {
+#line 11
+  int n;
+}  ;
+#line 12
+struct __nesc_attr_count_nok {
+#line 12
+  int n;
+}  ;
+#line 13
+struct __nesc_attr_one {
+}  ;
+#line 14
+struct __nesc_attr_one_nok {
+}  ;
+#line 15
+struct __nesc_attr_dmemset {
+#line 15
+  int a1, a2, a3;
+}  ;
+#line 16
+struct __nesc_attr_dmemcpy {
+#line 16
+  int a1, a2, a3;
+}  ;
+#line 17
+struct __nesc_attr_nts {
+}  ;
+# 38 "/usr/msp430/include/sys/inttypes.h" 3
 typedef signed char int8_t;
 typedef unsigned char uint8_t;
 
@@ -22,45 +70,39 @@ typedef unsigned long long uint64_t;
 typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 # 235 "/usr/lib/ncc/nesc_nx.h"
-static __inline uint8_t __nesc_ntoh_uint8(const void *source);
+static __inline uint8_t __nesc_ntoh_uint8(const void * source)  ;
 
 
 
 
-static __inline uint8_t __nesc_hton_uint8(void *target, uint8_t value);
+static __inline uint8_t __nesc_hton_uint8(void * target, uint8_t value)  ;
 #line 264
-static __inline uint16_t __nesc_ntoh_uint16(const void *source);
+static __inline uint16_t __nesc_ntoh_uint16(const void * source)  ;
 
 
 
 
-static __inline uint16_t __nesc_hton_uint16(void *target, uint16_t value);
+static __inline uint16_t __nesc_hton_uint16(void * target, uint16_t value)  ;
 #line 385
-typedef struct { char data[1]; } __attribute__((packed)) nx_int8_t;typedef int8_t __nesc_nxbase_nx_int8_t  ;
-typedef struct { char data[2]; } __attribute__((packed)) nx_int16_t;typedef int16_t __nesc_nxbase_nx_int16_t  ;
-typedef struct { char data[4]; } __attribute__((packed)) nx_int32_t;typedef int32_t __nesc_nxbase_nx_int32_t  ;
-typedef struct { char data[8]; } __attribute__((packed)) nx_int64_t;typedef int64_t __nesc_nxbase_nx_int64_t  ;
-typedef struct { char data[1]; } __attribute__((packed)) nx_uint8_t;typedef uint8_t __nesc_nxbase_nx_uint8_t  ;
-typedef struct { char data[2]; } __attribute__((packed)) nx_uint16_t;typedef uint16_t __nesc_nxbase_nx_uint16_t  ;
-typedef struct { char data[4]; } __attribute__((packed)) nx_uint32_t;typedef uint32_t __nesc_nxbase_nx_uint32_t  ;
-typedef struct { char data[8]; } __attribute__((packed)) nx_uint64_t;typedef uint64_t __nesc_nxbase_nx_uint64_t  ;
+typedef struct { unsigned char data[1]; } __attribute__((packed)) nx_int8_t;typedef int8_t __nesc_nxbase_nx_int8_t  ;
+typedef struct { unsigned char data[2]; } __attribute__((packed)) nx_int16_t;typedef int16_t __nesc_nxbase_nx_int16_t  ;
+typedef struct { unsigned char data[4]; } __attribute__((packed)) nx_int32_t;typedef int32_t __nesc_nxbase_nx_int32_t  ;
+typedef struct { unsigned char data[8]; } __attribute__((packed)) nx_int64_t;typedef int64_t __nesc_nxbase_nx_int64_t  ;
+typedef struct { unsigned char data[1]; } __attribute__((packed)) nx_uint8_t;typedef uint8_t __nesc_nxbase_nx_uint8_t  ;
+typedef struct { unsigned char data[2]; } __attribute__((packed)) nx_uint16_t;typedef uint16_t __nesc_nxbase_nx_uint16_t  ;
+typedef struct { unsigned char data[4]; } __attribute__((packed)) nx_uint32_t;typedef uint32_t __nesc_nxbase_nx_uint32_t  ;
+typedef struct { unsigned char data[8]; } __attribute__((packed)) nx_uint64_t;typedef uint64_t __nesc_nxbase_nx_uint64_t  ;
 
 
-typedef struct { char data[1]; } __attribute__((packed)) nxle_int8_t;typedef int8_t __nesc_nxbase_nxle_int8_t  ;
-typedef struct { char data[2]; } __attribute__((packed)) nxle_int16_t;typedef int16_t __nesc_nxbase_nxle_int16_t  ;
-typedef struct { char data[4]; } __attribute__((packed)) nxle_int32_t;typedef int32_t __nesc_nxbase_nxle_int32_t  ;
-typedef struct { char data[8]; } __attribute__((packed)) nxle_int64_t;typedef int64_t __nesc_nxbase_nxle_int64_t  ;
-typedef struct { char data[1]; } __attribute__((packed)) nxle_uint8_t;typedef uint8_t __nesc_nxbase_nxle_uint8_t  ;
-typedef struct { char data[2]; } __attribute__((packed)) nxle_uint16_t;typedef uint16_t __nesc_nxbase_nxle_uint16_t  ;
-typedef struct { char data[4]; } __attribute__((packed)) nxle_uint32_t;typedef uint32_t __nesc_nxbase_nxle_uint32_t  ;
-typedef struct { char data[8]; } __attribute__((packed)) nxle_uint64_t;typedef uint64_t __nesc_nxbase_nxle_uint64_t  ;
-# 151 "/opt/msp430/lib/gcc-lib/msp430/3.2.3/include/stddef.h" 3
-typedef int ptrdiff_t;
-#line 213
-typedef unsigned int size_t;
-#line 325
-typedef int wchar_t;
-# 41 "/opt/msp430/msp430/include/sys/types.h"
+typedef struct { unsigned char data[1]; } __attribute__((packed)) nxle_int8_t;typedef int8_t __nesc_nxbase_nxle_int8_t  ;
+typedef struct { unsigned char data[2]; } __attribute__((packed)) nxle_int16_t;typedef int16_t __nesc_nxbase_nxle_int16_t  ;
+typedef struct { unsigned char data[4]; } __attribute__((packed)) nxle_int32_t;typedef int32_t __nesc_nxbase_nxle_int32_t  ;
+typedef struct { unsigned char data[8]; } __attribute__((packed)) nxle_int64_t;typedef int64_t __nesc_nxbase_nxle_int64_t  ;
+typedef struct { unsigned char data[1]; } __attribute__((packed)) nxle_uint8_t;typedef uint8_t __nesc_nxbase_nxle_uint8_t  ;
+typedef struct { unsigned char data[2]; } __attribute__((packed)) nxle_uint16_t;typedef uint16_t __nesc_nxbase_nxle_uint16_t  ;
+typedef struct { unsigned char data[4]; } __attribute__((packed)) nxle_uint32_t;typedef uint32_t __nesc_nxbase_nxle_uint32_t  ;
+typedef struct { unsigned char data[8]; } __attribute__((packed)) nxle_uint64_t;typedef uint64_t __nesc_nxbase_nxle_uint64_t  ;
+# 41 "/usr/msp430/include/sys/types.h" 3
 typedef unsigned char u_char;
 typedef unsigned short u_short;
 typedef unsigned int u_int;
@@ -94,13 +136,11 @@ typedef int32_t swblk_t;
 typedef int32_t ufs_daddr_t;
 typedef int32_t ufs_time_t;
 typedef u_int32_t uid_t;
-# 40 "/opt/msp430/msp430/include/string.h"
-extern void *memcpy(void *, const void *, size_t );
-
-extern void *memset(void *, int , size_t );
+# 42 "/usr/msp430/include/string.h" 3
+extern void *memset(void *arg_0x4029e220, int arg_0x4029e378, size_t arg_0x4029e510);
 #line 63
-extern void *memset(void *, int , size_t );
-# 59 "/opt/msp430/msp430/include/stdlib.h"
+extern void *memset(void *arg_0x402aa118, int arg_0x402aa270, size_t arg_0x402aa408);
+# 59 "/usr/msp430/include/stdlib.h" 3
 #line 56
 typedef struct __nesc_unnamed4242 {
   int quot;
@@ -118,13 +158,13 @@ typedef struct __nesc_unnamed4243 {
   long quot;
   long rem;
 } ldiv_t;
-# 122 "/opt/msp430/msp430/include/sys/config.h" 3
+# 122 "/usr/msp430/include/sys/config.h" 3
 typedef long int __int32_t;
 typedef unsigned long int __uint32_t;
-# 12 "/opt/msp430/msp430/include/sys/_types.h"
+# 12 "/usr/msp430/include/sys/_types.h" 3
 typedef long _off_t;
 typedef long _ssize_t;
-# 28 "/opt/msp430/msp430/include/sys/reent.h" 3
+# 28 "/usr/msp430/include/sys/reent.h" 3
 typedef __uint32_t __ULong;
 
 
@@ -256,7 +296,7 @@ struct _reent {
 
   int __sdidinit;
 
-  void (*__cleanup)(struct _reent *);
+  void (*__cleanup)(struct _reent *arg_0x402cc510);
 
 
   struct _Bigint *_result;
@@ -296,7 +336,7 @@ struct _reent {
   struct _atexit _atexit0;
 
 
-  void (**_sig_func)(int );
+  void (**_sig_func)(int arg_0x402d0b88);
 
 
 
@@ -306,7 +346,7 @@ struct _reent {
 };
 #line 273
 struct _reent;
-# 18 "/opt/msp430/msp430/include/math.h"
+# 18 "/usr/msp430/include/math.h" 3
 union __dmath {
 
   __uint32_t i[2];
@@ -341,10 +381,10 @@ enum __fdlibm_version {
 
 
 enum __fdlibm_version;
-# 20 "/opt/tinyos-2.x/tos/system/tos.h"
+# 23 "/opt/tinyos-2.x/tos/system/tos.h"
 typedef uint8_t bool;
 enum __nesc_unnamed4247 {
-#line 21
+#line 24
   FALSE = 0, TRUE = 1
 };
 typedef nx_int8_t nx_bool;
@@ -354,15 +394,16 @@ typedef nx_int8_t nx_bool;
 
 
 
+
 struct __nesc_attr_atmostonce {
 };
-#line 31
+#line 35
 struct __nesc_attr_atleastonce {
 };
-#line 32
+#line 36
 struct __nesc_attr_exactlyonce {
 };
-# 34 "/opt/tinyos-2.x/tos/types/TinyError.h"
+# 40 "/opt/tinyos-2.x/tos/types/TinyError.h"
 enum __nesc_unnamed4248 {
   SUCCESS = 0, 
   FAIL = 1, 
@@ -373,13 +414,16 @@ enum __nesc_unnamed4248 {
   EINVAL = 6, 
   ERETRY = 7, 
   ERESERVE = 8, 
-  EALREADY = 9
+  EALREADY = 9, 
+  ENOMEM = 10, 
+  ENOACK = 11, 
+  ELAST = 11
 };
 
 typedef uint8_t error_t  ;
 
-static inline error_t ecombine(error_t r1, error_t r2);
-# 39 "/opt/msp430/msp430/include/msp430/iostructures.h"
+static inline error_t ecombine(error_t r1, error_t r2)  ;
+# 39 "/usr/msp430/include/msp430/iostructures.h" 3
 #line 27
 typedef union port {
   volatile unsigned char reg_p;
@@ -394,7 +438,7 @@ typedef union port {
     __p7 : 1;
   } __pin;
 } __attribute((packed))  ioregister_t;
-# 106 "/opt/msp430/msp430/include/msp430/iostructures.h" 3
+#line 108
 struct port_full_t {
   ioregister_t in;
   ioregister_t out;
@@ -404,6 +448,11 @@ struct port_full_t {
   ioregister_t ie;
   ioregister_t sel;
 };
+
+
+
+
+
 
 
 
@@ -439,7 +488,7 @@ struct port_simple_t;
 
 
 struct port_simple_t;
-# 103 "/opt/msp430/msp430/include/msp430/gpio.h" 3
+# 116 "/usr/msp430/include/msp430/gpio.h" 3
 volatile unsigned char P1OUT __asm ("0x0021");
 
 volatile unsigned char P1DIR __asm ("0x0022");
@@ -451,6 +500,10 @@ volatile unsigned char P1DIR __asm ("0x0022");
 volatile unsigned char P1IE __asm ("0x0025");
 
 volatile unsigned char P1SEL __asm ("0x0026");
+
+
+
+
 
 
 
@@ -474,11 +527,19 @@ volatile unsigned char P2SEL __asm ("0x002E");
 
 
 
+
+
+
+
 volatile unsigned char P3OUT __asm ("0x0019");
 
 volatile unsigned char P3DIR __asm ("0x001A");
 
 volatile unsigned char P3SEL __asm ("0x001B");
+
+
+
+
 
 
 
@@ -496,6 +557,10 @@ volatile unsigned char P4SEL __asm ("0x001F");
 
 
 
+
+
+
+
 volatile unsigned char P5OUT __asm ("0x0031");
 
 volatile unsigned char P5DIR __asm ("0x0032");
@@ -507,12 +572,16 @@ volatile unsigned char P5SEL __asm ("0x0033");
 
 
 
+
+
+
+
 volatile unsigned char P6OUT __asm ("0x0035");
 
 volatile unsigned char P6DIR __asm ("0x0036");
 
 volatile unsigned char P6SEL __asm ("0x0037");
-# 85 "/opt/msp430/msp430/include/msp430/usart.h"
+# 92 "/usr/msp430/include/msp430/usart.h" 3
 volatile unsigned char U0CTL __asm ("0x0070");
 
 volatile unsigned char U0TCTL __asm ("0x0071");
@@ -526,7 +595,7 @@ volatile unsigned char U0BR0 __asm ("0x0074");
 volatile unsigned char U0BR1 __asm ("0x0075");
 
 volatile unsigned char U0RXBUF __asm ("0x0076");
-#line 254
+#line 275
 volatile unsigned char U1CTL __asm ("0x0078");
 
 volatile unsigned char U1TCTL __asm ("0x0079");
@@ -540,18 +609,19 @@ volatile unsigned char U1BR0 __asm ("0x007C");
 volatile unsigned char U1BR1 __asm ("0x007D");
 
 volatile unsigned char U1RXBUF __asm ("0x007E");
-# 24 "/opt/msp430/msp430/include/msp430/timera.h"
+# 27 "/usr/msp430/include/msp430/timera.h" 3
 volatile unsigned int TA0CTL __asm ("0x0160");
+
+volatile unsigned int TA0R __asm ("0x0170");
+
 
 volatile unsigned int TA0CCTL0 __asm ("0x0162");
 
 volatile unsigned int TA0CCTL1 __asm ("0x0164");
-
+#line 70
 volatile unsigned int TA0CCTL2 __asm ("0x0166");
-
-volatile unsigned int TA0R __asm ("0x0170");
-# 114 "/opt/msp430/msp430/include/msp430/timera.h" 3
-#line 105
+#line 127
+#line 118
 typedef struct __nesc_unnamed4250 {
   volatile unsigned 
   taifg : 1, 
@@ -562,8 +632,8 @@ typedef struct __nesc_unnamed4250 {
   taid : 2, 
   tassel : 2;
 } __attribute((packed))  tactl_t;
-#line 130
-#line 116
+#line 143
+#line 129
 typedef struct __nesc_unnamed4251 {
   volatile unsigned 
   ccifg : 1, 
@@ -596,18 +666,19 @@ struct timera_t {
 
 
 struct timera_t;
-# 26 "/opt/msp430/msp430/include/msp430/timerb.h"
+# 26 "/usr/msp430/include/msp430/timerb.h" 3
+volatile unsigned int TBR __asm ("0x0190");
+
+
 volatile unsigned int TBCCTL0 __asm ("0x0182");
 
 
 
 
 
-volatile unsigned int TBR __asm ("0x0190");
-
 volatile unsigned int TBCCR0 __asm ("0x0192");
-#line 75
-#line 63
+#line 76
+#line 64
 typedef struct __nesc_unnamed4252 {
   volatile unsigned 
   tbifg : 1, 
@@ -621,8 +692,8 @@ typedef struct __nesc_unnamed4252 {
   tbcntl : 2, 
   tbclgrp : 2;
 } __attribute((packed))  tbctl_t;
-#line 90
-#line 77
+#line 91
+#line 78
 typedef struct __nesc_unnamed4253 {
   volatile unsigned 
   ccifg : 1, 
@@ -668,13 +739,13 @@ struct timerb_t {
 
 
 struct timerb_t;
-# 18 "/opt/msp430/msp430/include/msp430/basic_clock.h"
+# 20 "/usr/msp430/include/msp430/basic_clock.h" 3
 volatile unsigned char DCOCTL __asm ("0x0056");
 
 volatile unsigned char BCSCTL1 __asm ("0x0057");
 
 volatile unsigned char BCSCTL2 __asm ("0x0058");
-# 18 "/opt/msp430/msp430/include/msp430/adc12.h"
+# 18 "/usr/msp430/include/msp430/adc12.h" 3
 volatile unsigned int ADC12CTL0 __asm ("0x01A0");
 
 volatile unsigned int ADC12CTL1 __asm ("0x01A2");
@@ -741,7 +812,7 @@ struct adc12_t {
 
 
 struct adc12_t;
-# 71 "/opt/msp430/msp430/include/msp430x16x.h"
+# 83 "/usr/msp430/include/msp430x16x.h" 3
 volatile unsigned char ME1 __asm ("0x0004");
 
 
@@ -749,13 +820,13 @@ volatile unsigned char ME1 __asm ("0x0004");
 
 
 volatile unsigned char ME2 __asm ("0x0005");
-# 142 "/opt/tinyos-2.x/tos/chips/msp430/msp430hardware.h"
- static volatile uint8_t U0CTLnr __asm ("0x0070");
- static volatile uint8_t I2CTCTLnr __asm ("0x0071");
- static volatile uint8_t I2CDCTLnr __asm ("0x0072");
-#line 177
+# 158 "/opt/tinyos-2.x/tos/chips/msp430/msp430hardware.h"
+static volatile uint8_t U0CTLnr __asm ("0x0070");
+static volatile uint8_t I2CTCTLnr __asm ("0x0071");
+static volatile uint8_t I2CDCTLnr __asm ("0x0072");
+#line 193
 typedef uint8_t mcu_power_t  ;
-static inline mcu_power_t mcombine(mcu_power_t m1, mcu_power_t m2);
+static inline mcu_power_t mcombine(mcu_power_t m1, mcu_power_t m2)  ;
 
 
 enum __nesc_unnamed4257 {
@@ -767,13 +838,13 @@ enum __nesc_unnamed4257 {
   MSP430_POWER_LPM4 = 5
 };
 
-static inline void __nesc_disable_interrupt(void );
+static inline void __nesc_disable_interrupt(void )  ;
 
 
 
 
 
-static inline void __nesc_enable_interrupt(void );
+static inline void __nesc_enable_interrupt(void )  ;
 
 
 
@@ -787,7 +858,7 @@ void __nesc_atomic_end(__nesc_atomic_t reenable_interrupts);
 
 
 
-__nesc_atomic_t __nesc_atomic_start(void )  ;
+__nesc_atomic_t __nesc_atomic_start(void )   ;
 
 
 
@@ -795,18 +866,18 @@ __nesc_atomic_t __nesc_atomic_start(void )  ;
 
 
 
-void __nesc_atomic_end(__nesc_atomic_t reenable_interrupts)  ;
+void __nesc_atomic_end(__nesc_atomic_t reenable_interrupts)   ;
 # 33 "/opt/tinyos-2.x/tos/platforms/telosb/hardware.h"
-static inline void TOSH_SET_SIMO0_PIN(void);
+static inline void TOSH_SET_SIMO0_PIN()  ;
 #line 33
-static inline void TOSH_CLR_SIMO0_PIN(void);
+static inline void TOSH_CLR_SIMO0_PIN()  ;
 #line 33
-static inline void TOSH_MAKE_SIMO0_OUTPUT(void);
-static inline void TOSH_SET_UCLK0_PIN(void);
+static inline void TOSH_MAKE_SIMO0_OUTPUT()  ;
+static inline void TOSH_SET_UCLK0_PIN()  ;
 #line 34
-static inline void TOSH_CLR_UCLK0_PIN(void);
+static inline void TOSH_CLR_UCLK0_PIN()  ;
 #line 34
-static inline void TOSH_MAKE_UCLK0_OUTPUT(void);
+static inline void TOSH_MAKE_UCLK0_OUTPUT()  ;
 #line 76
 enum __nesc_unnamed4258 {
 
@@ -817,19 +888,19 @@ enum __nesc_unnamed4258 {
 
 
 
-static inline void TOSH_SET_FLASH_CS_PIN(void);
+static inline void TOSH_SET_FLASH_CS_PIN()  ;
 #line 85
-static inline void TOSH_CLR_FLASH_CS_PIN(void);
+static inline void TOSH_CLR_FLASH_CS_PIN()  ;
 #line 85
-static inline void TOSH_MAKE_FLASH_CS_OUTPUT(void);
-static inline void TOSH_SET_FLASH_HOLD_PIN(void);
+static inline void TOSH_MAKE_FLASH_CS_OUTPUT()  ;
+static inline void TOSH_SET_FLASH_HOLD_PIN()  ;
 #line 86
-static inline void TOSH_MAKE_FLASH_HOLD_OUTPUT(void);
-# 43 "/opt/msp430/lib/gcc-lib/msp430/3.2.3/include/stdarg.h"
+static inline void TOSH_MAKE_FLASH_HOLD_OUTPUT()  ;
+# 43 "/usr/lib/gcc-lib/msp430/3.2.3/include/stdarg.h" 3
 typedef __builtin_va_list __gnuc_va_list;
-# 110 "/opt/msp430/lib/gcc-lib/msp430/3.2.3/include/stdarg.h" 3
+#line 110
 typedef __gnuc_va_list va_list;
-# 52 "/opt/msp430/msp430/include/stdio.h"
+# 52 "/usr/msp430/include/stdio.h" 3
 int __attribute((format(printf, 1, 2))) printf(const char *string, ...);
 
 
@@ -840,8 +911,8 @@ int __attribute((format(printf, 1, 2))) printf(const char *string, ...);
 int putchar(int c);
 # 39 "/opt/tinyos-2.x/tos/chips/cc2420/CC2420.h"
 typedef uint8_t cc2420_status_t;
-#line 59
-#line 45
+#line 66
+#line 49
 typedef nx_struct cc2420_header_t {
   nxle_uint8_t length;
   nxle_uint16_t fcf;
@@ -852,28 +923,32 @@ typedef nx_struct cc2420_header_t {
 
 
 
+  nxle_uint8_t network;
 
 
 
   nxle_uint8_t type;
-} __attribute__((packed)) cc2420_header_t;
+} __attribute__((packed)) 
+
+cc2420_header_t;
 
 
 
 
 
-#line 64
+#line 71
 typedef nx_struct cc2420_footer_t {
 } __attribute__((packed)) cc2420_footer_t;
-#line 86
-#line 71
+#line 97
+#line 81
 typedef nx_struct cc2420_metadata_t {
-  nx_uint8_t tx_power;
   nx_uint8_t rssi;
   nx_uint8_t lqi;
+  nx_uint8_t tx_power;
   nx_bool crc;
   nx_bool ack;
-  nx_uint16_t time;
+  nx_bool timesync;
+  nx_uint32_t timestamp;
   nx_uint16_t rxInterval;
 } __attribute__((packed)) 
 
@@ -888,19 +963,21 @@ cc2420_metadata_t;
 
 
 
-#line 89
+#line 100
 typedef nx_struct cc2420_packet_t {
   cc2420_header_t packet;
   nx_uint8_t data[];
 } __attribute__((packed)) cc2420_packet_t;
-#line 123
+#line 134
 enum __nesc_unnamed4259 {
 
   MAC_HEADER_SIZE = sizeof(cc2420_header_t ) - 1, 
 
   MAC_FOOTER_SIZE = sizeof(uint16_t ), 
 
-  MAC_PACKET_SIZE = MAC_HEADER_SIZE + 28 + MAC_FOOTER_SIZE
+  MAC_PACKET_SIZE = MAC_HEADER_SIZE + 28 + MAC_FOOTER_SIZE, 
+
+  CC2420_SIZE = MAC_HEADER_SIZE + MAC_FOOTER_SIZE
 };
 
 enum cc2420_enums {
@@ -1132,6 +1209,11 @@ enum cc2420_sfdmux_enums {
   CC2420_SFDMUX_SFD = 0, 
   CC2420_SFDMUX_XOSC16M_STABLE = 24
 };
+
+enum __nesc_unnamed4260 {
+
+  CC2420_INVALID_TIMESTAMP = 0x80000000L
+};
 # 6 "/opt/tinyos-2.x/tos/types/AM.h"
 typedef nx_uint8_t nx_am_id_t;
 typedef nx_uint8_t nx_am_group_t;
@@ -1141,7 +1223,7 @@ typedef uint8_t am_id_t;
 typedef uint8_t am_group_t;
 typedef uint16_t am_addr_t;
 
-enum __nesc_unnamed4260 {
+enum __nesc_unnamed4261 {
   AM_BROADCAST_ADDR = 0xffff
 };
 
@@ -1153,7 +1235,7 @@ enum __nesc_unnamed4260 {
 
 
 
-enum __nesc_unnamed4261 {
+enum __nesc_unnamed4262 {
   TOS_AM_GROUP = 0x22, 
   TOS_AM_ADDRESS = 1
 };
@@ -1162,14 +1244,14 @@ typedef uint8_t uart_id_t;
 
 
 
-enum __nesc_unnamed4262 {
+enum __nesc_unnamed4263 {
   HDLC_FLAG_BYTE = 0x7e, 
   HDLC_CTLESC_BYTE = 0x7d
 };
 
 
 
-enum __nesc_unnamed4263 {
+enum __nesc_unnamed4264 {
   TOS_SERIAL_ACTIVE_MESSAGE_ID = 0, 
   TOS_SERIAL_CC1000_ID = 1, 
   TOS_SERIAL_802_15_4_ID = 2, 
@@ -1177,7 +1259,7 @@ enum __nesc_unnamed4263 {
 };
 
 
-enum __nesc_unnamed4264 {
+enum __nesc_unnamed4265 {
   SERIAL_PROTO_ACK = 67, 
   SERIAL_PROTO_PACKET_ACK = 68, 
   SERIAL_PROTO_PACKET_NOACK = 69, 
@@ -1222,6 +1304,13 @@ typedef nx_struct serial_packet {
   serial_header_t header;
   nx_uint8_t data[];
 } __attribute__((packed)) serial_packet_t;
+
+
+
+#line 125
+typedef nx_struct serial_metadata {
+  nx_uint8_t ack;
+} __attribute__((packed)) serial_metadata_t;
 # 48 "/opt/tinyos-2.x/tos/platforms/telosa/platform_message.h"
 #line 45
 typedef union message_header {
@@ -1238,9 +1327,11 @@ typedef union TOSRadioFooter {
 
 
 
+
 #line 54
 typedef union TOSRadioMetadata {
   cc2420_metadata_t cc2420;
+  serial_metadata_t serial;
 } message_metadata_t;
 # 19 "/opt/tinyos-2.x/tos/types/message.h"
 #line 14
@@ -1250,13 +1341,18 @@ typedef nx_struct message_t {
   nx_uint8_t footer[sizeof(message_footer_t )];
   nx_uint8_t metadata[sizeof(message_metadata_t )];
 } __attribute__((packed)) message_t;
-# 40 "/opt/tinyos-2.x/tos/lib/printf/printf.h"
-#line 38
+# 52 "/opt/tinyos-2.x/tos/lib/printf/printf.h"
+int printfflush();
+
+
+
+
+#line 55
 typedef nx_struct printf_msg {
   nx_uint8_t buffer[28];
 } __attribute__((packed)) printf_msg_t;
 
-enum __nesc_unnamed4265 {
+enum __nesc_unnamed4266 {
   AM_PRINTF_MSG = 100
 };
 # 41 "/opt/tinyos-2.x/tos/types/Storage.h"
@@ -1265,14 +1361,14 @@ typedef uint32_t storage_addr_t;
 typedef uint32_t storage_len_t;
 typedef uint32_t storage_cookie_t;
 
-enum __nesc_unnamed4266 {
+enum __nesc_unnamed4267 {
   SEEK_BEGINNING = 0
 };
 # 40 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25p.h"
 typedef storage_addr_t stm25p_addr_t;
 typedef storage_len_t stm25p_len_t;
 
-enum __nesc_unnamed4267 {
+enum __nesc_unnamed4268 {
   STM25P_NUM_SECTORS = 16, 
   STM25P_SECTOR_SIZE_LOG2 = 16, 
   STM25P_SECTOR_SIZE = 1L << STM25P_SECTOR_SIZE_LOG2, 
@@ -1294,8 +1390,95 @@ typedef struct stm25p_volume_info_t {
 # 8 "build/telosb/StorageVolumes.h"
 static const stm25p_volume_info_t STM25P_VMAP[1] = { 
 { .base = 0, .size = 16 } };
-# 30 "/opt/tinyos-2.x/tos/types/Leds.h"
-enum __nesc_unnamed4268 {
+# 29 "/opt/tinyos-2.x/tos/lib/timer/Timer.h"
+typedef struct __nesc_unnamed4269 {
+#line 29
+  int notUsed;
+} 
+#line 29
+TMilli;
+typedef struct __nesc_unnamed4270 {
+#line 30
+  int notUsed;
+} 
+#line 30
+T32khz;
+typedef struct __nesc_unnamed4271 {
+#line 31
+  int notUsed;
+} 
+#line 31
+TMicro;
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.h"
+enum __nesc_unnamed4272 {
+  MSP430TIMER_CM_NONE = 0, 
+  MSP430TIMER_CM_RISING = 1, 
+  MSP430TIMER_CM_FALLING = 2, 
+  MSP430TIMER_CM_BOTH = 3, 
+
+  MSP430TIMER_STOP_MODE = 0, 
+  MSP430TIMER_UP_MODE = 1, 
+  MSP430TIMER_CONTINUOUS_MODE = 2, 
+  MSP430TIMER_UPDOWN_MODE = 3, 
+
+  MSP430TIMER_TACLK = 0, 
+  MSP430TIMER_TBCLK = 0, 
+  MSP430TIMER_ACLK = 1, 
+  MSP430TIMER_SMCLK = 2, 
+  MSP430TIMER_INCLK = 3, 
+
+  MSP430TIMER_CLOCKDIV_1 = 0, 
+  MSP430TIMER_CLOCKDIV_2 = 1, 
+  MSP430TIMER_CLOCKDIV_4 = 2, 
+  MSP430TIMER_CLOCKDIV_8 = 3
+};
+#line 64
+#line 51
+typedef struct __nesc_unnamed4273 {
+
+  int ccifg : 1;
+  int cov : 1;
+  int out : 1;
+  int cci : 1;
+  int ccie : 1;
+  int outmod : 3;
+  int cap : 1;
+  int clld : 2;
+  int scs : 1;
+  int ccis : 2;
+  int cm : 2;
+} msp430_compare_control_t;
+#line 76
+#line 66
+typedef struct __nesc_unnamed4274 {
+
+  int taifg : 1;
+  int taie : 1;
+  int taclr : 1;
+  int _unused0 : 1;
+  int mc : 2;
+  int id : 2;
+  int tassel : 2;
+  int _unused1 : 6;
+} msp430_timer_a_control_t;
+#line 91
+#line 78
+typedef struct __nesc_unnamed4275 {
+
+  int tbifg : 1;
+  int tbie : 1;
+  int tbclr : 1;
+  int _unused0 : 1;
+  int mc : 2;
+  int id : 2;
+  int tbssel : 2;
+  int _unused1 : 1;
+  int cntl : 2;
+  int tbclgrp : 2;
+  int _unused2 : 1;
+} msp430_timer_b_control_t;
+# 32 "/opt/tinyos-2.x/tos/types/Leds.h"
+enum __nesc_unnamed4276 {
   LEDS_LED0 = 1 << 0, 
   LEDS_LED1 = 1 << 1, 
   LEDS_LED2 = 1 << 2, 
@@ -1309,7 +1492,7 @@ enum __nesc_unnamed4268 {
 static uint16_t crcByte(uint16_t crc, uint8_t b);
 # 56 "/opt/tinyos-2.x/tos/chips/msp430/usart/msp430usart.h"
 #line 48
-typedef enum __nesc_unnamed4269 {
+typedef enum __nesc_unnamed4277 {
 
   USART_NONE = 0, 
   USART_UART = 1, 
@@ -1329,7 +1512,7 @@ typedef enum __nesc_unnamed4269 {
 
 
 #line 58
-typedef struct __nesc_unnamed4270 {
+typedef struct __nesc_unnamed4278 {
   unsigned int swrst : 1;
   unsigned int mm : 1;
   unsigned int sync : 1;
@@ -1349,7 +1532,7 @@ typedef struct __nesc_unnamed4270 {
 
 
 #line 69
-typedef struct __nesc_unnamed4271 {
+typedef struct __nesc_unnamed4279 {
   unsigned int txept : 1;
   unsigned int stc : 1;
   unsigned int txwake : 1;
@@ -1369,7 +1552,7 @@ typedef struct __nesc_unnamed4271 {
 
 
 #line 79
-typedef struct __nesc_unnamed4272 {
+typedef struct __nesc_unnamed4280 {
   unsigned int rxerr : 1;
   unsigned int rxwake : 1;
   unsigned int urxwie : 1;
@@ -1381,7 +1564,7 @@ typedef struct __nesc_unnamed4272 {
 } __attribute((packed))  msp430_urctl_t;
 #line 116
 #line 99
-typedef struct __nesc_unnamed4273 {
+typedef struct __nesc_unnamed4281 {
   unsigned int ubr : 16;
 
   unsigned int  : 1;
@@ -1405,7 +1588,7 @@ typedef struct __nesc_unnamed4273 {
 
 
 #line 118
-typedef struct __nesc_unnamed4274 {
+typedef struct __nesc_unnamed4282 {
   uint16_t ubr;
   uint8_t uctl;
   uint8_t utctl;
@@ -1415,7 +1598,7 @@ typedef struct __nesc_unnamed4274 {
 
 
 #line 124
-typedef union __nesc_unnamed4275 {
+typedef union __nesc_unnamed4283 {
   msp430_spi_config_t spiConfig;
   msp430_spi_registers_t spiRegisters;
 } msp430_spi_union_config_t;
@@ -1432,7 +1615,7 @@ msp430_spi_union_config_t msp430_spi_default_config = {
 .stc = 1 } };
 #line 169
 #line 150
-typedef enum __nesc_unnamed4276 {
+typedef enum __nesc_unnamed4284 {
 
   UBR_32KHZ_1200 = 0x001B, UMCTL_32KHZ_1200 = 0x94, 
   UBR_32KHZ_1800 = 0x0012, UMCTL_32KHZ_1800 = 0x84, 
@@ -1454,7 +1637,7 @@ typedef enum __nesc_unnamed4276 {
 } msp430_uart_rate_t;
 #line 200
 #line 171
-typedef struct __nesc_unnamed4277 {
+typedef struct __nesc_unnamed4285 {
   unsigned int ubr : 16;
 
   unsigned int umctl : 8;
@@ -1493,7 +1676,7 @@ typedef struct __nesc_unnamed4277 {
 
 
 #line 202
-typedef struct __nesc_unnamed4278 {
+typedef struct __nesc_unnamed4286 {
   uint16_t ubr;
   uint8_t umctl;
   uint8_t uctl;
@@ -1506,7 +1689,7 @@ typedef struct __nesc_unnamed4278 {
 
 
 #line 211
-typedef union __nesc_unnamed4279 {
+typedef union __nesc_unnamed4287 {
   msp430_uart_config_t uartConfig;
   msp430_uart_registers_t uartRegisters;
 } msp430_uart_union_config_t;
@@ -1532,7 +1715,7 @@ msp430_uart_union_config_t msp430_uart_default_config = {
 .urxe = 1 } };
 #line 248
 #line 240
-typedef struct __nesc_unnamed4280 {
+typedef struct __nesc_unnamed4288 {
   unsigned int i2cstt : 1;
   unsigned int i2cstp : 1;
   unsigned int i2cstb : 1;
@@ -1543,7 +1726,7 @@ typedef struct __nesc_unnamed4280 {
 } __attribute((packed))  msp430_i2ctctl_t;
 #line 276
 #line 253
-typedef struct __nesc_unnamed4281 {
+typedef struct __nesc_unnamed4289 {
   unsigned int  : 1;
   unsigned int mst : 1;
   unsigned int  : 1;
@@ -1576,7 +1759,7 @@ typedef struct __nesc_unnamed4281 {
 
 
 #line 278
-typedef struct __nesc_unnamed4282 {
+typedef struct __nesc_unnamed4290 {
   uint8_t uctl;
   uint8_t i2ctctl;
   uint8_t i2cpsc;
@@ -1589,100 +1772,14 @@ typedef struct __nesc_unnamed4282 {
 
 
 #line 287
-typedef union __nesc_unnamed4283 {
+typedef union __nesc_unnamed4291 {
   msp430_i2c_config_t i2cConfig;
   msp430_i2c_registers_t i2cRegisters;
 } msp430_i2c_union_config_t;
-# 29 "/opt/tinyos-2.x/tos/lib/timer/Timer.h"
-typedef struct __nesc_unnamed4284 {
-#line 29
-  int notUsed;
-} 
-#line 29
-TMilli;
-typedef struct __nesc_unnamed4285 {
-#line 30
-  int notUsed;
-} 
-#line 30
-T32khz;
-typedef struct __nesc_unnamed4286 {
-#line 31
-  int notUsed;
-} 
-#line 31
-TMicro;
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.h"
-enum __nesc_unnamed4287 {
-  MSP430TIMER_CM_NONE = 0, 
-  MSP430TIMER_CM_RISING = 1, 
-  MSP430TIMER_CM_FALLING = 2, 
-  MSP430TIMER_CM_BOTH = 3, 
-
-  MSP430TIMER_STOP_MODE = 0, 
-  MSP430TIMER_UP_MODE = 1, 
-  MSP430TIMER_CONTINUOUS_MODE = 2, 
-  MSP430TIMER_UPDOWN_MODE = 3, 
-
-  MSP430TIMER_TACLK = 0, 
-  MSP430TIMER_TBCLK = 0, 
-  MSP430TIMER_ACLK = 1, 
-  MSP430TIMER_SMCLK = 2, 
-  MSP430TIMER_INCLK = 3, 
-
-  MSP430TIMER_CLOCKDIV_1 = 0, 
-  MSP430TIMER_CLOCKDIV_2 = 1, 
-  MSP430TIMER_CLOCKDIV_4 = 2, 
-  MSP430TIMER_CLOCKDIV_8 = 3
-};
-#line 64
-#line 51
-typedef struct __nesc_unnamed4288 {
-
-  int ccifg : 1;
-  int cov : 1;
-  int out : 1;
-  int cci : 1;
-  int ccie : 1;
-  int outmod : 3;
-  int cap : 1;
-  int clld : 2;
-  int scs : 1;
-  int ccis : 2;
-  int cm : 2;
-} msp430_compare_control_t;
-#line 76
-#line 66
-typedef struct __nesc_unnamed4289 {
-
-  int taifg : 1;
-  int taie : 1;
-  int taclr : 1;
-  int _unused0 : 1;
-  int mc : 2;
-  int id : 2;
-  int tassel : 2;
-  int _unused1 : 6;
-} msp430_timer_a_control_t;
-#line 91
-#line 78
-typedef struct __nesc_unnamed4290 {
-
-  int tbifg : 1;
-  int tbie : 1;
-  int tbclr : 1;
-  int _unused0 : 1;
-  int mc : 2;
-  int id : 2;
-  int tbssel : 2;
-  int _unused1 : 1;
-  int cntl : 2;
-  int tbclgrp : 2;
-  int _unused2 : 1;
-} msp430_timer_b_control_t;
 # 33 "/opt/tinyos-2.x/tos/types/Resource.h"
 typedef uint8_t resource_client_id_t;
-enum /*PlatformSerialC.UartC*/Msp430Uart1C$0$__nesc_unnamed4291 {
+typedef TMilli LZ77M$Timer$precision_tag;
+enum /*PlatformSerialC.UartC*/Msp430Uart1C$0$__nesc_unnamed4292 {
   Msp430Uart1C$0$CLIENT_ID = 0U
 };
 typedef T32khz /*Msp430Uart1P.UartP*/Msp430UartP$0$Counter$precision_tag;
@@ -1690,15 +1787,17 @@ typedef uint16_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Counter$size_type;
 typedef T32khz /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$frequency_tag;
 typedef /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$frequency_tag /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$precision_tag;
 typedef uint16_t /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$size_type;
-enum /*PlatformSerialC.UartC.UsartC*/Msp430Usart1C$0$__nesc_unnamed4292 {
+enum /*PlatformSerialC.UartC.UsartC*/Msp430Usart1C$0$__nesc_unnamed4293 {
   Msp430Usart1C$0$CLIENT_ID = 0U
 };
-enum SerialAMQueueP$__nesc_unnamed4293 {
+enum SerialAMQueueP$__nesc_unnamed4294 {
   SerialAMQueueP$NUM_CLIENTS = 1U
 };
-typedef TMilli LZ77M$Timer$precision_tag;
+typedef uint8_t /*PrintfC.QueueC*/QueueC$0$queue_t;
+typedef /*PrintfC.QueueC*/QueueC$0$queue_t /*PrintfC.QueueC*/QueueC$0$Queue$t;
+typedef uint8_t PrintfP$Queue$t;
 typedef TMilli TestC$Timer$precision_tag;
-enum /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Timer*/Msp430Timer32khzC$0$__nesc_unnamed4294 {
+enum /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Timer*/Msp430Timer32khzC$0$__nesc_unnamed4295 {
   Msp430Timer32khzC$0$ALARM_ID = 0U
 };
 typedef T32khz /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$frequency_tag;
@@ -1734,1359 +1833,2264 @@ typedef TMilli /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$preci
 typedef /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$precision_tag /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$LocalTime$precision_tag;
 typedef /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$precision_tag /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter$precision_tag;
 typedef uint32_t /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter$size_type;
-enum /*Lz77AppC.BlockStorageC*/BlockStorageC$0$__nesc_unnamed4295 {
+enum /*Lz77AppC.BlockStorageC*/BlockStorageC$0$__nesc_unnamed4296 {
   BlockStorageC$0$BLOCK_ID = 0U, BlockStorageC$0$VOLUME_ID = 0U
 };
 typedef TMilli /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$precision_tag;
-enum /*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$__nesc_unnamed4296 {
+enum /*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$__nesc_unnamed4297 {
   Msp430Spi0C$0$CLIENT_ID = 0U
 };
-enum /*HplStm25pSpiC.SpiC.UsartC*/Msp430Usart0C$0$__nesc_unnamed4297 {
+enum /*HplStm25pSpiC.SpiC.UsartC*/Msp430Usart0C$0$__nesc_unnamed4298 {
   Msp430Usart0C$0$CLIENT_ID = 0U
 };
-# 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-static  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$sendDone(message_t *arg_0x405aedf0, error_t arg_0x405ad010);
-# 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-static  message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubReceive$receive(message_t *arg_0x40584190, void *arg_0x40584330, uint8_t arg_0x405844b8);
-# 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-static  error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$send(
-# 36 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-am_id_t arg_0x405a5c40, 
-# 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-am_addr_t arg_0x4057cad0, message_t *arg_0x4057cc80, uint8_t arg_0x4057ce08);
-# 67 "/opt/tinyos-2.x/tos/interfaces/Packet.nc"
-static  uint8_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$payloadLength(message_t *arg_0x4057eb10);
-#line 108
-static  void */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(message_t *arg_0x4058dee0, uint8_t *arg_0x4058c0a8);
-#line 83
-static  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$setPayloadLength(message_t *arg_0x4058d190, uint8_t arg_0x4058d318);
-# 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-static  message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$default$receive(
-# 37 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-am_id_t arg_0x405a4598, 
-# 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-message_t *arg_0x40584190, void *arg_0x40584330, uint8_t arg_0x405844b8);
-# 67 "/opt/tinyos-2.x/tos/interfaces/AMPacket.nc"
-static  am_addr_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$destination(message_t *arg_0x40588aa8);
-#line 92
-static  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setDestination(message_t *arg_0x40586670, am_addr_t arg_0x40586800);
-#line 136
-static  am_id_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$type(message_t *arg_0x40595010);
-#line 151
-static  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setType(message_t *arg_0x40595598, am_id_t arg_0x40595720);
-# 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  error_t SerialP$SplitControl$start(void);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void SerialP$stopDoneTask$runTask(void);
-#line 64
-static  void SerialP$RunTx$runTask(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t SerialP$Init$init(void);
-# 43 "/opt/tinyos-2.x/tos/lib/serial/SerialFlush.nc"
-static  void SerialP$SerialFlush$flushDone(void);
-#line 38
-static  void SerialP$SerialFlush$default$flush(void);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void SerialP$startDoneTask$runTask(void);
-# 83 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
-static   void SerialP$SerialFrameComm$dataReceived(uint8_t arg_0x405fc128);
-
-
-
-
-
-static   void SerialP$SerialFrameComm$putDone(void);
-#line 74
-static   void SerialP$SerialFrameComm$delimiterReceived(void);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void SerialP$defaultSerialFlushTask$runTask(void);
-# 60 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
-static   error_t SerialP$SendBytePacket$completeSend(void);
-#line 51
-static   error_t SerialP$SendBytePacket$startSend(uint8_t arg_0x405f5558);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$runTask(void);
-# 64 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-static  error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$send(
-# 40 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x4065ea78, 
-# 64 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-message_t *arg_0x405afb80, uint8_t arg_0x405afd08);
-#line 89
-static  void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$default$sendDone(
-# 40 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x4065ea78, 
-# 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-message_t *arg_0x405aedf0, error_t arg_0x405ad010);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone$runTask(void);
-# 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-static  message_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$default$receive(
-# 39 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x4065e300, 
-# 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-message_t *arg_0x40584190, void *arg_0x40584330, uint8_t arg_0x405844b8);
-# 31 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$upperLength(
-# 43 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x40671460, 
-# 31 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-message_t *arg_0x405f1aa0, uint8_t arg_0x405f1c30);
-#line 15
-static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$offset(
-# 43 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x40671460);
-# 23 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$dataLinkLength(
-# 43 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x40671460, 
-# 23 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-message_t *arg_0x405f12a8, uint8_t arg_0x405f1438);
-# 70 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
-static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$nextByte(void);
-
-
-
-
-
-
-
-
-
-static   void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$sendCompleted(error_t arg_0x405f3578);
-# 51 "/opt/tinyos-2.x/tos/lib/serial/ReceiveBytePacket.nc"
-static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$startPacket(void);
-
-
-
-
-
-
-static   void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$byteReceived(uint8_t arg_0x406026e8);
-
-
-
-
-
-
-
-
-
-
-static   void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$endPacket(error_t arg_0x40602cb8);
-# 79 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
-static   void HdlcTranslateC$UartStream$receivedByte(uint8_t arg_0x406ad708);
-#line 99
-static   void HdlcTranslateC$UartStream$receiveDone(uint8_t *arg_0x406ac4d0, uint16_t arg_0x406ac660, error_t arg_0x406ac7e8);
-#line 57
-static   void HdlcTranslateC$UartStream$sendDone(uint8_t *arg_0x406af618, uint16_t arg_0x406af7a8, error_t arg_0x406af930);
-# 45 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
-static   error_t HdlcTranslateC$SerialFrameComm$putDelimiter(void);
-#line 68
-static   void HdlcTranslateC$SerialFrameComm$resetReceive(void);
-#line 54
-static   error_t HdlcTranslateC$SerialFrameComm$putData(uint8_t arg_0x405feed8);
-# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$unconfigure(
-# 43 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40700a88);
-# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$configure(
-# 43 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40700a88);
-# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartConfigure.nc"
-static   msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$default$getConfig(
-# 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40714880);
-# 48 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
-static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$send(uint8_t *arg_0x406b0e40, uint16_t arg_0x406af010);
-# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Counter$overflow(void);
-# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$release(
-# 48 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40715e90);
-# 87 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$immediateRequest(
-# 48 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40715e90);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$granted(
-# 48 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40715e90);
-# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$release(
-# 42 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40700128);
-# 87 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$immediateRequest(
-# 42 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40700128);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$default$granted(
-# 42 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40700128);
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$rxDone(uint8_t arg_0x40705730);
-#line 49
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$txDone(void);
-# 143 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-static   void HplMsp430Usart1P$Usart$enableUartRx(void);
-#line 123
-static   void HplMsp430Usart1P$Usart$enableUart(void);
-#line 97
-static   void HplMsp430Usart1P$Usart$resetUsart(bool arg_0x4070bb78);
-#line 179
-static   void HplMsp430Usart1P$Usart$disableIntr(void);
-#line 90
-static   void HplMsp430Usart1P$Usart$setUmctl(uint8_t arg_0x4070b350);
-#line 133
-static   void HplMsp430Usart1P$Usart$enableUartTx(void);
-#line 148
-static   void HplMsp430Usart1P$Usart$disableUartRx(void);
-#line 182
-static   void HplMsp430Usart1P$Usart$enableIntr(void);
-#line 207
-static   void HplMsp430Usart1P$Usart$clrIntr(void);
-#line 80
-static   void HplMsp430Usart1P$Usart$setUbr(uint16_t arg_0x4070ca58);
-#line 224
-static   void HplMsp430Usart1P$Usart$tx(uint8_t arg_0x4071ae28);
-#line 128
-static   void HplMsp430Usart1P$Usart$disableUart(void);
-#line 174
-static   void HplMsp430Usart1P$Usart$setModeUart(msp430_uart_union_config_t *arg_0x4071d258);
-#line 158
-static   void HplMsp430Usart1P$Usart$disableSpi(void);
-#line 138
-static   void HplMsp430Usart1P$Usart$disableUartTx(void);
-# 74 "/opt/tinyos-2.x/tos/interfaces/AsyncStdControl.nc"
-static   error_t HplMsp430Usart1P$AsyncStdControl$start(void);
-
-
-
-
-
-
-
-
-
-static   error_t HplMsp430Usart1P$AsyncStdControl$stop(void);
-# 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectIOFunc(void);
-#line 78
-static   void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectModuleFunc(void);
-
-
-
-
-
-
-static   void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectIOFunc(void);
-#line 78
-static   void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectModuleFunc(void);
-
-
-
-
-
-
-static   void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectIOFunc(void);
-#line 78
-static   void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectModuleFunc(void);
-
-
-
-
-
-
-static   void /*HplMsp430GeneralIOC.P34*/HplMsp430GeneralIOP$20$IO$selectIOFunc(void);
-#line 85
-static   void /*HplMsp430GeneralIOC.P35*/HplMsp430GeneralIOP$21$IO$selectIOFunc(void);
-#line 85
-static   void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectIOFunc(void);
-#line 78
-static   void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectModuleFunc(void);
-
-
-
-
-
-
-static   void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectIOFunc(void);
-#line 78
-static   void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectModuleFunc(void);
-#line 71
-static   void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$makeOutput(void);
-#line 34
-static   void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$set(void);
-
-
-
-
-static   void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$clr(void);
-#line 71
-static   void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$makeOutput(void);
-#line 34
-static   void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$set(void);
-#line 85
-static   void /*HplMsp430GeneralIOC.P51*/HplMsp430GeneralIOP$33$IO$selectIOFunc(void);
-#line 85
-static   void /*HplMsp430GeneralIOC.P52*/HplMsp430GeneralIOP$34$IO$selectIOFunc(void);
-#line 85
-static   void /*HplMsp430GeneralIOC.P53*/HplMsp430GeneralIOP$35$IO$selectIOFunc(void);
-#line 44
-static   void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$toggle(void);
-#line 71
-static   void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$makeOutput(void);
-#line 34
-static   void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$set(void);
-#line 71
-static   void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$makeOutput(void);
-#line 34
-static   void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$set(void);
-#line 71
-static   void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$makeOutput(void);
-#line 34
-static   void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$set(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX0$fired(void);
-#line 28
-static   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Overflow$fired(void);
-#line 28
-static   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX1$fired(void);
-#line 28
-static   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$default$fired(
-# 40 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-uint8_t arg_0x40903ef0);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX0$fired(void);
-#line 28
-static   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Overflow$fired(void);
-#line 28
-static   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX1$fired(void);
-#line 28
-static   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$default$fired(
-# 40 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-uint8_t arg_0x40903ef0);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$get(void);
-static   bool /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$isOverflowPending(void);
-# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$getEvent(void);
-#line 75
-static   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$default$captured(uint16_t arg_0x408df8a8);
-# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-static   msp430_compare_control_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Control$getControl(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Event$fired(void);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$default$fired(void);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Timer$overflow(void);
-# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$getEvent(void);
-#line 75
-static   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$default$captured(uint16_t arg_0x408df8a8);
-# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-static   msp430_compare_control_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Control$getControl(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Event$fired(void);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$default$fired(void);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Timer$overflow(void);
-# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$getEvent(void);
-#line 75
-static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$default$captured(uint16_t arg_0x408df8a8);
-# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-static   msp430_compare_control_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Control$getControl(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Event$fired(void);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$default$fired(void);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Timer$overflow(void);
-# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$getEvent(void);
-#line 75
-static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$default$captured(uint16_t arg_0x408df8a8);
-# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-static   msp430_compare_control_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$getControl(void);
-
-
-
-
-
-
-
-static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$enableEvents(void);
-#line 36
-static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$setControlAsCompare(void);
-
-
-
-static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$disableEvents(void);
-#line 33
-static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$clearPendingInterrupt(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Event$fired(void);
-# 30 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEvent(uint16_t arg_0x408c97f8);
-
-static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEventFromNow(uint16_t arg_0x408e5170);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$overflow(void);
-# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$getEvent(void);
-#line 75
-static   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$default$captured(uint16_t arg_0x408df8a8);
-# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-static   msp430_compare_control_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Control$getControl(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Event$fired(void);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Compare$default$fired(void);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Timer$overflow(void);
-# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$getEvent(void);
-#line 75
-static   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$default$captured(uint16_t arg_0x408df8a8);
-# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-static   msp430_compare_control_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Control$getControl(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Event$fired(void);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Compare$default$fired(void);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Timer$overflow(void);
-# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$getEvent(void);
-#line 75
-static   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$default$captured(uint16_t arg_0x408df8a8);
-# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-static   msp430_compare_control_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Control$getControl(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Event$fired(void);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Compare$default$fired(void);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Timer$overflow(void);
-# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$getEvent(void);
-#line 75
-static   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$default$captured(uint16_t arg_0x408df8a8);
-# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-static   msp430_compare_control_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Control$getControl(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Event$fired(void);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Compare$default$fired(void);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Timer$overflow(void);
-# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$getEvent(void);
-#line 75
-static   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$default$captured(uint16_t arg_0x408df8a8);
-# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-static   msp430_compare_control_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Control$getControl(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Event$fired(void);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Compare$default$fired(void);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Timer$overflow(void);
-# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$getEvent(void);
-#line 75
-static   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$default$captured(uint16_t arg_0x408df8a8);
-# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-static   msp430_compare_control_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Control$getControl(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Event$fired(void);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Compare$default$fired(void);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Timer$overflow(void);
-#line 37
-static   void /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$overflow(void);
-# 53 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-static   /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$size_type /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$get(void);
-
-
-
-
-
-
-static   bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$isOverflowPending(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t LedsP$Init$init(void);
-# 56 "/opt/tinyos-2.x/tos/interfaces/Leds.nc"
-static   void LedsP$Leds$led0Toggle(void);
-# 31 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-static   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$toggle(void);
-
-
-
-static   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$makeOutput(void);
-#line 29
-static   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$set(void);
-
-
-
-
-
-static   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$makeOutput(void);
-#line 29
-static   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$set(void);
-
-
-
-
-
-static   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$makeOutput(void);
-#line 29
-static   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$set(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t PlatformP$Init$init(void);
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-static   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$rxDone(
-# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-uint8_t arg_0x409e8c78, 
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-uint8_t arg_0x40705730);
-#line 49
-static   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$txDone(
-# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-uint8_t arg_0x409e8c78);
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-static   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$rxDone(uint8_t arg_0x40705730);
-#line 49
-static   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$txDone(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t MotePlatformC$Init$init(void);
-# 35 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockInit.nc"
-static  void Msp430ClockP$Msp430ClockInit$defaultInitClocks(void);
-#line 32
-static  void Msp430ClockP$Msp430ClockInit$default$initTimerB(void);
-
-
-
-static  void Msp430ClockP$Msp430ClockInit$defaultInitTimerA(void);
-#line 31
-static  void Msp430ClockP$Msp430ClockInit$default$initTimerA(void);
-
-
-
-
-
-static  void Msp430ClockP$Msp430ClockInit$defaultInitTimerB(void);
-#line 34
-static  void Msp430ClockP$Msp430ClockInit$defaultSetupDcoCalibrate(void);
-#line 29
-static  void Msp430ClockP$Msp430ClockInit$default$setupDcoCalibrate(void);
-static  void Msp430ClockP$Msp430ClockInit$default$initClocks(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t Msp430ClockP$Init$init(void);
-# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t SchedulerBasicP$TaskBasic$postTask(
-# 45 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x40508708);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void SchedulerBasicP$TaskBasic$default$runTask(
-# 45 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x40508708);
-# 46 "/opt/tinyos-2.x/tos/interfaces/Scheduler.nc"
-static  void SchedulerBasicP$Scheduler$init(void);
-#line 61
-static  void SchedulerBasicP$Scheduler$taskLoop(void);
-#line 54
-static  bool SchedulerBasicP$Scheduler$runNextTask(void);
-# 54 "/opt/tinyos-2.x/tos/interfaces/McuPowerOverride.nc"
-static   mcu_power_t McuSleepC$McuPowerOverride$default$lowestState(void);
-# 59 "/opt/tinyos-2.x/tos/interfaces/McuSleep.nc"
-static   void McuSleepC$McuSleep$sleep(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$Init$init(void);
-# 43 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-static   bool /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$isEmpty(void);
-#line 60
-static   resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$dequeue(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/ResourceRequested.nc"
-static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$immediateRequested(
-# 55 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a784c8);
-# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$unconfigure(
-# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
-# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$configure(
-# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
-# 56 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-static   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$release(void);
-# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$release(
-# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a79b68);
-# 87 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$immediateRequest(
-# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a79b68);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$granted(
-# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a79b68);
-# 80 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
-static   bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$inUse(void);
-
-
-
-
-
-
-
-static   uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$userId(void);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$runTask(void);
-# 52 "/opt/tinyos-2.x/tos/lib/power/PowerDownCleanup.nc"
-static   void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$default$cleanup(void);
-# 46 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-static   void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$granted(void);
-#line 81
-static   void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$immediateRequested(void);
-# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartConfigure.nc"
-static   msp430_uart_union_config_t *TelosSerialP$Msp430UartConfigure$getConfig(void);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void TelosSerialP$Resource$granted(void);
-# 74 "/opt/tinyos-2.x/tos/interfaces/StdControl.nc"
-static  error_t TelosSerialP$StdControl$start(void);
-
-
-
-
-
-
-
-
-
-static  error_t TelosSerialP$StdControl$stop(void);
-# 31 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-static   uint8_t SerialPacketInfoActiveMessageP$Info$upperLength(message_t *arg_0x405f1aa0, uint8_t arg_0x405f1c30);
-#line 15
-static   uint8_t SerialPacketInfoActiveMessageP$Info$offset(void);
-
-
-
-
-
-
-
-static   uint8_t SerialPacketInfoActiveMessageP$Info$dataLinkLength(message_t *arg_0x405f12a8, uint8_t arg_0x405f1438);
-# 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-static  error_t /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$send(am_addr_t arg_0x4057cad0, message_t *arg_0x4057cc80, uint8_t arg_0x4057ce08);
-# 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-static  void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$sendDone(message_t *arg_0x405aedf0, error_t arg_0x405ad010);
-# 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-static  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(
-# 40 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x40adfc28, 
-# 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-message_t *arg_0x4057beb8, error_t arg_0x4057a068);
-# 64 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-static  error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$send(
-# 38 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x40adf2c8, 
-# 64 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-message_t *arg_0x405afb80, uint8_t arg_0x405afd08);
-#line 89
-static  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(
-# 38 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x40adf2c8, 
-# 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-message_t *arg_0x405aedf0, error_t arg_0x405ad010);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$runTask(void);
-#line 64
-static  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$CancelTask$runTask(void);
-# 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  void PrintfP$SerialControl$startDone(error_t arg_0x4056be70);
-#line 117
-static  void PrintfP$SerialControl$stopDone(error_t arg_0x4056aa78);
-# 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-static  void PrintfP$AMSend$sendDone(message_t *arg_0x4057beb8, error_t arg_0x4057a068);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void PrintfP$retrySend$runTask(void);
-# 34 "/opt/tinyos-2.x/tos/lib/printf/PrintfFlush.nc"
-static  error_t PrintfP$PrintfFlush$flush(void);
-# 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  error_t PrintfP$PrintfControl$start(void);
-# 35 "/opt/tinyos-2.x/tos/lib/printf/PrintfFlush.nc"
-static  void LZ77M$PrintfFlush$flushDone(error_t arg_0x40566b38);
-# 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  void LZ77M$PrintfControl$startDone(error_t arg_0x4056be70);
-#line 117
-static  void LZ77M$PrintfControl$stopDone(error_t arg_0x4056aa78);
 # 4 "Lz77Compression.nc"
-static  error_t LZ77M$Lz77Compression$Lz77Encode(int *arg_0x40b2d608);
+static error_t LZ77M$Lz77Compression$Lz77Encode(int *arg_0x405faad0);
 # 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  void LZ77M$Timer$fired(void);
-# 49 "/opt/tinyos-2.x/tos/interfaces/Boot.nc"
-static  void TestC$Boot$booted(void);
-# 95 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-static  void TestC$BlockRead$computeCrcDone(storage_addr_t arg_0x40b72800, storage_len_t arg_0x40b72990, 
-uint16_t arg_0x40b72b30, error_t arg_0x40b72cb8);
-#line 67
-static  void TestC$BlockRead$readDone(storage_addr_t arg_0x40b4c338, void *arg_0x40b4c4d8, storage_len_t arg_0x40b4c668, 
-error_t arg_0x40b4c800);
-# 35 "/opt/tinyos-2.x/tos/lib/printf/PrintfFlush.nc"
-static  void TestC$PrintfFlush$flushDone(error_t arg_0x40566b38);
-# 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  void TestC$PrintfControl$startDone(error_t arg_0x4056be70);
-#line 117
-static  void TestC$PrintfControl$stopDone(error_t arg_0x4056aa78);
-# 5 "Lz77Compression.nc"
-static  error_t TestC$Lz77Compression$Lz77EncodeDone(error_t arg_0x40b2da98);
-# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  void TestC$Timer$fired(void);
+static void LZ77M$Timer$fired(void );
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t PlatformP$Init$init(void );
+#line 51
+static error_t MotePlatformC$Init$init(void );
+# 35 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockInit.nc"
+static void Msp430ClockP$Msp430ClockInit$defaultInitClocks(void );
+#line 32
+static void Msp430ClockP$Msp430ClockInit$default$initTimerB(void );
+
+
+
+static void Msp430ClockP$Msp430ClockInit$defaultInitTimerA(void );
+#line 31
+static void Msp430ClockP$Msp430ClockInit$default$initTimerA(void );
+
+
+
+
+
+static void Msp430ClockP$Msp430ClockInit$defaultInitTimerB(void );
+#line 34
+static void Msp430ClockP$Msp430ClockInit$defaultSetupDcoCalibrate(void );
+#line 29
+static void Msp430ClockP$Msp430ClockInit$default$setupDcoCalibrate(void );
+static void Msp430ClockP$Msp430ClockInit$default$initClocks(void );
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t Msp430ClockP$Init$init(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX0$fired(void );
+#line 28
+static void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Overflow$fired(void );
+#line 28
+static void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX1$fired(void );
+#line 28
+static void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$default$fired(
+# 40 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
+uint8_t arg_0x40686428);
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX0$fired(void );
+#line 28
+static void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Overflow$fired(void );
+#line 28
+static void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX1$fired(void );
+#line 28
+static void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$default$fired(
+# 40 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
+uint8_t arg_0x40686428);
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$get(void );
+static bool /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$isOverflowPending(void );
+# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$getEvent(void );
+#line 75
+static void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$default$captured(uint16_t time);
+# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+static msp430_compare_control_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Control$getControl(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Event$fired(void );
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$fired(void);
+static void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$default$fired(void );
 # 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$overflow(void);
-# 92 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$startAt(/*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$size_type arg_0x40b89350, /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$size_type arg_0x40b894e0);
-#line 62
-static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$stop(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Init$init(void);
-# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-static   void /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$overflow(void);
-#line 53
-static   /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$size_type /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$get(void);
-# 98 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-static   /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getNow(void);
-#line 92
-static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$startAt(/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$size_type arg_0x40b89350, /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$size_type arg_0x40b894e0);
-#line 105
-static   /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getAlarm(void);
-#line 62
-static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$stop(void);
-
-
-
-
-static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$fired(void);
-# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$overflow(void);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$runTask(void);
-# 67 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-static   void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$fired(void);
-# 125 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  uint32_t /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$getNow(void);
-#line 118
-static  void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$startOneShotAt(uint32_t arg_0x40b25738, uint32_t arg_0x40b258c8);
-#line 67
-static  void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$stop(void);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$runTask(void);
-# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$fired(void);
-#line 125
-static  uint32_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$getNow(
-# 37 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x40c428a8);
-# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(
-# 37 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x40c428a8);
-# 62 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startOneShot(
-# 37 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x40c428a8, 
-# 62 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-uint32_t arg_0x40b279f0);
-
-
-
-
-static  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$stop(
-# 37 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x40c428a8);
-# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-static   void /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter$overflow(void);
-# 68 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-static  error_t Stm25pBlockP$Sector$default$read(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
-# 68 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c75770, uint8_t *arg_0x40c75918, stm25p_len_t arg_0x40c75aa8);
-#line 101
-static  void Stm25pBlockP$Sector$writeDone(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
-# 101 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c724c0, uint8_t *arg_0x40c72668, stm25p_len_t arg_0x40c727f8, 
-error_t arg_0x40c72990);
-
-
-
-
-
-
-
-
-
-static  error_t Stm25pBlockP$Sector$default$erase(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
-# 112 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-uint8_t arg_0x40c71010, uint8_t arg_0x40c711a0);
-
-
-
-
-
-
-
-
-static  void Stm25pBlockP$Sector$eraseDone(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
-# 121 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-uint8_t arg_0x40c71768, uint8_t arg_0x40c718f8, error_t arg_0x40c71a80);
-#line 144
-static  void Stm25pBlockP$Sector$computeCrcDone(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
-# 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c9c9c0, stm25p_len_t arg_0x40c9cb50, 
-uint16_t arg_0x40c9ccf0, error_t arg_0x40c9ce78);
-#line 133
-static  error_t Stm25pBlockP$Sector$default$computeCrc(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
-# 133 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-uint16_t arg_0x40c9c068, stm25p_addr_t arg_0x40c9c1f8, 
-stm25p_len_t arg_0x40c9c398);
-#line 91
-static  error_t Stm25pBlockP$Sector$default$write(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
-# 91 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c73b68, uint8_t *arg_0x40c73d10, stm25p_len_t arg_0x40c73ea0);
-#line 56
-static  uint8_t Stm25pBlockP$Sector$default$getNumSectors(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0);
-# 78 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-static  void Stm25pBlockP$Sector$readDone(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
-# 78 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c730c0, uint8_t *arg_0x40c73268, stm25p_len_t arg_0x40c733f8, 
-error_t arg_0x40c73590);
-# 56 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-static  error_t Stm25pBlockP$Read$read(
-# 39 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7dba8, 
-# 56 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-storage_addr_t arg_0x40b4d950, void *arg_0x40b4daf0, storage_len_t arg_0x40b4dc80);
-#line 95
-static  void Stm25pBlockP$Read$default$computeCrcDone(
-# 39 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7dba8, 
-# 95 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-storage_addr_t arg_0x40b72800, storage_len_t arg_0x40b72990, 
-uint16_t arg_0x40b72b30, error_t arg_0x40b72cb8);
-#line 67
-static  void Stm25pBlockP$Read$default$readDone(
-# 39 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7dba8, 
-# 67 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-storage_addr_t arg_0x40b4c338, void *arg_0x40b4c4d8, storage_len_t arg_0x40b4c668, 
-error_t arg_0x40b4c800);
-# 113 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
-static  void Stm25pBlockP$Write$default$syncDone(
-# 40 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7c5e8, 
-# 113 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
-error_t arg_0x40c861b0);
-#line 71
-static  void Stm25pBlockP$Write$default$writeDone(
-# 40 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7c5e8, 
-# 71 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
-storage_addr_t arg_0x40c5c860, void *arg_0x40c5ca00, storage_len_t arg_0x40c5cb90, 
-error_t arg_0x40c5cd28);
-#line 91
-static  void Stm25pBlockP$Write$default$eraseDone(
-# 40 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7c5e8, 
-# 91 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
-error_t arg_0x40c5b798);
-# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t Stm25pBlockP$ClientResource$default$release(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7a350);
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t Stm25pBlockP$ClientResource$default$request(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7a350);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void Stm25pBlockP$ClientResource$granted(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7a350);
-# 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  error_t Stm25pSectorP$SplitControl$start(void);
-#line 109
-static  error_t Stm25pSectorP$SplitControl$stop(void);
-# 68 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-static  error_t Stm25pSectorP$Sector$read(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
-# 68 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c75770, uint8_t *arg_0x40c75918, stm25p_len_t arg_0x40c75aa8);
-#line 101
-static  void Stm25pSectorP$Sector$default$writeDone(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
-# 101 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c724c0, uint8_t *arg_0x40c72668, stm25p_len_t arg_0x40c727f8, 
-error_t arg_0x40c72990);
-
-
-
-
-
-
-
-
-
-static  error_t Stm25pSectorP$Sector$erase(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
-# 112 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-uint8_t arg_0x40c71010, uint8_t arg_0x40c711a0);
-
-
-
-
-
-
-
-
-static  void Stm25pSectorP$Sector$default$eraseDone(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
-# 121 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-uint8_t arg_0x40c71768, uint8_t arg_0x40c718f8, error_t arg_0x40c71a80);
-#line 144
-static  void Stm25pSectorP$Sector$default$computeCrcDone(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
-# 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c9c9c0, stm25p_len_t arg_0x40c9cb50, 
-uint16_t arg_0x40c9ccf0, error_t arg_0x40c9ce78);
-#line 133
-static  error_t Stm25pSectorP$Sector$computeCrc(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
-# 133 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-uint16_t arg_0x40c9c068, stm25p_addr_t arg_0x40c9c1f8, 
-stm25p_len_t arg_0x40c9c398);
-#line 91
-static  error_t Stm25pSectorP$Sector$write(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
-# 91 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c73b68, uint8_t *arg_0x40c73d10, stm25p_len_t arg_0x40c73ea0);
-#line 56
-static  uint8_t Stm25pSectorP$Sector$getNumSectors(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0);
-# 78 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-static  void Stm25pSectorP$Sector$default$readDone(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
-# 78 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c730c0, uint8_t *arg_0x40c73268, stm25p_len_t arg_0x40c733f8, 
-error_t arg_0x40c73590);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void Stm25pSectorP$Stm25pResource$granted(
-# 47 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdd168);
-# 48 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pVolume.nc"
-static   volume_id_t Stm25pSectorP$Volume$default$getVolumeId(
-# 45 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdeb28);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void Stm25pSectorP$SpiResource$granted(void);
-# 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-static   void Stm25pSectorP$Spi$sectorEraseDone(uint8_t arg_0x40cd1a60, error_t arg_0x40cd1be8);
-#line 77
-static   void Stm25pSectorP$Spi$readDone(stm25p_addr_t arg_0x40cd5088, uint8_t *arg_0x40cd5230, 
-stm25p_len_t arg_0x40cd53d0, error_t arg_0x40cd5558);
-#line 125
-static   void Stm25pSectorP$Spi$pageProgramDone(stm25p_addr_t arg_0x40cd2970, uint8_t *arg_0x40cd2b18, 
-stm25p_len_t arg_0x40cd2cb8, error_t arg_0x40cd2e40);
-#line 101
-static   void Stm25pSectorP$Spi$computeCrcDone(uint16_t arg_0x40cd44f8, stm25p_addr_t arg_0x40cd4688, 
-stm25p_len_t arg_0x40cd4828, error_t arg_0x40cd49b0);
-#line 159
-static   void Stm25pSectorP$Spi$bulkEraseDone(error_t arg_0x40cd0580);
-# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t Stm25pSectorP$ClientResource$release(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdf350);
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t Stm25pSectorP$ClientResource$request(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdf350);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void Stm25pSectorP$ClientResource$default$granted(
-# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdf350);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void Stm25pSectorP$signalDone_task$runTask(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$Init$init(void);
-# 69 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-static   error_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$enqueue(resource_client_id_t arg_0x40a62e88);
-#line 43
-static   bool /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$isEmpty(void);
-
-
-
-
-
-
-
-
-static   bool /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$isEnqueued(resource_client_id_t arg_0x40a624a0);
-
-
-
-
-
-
-
-static   resource_client_id_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$dequeue(void);
-# 43 "/opt/tinyos-2.x/tos/interfaces/ResourceRequested.nc"
-static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceRequested$default$requested(
-# 55 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a784c8);
-# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$unconfigure(
-# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
-# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$configure(
-# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
-# 56 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-static   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$release(void);
-# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$release(
-# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a79b68);
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$request(
-# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a79b68);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$runTask(void);
-# 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$startDone(error_t arg_0x4056be70);
-#line 117
-static  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stopDone(error_t arg_0x4056aa78);
-# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$fired(void);
-# 52 "/opt/tinyos-2.x/tos/lib/power/PowerDownCleanup.nc"
-static   void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$default$cleanup(void);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask$runTask(void);
-# 73 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-static   void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$requested(void);
+static void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Timer$overflow(void );
+# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$getEvent(void );
+#line 75
+static void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$default$captured(uint16_t time);
+# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+static msp430_compare_control_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Control$getControl(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Event$fired(void );
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$default$fired(void );
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Timer$overflow(void );
+# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$getEvent(void );
+#line 75
+static void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$default$captured(uint16_t time);
+# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+static msp430_compare_control_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Control$getControl(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Event$fired(void );
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$default$fired(void );
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Timer$overflow(void );
+# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$getEvent(void );
+#line 75
+static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$default$captured(uint16_t time);
+# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+static msp430_compare_control_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$getControl(void );
 #line 46
-static   void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$granted(void);
+static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$enableEvents(void );
+#line 36
+static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$setControlAsCompare(void );
+
+
+
+
+
+
+
+
+
+
+static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$disableEvents(void );
+#line 33
+static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$clearPendingInterrupt(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Event$fired(void );
+# 30 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEvent(uint16_t time);
+
+static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEventFromNow(uint16_t delta);
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$overflow(void );
+# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$getEvent(void );
+#line 75
+static void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$default$captured(uint16_t time);
+# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+static msp430_compare_control_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Control$getControl(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Event$fired(void );
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Compare$default$fired(void );
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Timer$overflow(void );
+# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$getEvent(void );
+#line 75
+static void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$default$captured(uint16_t time);
+# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+static msp430_compare_control_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Control$getControl(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Event$fired(void );
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Compare$default$fired(void );
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Timer$overflow(void );
+# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$getEvent(void );
+#line 75
+static void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$default$captured(uint16_t time);
+# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+static msp430_compare_control_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Control$getControl(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Event$fired(void );
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Compare$default$fired(void );
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Timer$overflow(void );
+# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$getEvent(void );
+#line 75
+static void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$default$captured(uint16_t time);
+# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+static msp430_compare_control_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Control$getControl(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Event$fired(void );
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Compare$default$fired(void );
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Timer$overflow(void );
+# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$getEvent(void );
+#line 75
+static void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$default$captured(uint16_t time);
+# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+static msp430_compare_control_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Control$getControl(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Event$fired(void );
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Compare$default$fired(void );
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Timer$overflow(void );
+# 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$getEvent(void );
+#line 75
+static void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$default$captured(uint16_t time);
+# 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+static msp430_compare_control_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Control$getControl(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Event$fired(void );
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Compare$default$fired(void );
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Timer$overflow(void );
+# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static error_t SchedulerBasicP$TaskBasic$postTask(
+# 45 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
+uint8_t arg_0x405924a0);
 # 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$startTask$runTask(void);
-# 74 "/opt/tinyos-2.x/tos/interfaces/StdControl.nc"
-static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$start(void);
+static void SchedulerBasicP$TaskBasic$default$runTask(
+# 45 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
+uint8_t arg_0x405924a0);
+# 46 "/opt/tinyos-2.x/tos/interfaces/Scheduler.nc"
+static void SchedulerBasicP$Scheduler$init(void );
+#line 61
+static void SchedulerBasicP$Scheduler$taskLoop(void );
+#line 54
+static bool SchedulerBasicP$Scheduler$runNextTask(void );
+# 54 "/opt/tinyos-2.x/tos/interfaces/McuPowerOverride.nc"
+static mcu_power_t McuSleepC$McuPowerOverride$default$lowestState(void );
+# 59 "/opt/tinyos-2.x/tos/interfaces/McuSleep.nc"
+static void McuSleepC$McuSleep$sleep(void );
+# 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
+static void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$sendDone(
+#line 85
+message_t * msg, 
+
+
+
+error_t error);
+# 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
+static 
+#line 63
+message_t * 
+
+
+
+/*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubReceive$receive(
+#line 60
+message_t * msg, 
+void * payload, 
 
 
 
 
 
-
-
-
-
-static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$stop(void);
-# 71 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
-static   void Stm25pSpiP$SpiPacket$sendDone(uint8_t *arg_0x40d41610, uint8_t *arg_0x40d417b8, uint16_t arg_0x40d41948, 
-error_t arg_0x40d41ae0);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t Stm25pSpiP$Init$init(void);
-# 47 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-static   error_t Stm25pSpiP$Spi$powerDown(void);
-#line 66
-static   error_t Stm25pSpiP$Spi$read(stm25p_addr_t arg_0x40cd6708, uint8_t *arg_0x40cd68b0, 
-stm25p_len_t arg_0x40cd6a50);
-#line 136
-static   error_t Stm25pSpiP$Spi$sectorErase(uint8_t arg_0x40cd14a8);
-#line 55
-static   error_t Stm25pSpiP$Spi$powerUp(void);
-#line 90
-static   error_t Stm25pSpiP$Spi$computeCrc(uint16_t arg_0x40cd5b30, stm25p_addr_t arg_0x40cd5cc0, 
-stm25p_len_t arg_0x40cd5e60);
-#line 114
-static   error_t Stm25pSpiP$Spi$pageProgram(stm25p_addr_t arg_0x40cd2010, uint8_t *arg_0x40cd21b8, 
-stm25p_len_t arg_0x40cd2358);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void Stm25pSpiP$SpiResource$granted(void);
-#line 110
-static   error_t Stm25pSpiP$ClientResource$release(void);
-#line 78
-static   error_t Stm25pSpiP$ClientResource$request(void);
-# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$unconfigure(
-# 41 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d91ea8);
-# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$configure(
-# 41 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d91ea8);
-# 59 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
-static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$send(
-# 43 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d90918, 
-# 59 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
-uint8_t *arg_0x40d43988, uint8_t *arg_0x40d43b30, uint16_t arg_0x40d43cc0);
-#line 71
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$default$sendDone(
-# 43 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d90918, 
-# 71 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
-uint8_t *arg_0x40d41610, uint8_t *arg_0x40d417b8, uint16_t arg_0x40d41948, 
-error_t arg_0x40d41ae0);
-# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiConfigure.nc"
-static   msp430_spi_union_config_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$default$getConfig(
-# 46 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d8e990);
-# 34 "/opt/tinyos-2.x/tos/interfaces/SpiByte.nc"
-static   uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiByte$write(uint8_t arg_0x40d460f8);
-# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$release(
-# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d8e030);
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$request(
-# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d8e030);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$granted(
-# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d8e030);
-# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$release(
-# 40 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d91548);
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$request(
-# 40 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d91548);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$default$granted(
-# 40 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d91548);
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$rxDone(uint8_t arg_0x40705730);
-#line 49
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$txDone(void);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_task$runTask(void);
-# 180 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-static   void HplMsp430Usart0P$Usart$enableRxIntr(void);
-#line 197
-static   void HplMsp430Usart0P$Usart$clrRxIntr(void);
-#line 97
-static   void HplMsp430Usart0P$Usart$resetUsart(bool arg_0x4070bb78);
-#line 179
-static   void HplMsp430Usart0P$Usart$disableIntr(void);
-#line 90
-static   void HplMsp430Usart0P$Usart$setUmctl(uint8_t arg_0x4070b350);
-#line 177
-static   void HplMsp430Usart0P$Usart$disableRxIntr(void);
-
-
-
-
-
-
-
-
-
-static   bool HplMsp430Usart0P$Usart$isTxIntrPending(void);
-#line 207
-static   void HplMsp430Usart0P$Usart$clrIntr(void);
-#line 80
-static   void HplMsp430Usart0P$Usart$setUbr(uint16_t arg_0x4070ca58);
-#line 224
-static   void HplMsp430Usart0P$Usart$tx(uint8_t arg_0x4071ae28);
-#line 128
-static   void HplMsp430Usart0P$Usart$disableUart(void);
-#line 153
-static   void HplMsp430Usart0P$Usart$enableSpi(void);
-#line 168
-static   void HplMsp430Usart0P$Usart$setModeSpi(msp430_spi_union_config_t *arg_0x4071fc40);
-#line 231
-static   uint8_t HplMsp430Usart0P$Usart$rx(void);
-#line 192
-static   bool HplMsp430Usart0P$Usart$isRxIntrPending(void);
-
-
-
-
-
-
-
-
-
-static   void HplMsp430Usart0P$Usart$clrTxIntr(void);
-#line 158
-static   void HplMsp430Usart0P$Usart$disableSpi(void);
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$rxDone(
-# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-uint8_t arg_0x409e8c78, 
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-uint8_t arg_0x40705730);
-#line 49
-static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$txDone(
-# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-uint8_t arg_0x409e8c78);
-# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2CInterrupts.nc"
-static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawI2CInterrupts$fired(void);
-#line 39
-static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$default$fired(
-# 40 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-uint8_t arg_0x409e25e8);
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$rxDone(uint8_t arg_0x40705730);
-#line 49
-static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$txDone(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$Init$init(void);
-# 69 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-static   error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$enqueue(resource_client_id_t arg_0x40a62e88);
-#line 43
-static   bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEmpty(void);
-
-
-
-
-
-
-
-
-static   bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEnqueued(resource_client_id_t arg_0x40a624a0);
-
-
-
-
-
-
-
-static   resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$dequeue(void);
-# 43 "/opt/tinyos-2.x/tos/interfaces/ResourceRequested.nc"
-static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$default$requested(
-# 55 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a784c8);
-# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$unconfigure(
-# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
-# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$configure(
-# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
-# 56 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$release(void);
-#line 73
-static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$requested(void);
-#line 46
-static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$granted(void);
-# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$release(
-# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a79b68);
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$request(
-# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a79b68);
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$default$granted(
-# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a79b68);
-# 80 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
-static   bool /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$inUse(void);
-
-
-
-
-
-
-
-static   uint8_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$userId(void);
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$runTask(void);
-# 7 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2C.nc"
-static   void HplMsp430I2C0P$HplI2C$clearModeI2C(void);
-#line 6
-static   bool HplMsp430I2C0P$HplI2C$isI2C(void);
-# 35 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-static   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$makeOutput(void);
-#line 29
-static   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$set(void);
-static   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$clr(void);
-
-
-
-
-static   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$makeOutput(void);
-#line 29
-static   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$set(void);
-# 48 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pVolume.nc"
-static   volume_id_t /*Lz77AppC.BlockStorageC.BinderP*/Stm25pBinderP$0$Volume$getVolumeId(void);
-# 64 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-static  error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$send(message_t *arg_0x405afb80, uint8_t arg_0x405afd08);
-# 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-static  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$sendDone(
+uint8_t len);
+# 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
+static error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$send(
 # 36 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-am_id_t arg_0x405a5c40, 
-# 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-message_t *arg_0x4057beb8, error_t arg_0x4057a068);
+am_id_t arg_0x40753598, 
+# 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
+am_addr_t addr, 
+#line 60
+message_t * msg, 
+
+
+
+
+
+
+
+
+uint8_t len);
+# 67 "/opt/tinyos-2.x/tos/interfaces/Packet.nc"
+static uint8_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$payloadLength(
+#line 63
+message_t * msg);
+#line 115
+static 
+#line 112
+void * 
+
+
+/*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(
+#line 110
+message_t * msg, 
+
+
+
+
+uint8_t len);
+#line 95
+static uint8_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$maxPayloadLength(void );
+#line 83
+static void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$setPayloadLength(
+#line 79
+message_t * msg, 
+
+
+
+uint8_t len);
 # 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-static  message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$receive(
+static 
+#line 63
+message_t * 
+
+
+
+/*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$default$receive(
 # 37 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-am_id_t arg_0x405a4598, 
+am_id_t arg_0x40751010, 
+# 60 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
+message_t * msg, 
+void * payload, 
+
+
+
+
+
+uint8_t len);
+# 67 "/opt/tinyos-2.x/tos/interfaces/AMPacket.nc"
+static am_addr_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$destination(
+#line 63
+message_t * amsg);
+#line 92
+static void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setDestination(
+#line 88
+message_t * amsg, 
+
+
+
+am_addr_t addr);
+#line 136
+static am_id_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$type(
+#line 132
+message_t * amsg);
+#line 151
+static void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setType(
+#line 147
+message_t * amsg, 
+
+
+
+am_id_t t);
+# 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
+static error_t SerialP$SplitControl$start(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void SerialP$stopDoneTask$runTask(void );
+#line 64
+static void SerialP$RunTx$runTask(void );
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t SerialP$Init$init(void );
+# 43 "/opt/tinyos-2.x/tos/lib/serial/SerialFlush.nc"
+static void SerialP$SerialFlush$flushDone(void );
+#line 38
+static void SerialP$SerialFlush$default$flush(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void SerialP$startDoneTask$runTask(void );
+# 83 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
+static void SerialP$SerialFrameComm$dataReceived(uint8_t data);
+
+
+
+
+
+static void SerialP$SerialFrameComm$putDone(void );
+#line 74
+static void SerialP$SerialFrameComm$delimiterReceived(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void SerialP$defaultSerialFlushTask$runTask(void );
+# 60 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
+static error_t SerialP$SendBytePacket$completeSend(void );
+#line 51
+static error_t SerialP$SendBytePacket$startSend(uint8_t first_byte);
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$runTask(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
+static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$send(
+# 40 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+uart_id_t arg_0x407f8010, 
+# 56 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
+message_t * msg, 
+
+
+
+
+
+
+
+uint8_t len);
+#line 89
+static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$default$sendDone(
+# 40 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+uart_id_t arg_0x407f8010, 
+# 85 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
+message_t * msg, 
+
+
+
+error_t error);
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone$runTask(void );
 # 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-message_t *arg_0x40584190, void *arg_0x40584330, uint8_t arg_0x405844b8);
+static 
+#line 63
+message_t * 
+
+
+
+/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$default$receive(
+# 39 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+uart_id_t arg_0x407fb918, 
+# 60 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
+message_t * msg, 
+void * payload, 
+
+
+
+
+
+uint8_t len);
+# 31 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
+static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$upperLength(
+# 43 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+uart_id_t arg_0x407f8b10, 
+# 31 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
+message_t *msg, uint8_t dataLinkLen);
+#line 15
+static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$offset(
+# 43 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+uart_id_t arg_0x407f8b10);
+# 23 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
+static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$dataLinkLength(
+# 43 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+uart_id_t arg_0x407f8b10, 
+# 23 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
+message_t *msg, uint8_t upperLen);
+# 70 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
+static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$nextByte(void );
+
+
+
+
+
+
+
+
+
+static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$sendCompleted(error_t error);
+# 51 "/opt/tinyos-2.x/tos/lib/serial/ReceiveBytePacket.nc"
+static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$startPacket(void );
+
+
+
+
+
+
+static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$byteReceived(uint8_t data);
+
+
+
+
+
+
+
+
+
+
+static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$endPacket(error_t result);
+# 79 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+static void HdlcTranslateC$UartStream$receivedByte(uint8_t byte);
+#line 99
+static void HdlcTranslateC$UartStream$receiveDone(
+#line 95
+uint8_t * buf, 
+
+
+
+uint16_t len, error_t error);
+#line 57
+static void HdlcTranslateC$UartStream$sendDone(
+#line 53
+uint8_t * buf, 
+
+
+
+uint16_t len, error_t error);
+# 45 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
+static error_t HdlcTranslateC$SerialFrameComm$putDelimiter(void );
+#line 68
+static void HdlcTranslateC$SerialFrameComm$resetReceive(void );
+#line 54
+static error_t HdlcTranslateC$SerialFrameComm$putData(uint8_t data);
+# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$unconfigure(
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x4088e6b0);
+# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$configure(
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x4088e6b0);
+# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartConfigure.nc"
+static msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$default$getConfig(
+# 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x408a8c40);
+# 48 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+static error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$send(
+# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x4088ee10, 
+# 44 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+uint8_t * buf, 
+
+
+
+uint16_t len);
+#line 79
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$receivedByte(
+# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x4088ee10, 
+# 79 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+uint8_t byte);
+#line 99
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$receiveDone(
+# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x4088ee10, 
+# 95 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+uint8_t * buf, 
+
+
+
+uint16_t len, error_t error);
+#line 57
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$sendDone(
+# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x4088ee10, 
+# 53 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+uint8_t * buf, 
+
+
+
+uint16_t len, error_t error);
+# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Counter$overflow(void );
+# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$release(
+# 48 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x408a81e8);
+# 87 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$immediateRequest(
+# 48 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x408a81e8);
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$granted(
+# 48 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x408a81e8);
+# 118 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static bool /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$isOwner(
+# 48 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x408a81e8);
+# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$release(
+# 43 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x40893bc8);
+# 87 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$immediateRequest(
+# 43 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x40893bc8);
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$default$granted(
+# 43 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x40893bc8);
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$rxDone(
+# 51 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x408a5dd0, 
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+uint8_t data);
+#line 49
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$txDone(
+# 51 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x408a5dd0);
+# 143 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
+static void HplMsp430Usart1P$Usart$enableUartRx(void );
+#line 123
+static void HplMsp430Usart1P$Usart$enableUart(void );
+#line 97
+static void HplMsp430Usart1P$Usart$resetUsart(bool reset);
+#line 179
+static void HplMsp430Usart1P$Usart$disableIntr(void );
+#line 90
+static void HplMsp430Usart1P$Usart$setUmctl(uint8_t umctl);
+#line 133
+static void HplMsp430Usart1P$Usart$enableUartTx(void );
+#line 148
+static void HplMsp430Usart1P$Usart$disableUartRx(void );
+#line 182
+static void HplMsp430Usart1P$Usart$enableIntr(void );
+#line 207
+static void HplMsp430Usart1P$Usart$clrIntr(void );
+#line 80
+static void HplMsp430Usart1P$Usart$setUbr(uint16_t ubr);
+#line 224
+static void HplMsp430Usart1P$Usart$tx(uint8_t data);
+#line 128
+static void HplMsp430Usart1P$Usart$disableUart(void );
+#line 174
+static void HplMsp430Usart1P$Usart$setModeUart(msp430_uart_union_config_t *config);
+#line 158
+static void HplMsp430Usart1P$Usart$disableSpi(void );
+#line 138
+static void HplMsp430Usart1P$Usart$disableUartTx(void );
+# 74 "/opt/tinyos-2.x/tos/interfaces/AsyncStdControl.nc"
+static error_t HplMsp430Usart1P$AsyncStdControl$start(void );
+
+
+
+
+
+
+
+
+
+static error_t HplMsp430Usart1P$AsyncStdControl$stop(void );
+# 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
+static void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectIOFunc(void );
+#line 78
+static void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectModuleFunc(void );
+
+
+
+
+
+
+static void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectIOFunc(void );
+#line 78
+static void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectModuleFunc(void );
+
+
+
+
+
+
+static void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectIOFunc(void );
+#line 78
+static void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectModuleFunc(void );
+
+
+
+
+
+
+static void /*HplMsp430GeneralIOC.P34*/HplMsp430GeneralIOP$20$IO$selectIOFunc(void );
+#line 85
+static void /*HplMsp430GeneralIOC.P35*/HplMsp430GeneralIOP$21$IO$selectIOFunc(void );
+#line 85
+static void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectIOFunc(void );
+#line 78
+static void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectModuleFunc(void );
+
+
+
+
+
+
+static void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectIOFunc(void );
+#line 78
+static void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectModuleFunc(void );
+#line 71
+static void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$makeOutput(void );
+#line 34
+static void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$set(void );
+
+
+
+
+static void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$clr(void );
+#line 71
+static void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$makeOutput(void );
+#line 34
+static void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$set(void );
+#line 85
+static void /*HplMsp430GeneralIOC.P51*/HplMsp430GeneralIOP$33$IO$selectIOFunc(void );
+#line 85
+static void /*HplMsp430GeneralIOC.P52*/HplMsp430GeneralIOP$34$IO$selectIOFunc(void );
+#line 85
+static void /*HplMsp430GeneralIOC.P53*/HplMsp430GeneralIOP$35$IO$selectIOFunc(void );
+#line 44
+static void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$toggle(void );
+#line 71
+static void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$makeOutput(void );
+#line 34
+static void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$set(void );
+#line 71
+static void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$makeOutput(void );
+#line 34
+static void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$set(void );
+#line 71
+static void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$makeOutput(void );
+#line 34
+static void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$set(void );
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$overflow(void );
+# 53 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
+static /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$size_type /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$get(void );
+
+
+
+
+
+
+static bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$isOverflowPending(void );
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t LedsP$Init$init(void );
+# 56 "/opt/tinyos-2.x/tos/interfaces/Leds.nc"
+static void LedsP$Leds$led0Toggle(void );
+# 31 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
+static void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$toggle(void );
+
+
+
+static void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$makeOutput(void );
+#line 29
+static void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$set(void );
+
+
+
+
+
+static void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$makeOutput(void );
+#line 29
+static void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$set(void );
+
+
+
+
+
+static void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$makeOutput(void );
+#line 29
+static void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$set(void );
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+static void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$rxDone(
+# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
+uint8_t arg_0x40a92f08, 
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+uint8_t data);
+#line 49
+static void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$txDone(
+# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
+uint8_t arg_0x40a92f08);
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+static void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$rxDone(uint8_t data);
+#line 49
+static void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$txDone(void );
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$Init$init(void );
+# 43 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
+static bool /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$isEmpty(void );
+#line 60
+static resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$dequeue(void );
+# 51 "/opt/tinyos-2.x/tos/interfaces/ResourceRequested.nc"
+static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$immediateRequested(
+# 55 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab1010);
+# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$unconfigure(
+# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab0430);
+# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$configure(
+# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab0430);
+# 56 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
+static error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$release(void );
+# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$release(
+# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab2520);
+# 87 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$immediateRequest(
+# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab2520);
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$granted(
+# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab2520);
+# 118 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$isOwner(
+# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab2520);
+# 80 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
+static bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$inUse(void );
+
+
+
+
+
+
+
+static uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$userId(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$runTask(void );
+# 52 "/opt/tinyos-2.x/tos/lib/power/PowerDownCleanup.nc"
+static void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$default$cleanup(void );
+# 46 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
+static void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$granted(void );
+#line 81
+static void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$immediateRequested(void );
+# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartConfigure.nc"
+static msp430_uart_union_config_t *TelosSerialP$Msp430UartConfigure$getConfig(void );
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void TelosSerialP$Resource$granted(void );
+# 74 "/opt/tinyos-2.x/tos/interfaces/StdControl.nc"
+static error_t TelosSerialP$StdControl$start(void );
+
+
+
+
+
+
+
+
+
+static error_t TelosSerialP$StdControl$stop(void );
+# 31 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
+static uint8_t SerialPacketInfoActiveMessageP$Info$upperLength(message_t *msg, uint8_t dataLinkLen);
+#line 15
+static uint8_t SerialPacketInfoActiveMessageP$Info$offset(void );
+
+
+
+
+
+
+
+static uint8_t SerialPacketInfoActiveMessageP$Info$dataLinkLength(message_t *msg, uint8_t upperLen);
+# 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
+static error_t /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$send(am_addr_t addr, 
+#line 60
+message_t * msg, 
+
+
+
+
+
+
+
+
+uint8_t len);
+# 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
+static void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$sendDone(
+#line 85
+message_t * msg, 
+
+
+
+error_t error);
+# 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
+static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(
+# 40 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
+am_id_t arg_0x40b27a70, 
+# 92 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
+message_t * msg, 
+
+
+
+
+
+
+error_t error);
+# 64 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
+static error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$send(
+# 38 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
+uint8_t arg_0x40b27088, 
+# 56 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
+message_t * msg, 
+
+
+
+
+
+
+
+uint8_t len);
+#line 89
+static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(
+# 38 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
+uint8_t arg_0x40b27088, 
+# 85 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
+message_t * msg, 
+
+
+
+error_t error);
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$runTask(void );
+#line 64
+static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$CancelTask$runTask(void );
+# 73 "/opt/tinyos-2.x/tos/interfaces/Queue.nc"
+static 
+#line 71
+/*PrintfC.QueueC*/QueueC$0$Queue$t  
+
+/*PrintfC.QueueC*/QueueC$0$Queue$head(void );
+#line 90
+static error_t /*PrintfC.QueueC*/QueueC$0$Queue$enqueue(
+#line 86
+/*PrintfC.QueueC*/QueueC$0$Queue$t  newVal);
+#line 65
+static uint8_t /*PrintfC.QueueC*/QueueC$0$Queue$maxSize(void );
+#line 81
+static 
+#line 79
+/*PrintfC.QueueC*/QueueC$0$Queue$t  
+
+/*PrintfC.QueueC*/QueueC$0$Queue$dequeue(void );
+#line 50
+static bool /*PrintfC.QueueC*/QueueC$0$Queue$empty(void );
+
+
+
+
+
+
+
+static uint8_t /*PrintfC.QueueC*/QueueC$0$Queue$size(void );
+# 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
+static void PrintfP$SerialControl$startDone(error_t error);
+#line 117
+static void PrintfP$SerialControl$stopDone(error_t error);
+# 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
+static void PrintfP$AMSend$sendDone(
+#line 92
+message_t * msg, 
+
+
+
+
+
+
+error_t error);
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void PrintfP$retrySend$runTask(void );
+# 49 "/opt/tinyos-2.x/tos/interfaces/Boot.nc"
+static void PrintfP$MainBoot$booted(void );
+#line 49
+static void TestC$Boot$booted(void );
+# 95 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
+static void TestC$BlockRead$computeCrcDone(storage_addr_t addr, storage_len_t len, 
+uint16_t crc, error_t error);
+#line 67
+static void TestC$BlockRead$readDone(storage_addr_t addr, 
+#line 62
+void * buf, 
+
+
+
+
+storage_len_t len, 
+error_t error);
+# 5 "Lz77Compression.nc"
+static error_t TestC$Lz77Compression$Lz77EncodeDone(error_t success, int *Outbuffer);
+# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+static void TestC$Timer$fired(void );
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$fired(void );
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$overflow(void );
+# 92 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
+static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$startAt(/*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$size_type t0, /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$size_type dt);
+#line 62
+static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$stop(void );
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Init$init(void );
+# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
+static void /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$overflow(void );
+#line 53
+static /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$size_type /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$get(void );
+# 98 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
+static /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getNow(void );
+#line 92
+static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$startAt(/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$size_type t0, /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$size_type dt);
+#line 105
+static /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getAlarm(void );
+#line 62
+static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$stop(void );
+
+
+
+
+static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$fired(void );
+# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
+static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$overflow(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$runTask(void );
+# 67 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
+static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$fired(void );
+# 125 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+static uint32_t /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$getNow(void );
+#line 118
+static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$startOneShotAt(uint32_t t0, uint32_t dt);
+#line 67
+static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$stop(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$runTask(void );
+# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$fired(void );
+#line 125
+static uint32_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$getNow(
+# 37 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
+uint8_t arg_0x40c4c2d8);
+# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(
+# 37 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
+uint8_t arg_0x40c4c2d8);
+# 62 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startOneShot(
+# 37 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
+uint8_t arg_0x40c4c2d8, 
+# 62 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+uint32_t dt);
+
+
+
+
+static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$stop(
+# 37 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
+uint8_t arg_0x40c4c2d8);
+# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
+static void /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter$overflow(void );
+# 68 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+static error_t Stm25pBlockP$Sector$default$read(
+# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40cac408, 
+# 68 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len);
+#line 101
+static void Stm25pBlockP$Sector$writeDone(
+# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40cac408, 
+# 101 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, 
+error_t error);
+
+
+
+
+
+
+
+
+
+static error_t Stm25pBlockP$Sector$default$erase(
+# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40cac408, 
+# 112 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+uint8_t sector, uint8_t num_sectors);
+
+
+
+
+
+
+
+
+static void Stm25pBlockP$Sector$eraseDone(
+# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40cac408, 
+# 121 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+uint8_t sector, uint8_t num_sectors, error_t error);
+#line 144
+static void Stm25pBlockP$Sector$computeCrcDone(
+# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40cac408, 
+# 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+stm25p_addr_t addr, stm25p_len_t len, 
+uint16_t crc, error_t error);
+#line 133
+static error_t Stm25pBlockP$Sector$default$computeCrc(
+# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40cac408, 
+# 133 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+uint16_t crc, stm25p_addr_t addr, 
+stm25p_len_t len);
+#line 91
+static error_t Stm25pBlockP$Sector$default$write(
+# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40cac408, 
+# 91 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len);
+#line 56
+static uint8_t Stm25pBlockP$Sector$default$getNumSectors(
+# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40cac408);
+# 78 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+static void Stm25pBlockP$Sector$readDone(
+# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40cac408, 
+# 78 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, 
+error_t error);
+# 95 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
+static void Stm25pBlockP$Read$default$computeCrcDone(
+# 39 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40c96d48, 
+# 95 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
+storage_addr_t addr, storage_len_t len, 
+uint16_t crc, error_t error);
+#line 67
+static void Stm25pBlockP$Read$default$readDone(
+# 39 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40c96d48, 
+# 67 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
+storage_addr_t addr, 
+#line 62
+void * buf, 
+
+
+
+
+storage_len_t len, 
+error_t error);
+# 112 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
+static void Stm25pBlockP$Write$default$syncDone(
+# 40 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40c8d7e0, 
+# 112 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
+error_t error);
+#line 71
+static void Stm25pBlockP$Write$default$writeDone(
+# 40 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40c8d7e0, 
+# 71 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
+storage_addr_t addr, 
+#line 66
+void * buf, 
+
+
+
+
+storage_len_t len, 
+error_t error);
+#line 91
+static void Stm25pBlockP$Write$default$eraseDone(
+# 40 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40c8d7e0, 
+# 91 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
+error_t error);
+# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t Stm25pBlockP$ClientResource$default$release(
+# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40c8b358);
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void Stm25pBlockP$ClientResource$granted(
+# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+uint8_t arg_0x40c8b358);
+# 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
+static error_t Stm25pSectorP$SplitControl$start(void );
+#line 109
+static error_t Stm25pSectorP$SplitControl$stop(void );
+# 68 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+static error_t Stm25pSectorP$Sector$read(
+# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf2440, 
+# 68 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len);
+#line 101
+static void Stm25pSectorP$Sector$default$writeDone(
+# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf2440, 
+# 101 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, 
+error_t error);
+
+
+
+
+
+
+
+
+
+static error_t Stm25pSectorP$Sector$erase(
+# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf2440, 
+# 112 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+uint8_t sector, uint8_t num_sectors);
+
+
+
+
+
+
+
+
+static void Stm25pSectorP$Sector$default$eraseDone(
+# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf2440, 
+# 121 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+uint8_t sector, uint8_t num_sectors, error_t error);
+#line 144
+static void Stm25pSectorP$Sector$default$computeCrcDone(
+# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf2440, 
+# 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+stm25p_addr_t addr, stm25p_len_t len, 
+uint16_t crc, error_t error);
+#line 133
+static error_t Stm25pSectorP$Sector$computeCrc(
+# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf2440, 
+# 133 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+uint16_t crc, stm25p_addr_t addr, 
+stm25p_len_t len);
+#line 91
+static error_t Stm25pSectorP$Sector$write(
+# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf2440, 
+# 91 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len);
+#line 56
+static uint8_t Stm25pSectorP$Sector$getNumSectors(
+# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf2440);
+# 78 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+static void Stm25pSectorP$Sector$default$readDone(
+# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf2440, 
+# 78 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, 
+error_t error);
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void Stm25pSectorP$Stm25pResource$granted(
+# 47 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf1a50);
+# 48 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pVolume.nc"
+static volume_id_t Stm25pSectorP$Volume$default$getVolumeId(
+# 45 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf1330);
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void Stm25pSectorP$SpiResource$granted(void );
+# 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
+static void Stm25pSectorP$Spi$sectorEraseDone(uint8_t sector, error_t error);
+#line 77
+static void Stm25pSectorP$Spi$readDone(stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len, error_t error);
+#line 125
+static void Stm25pSectorP$Spi$pageProgramDone(stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len, error_t error);
+#line 101
+static void Stm25pSectorP$Spi$computeCrcDone(uint16_t crc, stm25p_addr_t addr, 
+stm25p_len_t len, error_t error);
+#line 159
+static void Stm25pSectorP$Spi$bulkEraseDone(error_t error);
+# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t Stm25pSectorP$ClientResource$release(
+# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf3930);
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void Stm25pSectorP$ClientResource$default$granted(
+# 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+uint8_t arg_0x40cf3930);
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void Stm25pSectorP$signalDone_task$runTask(void );
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$Init$init(void );
+# 43 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
+static bool /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$isEmpty(void );
+#line 60
+static resource_client_id_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$dequeue(void );
+# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+static void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$unconfigure(
+# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab0430);
+# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+static void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$configure(
+# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab0430);
+# 56 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
+static error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$release(void );
+# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$release(
+# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab2520);
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$runTask(void );
+# 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
+static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$startDone(error_t error);
+#line 117
+static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stopDone(error_t error);
+# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$fired(void );
+# 52 "/opt/tinyos-2.x/tos/lib/power/PowerDownCleanup.nc"
+static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$default$cleanup(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask$runTask(void );
+# 46 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
+static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$granted(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$startTask$runTask(void );
+# 74 "/opt/tinyos-2.x/tos/interfaces/StdControl.nc"
+static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$start(void );
+
+
+
+
+
+
+
+
+
+static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$stop(void );
+# 71 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
+static void Stm25pSpiP$SpiPacket$sendDone(
+#line 64
+uint8_t * txBuf, 
+uint8_t * rxBuf, 
+
+
+
+
+
+uint16_t len, 
+error_t error);
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t Stm25pSpiP$Init$init(void );
+# 47 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
+static error_t Stm25pSpiP$Spi$powerDown(void );
+#line 66
+static error_t Stm25pSpiP$Spi$read(stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len);
+#line 136
+static error_t Stm25pSpiP$Spi$sectorErase(uint8_t sector);
+#line 55
+static error_t Stm25pSpiP$Spi$powerUp(void );
+#line 90
+static error_t Stm25pSpiP$Spi$computeCrc(uint16_t crc, stm25p_addr_t addr, 
+stm25p_len_t len);
+#line 114
+static error_t Stm25pSpiP$Spi$pageProgram(stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len);
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void Stm25pSpiP$SpiResource$granted(void );
+#line 110
+static error_t Stm25pSpiP$ClientResource$release(void );
+#line 78
+static error_t Stm25pSpiP$ClientResource$request(void );
+# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$unconfigure(
+# 42 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40dafc98);
+# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$configure(
+# 42 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40dafc98);
+# 59 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
+static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$send(
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40dad820, 
+# 48 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
+uint8_t * txBuf, 
+
+uint8_t * rxBuf, 
+
+
+
+
+
+
+
+
+uint16_t len);
+#line 71
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$default$sendDone(
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40dad820, 
+# 64 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
+uint8_t * txBuf, 
+uint8_t * rxBuf, 
+
+
+
+
+
+uint16_t len, 
+error_t error);
+# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiConfigure.nc"
+static msp430_spi_union_config_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$default$getConfig(
+# 47 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40daca80);
+# 34 "/opt/tinyos-2.x/tos/interfaces/SpiByte.nc"
+static uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiByte$write(uint8_t tx);
+# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$release(
+# 46 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40dac030);
+# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$request(
+# 46 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40dac030);
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$granted(
+# 46 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40dac030);
+# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$release(
+# 41 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40daf250);
+# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$request(
+# 41 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40daf250);
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$default$granted(
+# 41 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40daf250);
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$rxDone(uint8_t data);
+#line 49
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$txDone(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_task$runTask(void );
+# 180 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
+static void HplMsp430Usart0P$Usart$enableRxIntr(void );
+#line 197
+static void HplMsp430Usart0P$Usart$clrRxIntr(void );
+#line 97
+static void HplMsp430Usart0P$Usart$resetUsart(bool reset);
+#line 179
+static void HplMsp430Usart0P$Usart$disableIntr(void );
+#line 90
+static void HplMsp430Usart0P$Usart$setUmctl(uint8_t umctl);
+#line 177
+static void HplMsp430Usart0P$Usart$disableRxIntr(void );
+#line 207
+static void HplMsp430Usart0P$Usart$clrIntr(void );
+#line 80
+static void HplMsp430Usart0P$Usart$setUbr(uint16_t ubr);
+#line 224
+static void HplMsp430Usart0P$Usart$tx(uint8_t data);
+#line 128
+static void HplMsp430Usart0P$Usart$disableUart(void );
+#line 153
+static void HplMsp430Usart0P$Usart$enableSpi(void );
+#line 168
+static void HplMsp430Usart0P$Usart$setModeSpi(msp430_spi_union_config_t *config);
+#line 231
+static uint8_t HplMsp430Usart0P$Usart$rx(void );
+#line 192
+static bool HplMsp430Usart0P$Usart$isRxIntrPending(void );
+#line 158
+static void HplMsp430Usart0P$Usart$disableSpi(void );
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$rxDone(
+# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
+uint8_t arg_0x40a92f08, 
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+uint8_t data);
+#line 49
+static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$txDone(
+# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
+uint8_t arg_0x40a92f08);
+# 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2CInterrupts.nc"
+static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawI2CInterrupts$fired(void );
+#line 39
+static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$default$fired(
+# 40 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
+uint8_t arg_0x40a8fed0);
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$rxDone(uint8_t data);
+#line 49
+static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$txDone(void );
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$Init$init(void );
+# 69 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
+static error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$enqueue(resource_client_id_t id);
+#line 43
+static bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEmpty(void );
+
+
+
+
+
+
+
+
+static bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEnqueued(resource_client_id_t id);
+
+
+
+
+
+
+
+static resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$dequeue(void );
+# 43 "/opt/tinyos-2.x/tos/interfaces/ResourceRequested.nc"
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$default$requested(
+# 55 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab1010);
+# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$unconfigure(
+# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab0430);
+# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$configure(
+# 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab0430);
+# 56 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
+static error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$release(void );
+#line 73
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$requested(void );
+#line 46
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$granted(void );
+# 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$release(
+# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab2520);
+# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$request(
+# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab2520);
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$default$granted(
+# 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+uint8_t arg_0x40ab2520);
+# 80 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
+static bool /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$inUse(void );
+
+
+
+
+
+
+
+static uint8_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$userId(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$runTask(void );
+# 7 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2C.nc"
+static void HplMsp430I2C0P$HplI2C$clearModeI2C(void );
+#line 6
+static bool HplMsp430I2C0P$HplI2C$isI2C(void );
+# 35 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
+static void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$makeOutput(void );
+#line 29
+static void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$set(void );
+static void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$clr(void );
+
+
+
+
+static void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$makeOutput(void );
+#line 29
+static void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$set(void );
+# 48 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pVolume.nc"
+static volume_id_t /*Lz77AppC.BlockStorageC.BinderP*/Stm25pBinderP$0$Volume$getVolumeId(void );
+# 5 "Lz77Compression.nc"
+static error_t LZ77M$Lz77Compression$Lz77EncodeDone(error_t success, int *Outbuffer);
+# 125 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+static uint32_t LZ77M$Timer$getNow(void );
+# 13 "LZ77M.nc"
+int LZ77M$matchlen;
+#line 13
+int LZ77M$matchpos;
+int LZ77M$dict[250];
+int LZ77M$index1 = 0;
+int LZ77M$nextlinklen = 0;
+int LZ77M$nextlink[250];
+int LZ77M$Outbuffer[256 * 3];
+int LZ77M$FLAG = 0;
+
+int *LZ77M$brr;
+
+uint16_t LZ77M$timetaken;
+uint16_t LZ77M$start_time;
+#line 24
+uint16_t LZ77M$end_time;
+
+
+static inline int8_t LZ77M$search(int a);
+#line 50
+static void LZ77M$encode(int matchlen1, int matchpos1, int result, int symbol);
+#line 72
+static void LZ77M$shift(int val);
+#line 95
+static inline void LZ77M$findMaxmatch(void );
+#line 122
+static error_t LZ77M$Lz77Compression$Lz77Encode(int *arr1);
+#line 169
+static inline void LZ77M$Timer$fired(void );
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t PlatformP$MoteInit$init(void );
+#line 51
+static error_t PlatformP$MoteClockInit$init(void );
+#line 51
+static error_t PlatformP$LedsInit$init(void );
+# 10 "/opt/tinyos-2.x/tos/platforms/telosa/PlatformP.nc"
+static inline error_t PlatformP$Init$init(void );
+# 6 "/opt/tinyos-2.x/tos/platforms/telosb/MotePlatformC.nc"
+static __inline void MotePlatformC$uwait(uint16_t u);
+
+
+
+
+static __inline void MotePlatformC$TOSH_wait(void );
+
+
+
+
+static void MotePlatformC$TOSH_FLASH_M25P_DP_bit(bool set);
+
+
+
+
+
+
+
+
+
+
+static inline void MotePlatformC$TOSH_FLASH_M25P_DP(void );
+#line 56
+static inline error_t MotePlatformC$Init$init(void );
+# 32 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockInit.nc"
+static void Msp430ClockP$Msp430ClockInit$initTimerB(void );
+#line 31
+static void Msp430ClockP$Msp430ClockInit$initTimerA(void );
+#line 29
+static void Msp430ClockP$Msp430ClockInit$setupDcoCalibrate(void );
+static void Msp430ClockP$Msp430ClockInit$initClocks(void );
+# 39 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockP.nc"
+static volatile uint8_t Msp430ClockP$IE1 __asm ("0x0000");
+static volatile uint16_t Msp430ClockP$TA0CTL __asm ("0x0160");
+static volatile uint16_t Msp430ClockP$TA0IV __asm ("0x012E");
+static volatile uint16_t Msp430ClockP$TBCTL __asm ("0x0180");
+static volatile uint16_t Msp430ClockP$TBIV __asm ("0x011E");
+
+enum Msp430ClockP$__nesc_unnamed4299 {
+
+  Msp430ClockP$ACLK_CALIB_PERIOD = 8, 
+  Msp430ClockP$TARGET_DCO_DELTA = 4096 / 32 * Msp430ClockP$ACLK_CALIB_PERIOD
+};
+
+
+static inline void Msp430ClockP$Msp430ClockInit$defaultSetupDcoCalibrate(void );
+#line 64
+static inline void Msp430ClockP$Msp430ClockInit$defaultInitClocks(void );
+#line 85
+static inline void Msp430ClockP$Msp430ClockInit$defaultInitTimerA(void );
+#line 100
+static inline void Msp430ClockP$Msp430ClockInit$defaultInitTimerB(void );
+#line 115
+static inline void Msp430ClockP$Msp430ClockInit$default$setupDcoCalibrate(void );
+
+
+
+
+static inline void Msp430ClockP$Msp430ClockInit$default$initClocks(void );
+
+
+
+
+static inline void Msp430ClockP$Msp430ClockInit$default$initTimerA(void );
+
+
+
+
+static inline void Msp430ClockP$Msp430ClockInit$default$initTimerB(void );
+
+
+
+
+
+static inline void Msp430ClockP$startTimerA(void );
+#line 148
+static inline void Msp430ClockP$startTimerB(void );
+#line 160
+static void Msp430ClockP$set_dco_calib(int calib);
+
+
+
+
+
+static inline uint16_t Msp430ClockP$test_calib_busywait_delta(int calib);
+#line 189
+static inline void Msp430ClockP$busyCalibrateDco(void );
+#line 214
+static inline error_t Msp430ClockP$Init$init(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$fired(
+# 40 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
+uint8_t arg_0x40686428);
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Timer$overflow(void );
+# 115 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
+static inline void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX0$fired(void );
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX1$fired(void );
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Overflow$fired(void );
+
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$default$fired(uint8_t n);
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$fired(
+# 40 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
+uint8_t arg_0x40686428);
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$overflow(void );
+# 51 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$get(void );
+#line 70
+static inline bool /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$isOverflowPending(void );
+#line 115
+static inline void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX0$fired(void );
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX1$fired(void );
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Overflow$fired(void );
+
+
+
+
+
+
+
+
+static void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$default$fired(uint8_t n);
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$captured(uint16_t time);
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$fired(void );
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t;
+
+
+static inline /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$int2CC(uint16_t x)  ;
+#line 74
+static inline /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Control$getControl(void );
+#line 139
+static inline uint16_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$getEvent(void );
+#line 169
+static void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Event$fired(void );
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$default$captured(uint16_t n);
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$default$fired(void );
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Timer$overflow(void );
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$captured(uint16_t time);
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$fired(void );
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t;
+
+
+static inline /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$int2CC(uint16_t x)  ;
+#line 74
+static inline /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Control$getControl(void );
+#line 139
+static inline uint16_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$getEvent(void );
+#line 169
+static void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Event$fired(void );
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$default$captured(uint16_t n);
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$default$fired(void );
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Timer$overflow(void );
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$captured(uint16_t time);
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$fired(void );
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t;
+
+
+static inline /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$int2CC(uint16_t x)  ;
+#line 74
+static inline /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Control$getControl(void );
+#line 139
+static inline uint16_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$getEvent(void );
+#line 169
+static void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Event$fired(void );
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$default$captured(uint16_t n);
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$default$fired(void );
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Timer$overflow(void );
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$captured(uint16_t time);
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$fired(void );
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+static uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$get(void );
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t;
+
+static inline uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$CC2int(/*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t x)  ;
+static inline /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$int2CC(uint16_t x)  ;
+
+static inline uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$compareControl(void );
+#line 74
+static inline /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$getControl(void );
+
+
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$clearPendingInterrupt(void );
+
+
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$setControlAsCompare(void );
+#line 119
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$enableEvents(void );
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$disableEvents(void );
+#line 139
+static inline uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$getEvent(void );
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEvent(uint16_t x);
+
+
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEventFromNow(uint16_t x);
+#line 169
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Event$fired(void );
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$default$captured(uint16_t n);
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$overflow(void );
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$captured(uint16_t time);
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Compare$fired(void );
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$cc_t;
+
+
+static inline /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$cc_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$int2CC(uint16_t x)  ;
+#line 74
+static inline /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$cc_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Control$getControl(void );
+#line 139
+static inline uint16_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$getEvent(void );
+#line 169
+static inline void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Event$fired(void );
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$default$captured(uint16_t n);
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Compare$default$fired(void );
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Timer$overflow(void );
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$captured(uint16_t time);
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Compare$fired(void );
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$cc_t;
+
+
+static inline /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$cc_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$int2CC(uint16_t x)  ;
+#line 74
+static inline /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$cc_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Control$getControl(void );
+#line 139
+static inline uint16_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$getEvent(void );
+#line 169
+static inline void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Event$fired(void );
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$default$captured(uint16_t n);
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Compare$default$fired(void );
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Timer$overflow(void );
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$captured(uint16_t time);
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Compare$fired(void );
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$cc_t;
+
+
+static inline /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$cc_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$int2CC(uint16_t x)  ;
+#line 74
+static inline /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$cc_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Control$getControl(void );
+#line 139
+static inline uint16_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$getEvent(void );
+#line 169
+static inline void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Event$fired(void );
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$default$captured(uint16_t n);
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Compare$default$fired(void );
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Timer$overflow(void );
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$captured(uint16_t time);
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Compare$fired(void );
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$cc_t;
+
+
+static inline /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$cc_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$int2CC(uint16_t x)  ;
+#line 74
+static inline /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$cc_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Control$getControl(void );
+#line 139
+static inline uint16_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$getEvent(void );
+#line 169
+static inline void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Event$fired(void );
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$default$captured(uint16_t n);
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Compare$default$fired(void );
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Timer$overflow(void );
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$captured(uint16_t time);
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Compare$fired(void );
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$cc_t;
+
+
+static inline /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$cc_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$int2CC(uint16_t x)  ;
+#line 74
+static inline /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$cc_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Control$getControl(void );
+#line 139
+static inline uint16_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$getEvent(void );
+#line 169
+static inline void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Event$fired(void );
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$default$captured(uint16_t n);
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Compare$default$fired(void );
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Timer$overflow(void );
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+static void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$captured(uint16_t time);
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+static void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Compare$fired(void );
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$cc_t;
+
+
+static inline /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$cc_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$int2CC(uint16_t x)  ;
+#line 74
+static inline /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$cc_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Control$getControl(void );
+#line 139
+static inline uint16_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$getEvent(void );
+#line 169
+static inline void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Event$fired(void );
+
+
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$default$captured(uint16_t n);
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Compare$default$fired(void );
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Timer$overflow(void );
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+static void Msp430TimerCommonP$VectorTimerB1$fired(void );
+#line 28
+static void Msp430TimerCommonP$VectorTimerA0$fired(void );
+#line 28
+static void Msp430TimerCommonP$VectorTimerA1$fired(void );
+#line 28
+static void Msp430TimerCommonP$VectorTimerB0$fired(void );
+# 11 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCommonP.nc"
+void sig_TIMERA0_VECTOR(void ) __attribute((wakeup)) __attribute((interrupt(12)))  ;
+void sig_TIMERA1_VECTOR(void ) __attribute((wakeup)) __attribute((interrupt(10)))  ;
+void sig_TIMERB0_VECTOR(void ) __attribute((wakeup)) __attribute((interrupt(26)))  ;
+void sig_TIMERB1_VECTOR(void ) __attribute((wakeup)) __attribute((interrupt(24)))  ;
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t RealMainP$SoftwareInit$init(void );
+# 49 "/opt/tinyos-2.x/tos/interfaces/Boot.nc"
+static void RealMainP$Boot$booted(void );
+# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
+static error_t RealMainP$PlatformInit$init(void );
+# 46 "/opt/tinyos-2.x/tos/interfaces/Scheduler.nc"
+static void RealMainP$Scheduler$init(void );
+#line 61
+static void RealMainP$Scheduler$taskLoop(void );
+#line 54
+static bool RealMainP$Scheduler$runNextTask(void );
+# 52 "/opt/tinyos-2.x/tos/system/RealMainP.nc"
+int main(void )   ;
+# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static void SchedulerBasicP$TaskBasic$runTask(
+# 45 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
+uint8_t arg_0x405924a0);
+# 59 "/opt/tinyos-2.x/tos/interfaces/McuSleep.nc"
+static void SchedulerBasicP$McuSleep$sleep(void );
+# 50 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
+enum SchedulerBasicP$__nesc_unnamed4300 {
+
+  SchedulerBasicP$NUM_TASKS = 18U, 
+  SchedulerBasicP$NO_TASK = 255
+};
+
+uint8_t SchedulerBasicP$m_head;
+uint8_t SchedulerBasicP$m_tail;
+uint8_t SchedulerBasicP$m_next[SchedulerBasicP$NUM_TASKS];
+
+
+
+
+
+
+
+
+static __inline uint8_t SchedulerBasicP$popTask(void );
+#line 86
+static inline bool SchedulerBasicP$isWaiting(uint8_t id);
+
+
+
+
+static inline bool SchedulerBasicP$pushTask(uint8_t id);
+#line 113
+static inline void SchedulerBasicP$Scheduler$init(void );
+
+
+
+
+
+
+
+
+
+static bool SchedulerBasicP$Scheduler$runNextTask(void );
+#line 138
+static inline void SchedulerBasicP$Scheduler$taskLoop(void );
+#line 159
+static error_t SchedulerBasicP$TaskBasic$postTask(uint8_t id);
+
+
+
+
+static void SchedulerBasicP$TaskBasic$default$runTask(uint8_t id);
+# 54 "/opt/tinyos-2.x/tos/interfaces/McuPowerOverride.nc"
+static mcu_power_t McuSleepC$McuPowerOverride$lowestState(void );
+# 51 "/opt/tinyos-2.x/tos/chips/msp430/McuSleepC.nc"
+bool McuSleepC$dirty = TRUE;
+mcu_power_t McuSleepC$powerState = MSP430_POWER_ACTIVE;
+
+
+
+
+const uint16_t McuSleepC$msp430PowerBits[MSP430_POWER_LPM4 + 1] = { 
+0, 
+0x0010, 
+0x0040 + 0x0010, 
+0x0080 + 0x0010, 
+0x0080 + 0x0040 + 0x0010, 
+0x0080 + 0x0040 + 0x0020 + 0x0010 };
+
+
+static inline mcu_power_t McuSleepC$getPowerState(void );
+#line 104
+static inline void McuSleepC$computePowerState(void );
+
+
+
+
+static inline void McuSleepC$McuSleep$sleep(void );
+#line 126
+static inline mcu_power_t McuSleepC$McuPowerOverride$default$lowestState(void );
+# 64 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
+static error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$send(
+#line 56
+message_t * msg, 
+
+
+
+
+
+
+
+uint8_t len);
+# 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
+static void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$sendDone(
+# 36 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
+am_id_t arg_0x40753598, 
+# 92 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
+message_t * msg, 
+
+
+
+
+
+
+error_t error);
+# 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
+static 
+#line 63
+message_t * 
+
+
+
+/*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$receive(
+# 37 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
+am_id_t arg_0x40751010, 
+# 60 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
+message_t * msg, 
+void * payload, 
+
+
+
+
+
+uint8_t len);
 # 49 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-static inline serial_header_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(message_t *msg);
+static inline serial_header_t * /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(message_t * msg);
 
 
 
-static  error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$send(am_id_t id, am_addr_t dest, 
+
+
+
+
+static error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$send(am_id_t id, am_addr_t dest, 
 message_t *msg, 
 uint8_t len);
-#line 81
-static inline  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$sendDone(message_t *msg, error_t result);
+#line 85
+static inline void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$sendDone(message_t *msg, error_t result);
 
 
 
@@ -3094,30 +4098,11 @@ static inline  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$se
 
 
 
-static inline   message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$default$receive(uint8_t id, message_t *msg, void *payload, uint8_t len);
-#line 102
-static inline  message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubReceive$receive(message_t *msg, void *payload, uint8_t len);
+static inline message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$default$receive(uint8_t id, message_t *msg, void *payload, uint8_t len);
 
 
 
-
-
-
-
-static  uint8_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$payloadLength(message_t *msg);
-
-
-
-
-static inline  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$setPayloadLength(message_t *msg, uint8_t len);
-
-
-
-
-
-
-
-static  void */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(message_t *msg, uint8_t *len);
+static inline message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubReceive$receive(message_t *msg, void *payload, uint8_t len);
 
 
 
@@ -3126,9 +4111,22 @@ static  void */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayloa
 
 
 
+static inline uint8_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$payloadLength(message_t *msg);
 
 
-static  am_addr_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$destination(message_t *amsg);
+
+
+static inline void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$setPayloadLength(message_t *msg, uint8_t len);
+
+
+
+static inline uint8_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$maxPayloadLength(void );
+
+
+
+static void */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(message_t *msg, uint8_t len);
+#line 132
+static am_addr_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$destination(message_t *amsg);
 
 
 
@@ -3138,22 +4136,22 @@ static  am_addr_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$des
 
 
 
-static inline  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setDestination(message_t *amsg, am_addr_t addr);
-#line 158
-static  am_id_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$type(message_t *amsg);
+static inline void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setDestination(message_t *amsg, am_addr_t addr);
+#line 156
+static am_id_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$type(message_t *amsg);
 
 
 
 
-static inline  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setType(message_t *amsg, am_id_t type);
+static inline void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setType(message_t *amsg, am_id_t type);
 # 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  void SerialP$SplitControl$startDone(error_t arg_0x4056be70);
+static void SerialP$SplitControl$startDone(error_t error);
 #line 117
-static  void SerialP$SplitControl$stopDone(error_t arg_0x4056aa78);
+static void SerialP$SplitControl$stopDone(error_t error);
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t SerialP$stopDoneTask$postTask(void);
+static error_t SerialP$stopDoneTask$postTask(void );
 # 74 "/opt/tinyos-2.x/tos/interfaces/StdControl.nc"
-static  error_t SerialP$SerialControl$start(void);
+static error_t SerialP$SerialControl$start(void );
 
 
 
@@ -3163,23 +4161,23 @@ static  error_t SerialP$SerialControl$start(void);
 
 
 
-static  error_t SerialP$SerialControl$stop(void);
+static error_t SerialP$SerialControl$stop(void );
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t SerialP$RunTx$postTask(void);
+static error_t SerialP$RunTx$postTask(void );
 # 38 "/opt/tinyos-2.x/tos/lib/serial/SerialFlush.nc"
-static  void SerialP$SerialFlush$flush(void);
+static void SerialP$SerialFlush$flush(void );
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t SerialP$startDoneTask$postTask(void);
+static error_t SerialP$startDoneTask$postTask(void );
 # 45 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
-static   error_t SerialP$SerialFrameComm$putDelimiter(void);
+static error_t SerialP$SerialFrameComm$putDelimiter(void );
 #line 68
-static   void SerialP$SerialFrameComm$resetReceive(void);
+static void SerialP$SerialFrameComm$resetReceive(void );
 #line 54
-static   error_t SerialP$SerialFrameComm$putData(uint8_t arg_0x405feed8);
+static error_t SerialP$SerialFrameComm$putData(uint8_t data);
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t SerialP$defaultSerialFlushTask$postTask(void);
+static error_t SerialP$defaultSerialFlushTask$postTask(void );
 # 70 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
-static   uint8_t SerialP$SendBytePacket$nextByte(void);
+static uint8_t SerialP$SendBytePacket$nextByte(void );
 
 
 
@@ -3189,16 +4187,16 @@ static   uint8_t SerialP$SendBytePacket$nextByte(void);
 
 
 
-static   void SerialP$SendBytePacket$sendCompleted(error_t arg_0x405f3578);
+static void SerialP$SendBytePacket$sendCompleted(error_t error);
 # 51 "/opt/tinyos-2.x/tos/lib/serial/ReceiveBytePacket.nc"
-static   error_t SerialP$ReceiveBytePacket$startPacket(void);
+static error_t SerialP$ReceiveBytePacket$startPacket(void );
 
 
 
 
 
 
-static   void SerialP$ReceiveBytePacket$byteReceived(uint8_t arg_0x406026e8);
+static void SerialP$ReceiveBytePacket$byteReceived(uint8_t data);
 
 
 
@@ -3209,16 +4207,16 @@ static   void SerialP$ReceiveBytePacket$byteReceived(uint8_t arg_0x406026e8);
 
 
 
-static   void SerialP$ReceiveBytePacket$endPacket(error_t arg_0x40602cb8);
+static void SerialP$ReceiveBytePacket$endPacket(error_t result);
 # 189 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-enum SerialP$__nesc_unnamed4298 {
+enum SerialP$__nesc_unnamed4301 {
 #line 189
   SerialP$RunTx = 0U
 };
 #line 189
 typedef int SerialP$__nesc_sillytask_RunTx[SerialP$RunTx];
 #line 320
-enum SerialP$__nesc_unnamed4299 {
+enum SerialP$__nesc_unnamed4302 {
 #line 320
   SerialP$startDoneTask = 1U
 };
@@ -3229,7 +4227,7 @@ typedef int SerialP$__nesc_sillytask_startDoneTask[SerialP$startDoneTask];
 
 
 
-enum SerialP$__nesc_unnamed4300 {
+enum SerialP$__nesc_unnamed4303 {
 #line 326
   SerialP$stopDoneTask = 2U
 };
@@ -3243,14 +4241,14 @@ typedef int SerialP$__nesc_sillytask_stopDoneTask[SerialP$stopDoneTask];
 
 
 
-enum SerialP$__nesc_unnamed4301 {
+enum SerialP$__nesc_unnamed4304 {
 #line 335
   SerialP$defaultSerialFlushTask = 3U
 };
 #line 335
 typedef int SerialP$__nesc_sillytask_defaultSerialFlushTask[SerialP$defaultSerialFlushTask];
 #line 79
-enum SerialP$__nesc_unnamed4302 {
+enum SerialP$__nesc_unnamed4305 {
   SerialP$RX_DATA_BUFFER_SIZE = 2, 
   SerialP$TX_DATA_BUFFER_SIZE = 4, 
   SerialP$SERIAL_MTU = 255, 
@@ -3258,7 +4256,7 @@ enum SerialP$__nesc_unnamed4302 {
   SerialP$ACK_QUEUE_SIZE = 5
 };
 
-enum SerialP$__nesc_unnamed4303 {
+enum SerialP$__nesc_unnamed4306 {
   SerialP$RXSTATE_NOSYNC, 
   SerialP$RXSTATE_PROTO, 
   SerialP$RXSTATE_TOKEN, 
@@ -3266,7 +4264,7 @@ enum SerialP$__nesc_unnamed4303 {
   SerialP$RXSTATE_INACTIVE
 };
 
-enum SerialP$__nesc_unnamed4304 {
+enum SerialP$__nesc_unnamed4307 {
   SerialP$TXSTATE_IDLE, 
   SerialP$TXSTATE_PROTO, 
   SerialP$TXSTATE_SEQNO, 
@@ -3285,13 +4283,13 @@ enum SerialP$__nesc_unnamed4304 {
 
 
 #line 109
-typedef enum SerialP$__nesc_unnamed4305 {
+typedef enum SerialP$__nesc_unnamed4308 {
   SerialP$BUFFER_AVAILABLE, 
   SerialP$BUFFER_FILLING, 
   SerialP$BUFFER_COMPLETE
 } SerialP$tx_data_buffer_states_t;
 
-enum SerialP$__nesc_unnamed4306 {
+enum SerialP$__nesc_unnamed4309 {
   SerialP$TX_ACK_INDEX = 0, 
   SerialP$TX_DATA_INDEX = 1, 
   SerialP$TX_BUFFER_COUNT = 2
@@ -3303,7 +4301,7 @@ enum SerialP$__nesc_unnamed4306 {
 
 
 #line 122
-typedef struct SerialP$__nesc_unnamed4307 {
+typedef struct SerialP$__nesc_unnamed4310 {
   uint8_t writePtr;
   uint8_t readPtr;
   uint8_t buf[SerialP$RX_DATA_BUFFER_SIZE + 1];
@@ -3313,7 +4311,7 @@ typedef struct SerialP$__nesc_unnamed4307 {
 
 
 #line 128
-typedef struct SerialP$__nesc_unnamed4308 {
+typedef struct SerialP$__nesc_unnamed4311 {
   uint8_t state;
   uint8_t buf;
 } SerialP$tx_buf_t;
@@ -3323,7 +4321,7 @@ typedef struct SerialP$__nesc_unnamed4308 {
 
 
 #line 133
-typedef struct SerialP$__nesc_unnamed4309 {
+typedef struct SerialP$__nesc_unnamed4312 {
   uint8_t writePtr;
   uint8_t readPtr;
   uint8_t buf[SerialP$ACK_QUEUE_SIZE + 1];
@@ -3344,13 +4342,13 @@ uint16_t SerialP$rxCRC;
 
 
 
- uint8_t SerialP$txState;
- uint8_t SerialP$txByteCnt;
- uint8_t SerialP$txProto;
- uint8_t SerialP$txSeqno;
- uint16_t SerialP$txCRC;
+uint8_t SerialP$txState;
+uint8_t SerialP$txByteCnt;
+uint8_t SerialP$txProto;
+uint8_t SerialP$txSeqno;
+uint16_t SerialP$txCRC;
 uint8_t SerialP$txPending;
- uint8_t SerialP$txIndex;
+uint8_t SerialP$txIndex;
 
 
 SerialP$ack_queue_t SerialP$ackQ;
@@ -3359,33 +4357,33 @@ bool SerialP$offPending = FALSE;
 
 
 
-static __inline void SerialP$txInit(void);
-static __inline void SerialP$rxInit(void);
-static __inline void SerialP$ackInit(void);
+static __inline void SerialP$txInit(void );
+static __inline void SerialP$rxInit(void );
+static __inline void SerialP$ackInit(void );
 
-static __inline bool SerialP$ack_queue_is_full(void);
-static __inline bool SerialP$ack_queue_is_empty(void);
+static __inline bool SerialP$ack_queue_is_full(void );
+static __inline bool SerialP$ack_queue_is_empty(void );
 static __inline void SerialP$ack_queue_push(uint8_t token);
-static __inline uint8_t SerialP$ack_queue_top(void);
-static inline uint8_t SerialP$ack_queue_pop(void);
+static __inline uint8_t SerialP$ack_queue_top(void );
+static inline uint8_t SerialP$ack_queue_pop(void );
 
 
 
 
 static __inline void SerialP$rx_buffer_push(uint8_t data);
-static __inline uint8_t SerialP$rx_buffer_top(void);
-static __inline uint8_t SerialP$rx_buffer_pop(void);
-static __inline uint16_t SerialP$rx_current_crc(void);
+static __inline uint8_t SerialP$rx_buffer_top(void );
+static __inline uint8_t SerialP$rx_buffer_pop(void );
+static __inline uint16_t SerialP$rx_current_crc(void );
 
 static void SerialP$rx_state_machine(bool isDelimeter, uint8_t data);
-static void SerialP$MaybeScheduleTx(void);
+static void SerialP$MaybeScheduleTx(void );
 
 
 
 
-static __inline void SerialP$txInit(void);
+static __inline void SerialP$txInit(void );
 #line 205
-static __inline void SerialP$rxInit(void);
+static __inline void SerialP$rxInit(void );
 
 
 
@@ -3394,13 +4392,13 @@ static __inline void SerialP$rxInit(void);
 
 
 
-static __inline void SerialP$ackInit(void);
+static __inline void SerialP$ackInit(void );
 
 
 
-static inline  error_t SerialP$Init$init(void);
+static inline error_t SerialP$Init$init(void );
 #line 232
-static __inline bool SerialP$ack_queue_is_full(void);
+static __inline bool SerialP$ack_queue_is_full(void );
 
 
 
@@ -3410,7 +4408,7 @@ static __inline bool SerialP$ack_queue_is_full(void);
 
 
 
-static __inline bool SerialP$ack_queue_is_empty(void);
+static __inline bool SerialP$ack_queue_is_empty(void );
 
 
 
@@ -3426,7 +4424,7 @@ static __inline void SerialP$ack_queue_push(uint8_t token);
 
 
 
-static __inline uint8_t SerialP$ack_queue_top(void);
+static __inline uint8_t SerialP$ack_queue_top(void );
 
 
 
@@ -3436,66 +4434,66 @@ static __inline uint8_t SerialP$ack_queue_top(void);
 
 
 
-static inline uint8_t SerialP$ack_queue_pop(void);
+static inline uint8_t SerialP$ack_queue_pop(void );
 #line 295
 static __inline void SerialP$rx_buffer_push(uint8_t data);
 
 
 
-static __inline uint8_t SerialP$rx_buffer_top(void);
+static __inline uint8_t SerialP$rx_buffer_top(void );
 
 
 
-static __inline uint8_t SerialP$rx_buffer_pop(void);
-
-
-
-
-
-static __inline uint16_t SerialP$rx_current_crc(void);
+static __inline uint8_t SerialP$rx_buffer_pop(void );
 
 
 
 
+
+static __inline uint16_t SerialP$rx_current_crc(void );
 
 
 
 
 
 
-static inline  void SerialP$startDoneTask$runTask(void);
+
+
+
+
+static inline void SerialP$startDoneTask$runTask(void );
 
 
 
 
 
-static inline  void SerialP$stopDoneTask$runTask(void);
+static inline void SerialP$stopDoneTask$runTask(void );
 
 
 
-static inline  void SerialP$SerialFlush$flushDone(void);
-
-
-
-
-static inline  void SerialP$defaultSerialFlushTask$runTask(void);
-
-
-static inline   void SerialP$SerialFlush$default$flush(void);
-
-
-
-static inline  error_t SerialP$SplitControl$start(void);
+static inline void SerialP$SerialFlush$flushDone(void );
 
 
 
 
-static void SerialP$testOff(void);
+static inline void SerialP$defaultSerialFlushTask$runTask(void );
+
+
+static inline void SerialP$SerialFlush$default$flush(void );
+
+
+
+static inline error_t SerialP$SplitControl$start(void );
+
+
+
+
+static void SerialP$testOff(void );
 #line 384
-static inline   void SerialP$SerialFrameComm$delimiterReceived(void);
+static inline void SerialP$SerialFrameComm$delimiterReceived(void );
 
 
-static inline   void SerialP$SerialFrameComm$dataReceived(uint8_t data);
+static inline void SerialP$SerialFrameComm$dataReceived(uint8_t data);
 
 
 
@@ -3512,7 +4510,7 @@ static inline bool SerialP$valid_rx_proto(uint8_t proto);
 
 static void SerialP$rx_state_machine(bool isDelimeter, uint8_t data);
 #line 502
-static void SerialP$MaybeScheduleTx(void);
+static void SerialP$MaybeScheduleTx(void );
 
 
 
@@ -3523,7 +4521,7 @@ static void SerialP$MaybeScheduleTx(void);
 
 
 
-static inline   error_t SerialP$SendBytePacket$completeSend(void);
+static inline error_t SerialP$SendBytePacket$completeSend(void );
 
 
 
@@ -3532,70 +4530,87 @@ static inline   error_t SerialP$SendBytePacket$completeSend(void);
 
 
 
-static inline   error_t SerialP$SendBytePacket$startSend(uint8_t b);
+static inline error_t SerialP$SendBytePacket$startSend(uint8_t b);
 #line 539
-static inline  void SerialP$RunTx$runTask(void);
+static inline void SerialP$RunTx$runTask(void );
 #line 642
-static inline   void SerialP$SerialFrameComm$putDone(void);
+static inline void SerialP$SerialFrameComm$putDone(void );
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$postTask(void);
+static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$postTask(void );
 # 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-static  void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$sendDone(
+static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$sendDone(
 # 40 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x4065ea78, 
-# 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-message_t *arg_0x405aedf0, error_t arg_0x405ad010);
+uart_id_t arg_0x407f8010, 
+# 85 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
+message_t * msg, 
+
+
+
+error_t error);
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone$postTask(void);
+static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone$postTask(void );
 # 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-static  message_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$receive(
+static 
+#line 63
+message_t * 
+
+
+
+/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$receive(
 # 39 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x4065e300, 
-# 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-message_t *arg_0x40584190, void *arg_0x40584330, uint8_t arg_0x405844b8);
+uart_id_t arg_0x407fb918, 
+# 60 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
+message_t * msg, 
+void * payload, 
+
+
+
+
+
+uint8_t len);
 # 31 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$upperLength(
+static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$upperLength(
 # 43 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x40671460, 
+uart_id_t arg_0x407f8b10, 
 # 31 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-message_t *arg_0x405f1aa0, uint8_t arg_0x405f1c30);
+message_t *msg, uint8_t dataLinkLen);
 #line 15
-static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$offset(
+static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$offset(
 # 43 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x40671460);
+uart_id_t arg_0x407f8b10);
 # 23 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$dataLinkLength(
+static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$dataLinkLength(
 # 43 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x40671460, 
+uart_id_t arg_0x407f8b10, 
 # 23 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-message_t *arg_0x405f12a8, uint8_t arg_0x405f1438);
+message_t *msg, uint8_t upperLen);
 # 60 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
-static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$completeSend(void);
+static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$completeSend(void );
 #line 51
-static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$startSend(uint8_t arg_0x405f5558);
-# 152 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-enum /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_unnamed4310 {
-#line 152
+static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$startSend(uint8_t first_byte);
+# 147 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+enum /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_unnamed4313 {
+#line 147
   SerialDispatcherP$0$signalSendDone = 4U
 };
-#line 152
+#line 147
 typedef int /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_sillytask_signalSendDone[/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone];
-#line 269
-enum /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_unnamed4311 {
-#line 269
+#line 264
+enum /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_unnamed4314 {
+#line 264
   SerialDispatcherP$0$receiveTask = 5U
 };
-#line 269
+#line 264
 typedef int /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_sillytask_receiveTask[/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask];
 #line 55
 #line 51
-typedef enum /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_unnamed4312 {
+typedef enum /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_unnamed4315 {
   SerialDispatcherP$0$SEND_STATE_IDLE = 0, 
   SerialDispatcherP$0$SEND_STATE_BEGIN = 1, 
   SerialDispatcherP$0$SEND_STATE_DATA = 2
 } /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$send_state_t;
 
-enum /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_unnamed4313 {
+enum /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_unnamed4316 {
   SerialDispatcherP$0$RECV_STATE_IDLE = 0, 
   SerialDispatcherP$0$RECV_STATE_BEGIN = 1, 
   SerialDispatcherP$0$RECV_STATE_DATA = 2
@@ -3607,7 +4622,7 @@ enum /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_unnamed43
 
 
 #line 63
-typedef struct /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_unnamed4314 {
+typedef struct /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$__nesc_unnamed4317 {
   uint8_t which : 1;
   uint8_t bufZeroLocked : 1;
   uint8_t bufOneLocked : 1;
@@ -3622,18 +4637,18 @@ uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex = 0
 
 
 message_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messages[2];
-message_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messagePtrs[2] = { &/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messages[0], &/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messages[1] };
+message_t * /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messagePtrs[2] = { &/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messages[0], &/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messages[1] };
 
 
 
 
-uint8_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBuffer = (uint8_t *)&/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messages[0];
+uint8_t * /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBuffer = (uint8_t * )&/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messages[0];
 
-uint8_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendBuffer = (void *)0;
+uint8_t * /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendBuffer = (void *)0;
 /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$send_state_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendState = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SEND_STATE_IDLE;
 uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendLen = 0;
 uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendIndex = 0;
- error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendError = SUCCESS;
+error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendError = SUCCESS;
 bool /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendCancelled = FALSE;
 uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendId = 0;
 
@@ -3641,25 +4656,25 @@ uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendId = 0;
 uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskPending = FALSE;
 uart_id_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskType = 0;
 uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskWhich;
-message_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskBuf = (void *)0;
+message_t * /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskBuf = (void *)0;
 uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskSize = 0;
 
-static inline  error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$send(uint8_t id, message_t *msg, uint8_t len);
-#line 152
-static inline  void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone$runTask(void);
-#line 172
-static inline   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$nextByte(void);
-#line 188
-static inline   void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$sendCompleted(error_t error);
+static inline error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$send(uint8_t id, message_t *msg, uint8_t len);
+#line 147
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone$runTask(void );
+#line 167
+static inline uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$nextByte(void );
+#line 183
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$sendCompleted(error_t error);
 
 
 
 
-static inline bool /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$isCurrentBufferLocked(void);
+static inline bool /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$isCurrentBufferLocked(void );
 
 
 
-static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$lockCurrentBuffer(void);
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$lockCurrentBuffer(void );
 
 
 
@@ -3677,80 +4692,86 @@ static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$un
 
 
 
-static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBufferSwap(void);
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBufferSwap(void );
 
 
 
 
-static inline   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$startPacket(void);
-#line 238
-static inline   void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$byteReceived(uint8_t b);
-#line 269
-static inline  void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$runTask(void);
-#line 290
-static   void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$endPacket(error_t result);
-#line 349
-static inline    uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$offset(uart_id_t id);
+static inline error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$startPacket(void );
+#line 233
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$byteReceived(uint8_t b);
+#line 264
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$runTask(void );
+#line 285
+static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$endPacket(error_t result);
+#line 344
+static inline uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$offset(uart_id_t id);
 
 
-static inline    uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$dataLinkLength(uart_id_t id, message_t *msg, 
+static inline uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$dataLinkLength(uart_id_t id, message_t *msg, 
 uint8_t upperLen);
 
 
-static inline    uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$upperLength(uart_id_t id, message_t *msg, 
+static inline uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$upperLength(uart_id_t id, message_t *msg, 
 uint8_t dataLinkLen);
 
 
 
 
-static inline   message_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$default$receive(uart_id_t idxxx, message_t *msg, 
+static inline message_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$default$receive(uart_id_t idxxx, message_t *msg, 
 void *payload, 
 uint8_t len);
 
 
-static inline   void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$default$sendDone(uart_id_t idxxx, message_t *msg, error_t error);
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$default$sendDone(uart_id_t idxxx, message_t *msg, error_t error);
 # 48 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
-static   error_t HdlcTranslateC$UartStream$send(uint8_t *arg_0x406b0e40, uint16_t arg_0x406af010);
+static error_t HdlcTranslateC$UartStream$send(
+#line 44
+uint8_t * buf, 
+
+
+
+uint16_t len);
 # 83 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
-static   void HdlcTranslateC$SerialFrameComm$dataReceived(uint8_t arg_0x405fc128);
+static void HdlcTranslateC$SerialFrameComm$dataReceived(uint8_t data);
 
 
 
 
 
-static   void HdlcTranslateC$SerialFrameComm$putDone(void);
+static void HdlcTranslateC$SerialFrameComm$putDone(void );
 #line 74
-static   void HdlcTranslateC$SerialFrameComm$delimiterReceived(void);
+static void HdlcTranslateC$SerialFrameComm$delimiterReceived(void );
 # 47 "/opt/tinyos-2.x/tos/lib/serial/HdlcTranslateC.nc"
 #line 44
-typedef struct HdlcTranslateC$__nesc_unnamed4315 {
+typedef struct HdlcTranslateC$__nesc_unnamed4318 {
   uint8_t sendEscape : 1;
   uint8_t receiveEscape : 1;
 } HdlcTranslateC$HdlcState;
 
 
- HdlcTranslateC$HdlcState HdlcTranslateC$state = { 0, 0 };
- uint8_t HdlcTranslateC$txTemp;
- uint8_t HdlcTranslateC$m_data;
+HdlcTranslateC$HdlcState HdlcTranslateC$state = { 0, 0 };
+uint8_t HdlcTranslateC$txTemp;
+uint8_t HdlcTranslateC$m_data;
 
 
-static inline   void HdlcTranslateC$SerialFrameComm$resetReceive(void);
+static inline void HdlcTranslateC$SerialFrameComm$resetReceive(void );
 
 
 
 
 
-static inline   void HdlcTranslateC$UartStream$receivedByte(uint8_t data);
+static inline void HdlcTranslateC$UartStream$receivedByte(uint8_t data);
 #line 86
-static   error_t HdlcTranslateC$SerialFrameComm$putDelimiter(void);
+static error_t HdlcTranslateC$SerialFrameComm$putDelimiter(void );
 
 
 
 
 
-static   error_t HdlcTranslateC$SerialFrameComm$putData(uint8_t data);
+static error_t HdlcTranslateC$SerialFrameComm$putData(uint8_t data);
 #line 104
-static inline   void HdlcTranslateC$UartStream$sendDone(uint8_t *buf, uint16_t len, 
+static void HdlcTranslateC$UartStream$sendDone(uint8_t *buf, uint16_t len, 
 error_t error);
 
 
@@ -3762,149 +4783,182 @@ error_t error);
 
 
 
-static inline   void HdlcTranslateC$UartStream$receiveDone(uint8_t *buf, uint16_t len, error_t error);
+static inline void HdlcTranslateC$UartStream$receiveDone(uint8_t *buf, uint16_t len, error_t error);
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartConfigure.nc"
-static   msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$getConfig(
+static msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$getConfig(
 # 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40714880);
+uint8_t arg_0x408a8c40);
 # 97 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$resetUsart(bool arg_0x4070bb78);
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$resetUsart(bool reset);
 #line 179
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableIntr(void);
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableIntr(void );
 
 
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$enableIntr(void);
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$enableIntr(void );
 #line 224
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$tx(uint8_t arg_0x4071ae28);
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$tx(uint8_t data);
 #line 128
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableUart(void);
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableUart(void );
 #line 174
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$setModeUart(msp430_uart_union_config_t *arg_0x4071d258);
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$setModeUart(msp430_uart_union_config_t *config);
 # 79 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receivedByte(uint8_t arg_0x406ad708);
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receivedByte(
+# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x4088ee10, 
+# 79 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+uint8_t byte);
 #line 99
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receiveDone(uint8_t *arg_0x406ac4d0, uint16_t arg_0x406ac660, error_t arg_0x406ac7e8);
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receiveDone(
+# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x4088ee10, 
+# 95 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+uint8_t * buf, 
+
+
+
+uint16_t len, error_t error);
 #line 57
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$sendDone(uint8_t *arg_0x406af618, uint16_t arg_0x406af7a8, error_t arg_0x406af930);
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$sendDone(
+# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x4088ee10, 
+# 53 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+uint8_t * buf, 
+
+
+
+uint16_t len, error_t error);
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$release(
+static error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$release(
 # 48 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40715e90);
+uint8_t arg_0x408a81e8);
 # 87 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$immediateRequest(
+static error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$immediateRequest(
 # 48 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40715e90);
+uint8_t arg_0x408a81e8);
+# 118 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+static bool /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$isOwner(
+# 48 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x408a81e8);
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$granted(
-# 42 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-uint8_t arg_0x40700128);
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$granted(
+# 43 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+uint8_t arg_0x40893bc8);
 #line 59
- uint8_t */*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf;
+uint16_t /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_len;
 #line 59
- uint8_t */*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_buf;
- uint16_t /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_len;
+uint16_t /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_len;
+uint8_t * /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf;
 #line 60
- uint16_t /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_len;
- uint16_t /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_pos;
+uint8_t * /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_buf;
+uint16_t /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_pos;
 #line 61
- uint16_t /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_pos;
- uint8_t /*Msp430Uart1P.UartP*/Msp430UartP$0$m_byte_time;
+uint16_t /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_pos;
+uint8_t /*Msp430Uart1P.UartP*/Msp430UartP$0$m_byte_time;
+uint8_t /*Msp430Uart1P.UartP*/Msp430UartP$0$current_owner;
 
-static inline   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$immediateRequest(uint8_t id);
-#line 76
-static inline   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$release(uint8_t id);
-
-
-
-
-
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$configure(uint8_t id);
+static inline error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$immediateRequest(uint8_t id);
+#line 77
+static inline error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$release(uint8_t id);
 
 
 
 
 
 
-static inline   void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$unconfigure(uint8_t id);
+
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$configure(uint8_t id);
 
 
 
 
 
 
-static inline  void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$granted(uint8_t id);
-#line 123
-static inline   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$rxDone(uint8_t data);
-#line 137
-static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$send(uint8_t *buf, uint16_t len);
-#line 149
-static inline   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$txDone(void);
-#line 186
-static inline   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Counter$overflow(void);
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$unconfigure(uint8_t id);
 
 
 
-static inline    error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$immediateRequest(uint8_t id);
-static inline    error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$release(uint8_t id);
-static inline    msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$default$getConfig(uint8_t id);
 
 
 
-static inline   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$default$granted(uint8_t id);
+
+
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$granted(uint8_t id);
+#line 134
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$rxDone(uint8_t id, uint8_t data);
+#line 147
+static error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$send(uint8_t id, uint8_t *buf, uint16_t len);
+#line 162
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$txDone(uint8_t id);
+#line 208
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$Counter$overflow(void );
+
+static inline error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$isOwner(uint8_t id);
+
+static inline error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$immediateRequest(uint8_t id);
+static inline error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$release(uint8_t id);
+static inline msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$default$getConfig(uint8_t id);
+
+
+
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$default$granted(uint8_t id);
+
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$sendDone(uint8_t id, uint8_t *buf, uint16_t len, error_t error);
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$receivedByte(uint8_t id, uint8_t byte);
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$receiveDone(uint8_t id, uint8_t *buf, uint16_t len, error_t error);
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void HplMsp430Usart1P$UCLK$selectIOFunc(void);
+static void HplMsp430Usart1P$UCLK$selectIOFunc(void );
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-static   void HplMsp430Usart1P$Interrupts$rxDone(uint8_t arg_0x40705730);
+static void HplMsp430Usart1P$Interrupts$rxDone(uint8_t data);
 #line 49
-static   void HplMsp430Usart1P$Interrupts$txDone(void);
+static void HplMsp430Usart1P$Interrupts$txDone(void );
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void HplMsp430Usart1P$URXD$selectIOFunc(void);
+static void HplMsp430Usart1P$URXD$selectIOFunc(void );
 #line 78
-static   void HplMsp430Usart1P$URXD$selectModuleFunc(void);
+static void HplMsp430Usart1P$URXD$selectModuleFunc(void );
 
 
 
 
 
 
-static   void HplMsp430Usart1P$UTXD$selectIOFunc(void);
+static void HplMsp430Usart1P$UTXD$selectIOFunc(void );
 #line 78
-static   void HplMsp430Usart1P$UTXD$selectModuleFunc(void);
+static void HplMsp430Usart1P$UTXD$selectModuleFunc(void );
 
 
 
 
 
 
-static   void HplMsp430Usart1P$SOMI$selectIOFunc(void);
+static void HplMsp430Usart1P$SOMI$selectIOFunc(void );
 #line 85
-static   void HplMsp430Usart1P$SIMO$selectIOFunc(void);
+static void HplMsp430Usart1P$SIMO$selectIOFunc(void );
 # 87 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
- static volatile uint8_t HplMsp430Usart1P$IE2 __asm ("0x0001");
- static volatile uint8_t HplMsp430Usart1P$ME2 __asm ("0x0005");
- static volatile uint8_t HplMsp430Usart1P$IFG2 __asm ("0x0003");
- static volatile uint8_t HplMsp430Usart1P$U1TCTL __asm ("0x0079");
- static volatile uint8_t HplMsp430Usart1P$U1RCTL __asm ("0x007A");
- static volatile uint8_t HplMsp430Usart1P$U1TXBUF __asm ("0x007F");
+static volatile uint8_t HplMsp430Usart1P$IE2 __asm ("0x0001");
+static volatile uint8_t HplMsp430Usart1P$ME2 __asm ("0x0005");
+static volatile uint8_t HplMsp430Usart1P$IFG2 __asm ("0x0003");
+static volatile uint8_t HplMsp430Usart1P$U1TCTL __asm ("0x0079");
+static volatile uint8_t HplMsp430Usart1P$U1RCTL __asm ("0x007A");
+static volatile uint8_t HplMsp430Usart1P$U1TXBUF __asm ("0x007F");
 
 
 
-void sig_UART1RX_VECTOR(void)  __attribute((wakeup)) __attribute((interrupt(6))) ;
+void sig_UART1RX_VECTOR(void ) __attribute((wakeup)) __attribute((interrupt(6)))  ;
 
 
 
 
-void sig_UART1TX_VECTOR(void)  __attribute((wakeup)) __attribute((interrupt(4))) ;
+void sig_UART1TX_VECTOR(void ) __attribute((wakeup)) __attribute((interrupt(4)))  ;
 
 
 
-static inline   error_t HplMsp430Usart1P$AsyncStdControl$start(void);
+static inline error_t HplMsp430Usart1P$AsyncStdControl$start(void );
 
 
 
-static inline   error_t HplMsp430Usart1P$AsyncStdControl$stop(void);
+static inline error_t HplMsp430Usart1P$AsyncStdControl$stop(void );
 #line 140
-static inline   void HplMsp430Usart1P$Usart$setUbr(uint16_t control);
+static inline void HplMsp430Usart1P$Usart$setUbr(uint16_t control);
 
 
 
@@ -3915,7 +4969,7 @@ static inline   void HplMsp430Usart1P$Usart$setUbr(uint16_t control);
 
 
 
-static inline   void HplMsp430Usart1P$Usart$setUmctl(uint8_t control);
+static inline void HplMsp430Usart1P$Usart$setUmctl(uint8_t control);
 
 
 
@@ -3923,9 +4977,9 @@ static inline   void HplMsp430Usart1P$Usart$setUmctl(uint8_t control);
 
 
 
-static inline   void HplMsp430Usart1P$Usart$resetUsart(bool reset);
+static inline void HplMsp430Usart1P$Usart$resetUsart(bool reset);
 #line 203
-static inline   void HplMsp430Usart1P$Usart$enableUart(void);
+static inline void HplMsp430Usart1P$Usart$enableUart(void );
 
 
 
@@ -3933,7 +4987,7 @@ static inline   void HplMsp430Usart1P$Usart$enableUart(void);
 
 
 
-static   void HplMsp430Usart1P$Usart$disableUart(void);
+static void HplMsp430Usart1P$Usart$disableUart(void );
 
 
 
@@ -3942,25 +4996,25 @@ static   void HplMsp430Usart1P$Usart$disableUart(void);
 
 
 
-static inline   void HplMsp430Usart1P$Usart$enableUartTx(void);
+static inline void HplMsp430Usart1P$Usart$enableUartTx(void );
 
 
 
 
-static inline   void HplMsp430Usart1P$Usart$disableUartTx(void);
+static inline void HplMsp430Usart1P$Usart$disableUartTx(void );
 
 
 
 
 
-static inline   void HplMsp430Usart1P$Usart$enableUartRx(void);
+static inline void HplMsp430Usart1P$Usart$enableUartRx(void );
 
 
 
 
-static inline   void HplMsp430Usart1P$Usart$disableUartRx(void);
+static inline void HplMsp430Usart1P$Usart$disableUartRx(void );
 #line 251
-static   void HplMsp430Usart1P$Usart$disableSpi(void);
+static void HplMsp430Usart1P$Usart$disableSpi(void );
 #line 283
 static inline void HplMsp430Usart1P$configUart(msp430_uart_union_config_t *config);
 
@@ -3972,538 +5026,109 @@ static inline void HplMsp430Usart1P$configUart(msp430_uart_union_config_t *confi
 
 
 
-static inline   void HplMsp430Usart1P$Usart$setModeUart(msp430_uart_union_config_t *config);
+static inline void HplMsp430Usart1P$Usart$setModeUart(msp430_uart_union_config_t *config);
 #line 347
-static inline   void HplMsp430Usart1P$Usart$clrIntr(void);
+static inline void HplMsp430Usart1P$Usart$clrIntr(void );
 #line 359
-static inline   void HplMsp430Usart1P$Usart$disableIntr(void);
+static inline void HplMsp430Usart1P$Usart$disableIntr(void );
 #line 377
-static inline   void HplMsp430Usart1P$Usart$enableIntr(void);
+static inline void HplMsp430Usart1P$Usart$enableIntr(void );
 
 
 
 
 
 
-static inline   void HplMsp430Usart1P$Usart$tx(uint8_t data);
+static inline void HplMsp430Usart1P$Usart$tx(uint8_t data);
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectModuleFunc(void);
+static inline void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectModuleFunc(void );
 
-static inline   void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectIOFunc(void);
+static inline void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectIOFunc(void );
 #line 54
-static inline   void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectModuleFunc(void);
+static inline void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectModuleFunc(void );
 
-static inline   void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectIOFunc(void);
+static inline void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectIOFunc(void );
 #line 54
-static inline   void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectModuleFunc(void);
+static inline void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectModuleFunc(void );
 
-static inline   void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectIOFunc(void);
+static inline void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectIOFunc(void );
 #line 56
-static inline   void /*HplMsp430GeneralIOC.P34*/HplMsp430GeneralIOP$20$IO$selectIOFunc(void);
+static inline void /*HplMsp430GeneralIOC.P34*/HplMsp430GeneralIOP$20$IO$selectIOFunc(void );
 #line 56
-static inline   void /*HplMsp430GeneralIOC.P35*/HplMsp430GeneralIOP$21$IO$selectIOFunc(void);
+static inline void /*HplMsp430GeneralIOC.P35*/HplMsp430GeneralIOP$21$IO$selectIOFunc(void );
 #line 54
-static inline   void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectModuleFunc(void);
+static inline void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectModuleFunc(void );
 
-static inline   void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectIOFunc(void);
+static inline void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectIOFunc(void );
 #line 54
-static inline   void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectModuleFunc(void);
+static inline void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectModuleFunc(void );
 
-static inline   void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectIOFunc(void);
+static inline void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectIOFunc(void );
 #line 45
-static   void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$set(void);
-static   void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$clr(void);
+static void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$set(void );
+static void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$clr(void );
 
 
 
 
 
-static inline   void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$makeOutput(void);
+static inline void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$makeOutput(void );
 #line 45
-static inline   void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$set(void);
+static inline void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$set(void );
 
 
 
 
 
 
-static inline   void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$makeOutput(void);
+static inline void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$makeOutput(void );
 
 
 
-static inline   void /*HplMsp430GeneralIOC.P51*/HplMsp430GeneralIOP$33$IO$selectIOFunc(void);
+static inline void /*HplMsp430GeneralIOC.P51*/HplMsp430GeneralIOP$33$IO$selectIOFunc(void );
 #line 56
-static inline   void /*HplMsp430GeneralIOC.P52*/HplMsp430GeneralIOP$34$IO$selectIOFunc(void);
+static inline void /*HplMsp430GeneralIOC.P52*/HplMsp430GeneralIOP$34$IO$selectIOFunc(void );
 #line 56
-static inline   void /*HplMsp430GeneralIOC.P53*/HplMsp430GeneralIOP$35$IO$selectIOFunc(void);
+static inline void /*HplMsp430GeneralIOC.P53*/HplMsp430GeneralIOP$35$IO$selectIOFunc(void );
 #line 45
-static inline   void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$set(void);
+static inline void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$set(void );
 
-static inline   void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$toggle(void);
-
-
+static inline void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$toggle(void );
 
 
-static inline   void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$makeOutput(void);
+
+
+static inline void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$makeOutput(void );
 #line 45
-static inline   void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$set(void);
+static inline void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$set(void );
 
 
 
 
 
 
-static inline   void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$makeOutput(void);
+static inline void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$makeOutput(void );
 #line 45
-static inline   void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$set(void);
+static inline void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$set(void );
 
 
 
 
 
 
-static inline   void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$makeOutput(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$fired(
-# 40 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-uint8_t arg_0x40903ef0);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Timer$overflow(void);
-# 115 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX0$fired(void);
-
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX1$fired(void);
-
-
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Overflow$fired(void);
-
-
-
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$default$fired(uint8_t n);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$fired(
-# 40 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-uint8_t arg_0x40903ef0);
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$overflow(void);
-# 51 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$get(void);
-#line 70
-static inline   bool /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$isOverflowPending(void);
-#line 115
-static inline   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX0$fired(void);
-
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX1$fired(void);
-
-
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Overflow$fired(void);
-
-
-
-
-
-
-
-
-static    void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$default$fired(uint8_t n);
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$captured(uint16_t arg_0x408df8a8);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$fired(void);
-# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t;
-
-
-static inline /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$int2CC(uint16_t x);
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Control$getControl(void);
-#line 139
-static inline   uint16_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$getEvent(void);
-#line 169
-static   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Event$fired(void);
-
-
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$default$captured(uint16_t n);
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$default$fired(void);
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Timer$overflow(void);
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$captured(uint16_t arg_0x408df8a8);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$fired(void);
-# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t;
-
-
-static inline /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$int2CC(uint16_t x);
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Control$getControl(void);
-#line 139
-static inline   uint16_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$getEvent(void);
-#line 169
-static   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Event$fired(void);
-
-
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$default$captured(uint16_t n);
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$default$fired(void);
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Timer$overflow(void);
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$captured(uint16_t arg_0x408df8a8);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$fired(void);
-# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t;
-
-
-static inline /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$int2CC(uint16_t x);
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Control$getControl(void);
-#line 139
-static inline   uint16_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$getEvent(void);
-#line 169
-static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Event$fired(void);
-
-
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$default$captured(uint16_t n);
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$default$fired(void);
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Timer$overflow(void);
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$captured(uint16_t arg_0x408df8a8);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$fired(void);
+static inline void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$makeOutput(void );
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$get(void);
-# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t;
-
-static inline uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$CC2int(/*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t x);
-static inline /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$int2CC(uint16_t x);
-
-static inline uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$compareControl(void);
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$getControl(void);
-
-
-
-
-
-
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$clearPendingInterrupt(void);
-
-
-
-
-
-
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$setControlAsCompare(void);
-#line 119
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$enableEvents(void);
-
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$disableEvents(void);
-#line 139
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$getEvent(void);
-
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEvent(uint16_t x);
-
-
-
-
-
-
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEventFromNow(uint16_t x);
-#line 169
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Event$fired(void);
-
-
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$default$captured(uint16_t n);
-
-
-
-
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$overflow(void);
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$captured(uint16_t arg_0x408df8a8);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Compare$fired(void);
-# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$cc_t;
-
-
-static inline /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$cc_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$int2CC(uint16_t x);
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$cc_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Control$getControl(void);
-#line 139
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$getEvent(void);
-#line 169
-static inline   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Event$fired(void);
-
-
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$default$captured(uint16_t n);
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Compare$default$fired(void);
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Timer$overflow(void);
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$captured(uint16_t arg_0x408df8a8);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Compare$fired(void);
-# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$cc_t;
-
-
-static inline /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$cc_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$int2CC(uint16_t x);
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$cc_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Control$getControl(void);
-#line 139
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$getEvent(void);
-#line 169
-static inline   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Event$fired(void);
-
-
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$default$captured(uint16_t n);
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Compare$default$fired(void);
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Timer$overflow(void);
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$captured(uint16_t arg_0x408df8a8);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Compare$fired(void);
-# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$cc_t;
-
-
-static inline /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$cc_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$int2CC(uint16_t x);
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$cc_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Control$getControl(void);
-#line 139
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$getEvent(void);
-#line 169
-static inline   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Event$fired(void);
-
-
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$default$captured(uint16_t n);
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Compare$default$fired(void);
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Timer$overflow(void);
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$captured(uint16_t arg_0x408df8a8);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Compare$fired(void);
-# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$cc_t;
-
-
-static inline /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$cc_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$int2CC(uint16_t x);
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$cc_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Control$getControl(void);
-#line 139
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$getEvent(void);
-#line 169
-static inline   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Event$fired(void);
-
-
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$default$captured(uint16_t n);
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Compare$default$fired(void);
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Timer$overflow(void);
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$captured(uint16_t arg_0x408df8a8);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Compare$fired(void);
-# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$cc_t;
-
-
-static inline /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$cc_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$int2CC(uint16_t x);
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$cc_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Control$getControl(void);
-#line 139
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$getEvent(void);
-#line 169
-static inline   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Event$fired(void);
-
-
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$default$captured(uint16_t n);
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Compare$default$fired(void);
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Timer$overflow(void);
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-static   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$captured(uint16_t arg_0x408df8a8);
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Compare$fired(void);
-# 44 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-typedef msp430_compare_control_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$cc_t;
-
-
-static inline /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$cc_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$int2CC(uint16_t x);
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$cc_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Control$getControl(void);
-#line 139
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$getEvent(void);
-#line 169
-static inline   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Event$fired(void);
-
-
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$default$captured(uint16_t n);
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Compare$default$fired(void);
-
-
-
-static inline   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Timer$overflow(void);
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void Msp430TimerCommonP$VectorTimerB1$fired(void);
-#line 28
-static   void Msp430TimerCommonP$VectorTimerA0$fired(void);
-#line 28
-static   void Msp430TimerCommonP$VectorTimerA1$fired(void);
-#line 28
-static   void Msp430TimerCommonP$VectorTimerB0$fired(void);
-# 11 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCommonP.nc"
-void sig_TIMERA0_VECTOR(void)  __attribute((wakeup)) __attribute((interrupt(12))) ;
-void sig_TIMERA1_VECTOR(void)  __attribute((wakeup)) __attribute((interrupt(10))) ;
-void sig_TIMERB0_VECTOR(void)  __attribute((wakeup)) __attribute((interrupt(26))) ;
-void sig_TIMERB1_VECTOR(void)  __attribute((wakeup)) __attribute((interrupt(24))) ;
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   uint16_t /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$get(void);
-static   bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$isOverflowPending(void);
+static uint16_t /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$get(void );
+static bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$isOverflowPending(void );
 # 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-static   void /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$overflow(void);
+static void /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$overflow(void );
 # 38 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430CounterC.nc"
-static inline   uint16_t /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$get(void);
+static inline uint16_t /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$get(void );
 
 
 
 
-static inline   bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$isOverflowPending(void);
+static inline bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$isOverflowPending(void );
 
 
 
@@ -4513,83 +5138,75 @@ static inline   bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$isO
 
 
 
-static inline   void /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$overflow(void);
+static inline void /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$overflow(void );
 # 31 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-static   void LedsP$Led0$toggle(void);
+static void LedsP$Led0$toggle(void );
 
 
 
-static   void LedsP$Led0$makeOutput(void);
+static void LedsP$Led0$makeOutput(void );
 #line 29
-static   void LedsP$Led0$set(void);
+static void LedsP$Led0$set(void );
 
 
 
 
 
-static   void LedsP$Led1$makeOutput(void);
+static void LedsP$Led1$makeOutput(void );
 #line 29
-static   void LedsP$Led1$set(void);
+static void LedsP$Led1$set(void );
 
 
 
 
 
-static   void LedsP$Led2$makeOutput(void);
+static void LedsP$Led2$makeOutput(void );
 #line 29
-static   void LedsP$Led2$set(void);
+static void LedsP$Led2$set(void );
 # 45 "/opt/tinyos-2.x/tos/system/LedsP.nc"
-static inline  error_t LedsP$Init$init(void);
+static inline error_t LedsP$Init$init(void );
 #line 73
-static inline   void LedsP$Leds$led0Toggle(void);
+static inline void LedsP$Leds$led0Toggle(void );
 # 44 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$toggle(void);
+static void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$toggle(void );
 #line 71
-static   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$makeOutput(void);
+static void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$makeOutput(void );
 #line 34
-static   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$set(void);
+static void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$set(void );
 # 37 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$set(void);
+static inline void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$set(void );
 
-static inline   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$toggle(void);
+static inline void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$toggle(void );
 
 
 
-static inline   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$makeOutput(void);
+static inline void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$makeOutput(void );
 # 71 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$HplGeneralIO$makeOutput(void);
+static void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$HplGeneralIO$makeOutput(void );
 #line 34
-static   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$HplGeneralIO$set(void);
+static void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$HplGeneralIO$set(void );
 # 37 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$set(void);
+static inline void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$set(void );
 
 
 
 
 
-static inline   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$makeOutput(void);
+static inline void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$makeOutput(void );
 # 71 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$HplGeneralIO$makeOutput(void);
+static void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$HplGeneralIO$makeOutput(void );
 #line 34
-static   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$HplGeneralIO$set(void);
+static void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$HplGeneralIO$set(void );
 # 37 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$set(void);
+static inline void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$set(void );
 
 
 
 
 
-static inline   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$makeOutput(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t PlatformP$MoteInit$init(void);
-#line 51
-static  error_t PlatformP$MoteClockInit$init(void);
-#line 51
-static  error_t PlatformP$LedsInit$init(void);
-# 10 "/opt/tinyos-2.x/tos/platforms/telosa/PlatformP.nc"
-static inline  error_t PlatformP$Init$init(void);
+static inline void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$makeOutput(void );
 # 80 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
-static   bool /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$inUse(void);
+static bool /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$inUse(void );
 
 
 
@@ -4597,17 +5214,17 @@ static   bool /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$
 
 
 
-static   uint8_t /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$userId(void);
+static uint8_t /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$userId(void );
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-static   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$rxDone(
+static void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$rxDone(
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-uint8_t arg_0x409e8c78, 
+uint8_t arg_0x40a92f08, 
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-uint8_t arg_0x40705730);
+uint8_t data);
 #line 49
-static   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$txDone(
+static void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$txDone(
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-uint8_t arg_0x409e8c78);
+uint8_t arg_0x40a92f08);
 
 
 
@@ -4617,12 +5234,12 @@ uint8_t arg_0x409e8c78);
 
 
 
-static inline   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$txDone(void);
+static inline void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$txDone(void );
 
 
 
 
-static inline   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$rxDone(uint8_t data);
+static inline void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$rxDone(uint8_t data);
 
 
 
@@ -4632,195 +5249,10 @@ static inline   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawIn
 
 
 
-static inline    void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$txDone(uint8_t id);
-static inline    void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$rxDone(uint8_t id, uint8_t data);
-# 6 "/opt/tinyos-2.x/tos/platforms/telosb/MotePlatformC.nc"
-static __inline void MotePlatformC$uwait(uint16_t u);
-
-
-
-
-static __inline void MotePlatformC$TOSH_wait(void);
-
-
-
-
-static void MotePlatformC$TOSH_FLASH_M25P_DP_bit(bool set);
-
-
-
-
-
-
-
-
-
-
-static inline void MotePlatformC$TOSH_FLASH_M25P_DP(void);
-#line 56
-static inline  error_t MotePlatformC$Init$init(void);
-# 32 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockInit.nc"
-static  void Msp430ClockP$Msp430ClockInit$initTimerB(void);
-#line 31
-static  void Msp430ClockP$Msp430ClockInit$initTimerA(void);
-#line 29
-static  void Msp430ClockP$Msp430ClockInit$setupDcoCalibrate(void);
-static  void Msp430ClockP$Msp430ClockInit$initClocks(void);
-# 39 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockP.nc"
- static volatile uint8_t Msp430ClockP$IE1 __asm ("0x0000");
- static volatile uint16_t Msp430ClockP$TA0CTL __asm ("0x0160");
- static volatile uint16_t Msp430ClockP$TA0IV __asm ("0x012E");
- static volatile uint16_t Msp430ClockP$TBCTL __asm ("0x0180");
- static volatile uint16_t Msp430ClockP$TBIV __asm ("0x011E");
-
-enum Msp430ClockP$__nesc_unnamed4316 {
-
-  Msp430ClockP$ACLK_CALIB_PERIOD = 8, 
-  Msp430ClockP$TARGET_DCO_DELTA = 4096 / 32 * Msp430ClockP$ACLK_CALIB_PERIOD
-};
-
-
-static inline  void Msp430ClockP$Msp430ClockInit$defaultSetupDcoCalibrate(void);
-#line 64
-static inline  void Msp430ClockP$Msp430ClockInit$defaultInitClocks(void);
-#line 85
-static inline  void Msp430ClockP$Msp430ClockInit$defaultInitTimerA(void);
-#line 100
-static inline  void Msp430ClockP$Msp430ClockInit$defaultInitTimerB(void);
-#line 115
-static inline   void Msp430ClockP$Msp430ClockInit$default$setupDcoCalibrate(void);
-
-
-
-
-static inline   void Msp430ClockP$Msp430ClockInit$default$initClocks(void);
-
-
-
-
-static inline   void Msp430ClockP$Msp430ClockInit$default$initTimerA(void);
-
-
-
-
-static inline   void Msp430ClockP$Msp430ClockInit$default$initTimerB(void);
-
-
-
-
-
-static inline void Msp430ClockP$startTimerA(void);
-#line 148
-static inline void Msp430ClockP$startTimerB(void);
-#line 160
-static void Msp430ClockP$set_dco_calib(int calib);
-
-
-
-
-
-static inline uint16_t Msp430ClockP$test_calib_busywait_delta(int calib);
-#line 189
-static inline void Msp430ClockP$busyCalibrateDco(void);
-#line 214
-static inline  error_t Msp430ClockP$Init$init(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t RealMainP$SoftwareInit$init(void);
-# 49 "/opt/tinyos-2.x/tos/interfaces/Boot.nc"
-static  void RealMainP$Boot$booted(void);
-# 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-static  error_t RealMainP$PlatformInit$init(void);
-# 46 "/opt/tinyos-2.x/tos/interfaces/Scheduler.nc"
-static  void RealMainP$Scheduler$init(void);
-#line 61
-static  void RealMainP$Scheduler$taskLoop(void);
-#line 54
-static  bool RealMainP$Scheduler$runNextTask(void);
-# 52 "/opt/tinyos-2.x/tos/system/RealMainP.nc"
-int main(void)   ;
-# 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void SchedulerBasicP$TaskBasic$runTask(
-# 45 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x40508708);
-# 59 "/opt/tinyos-2.x/tos/interfaces/McuSleep.nc"
-static   void SchedulerBasicP$McuSleep$sleep(void);
-# 50 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
-enum SchedulerBasicP$__nesc_unnamed4317 {
-
-  SchedulerBasicP$NUM_TASKS = 18U, 
-  SchedulerBasicP$NO_TASK = 255
-};
-
-volatile uint8_t SchedulerBasicP$m_head;
-volatile uint8_t SchedulerBasicP$m_tail;
-volatile uint8_t SchedulerBasicP$m_next[SchedulerBasicP$NUM_TASKS];
-
-
-
-
-
-
-
-
-static __inline uint8_t SchedulerBasicP$popTask(void);
-#line 86
-static inline bool SchedulerBasicP$isWaiting(uint8_t id);
-
-
-
-
-static inline bool SchedulerBasicP$pushTask(uint8_t id);
-#line 113
-static inline  void SchedulerBasicP$Scheduler$init(void);
-
-
-
-
-
-
-
-
-
-static  bool SchedulerBasicP$Scheduler$runNextTask(void);
-#line 138
-static inline  void SchedulerBasicP$Scheduler$taskLoop(void);
-#line 159
-static   error_t SchedulerBasicP$TaskBasic$postTask(uint8_t id);
-
-
-
-
-static   void SchedulerBasicP$TaskBasic$default$runTask(uint8_t id);
-# 54 "/opt/tinyos-2.x/tos/interfaces/McuPowerOverride.nc"
-static   mcu_power_t McuSleepC$McuPowerOverride$lowestState(void);
-# 51 "/opt/tinyos-2.x/tos/chips/msp430/McuSleepC.nc"
-bool McuSleepC$dirty = TRUE;
-mcu_power_t McuSleepC$powerState = MSP430_POWER_ACTIVE;
-
-
-
-
-const uint16_t McuSleepC$msp430PowerBits[MSP430_POWER_LPM4 + 1] = { 
-0, 
-0x0010, 
-0x0040 + 0x0010, 
-0x0080 + 0x0010, 
-0x0080 + 0x0040 + 0x0010, 
-0x0080 + 0x0040 + 0x0020 + 0x0010 };
-
-
-static inline mcu_power_t McuSleepC$getPowerState(void);
-#line 104
-static inline void McuSleepC$computePowerState(void);
-
-
-
-
-static inline   void McuSleepC$McuSleep$sleep(void);
-#line 124
-static inline    mcu_power_t McuSleepC$McuPowerOverride$default$lowestState(void);
+static inline void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$txDone(uint8_t id);
+static inline void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$rxDone(uint8_t id, uint8_t data);
 # 39 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-enum /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$__nesc_unnamed4318 {
+enum /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$__nesc_unnamed4319 {
 #line 39
   FcfsResourceQueueC$0$NO_ENTRY = 0xFF
 };
@@ -4828,12 +5260,12 @@ uint8_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$resQ[1U];
 uint8_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$qHead = /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$NO_ENTRY;
 uint8_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$qTail = /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$NO_ENTRY;
 
-static inline  error_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$Init$init(void);
+static inline error_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$Init$init(void );
 
 
 
 
-static inline   bool /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$isEmpty(void);
+static inline bool /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$isEmpty(void );
 
 
 
@@ -4841,78 +5273,68 @@ static inline   bool /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$F
 
 
 
-static inline   resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$dequeue(void);
+static inline resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$dequeue(void );
 # 51 "/opt/tinyos-2.x/tos/interfaces/ResourceRequested.nc"
-static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$immediateRequested(
+static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$immediateRequested(
 # 55 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a784c8);
+uint8_t arg_0x40ab1010);
 # 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$unconfigure(
+static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$unconfigure(
 # 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
+uint8_t arg_0x40ab0430);
 # 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$configure(
+static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$configure(
 # 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
+uint8_t arg_0x40ab0430);
 # 43 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-static   bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Queue$isEmpty(void);
+static bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Queue$isEmpty(void );
 #line 60
-static   resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Queue$dequeue(void);
+static resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Queue$dequeue(void );
 # 46 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$granted(void);
+static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$granted(void );
 #line 81
-static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$immediateRequested(void);
+static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$immediateRequested(void );
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$granted(
+static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$granted(
 # 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a79b68);
+uint8_t arg_0x40ab2520);
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$postTask(void);
-# 74 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-enum /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$__nesc_unnamed4319 {
-#line 74
+static error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$postTask(void );
+# 75 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+enum /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$__nesc_unnamed4320 {
+#line 75
   ArbiterP$0$grantedTask = 6U
 };
-#line 74
+#line 75
 typedef int /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$__nesc_sillytask_grantedTask[/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask];
 #line 67
-enum /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$__nesc_unnamed4320 {
+enum /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$__nesc_unnamed4321 {
 #line 67
   ArbiterP$0$RES_CONTROLLED, ArbiterP$0$RES_GRANTING, ArbiterP$0$RES_IMM_GRANTING, ArbiterP$0$RES_BUSY
 };
 #line 68
-enum /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$__nesc_unnamed4321 {
+enum /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$__nesc_unnamed4322 {
 #line 68
   ArbiterP$0$default_owner_id = 1U
 };
+#line 69
+enum /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$__nesc_unnamed4323 {
+#line 69
+  ArbiterP$0$NO_RES = 0xFF
+};
 uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_CONTROLLED;
- uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$default_owner_id;
- uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$reqResId;
-#line 89
-static inline   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$immediateRequest(uint8_t id);
-#line 107
-static inline   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$release(uint8_t id);
-#line 126
-static inline   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$release(void);
-#line 146
-static inline   bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$inUse(void);
-
-
-
-
-
-
-
-
-static inline   uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$userId(void);
-#line 173
-static inline  void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$runTask(void);
-#line 185
-static inline   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$granted(uint8_t id);
-
-
-
-static inline    void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$immediateRequested(uint8_t id);
+uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$default_owner_id;
+uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$reqResId;
+#line 90
+static inline error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$immediateRequest(uint8_t id);
+#line 108
+static inline error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$release(uint8_t id);
+#line 129
+static inline error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$release(void );
+#line 149
+static bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$inUse(void );
+#line 162
+static uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$userId(void );
 
 
 
@@ -4922,15 +5344,34 @@ static inline    void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource
 
 
 
-static inline    void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$configure(uint8_t id);
 
-static inline    void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$unconfigure(uint8_t id);
+static uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$isOwner(uint8_t id);
+#line 186
+static inline void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$runTask(void );
+#line 198
+static inline void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$granted(uint8_t id);
+
+
+
+static inline void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$immediateRequested(uint8_t id);
+
+
+
+
+
+
+
+
+
+static inline void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$configure(uint8_t id);
+
+static inline void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$unconfigure(uint8_t id);
 # 52 "/opt/tinyos-2.x/tos/lib/power/PowerDownCleanup.nc"
-static   void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$cleanup(void);
+static void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$cleanup(void );
 # 56 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-static   error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$release(void);
+static error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$release(void );
 # 74 "/opt/tinyos-2.x/tos/interfaces/AsyncStdControl.nc"
-static   error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$AsyncStdControl$start(void);
+static error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$AsyncStdControl$start(void );
 
 
 
@@ -4940,54 +5381,85 @@ static   error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerMana
 
 
 
-static   error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$AsyncStdControl$stop(void);
+static error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$AsyncStdControl$stop(void );
 # 64 "/opt/tinyos-2.x/tos/lib/power/AsyncPowerManagerP.nc"
-static inline   void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$immediateRequested(void);
+static inline void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$immediateRequested(void );
 
 
 
 
-static inline   void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$granted(void);
+static inline void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$granted(void );
 
 
 
 
-static inline    void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$default$cleanup(void);
+static inline void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$default$cleanup(void );
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t TelosSerialP$Resource$release(void);
+static error_t TelosSerialP$Resource$release(void );
 #line 87
-static   error_t TelosSerialP$Resource$immediateRequest(void);
+static error_t TelosSerialP$Resource$immediateRequest(void );
 # 8 "/opt/tinyos-2.x/tos/platforms/telosa/TelosSerialP.nc"
 msp430_uart_union_config_t TelosSerialP$msp430_uart_telos_config = { { .ubr = UBR_1MHZ_115200, .umctl = UMCTL_1MHZ_115200, .ssel = 0x02, .pena = 0, .pev = 0, .spb = 0, .clen = 1, .listen = 0, .mm = 0, .ckpl = 0, .urxse = 0, .urxeie = 1, .urxwie = 0, .utxe = 1, .urxe = 1 } };
 
-static inline  error_t TelosSerialP$StdControl$start(void);
+static inline error_t TelosSerialP$StdControl$start(void );
 
 
-static inline  error_t TelosSerialP$StdControl$stop(void);
+static inline error_t TelosSerialP$StdControl$stop(void );
 
 
 
-static inline  void TelosSerialP$Resource$granted(void);
+static inline void TelosSerialP$Resource$granted(void );
 
-static inline   msp430_uart_union_config_t *TelosSerialP$Msp430UartConfigure$getConfig(void);
+static inline msp430_uart_union_config_t *TelosSerialP$Msp430UartConfigure$getConfig(void );
 # 40 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfoActiveMessageP.nc"
-static inline   uint8_t SerialPacketInfoActiveMessageP$Info$offset(void);
+static inline uint8_t SerialPacketInfoActiveMessageP$Info$offset(void );
 
 
-static inline   uint8_t SerialPacketInfoActiveMessageP$Info$dataLinkLength(message_t *msg, uint8_t upperLen);
+static inline uint8_t SerialPacketInfoActiveMessageP$Info$dataLinkLength(message_t *msg, uint8_t upperLen);
 
 
-static inline   uint8_t SerialPacketInfoActiveMessageP$Info$upperLength(message_t *msg, uint8_t dataLinkLen);
+static inline uint8_t SerialPacketInfoActiveMessageP$Info$upperLength(message_t *msg, uint8_t dataLinkLen);
 # 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-static  void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$sendDone(message_t *arg_0x4057beb8, error_t arg_0x4057a068);
+static void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$sendDone(
+#line 92
+message_t * msg, 
+
+
+
+
+
+
+error_t error);
 # 64 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-static  error_t /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$send(message_t *arg_0x405afb80, uint8_t arg_0x405afd08);
+static error_t /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$send(
+#line 56
+message_t * msg, 
+
+
+
+
+
+
+
+uint8_t len);
 # 92 "/opt/tinyos-2.x/tos/interfaces/AMPacket.nc"
-static  void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setDestination(message_t *arg_0x40586670, am_addr_t arg_0x40586800);
+static void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setDestination(
+#line 88
+message_t * amsg, 
+
+
+
+am_addr_t addr);
 #line 151
-static  void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setType(message_t *arg_0x40595598, am_id_t arg_0x40595720);
+static void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setType(
+#line 147
+message_t * amsg, 
+
+
+
+am_id_t t);
 # 45 "/opt/tinyos-2.x/tos/system/AMQueueEntryP.nc"
-static  error_t /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$send(am_addr_t dest, 
+static error_t /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$send(am_addr_t dest, 
 message_t *msg, 
 uint8_t len);
 
@@ -4999,38 +5471,65 @@ uint8_t len);
 
 
 
-static inline  void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$sendDone(message_t *m, error_t err);
+static inline void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$sendDone(message_t *m, error_t err);
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-static  error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(
+static error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(
 # 40 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x40adfc28, 
+am_id_t arg_0x40b27a70, 
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-am_addr_t arg_0x4057cad0, message_t *arg_0x4057cc80, uint8_t arg_0x4057ce08);
+am_addr_t addr, 
+#line 60
+message_t * msg, 
+
+
+
+
+
+
+
+
+uint8_t len);
 # 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-static  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(
+static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(
 # 38 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x40adf2c8, 
-# 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-message_t *arg_0x405aedf0, error_t arg_0x405ad010);
+uint8_t arg_0x40b27088, 
+# 85 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
+message_t * msg, 
+
+
+
+error_t error);
 # 67 "/opt/tinyos-2.x/tos/interfaces/Packet.nc"
-static  uint8_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Packet$payloadLength(message_t *arg_0x4057eb10);
+static uint8_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Packet$payloadLength(
+#line 63
+message_t * msg);
 #line 83
-static  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Packet$setPayloadLength(message_t *arg_0x4058d190, uint8_t arg_0x4058d318);
+static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Packet$setPayloadLength(
+#line 79
+message_t * msg, 
+
+
+
+uint8_t len);
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$postTask(void);
+static error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$postTask(void );
 # 67 "/opt/tinyos-2.x/tos/interfaces/AMPacket.nc"
-static  am_addr_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$destination(message_t *arg_0x40588aa8);
+static am_addr_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$destination(
+#line 63
+message_t * amsg);
 #line 136
-static  am_id_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$type(message_t *arg_0x40595010);
+static am_id_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$type(
+#line 132
+message_t * amsg);
 # 118 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-enum /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4322 {
+enum /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4324 {
 #line 118
   AMQueueImplP$0$CancelTask = 7U
 };
 #line 118
 typedef int /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_sillytask_CancelTask[/*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$CancelTask];
 #line 161
-enum /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4323 {
+enum /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4325 {
 #line 161
   AMQueueImplP$0$errorTask = 8U
 };
@@ -5038,86 +5537,141 @@ enum /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4323 {
 typedef int /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_sillytask_errorTask[/*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask];
 #line 49
 #line 47
-typedef struct /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4324 {
-  message_t *msg;
+typedef struct /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$__nesc_unnamed4326 {
+  message_t * msg;
 } /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$queue_entry_t;
 
 uint8_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$current = 1;
 /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$queue_entry_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[1];
 uint8_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$cancelMask[1 / 8 + 1];
 
-static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$tryToSend(void);
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$tryToSend(void );
 
-static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$nextPacket(void);
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$nextPacket(void );
 #line 82
-static inline  error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$send(uint8_t clientId, message_t *msg, 
+static inline error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$send(uint8_t clientId, message_t *msg, 
 uint8_t len);
 #line 118
-static inline  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$CancelTask$runTask(void);
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$CancelTask$runTask(void );
 #line 155
-static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$sendDone(uint8_t last, message_t *msg, error_t err);
+static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$sendDone(uint8_t last, message_t * msg, error_t err);
 
 
 
 
 
-static inline  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$runTask(void);
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$runTask(void );
 
 
 
 
-static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$tryToSend(void);
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$tryToSend(void );
 #line 181
-static inline  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(am_id_t id, message_t *msg, error_t err);
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(am_id_t id, message_t *msg, error_t err);
 #line 207
-static inline   void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(uint8_t id, message_t *msg, error_t err);
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(uint8_t id, message_t *msg, error_t err);
+# 48 "/opt/tinyos-2.x/tos/system/QueueC.nc"
+/*PrintfC.QueueC*/QueueC$0$queue_t  /*PrintfC.QueueC*/QueueC$0$queue[250];
+uint8_t /*PrintfC.QueueC*/QueueC$0$head = 0;
+uint8_t /*PrintfC.QueueC*/QueueC$0$tail = 0;
+uint8_t /*PrintfC.QueueC*/QueueC$0$size = 0;
+
+static inline bool /*PrintfC.QueueC*/QueueC$0$Queue$empty(void );
+
+
+
+static inline uint8_t /*PrintfC.QueueC*/QueueC$0$Queue$size(void );
+
+
+
+static inline uint8_t /*PrintfC.QueueC*/QueueC$0$Queue$maxSize(void );
+
+
+
+static inline /*PrintfC.QueueC*/QueueC$0$queue_t /*PrintfC.QueueC*/QueueC$0$Queue$head(void );
+
+
+
+static inline void /*PrintfC.QueueC*/QueueC$0$printQueue(void );
+#line 85
+static inline /*PrintfC.QueueC*/QueueC$0$queue_t /*PrintfC.QueueC*/QueueC$0$Queue$dequeue(void );
+#line 97
+static inline error_t /*PrintfC.QueueC*/QueueC$0$Queue$enqueue(/*PrintfC.QueueC*/QueueC$0$queue_t newVal);
+# 49 "/opt/tinyos-2.x/tos/interfaces/Boot.nc"
+static void PrintfP$Boot$booted(void );
 # 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  error_t PrintfP$SerialControl$start(void);
-# 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-static  error_t PrintfP$AMSend$send(am_addr_t arg_0x4057cad0, message_t *arg_0x4057cc80, uint8_t arg_0x4057ce08);
-# 108 "/opt/tinyos-2.x/tos/interfaces/Packet.nc"
-static  void *PrintfP$Packet$getPayload(message_t *arg_0x4058dee0, uint8_t *arg_0x4058c0a8);
-# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t PrintfP$retrySend$postTask(void);
-# 35 "/opt/tinyos-2.x/tos/lib/printf/PrintfFlush.nc"
-static  void PrintfP$PrintfFlush$flushDone(error_t arg_0x40566b38);
-# 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  void PrintfP$PrintfControl$startDone(error_t arg_0x4056be70);
-#line 117
-static  void PrintfP$PrintfControl$stopDone(error_t arg_0x4056aa78);
-# 81 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
-enum PrintfP$__nesc_unnamed4325 {
+static error_t PrintfP$SerialControl$start(void );
+# 90 "/opt/tinyos-2.x/tos/interfaces/Queue.nc"
+static error_t PrintfP$Queue$enqueue(
+#line 86
+PrintfP$Queue$t  newVal);
 #line 81
+static 
+#line 79
+PrintfP$Queue$t  
+
+PrintfP$Queue$dequeue(void );
+#line 50
+static bool PrintfP$Queue$empty(void );
+
+
+
+
+
+
+
+static uint8_t PrintfP$Queue$size(void );
+# 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
+static error_t PrintfP$AMSend$send(am_addr_t addr, 
+#line 60
+message_t * msg, 
+
+
+
+
+
+
+
+
+uint8_t len);
+# 115 "/opt/tinyos-2.x/tos/interfaces/Packet.nc"
+static 
+#line 112
+void * 
+
+
+PrintfP$Packet$getPayload(
+#line 110
+message_t * msg, 
+
+
+
+
+uint8_t len);
+# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+static error_t PrintfP$retrySend$postTask(void );
+# 127 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
+enum PrintfP$__nesc_unnamed4327 {
+#line 127
   PrintfP$retrySend = 9U
 };
-#line 81
+#line 127
 typedef int PrintfP$__nesc_sillytask_retrySend[PrintfP$retrySend];
-#line 68
-enum PrintfP$__nesc_unnamed4326 {
-  PrintfP$S_STARTED, 
+#line 100
+enum PrintfP$__nesc_unnamed4328 {
   PrintfP$S_STOPPED, 
+  PrintfP$S_STARTED, 
   PrintfP$S_FLUSHING
 };
 
 message_t PrintfP$printfMsg;
-nx_uint8_t PrintfP$buffer[250];
- nx_uint8_t *PrintfP$next_byte;
 uint8_t PrintfP$state = PrintfP$S_STOPPED;
-uint8_t PrintfP$bytes_left_to_flush;
-uint8_t PrintfP$length_to_send;
 
-static inline  void PrintfP$retrySend$runTask(void);
+static inline void PrintfP$MainBoot$booted(void );
 
 
 
-
-static void PrintfP$sendNext(void);
-#line 99
-static inline  error_t PrintfP$PrintfControl$start(void);
-#line 111
-static inline  void PrintfP$SerialControl$startDone(error_t error);
-#line 129
-static inline  void PrintfP$SerialControl$stopDone(error_t error);
+static inline void PrintfP$SerialControl$startDone(error_t error);
 
 
 
@@ -5126,68 +5680,47 @@ static inline  void PrintfP$SerialControl$stopDone(error_t error);
 
 
 
-static  error_t PrintfP$PrintfFlush$flush(void);
-#line 151
-static  void PrintfP$AMSend$sendDone(message_t *msg, error_t error);
-#line 167
+
+static inline void PrintfP$SerialControl$stopDone(error_t error);
+
+
+
+static inline void PrintfP$retrySend$runTask(void );
+
+
+
+
+static void PrintfP$sendNext(void );
+
+
+
+
+
+
+
+
+
+
+int printfflush(void )   ;
+#line 155
+static void PrintfP$AMSend$sendDone(message_t *msg, error_t error);
+
+
+
+
+
+
+
+
+
 int putchar(int c) __attribute((noinline))   ;
-# 34 "/opt/tinyos-2.x/tos/lib/printf/PrintfFlush.nc"
-static  error_t LZ77M$PrintfFlush$flush(void);
-# 5 "Lz77Compression.nc"
-static  error_t LZ77M$Lz77Compression$Lz77EncodeDone(error_t arg_0x40b2da98);
-# 125 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  uint32_t LZ77M$Timer$getNow(void);
-# 14 "LZ77M.nc"
-int LZ77M$matchlen;
-#line 14
-int LZ77M$matchpos;
-int LZ77M$dict[250];
-int LZ77M$index1 = 0;
-int LZ77M$nextlinklen = 0;
-int LZ77M$nextlink[250];
-int LZ77M$Outbuffer[256 * 3];
-int LZ77M$FLAG = 0;
-
-int *LZ77M$brr;
-
-uint16_t LZ77M$timetaken;
-uint16_t LZ77M$start_time;
-#line 25
-uint16_t LZ77M$end_time;
-
-
-static inline int8_t LZ77M$search(int a);
-#line 54
-static void LZ77M$encode(int matchlen1, int matchpos1, int result, int symbol);
-#line 71
-static void LZ77M$shift(int val);
-#line 95
-static inline void LZ77M$findMaxmatch(void);
-#line 124
-static inline  error_t LZ77M$Lz77Compression$Lz77Encode(int *arr1);
-#line 171
-static  void LZ77M$PrintfControl$startDone(error_t err);
-#line 186
-static inline  void LZ77M$PrintfControl$stopDone(error_t err);
-
-
-static inline  void LZ77M$PrintfFlush$flushDone(error_t err);
-
-
-static inline  void LZ77M$Timer$fired(void);
-# 56 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-static  error_t TestC$BlockRead$read(storage_addr_t arg_0x40b4d950, void *arg_0x40b4daf0, storage_len_t arg_0x40b4dc80);
-# 34 "/opt/tinyos-2.x/tos/lib/printf/PrintfFlush.nc"
-static  error_t TestC$PrintfFlush$flush(void);
 # 56 "/opt/tinyos-2.x/tos/interfaces/Leds.nc"
-static   void TestC$Leds$led0Toggle(void);
-# 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  error_t TestC$PrintfControl$start(void);
+static void TestC$Leds$led0Toggle(void );
 # 4 "Lz77Compression.nc"
-static  error_t TestC$Lz77Compression$Lz77Encode(int *arg_0x40b2d608);
+static error_t TestC$Lz77Compression$Lz77Encode(int *arg_0x405faad0);
 # 125 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  uint32_t TestC$Timer$getNow(void);
-# 15 "TestC.nc"
+static uint32_t TestC$Timer$getNow(void );
+# 13 "TestC.nc"
 int TestC$i;
 int TestC$buf[256];
 int TestC$arr[2];
@@ -5195,95 +5728,75 @@ int TestC$NUMR;
 uint32_t TestC$addr;
 int TestC$count;
 uint64_t TestC$start_time;
-#line 21
+#line 19
 uint64_t TestC$end_time;
 uint64_t TestC$time_taken;
-static inline  void TestC$Boot$booted(void);
+static inline void TestC$Boot$booted(void );
+#line 38
+static inline void TestC$BlockRead$readDone(storage_addr_t addr1, void *buf1, storage_len_t len1, error_t error);
+#line 59
+static inline void TestC$Timer$fired(void );
 
 
-
-
-
-
-
-
-
-
-static  void TestC$PrintfControl$startDone(error_t err);
-
-
-
-
-
-
-
-static inline  void TestC$PrintfControl$stopDone(error_t err);
-
-
-
-static inline  void TestC$BlockRead$readDone(storage_addr_t addr1, void *buf1, storage_len_t len1, error_t error);
-#line 68
-static inline  void TestC$PrintfFlush$flushDone(error_t err);
-
-
-static inline  void TestC$Timer$fired(void);
-
-
-static inline  error_t TestC$Lz77Compression$Lz77EncodeDone(error_t err);
-
-
-
-
-static inline  void TestC$BlockRead$computeCrcDone(storage_addr_t x, storage_len_t y, uint16_t z, error_t result);
+static inline error_t TestC$Lz77Compression$Lz77EncodeDone(error_t err, int *Outbuffer);
+#line 76
+static inline void TestC$BlockRead$computeCrcDone(storage_addr_t x, storage_len_t y, uint16_t z, error_t result);
 # 30 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$setEvent(uint16_t arg_0x408c97f8);
+static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$setEvent(uint16_t time);
 
-static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$setEventFromNow(uint16_t arg_0x408e5170);
+static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$setEventFromNow(uint16_t delta);
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-static   uint16_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$get(void);
+static uint16_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$get(void );
 # 67 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$fired(void);
-# 39 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$enableEvents(void);
+static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$fired(void );
+# 46 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$enableEvents(void );
 #line 36
-static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$setControlAsCompare(void);
+static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$setControlAsCompare(void );
 
 
 
-static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$disableEvents(void);
+
+
+
+
+
+
+
+static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$disableEvents(void );
 #line 33
-static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$clearPendingInterrupt(void);
+static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$clearPendingInterrupt(void );
 # 42 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430AlarmC.nc"
-static inline  error_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Init$init(void);
+static inline error_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Init$init(void );
 #line 54
-static inline   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$stop(void);
+static inline void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$stop(void );
 
 
 
 
-static inline   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$fired(void);
-
-
-
-
-
+static inline void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$fired(void );
 
 
 
 
 
-static inline   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$startAt(uint16_t t0, uint16_t dt);
+
+
+
+
+
+static inline void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$startAt(uint16_t t0, uint16_t dt);
 #line 103
-static inline   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$overflow(void);
+static inline void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$overflow(void );
 # 53 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-static   /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$size_type /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$get(void);
+static /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$size_type /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$get(void );
 
 
 
 
 
 
-static   bool /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$isOverflowPending(void);
+static bool /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$isOverflowPending(void );
 
 
 
@@ -5294,11 +5807,11 @@ static   bool /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$isOve
 
 
 
-static   void /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$overflow(void);
+static void /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$overflow(void );
 # 56 "/opt/tinyos-2.x/tos/lib/timer/TransformCounterC.nc"
 /*CounterMilli32C.Transform*/TransformCounterC$0$upper_count_type /*CounterMilli32C.Transform*/TransformCounterC$0$m_upper;
 
-enum /*CounterMilli32C.Transform*/TransformCounterC$0$__nesc_unnamed4327 {
+enum /*CounterMilli32C.Transform*/TransformCounterC$0$__nesc_unnamed4329 {
 
   TransformCounterC$0$LOW_SHIFT_RIGHT = 5, 
   TransformCounterC$0$HIGH_SHIFT_LEFT = 8 * sizeof(/*CounterMilli32C.Transform*/TransformCounterC$0$from_size_type ) - /*CounterMilli32C.Transform*/TransformCounterC$0$LOW_SHIFT_RIGHT, 
@@ -5309,69 +5822,69 @@ enum /*CounterMilli32C.Transform*/TransformCounterC$0$__nesc_unnamed4327 {
   TransformCounterC$0$OVERFLOW_MASK = /*CounterMilli32C.Transform*/TransformCounterC$0$NUM_UPPER_BITS ? ((/*CounterMilli32C.Transform*/TransformCounterC$0$upper_count_type )2 << (/*CounterMilli32C.Transform*/TransformCounterC$0$NUM_UPPER_BITS - 1)) - 1 : 0
 };
 
-static   /*CounterMilli32C.Transform*/TransformCounterC$0$to_size_type /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$get(void);
+static /*CounterMilli32C.Transform*/TransformCounterC$0$to_size_type /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$get(void );
 #line 122
-static inline   void /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$overflow(void);
+static inline void /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$overflow(void );
 # 67 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$fired(void);
+static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$fired(void );
 #line 92
-static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$startAt(/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$size_type arg_0x40b89350, /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$size_type arg_0x40b894e0);
+static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$startAt(/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$size_type t0, /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$size_type dt);
 #line 62
-static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$stop(void);
+static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$stop(void );
 # 53 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-static   /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$get(void);
+static /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$get(void );
 # 66 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
 /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$m_t0;
 /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$m_dt;
 
-enum /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$__nesc_unnamed4328 {
+enum /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$__nesc_unnamed4330 {
 
   TransformAlarmC$0$MAX_DELAY_LOG2 = 8 * sizeof(/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$from_size_type ) - 1 - 5, 
   TransformAlarmC$0$MAX_DELAY = (/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type )1 << /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$MAX_DELAY_LOG2
 };
 
-static inline   /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getNow(void);
+static inline /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getNow(void );
 
 
 
 
-static inline   /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getAlarm(void);
-
-
-
-
-
+static inline /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getAlarm(void );
 
 
 
 
 
-static inline   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$stop(void);
 
 
 
 
-static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$set_alarm(void);
+
+static inline void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$stop(void );
+
+
+
+
+static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$set_alarm(void );
 #line 136
-static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$startAt(/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type t0, /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type dt);
+static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$startAt(/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type t0, /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type dt);
 #line 151
-static inline   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$fired(void);
+static inline void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$fired(void );
 #line 166
-static inline   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$overflow(void);
+static inline void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$overflow(void );
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$postTask(void);
+static error_t /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$postTask(void );
 # 98 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-static   /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$getNow(void);
+static /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$getNow(void );
 #line 92
-static   void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$startAt(/*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type arg_0x40b89350, /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type arg_0x40b894e0);
+static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$startAt(/*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type t0, /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type dt);
 #line 105
-static   /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$getAlarm(void);
+static /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$getAlarm(void );
 #line 62
-static   void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$stop(void);
+static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$stop(void );
 # 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$fired(void);
+static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$fired(void );
 # 63 "/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc"
-enum /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$__nesc_unnamed4329 {
+enum /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$__nesc_unnamed4331 {
 #line 63
   AlarmToTimerC$0$fired = 10U
 };
@@ -5383,46 +5896,46 @@ bool /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$m_oneshot;
 
 static inline void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$start(uint32_t t0, uint32_t dt, bool oneshot);
 #line 60
-static inline  void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$stop(void);
+static inline void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$stop(void );
 
 
-static inline  void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$runTask(void);
-
-
-
+static inline void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$runTask(void );
 
 
 
-static inline   void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$fired(void);
+
+
+
+static inline void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$fired(void );
 #line 82
-static inline  void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$startOneShotAt(uint32_t t0, uint32_t dt);
+static inline void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$startOneShotAt(uint32_t t0, uint32_t dt);
 
 
-static inline  uint32_t /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$getNow(void);
+static inline uint32_t /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$getNow(void );
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$postTask(void);
+static error_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$postTask(void );
 # 125 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  uint32_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$getNow(void);
+static uint32_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$getNow(void );
 #line 118
-static  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$startOneShotAt(uint32_t arg_0x40b25738, uint32_t arg_0x40b258c8);
+static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$startOneShotAt(uint32_t t0, uint32_t dt);
 #line 67
-static  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$stop(void);
+static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$stop(void );
 
 
 
 
-static  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$fired(
+static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$fired(
 # 37 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x40c428a8);
+uint8_t arg_0x40c4c2d8);
 #line 60
-enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4330 {
+enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4332 {
 #line 60
   VirtualizeTimerC$0$updateFromTimer = 11U
 };
 #line 60
 typedef int /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_sillytask_updateFromTimer[/*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer];
 #line 42
-enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4331 {
+enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4333 {
 
   VirtualizeTimerC$0$NUM_TIMERS = 2U, 
   VirtualizeTimerC$0$END_OF_LIST = 255
@@ -5436,7 +5949,7 @@ enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4331 {
 
 
 #line 48
-typedef struct /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4332 {
+typedef struct /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4334 {
 
   uint32_t t0;
   uint32_t dt;
@@ -5451,105 +5964,115 @@ typedef struct /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unna
 
 
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$fireTimers(uint32_t now);
-#line 88
-static inline  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$runTask(void);
-#line 127
-static inline  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$fired(void);
+#line 89
+static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$runTask(void );
+#line 128
+static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$fired(void );
 
 
 
 
 static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$startTimer(uint8_t num, uint32_t t0, uint32_t dt, bool isoneshot);
-#line 147
-static inline  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startOneShot(uint8_t num, uint32_t dt);
+#line 148
+static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startOneShot(uint8_t num, uint32_t dt);
 
 
 
 
-static inline  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$stop(uint8_t num);
-#line 177
-static inline  uint32_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$getNow(uint8_t num);
-#line 192
-static inline   void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(uint8_t num);
+static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$stop(uint8_t num);
+#line 178
+static inline uint32_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$getNow(uint8_t num);
+#line 193
+static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(uint8_t num);
 # 47 "/opt/tinyos-2.x/tos/lib/timer/CounterToLocalTimeC.nc"
-static inline   void /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter$overflow(void);
+static inline void /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter$overflow(void );
 # 68 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-static  error_t Stm25pBlockP$Sector$read(
+static error_t Stm25pBlockP$Sector$read(
 # 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
+uint8_t arg_0x40cac408, 
 # 68 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c75770, uint8_t *arg_0x40c75918, stm25p_len_t arg_0x40c75aa8);
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len);
 #line 112
-static  error_t Stm25pBlockP$Sector$erase(
+static error_t Stm25pBlockP$Sector$erase(
 # 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
+uint8_t arg_0x40cac408, 
 # 112 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-uint8_t arg_0x40c71010, uint8_t arg_0x40c711a0);
+uint8_t sector, uint8_t num_sectors);
 #line 133
-static  error_t Stm25pBlockP$Sector$computeCrc(
+static error_t Stm25pBlockP$Sector$computeCrc(
 # 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
+uint8_t arg_0x40cac408, 
 # 133 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-uint16_t arg_0x40c9c068, stm25p_addr_t arg_0x40c9c1f8, 
-stm25p_len_t arg_0x40c9c398);
+uint16_t crc, stm25p_addr_t addr, 
+stm25p_len_t len);
 #line 91
-static  error_t Stm25pBlockP$Sector$write(
+static error_t Stm25pBlockP$Sector$write(
 # 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0, 
+uint8_t arg_0x40cac408, 
 # 91 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c73b68, uint8_t *arg_0x40c73d10, stm25p_len_t arg_0x40c73ea0);
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len);
 #line 56
-static  uint8_t Stm25pBlockP$Sector$getNumSectors(
+static uint8_t Stm25pBlockP$Sector$getNumSectors(
 # 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c9a4e0);
+uint8_t arg_0x40cac408);
 # 95 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-static  void Stm25pBlockP$Read$computeCrcDone(
+static void Stm25pBlockP$Read$computeCrcDone(
 # 39 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7dba8, 
+uint8_t arg_0x40c96d48, 
 # 95 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-storage_addr_t arg_0x40b72800, storage_len_t arg_0x40b72990, 
-uint16_t arg_0x40b72b30, error_t arg_0x40b72cb8);
+storage_addr_t addr, storage_len_t len, 
+uint16_t crc, error_t error);
 #line 67
-static  void Stm25pBlockP$Read$readDone(
+static void Stm25pBlockP$Read$readDone(
 # 39 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7dba8, 
+uint8_t arg_0x40c96d48, 
 # 67 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-storage_addr_t arg_0x40b4c338, void *arg_0x40b4c4d8, storage_len_t arg_0x40b4c668, 
-error_t arg_0x40b4c800);
-# 113 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
-static  void Stm25pBlockP$Write$syncDone(
+storage_addr_t addr, 
+#line 62
+void * buf, 
+
+
+
+
+storage_len_t len, 
+error_t error);
+# 112 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
+static void Stm25pBlockP$Write$syncDone(
 # 40 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7c5e8, 
-# 113 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
-error_t arg_0x40c861b0);
+uint8_t arg_0x40c8d7e0, 
+# 112 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
+error_t error);
 #line 71
-static  void Stm25pBlockP$Write$writeDone(
+static void Stm25pBlockP$Write$writeDone(
 # 40 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7c5e8, 
+uint8_t arg_0x40c8d7e0, 
 # 71 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
-storage_addr_t arg_0x40c5c860, void *arg_0x40c5ca00, storage_len_t arg_0x40c5cb90, 
-error_t arg_0x40c5cd28);
+storage_addr_t addr, 
+#line 66
+void * buf, 
+
+
+
+
+storage_len_t len, 
+error_t error);
 #line 91
-static  void Stm25pBlockP$Write$eraseDone(
+static void Stm25pBlockP$Write$eraseDone(
 # 40 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7c5e8, 
+uint8_t arg_0x40c8d7e0, 
 # 91 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
-error_t arg_0x40c5b798);
+error_t error);
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t Stm25pBlockP$ClientResource$release(
+static error_t Stm25pBlockP$ClientResource$release(
 # 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7a350);
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t Stm25pBlockP$ClientResource$request(
-# 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-uint8_t arg_0x40c7a350);
+uint8_t arg_0x40c8b358);
 
 
 
 
 
 
-enum Stm25pBlockP$__nesc_unnamed4333 {
+enum Stm25pBlockP$__nesc_unnamed4335 {
   Stm25pBlockP$NUM_BLOCKS = 1U
 };
 
@@ -5561,7 +6084,7 @@ enum Stm25pBlockP$__nesc_unnamed4333 {
 
 
 #line 55
-typedef enum Stm25pBlockP$__nesc_unnamed4334 {
+typedef enum Stm25pBlockP$__nesc_unnamed4336 {
   Stm25pBlockP$S_IDLE, 
   Stm25pBlockP$S_READ, 
   Stm25pBlockP$S_CRC, 
@@ -5584,44 +6107,30 @@ typedef struct Stm25pBlockP$stm25p_block_state_t {
 } Stm25pBlockP$stm25p_block_state_t;
 
 Stm25pBlockP$stm25p_block_state_t Stm25pBlockP$m_block_state[Stm25pBlockP$NUM_BLOCKS];
-Stm25pBlockP$stm25p_block_state_t Stm25pBlockP$m_req;
 
-static inline error_t Stm25pBlockP$newRequest(uint8_t client);
+
+
 static void Stm25pBlockP$signalDone(uint8_t id, uint16_t crc, error_t error);
-
-
-
-
-
-
-
-
-
-
-static  error_t Stm25pBlockP$Read$read(uint8_t id, storage_addr_t addr, void *buf, 
-storage_len_t len);
-#line 124
-static inline error_t Stm25pBlockP$newRequest(uint8_t client);
 #line 136
-static  void Stm25pBlockP$ClientResource$granted(uint8_t id);
+static void Stm25pBlockP$ClientResource$granted(uint8_t id);
 #line 166
-static inline  void Stm25pBlockP$Sector$readDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
+static inline void Stm25pBlockP$Sector$readDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
 stm25p_len_t len, error_t error);
 
 
 
-static inline  void Stm25pBlockP$Sector$writeDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
+static inline void Stm25pBlockP$Sector$writeDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
 stm25p_len_t len, error_t error);
 
 
 
-static inline  void Stm25pBlockP$Sector$eraseDone(uint8_t id, uint8_t sector, 
+static inline void Stm25pBlockP$Sector$eraseDone(uint8_t id, uint8_t sector, 
 uint8_t num_sectors, 
 error_t error);
 
 
 
-static inline  void Stm25pBlockP$Sector$computeCrcDone(uint8_t id, stm25p_addr_t addr, 
+static inline void Stm25pBlockP$Sector$computeCrcDone(uint8_t id, stm25p_addr_t addr, 
 stm25p_len_t len, 
 uint16_t crc, 
 error_t error);
@@ -5630,97 +6139,93 @@ error_t error);
 
 static void Stm25pBlockP$signalDone(uint8_t id, uint16_t crc, error_t error);
 #line 222
-static inline   void Stm25pBlockP$Read$default$readDone(uint8_t id, storage_addr_t addr, void *buf, storage_len_t len, error_t error);
-static inline   void Stm25pBlockP$Read$default$computeCrcDone(uint8_t id, storage_addr_t addr, storage_len_t len, uint16_t crc, error_t error);
-static inline   void Stm25pBlockP$Write$default$writeDone(uint8_t id, storage_addr_t addr, void *buf, storage_len_t len, error_t error);
-static inline   void Stm25pBlockP$Write$default$eraseDone(uint8_t id, error_t error);
-static inline   void Stm25pBlockP$Write$default$syncDone(uint8_t id, error_t error);
+static inline void Stm25pBlockP$Read$default$readDone(uint8_t id, storage_addr_t addr, void *buf, storage_len_t len, error_t error);
+static inline void Stm25pBlockP$Read$default$computeCrcDone(uint8_t id, storage_addr_t addr, storage_len_t len, uint16_t crc, error_t error);
+static inline void Stm25pBlockP$Write$default$writeDone(uint8_t id, storage_addr_t addr, void *buf, storage_len_t len, error_t error);
+static inline void Stm25pBlockP$Write$default$eraseDone(uint8_t id, error_t error);
+static inline void Stm25pBlockP$Write$default$syncDone(uint8_t id, error_t error);
 
 
-static inline   uint8_t Stm25pBlockP$Sector$default$getNumSectors(uint8_t id);
-static inline   error_t Stm25pBlockP$Sector$default$read(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len);
-static inline   error_t Stm25pBlockP$Sector$default$write(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len);
-static inline   error_t Stm25pBlockP$Sector$default$erase(uint8_t id, uint8_t sector, uint8_t num_sectors);
-static inline   error_t Stm25pBlockP$Sector$default$computeCrc(uint8_t id, uint16_t crc, storage_addr_t addr, storage_len_t len);
-static inline    error_t Stm25pBlockP$ClientResource$default$request(uint8_t id);
-static inline    error_t Stm25pBlockP$ClientResource$default$release(uint8_t id);
+static inline uint8_t Stm25pBlockP$Sector$default$getNumSectors(uint8_t id);
+static inline error_t Stm25pBlockP$Sector$default$read(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len);
+static inline error_t Stm25pBlockP$Sector$default$write(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len);
+static inline error_t Stm25pBlockP$Sector$default$erase(uint8_t id, uint8_t sector, uint8_t num_sectors);
+static inline error_t Stm25pBlockP$Sector$default$computeCrc(uint8_t id, uint16_t crc, storage_addr_t addr, storage_len_t len);
+
+static inline error_t Stm25pBlockP$ClientResource$default$release(uint8_t id);
 # 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  void Stm25pSectorP$SplitControl$startDone(error_t arg_0x4056be70);
+static void Stm25pSectorP$SplitControl$startDone(error_t error);
 #line 117
-static  void Stm25pSectorP$SplitControl$stopDone(error_t arg_0x4056aa78);
+static void Stm25pSectorP$SplitControl$stopDone(error_t error);
 # 101 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-static  void Stm25pSectorP$Sector$writeDone(
+static void Stm25pSectorP$Sector$writeDone(
 # 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
+uint8_t arg_0x40cf2440, 
 # 101 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c724c0, uint8_t *arg_0x40c72668, stm25p_len_t arg_0x40c727f8, 
-error_t arg_0x40c72990);
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, 
+error_t error);
 #line 121
-static  void Stm25pSectorP$Sector$eraseDone(
+static void Stm25pSectorP$Sector$eraseDone(
 # 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
+uint8_t arg_0x40cf2440, 
 # 121 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-uint8_t arg_0x40c71768, uint8_t arg_0x40c718f8, error_t arg_0x40c71a80);
+uint8_t sector, uint8_t num_sectors, error_t error);
 #line 144
-static  void Stm25pSectorP$Sector$computeCrcDone(
+static void Stm25pSectorP$Sector$computeCrcDone(
 # 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
+uint8_t arg_0x40cf2440, 
 # 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c9c9c0, stm25p_len_t arg_0x40c9cb50, 
-uint16_t arg_0x40c9ccf0, error_t arg_0x40c9ce78);
+stm25p_addr_t addr, stm25p_len_t len, 
+uint16_t crc, error_t error);
 #line 78
-static  void Stm25pSectorP$Sector$readDone(
+static void Stm25pSectorP$Sector$readDone(
 # 44 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdfcd0, 
+uint8_t arg_0x40cf2440, 
 # 78 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-stm25p_addr_t arg_0x40c730c0, uint8_t *arg_0x40c73268, stm25p_len_t arg_0x40c733f8, 
-error_t arg_0x40c73590);
+stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, 
+error_t error);
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t Stm25pSectorP$Stm25pResource$release(
+static error_t Stm25pSectorP$Stm25pResource$release(
 # 47 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdd168);
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t Stm25pSectorP$Stm25pResource$request(
-# 47 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdd168);
+uint8_t arg_0x40cf1a50);
 # 48 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pVolume.nc"
-static   volume_id_t Stm25pSectorP$Volume$getVolumeId(
+static volume_id_t Stm25pSectorP$Volume$getVolumeId(
 # 45 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdeb28);
+uint8_t arg_0x40cf1330);
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t Stm25pSectorP$SpiResource$release(void);
+static error_t Stm25pSectorP$SpiResource$release(void );
 #line 78
-static   error_t Stm25pSectorP$SpiResource$request(void);
+static error_t Stm25pSectorP$SpiResource$request(void );
 # 47 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-static   error_t Stm25pSectorP$Spi$powerDown(void);
+static error_t Stm25pSectorP$Spi$powerDown(void );
 #line 66
-static   error_t Stm25pSectorP$Spi$read(stm25p_addr_t arg_0x40cd6708, uint8_t *arg_0x40cd68b0, 
-stm25p_len_t arg_0x40cd6a50);
+static error_t Stm25pSectorP$Spi$read(stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len);
 #line 136
-static   error_t Stm25pSectorP$Spi$sectorErase(uint8_t arg_0x40cd14a8);
+static error_t Stm25pSectorP$Spi$sectorErase(uint8_t sector);
 #line 55
-static   error_t Stm25pSectorP$Spi$powerUp(void);
+static error_t Stm25pSectorP$Spi$powerUp(void );
 #line 90
-static   error_t Stm25pSectorP$Spi$computeCrc(uint16_t arg_0x40cd5b30, stm25p_addr_t arg_0x40cd5cc0, 
-stm25p_len_t arg_0x40cd5e60);
+static error_t Stm25pSectorP$Spi$computeCrc(uint16_t crc, stm25p_addr_t addr, 
+stm25p_len_t len);
 #line 114
-static   error_t Stm25pSectorP$Spi$pageProgram(stm25p_addr_t arg_0x40cd2010, uint8_t *arg_0x40cd21b8, 
-stm25p_len_t arg_0x40cd2358);
+static error_t Stm25pSectorP$Spi$pageProgram(stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len);
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void Stm25pSectorP$ClientResource$granted(
+static void Stm25pSectorP$ClientResource$granted(
 # 43 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-uint8_t arg_0x40cdf350);
+uint8_t arg_0x40cf3930);
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t Stm25pSectorP$signalDone_task$postTask(void);
+static error_t Stm25pSectorP$signalDone_task$postTask(void );
 # 86 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-enum Stm25pSectorP$__nesc_unnamed4335 {
+enum Stm25pSectorP$__nesc_unnamed4337 {
 #line 86
   Stm25pSectorP$signalDone_task = 12U
 };
 #line 86
 typedef int Stm25pSectorP$__nesc_sillytask_signalDone_task[Stm25pSectorP$signalDone_task];
 #line 56
-enum Stm25pSectorP$__nesc_unnamed4336 {
+enum Stm25pSectorP$__nesc_unnamed4338 {
   Stm25pSectorP$NO_CLIENT = 0xff
 };
 
@@ -5731,62 +6236,49 @@ enum Stm25pSectorP$__nesc_unnamed4336 {
 
 
 #line 60
-typedef enum Stm25pSectorP$__nesc_unnamed4337 {
+typedef enum Stm25pSectorP$__nesc_unnamed4339 {
   Stm25pSectorP$S_IDLE, 
   Stm25pSectorP$S_READ, 
   Stm25pSectorP$S_WRITE, 
   Stm25pSectorP$S_ERASE, 
   Stm25pSectorP$S_CRC
 } Stm25pSectorP$stm25p_sector_state_t;
- Stm25pSectorP$stm25p_sector_state_t Stm25pSectorP$m_state;
+Stm25pSectorP$stm25p_sector_state_t Stm25pSectorP$m_state;
 
 
 
 
 
 #line 69
-typedef enum Stm25pSectorP$__nesc_unnamed4338 {
+typedef enum Stm25pSectorP$__nesc_unnamed4340 {
   Stm25pSectorP$S_NONE, 
   Stm25pSectorP$S_START, 
   Stm25pSectorP$S_STOP
 } Stm25pSectorP$stm25p_power_state_t;
- Stm25pSectorP$stm25p_power_state_t Stm25pSectorP$m_power_state;
+Stm25pSectorP$stm25p_power_state_t Stm25pSectorP$m_power_state;
 
- uint8_t Stm25pSectorP$m_client;
- stm25p_addr_t Stm25pSectorP$m_addr;
- stm25p_len_t Stm25pSectorP$m_len;
- stm25p_len_t Stm25pSectorP$m_cur_len;
- uint8_t *Stm25pSectorP$m_buf;
- error_t Stm25pSectorP$m_error;
- uint16_t Stm25pSectorP$m_crc;
+uint8_t Stm25pSectorP$m_client;
+stm25p_addr_t Stm25pSectorP$m_addr;
+stm25p_len_t Stm25pSectorP$m_len;
+stm25p_len_t Stm25pSectorP$m_cur_len;
+uint8_t *Stm25pSectorP$m_buf;
+error_t Stm25pSectorP$m_error;
+uint16_t Stm25pSectorP$m_crc;
 
 
 static inline void Stm25pSectorP$signalDone(error_t error);
 
 
-static  error_t Stm25pSectorP$SplitControl$start(void);
+static error_t Stm25pSectorP$SplitControl$start(void );
 
 
 
 
 
 
-static inline  error_t Stm25pSectorP$SplitControl$stop(void);
-
-
-
-
-
-
-static inline   error_t Stm25pSectorP$ClientResource$request(uint8_t id);
-
-
-
-
-
-
-
-static inline   error_t Stm25pSectorP$ClientResource$release(uint8_t id);
+static inline error_t Stm25pSectorP$SplitControl$stop(void );
+#line 110
+static inline error_t Stm25pSectorP$ClientResource$release(uint8_t id);
 
 
 
@@ -5797,7 +6289,7 @@ static inline   error_t Stm25pSectorP$ClientResource$release(uint8_t id);
 
 
 
-static inline  void Stm25pSectorP$Stm25pResource$granted(uint8_t id);
+static inline void Stm25pSectorP$Stm25pResource$granted(uint8_t id);
 
 
 
@@ -5806,7 +6298,7 @@ static inline uint8_t Stm25pSectorP$getVolumeId(uint8_t client);
 
 
 
-static inline  void Stm25pSectorP$SpiResource$granted(void);
+static inline void Stm25pSectorP$SpiResource$granted(void );
 #line 153
 static inline stm25p_addr_t Stm25pSectorP$physicalAddr(uint8_t id, stm25p_addr_t addr);
 
@@ -5822,11 +6314,11 @@ static stm25p_len_t Stm25pSectorP$calcWriteLen(stm25p_addr_t addr);
 
 
 
-static inline  uint8_t Stm25pSectorP$Sector$getNumSectors(uint8_t id);
+static inline uint8_t Stm25pSectorP$Sector$getNumSectors(uint8_t id);
 
 
 
-static inline  error_t Stm25pSectorP$Sector$read(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
+static inline error_t Stm25pSectorP$Sector$read(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
 stm25p_len_t len);
 
 
@@ -5838,16 +6330,16 @@ stm25p_len_t len);
 
 
 
-static inline   void Stm25pSectorP$Spi$readDone(stm25p_addr_t addr, uint8_t *buf, 
+static inline void Stm25pSectorP$Spi$readDone(stm25p_addr_t addr, uint8_t *buf, 
 stm25p_len_t len, error_t error);
 
 
 
-static inline  error_t Stm25pSectorP$Sector$write(uint8_t id, stm25p_addr_t addr, 
+static inline error_t Stm25pSectorP$Sector$write(uint8_t id, stm25p_addr_t addr, 
 uint8_t *buf, 
 stm25p_len_t len);
 #line 202
-static inline   void Stm25pSectorP$Spi$pageProgramDone(stm25p_addr_t addr, uint8_t *buf, 
+static inline void Stm25pSectorP$Spi$pageProgramDone(stm25p_addr_t addr, uint8_t *buf, 
 stm25p_len_t len, error_t error);
 
 
@@ -5858,10 +6350,10 @@ stm25p_len_t len, error_t error);
 
 
 
-static inline  error_t Stm25pSectorP$Sector$erase(uint8_t id, uint8_t sector, 
+static inline error_t Stm25pSectorP$Sector$erase(uint8_t id, uint8_t sector, 
 uint8_t num_sectors);
 #line 226
-static inline   void Stm25pSectorP$Spi$sectorEraseDone(uint8_t sector, error_t error);
+static inline void Stm25pSectorP$Spi$sectorEraseDone(uint8_t sector, error_t error);
 
 
 
@@ -5869,7 +6361,7 @@ static inline   void Stm25pSectorP$Spi$sectorEraseDone(uint8_t sector, error_t e
 
 
 
-static inline  error_t Stm25pSectorP$Sector$computeCrc(uint8_t id, uint16_t crc, 
+static inline error_t Stm25pSectorP$Sector$computeCrc(uint8_t id, uint16_t crc, 
 stm25p_addr_t addr, 
 stm25p_len_t len);
 
@@ -5881,13 +6373,13 @@ stm25p_len_t len);
 
 
 
-static inline   void Stm25pSectorP$Spi$computeCrcDone(uint16_t crc, stm25p_addr_t addr, 
+static inline void Stm25pSectorP$Spi$computeCrcDone(uint16_t crc, stm25p_addr_t addr, 
 stm25p_len_t len, error_t error);
 
 
 
 
-static inline   void Stm25pSectorP$Spi$bulkEraseDone(error_t error);
+static inline void Stm25pSectorP$Spi$bulkEraseDone(error_t error);
 
 
 
@@ -5896,16 +6388,16 @@ static inline void Stm25pSectorP$signalDone(error_t error);
 
 
 
-static inline  void Stm25pSectorP$signalDone_task$runTask(void);
+static inline void Stm25pSectorP$signalDone_task$runTask(void );
 #line 284
-static inline   void Stm25pSectorP$ClientResource$default$granted(uint8_t id);
-static inline   void Stm25pSectorP$Sector$default$readDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error);
-static inline   void Stm25pSectorP$Sector$default$writeDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error);
-static inline   void Stm25pSectorP$Sector$default$eraseDone(uint8_t id, uint8_t sector, uint8_t num_sectors, error_t error);
-static inline   void Stm25pSectorP$Sector$default$computeCrcDone(uint8_t id, stm25p_addr_t addr, stm25p_len_t len, uint16_t crc, error_t error);
-static inline    volume_id_t Stm25pSectorP$Volume$default$getVolumeId(uint8_t id);
+static inline void Stm25pSectorP$ClientResource$default$granted(uint8_t id);
+static inline void Stm25pSectorP$Sector$default$readDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error);
+static inline void Stm25pSectorP$Sector$default$writeDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error);
+static inline void Stm25pSectorP$Sector$default$eraseDone(uint8_t id, uint8_t sector, uint8_t num_sectors, error_t error);
+static inline void Stm25pSectorP$Sector$default$computeCrcDone(uint8_t id, stm25p_addr_t addr, stm25p_len_t len, uint16_t crc, error_t error);
+static inline volume_id_t Stm25pSectorP$Volume$default$getVolumeId(uint8_t id);
 # 39 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-enum /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$__nesc_unnamed4339 {
+enum /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$__nesc_unnamed4341 {
 #line 39
   FcfsResourceQueueC$1$NO_ENTRY = 0xFF
 };
@@ -5913,107 +6405,94 @@ uint8_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$resQ[1U];
 uint8_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$qHead = /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$NO_ENTRY;
 uint8_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$qTail = /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$NO_ENTRY;
 
-static inline  error_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$Init$init(void);
+static inline error_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$Init$init(void );
 
 
 
 
-static inline   bool /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$isEmpty(void);
+static inline bool /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$isEmpty(void );
 
 
 
-static inline   bool /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$isEnqueued(resource_client_id_t id);
 
 
 
-static inline   resource_client_id_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$dequeue(void);
-#line 72
-static inline   error_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$enqueue(resource_client_id_t id);
-# 43 "/opt/tinyos-2.x/tos/interfaces/ResourceRequested.nc"
-static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceRequested$requested(
-# 55 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a784c8);
+
+static inline resource_client_id_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$dequeue(void );
 # 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$unconfigure(
+static void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$unconfigure(
 # 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
+uint8_t arg_0x40ab0430);
 # 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$configure(
+static void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$configure(
 # 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
-# 69 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-static   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$enqueue(resource_client_id_t arg_0x40a62e88);
-#line 43
-static   bool /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$isEmpty(void);
+uint8_t arg_0x40ab0430);
+# 43 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
+static bool /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$isEmpty(void );
 #line 60
-static   resource_client_id_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$dequeue(void);
-# 73 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$requested(void);
-#line 46
-static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$granted(void);
+static resource_client_id_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$dequeue(void );
+# 46 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
+static void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$granted(void );
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$granted(
+static void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$granted(
 # 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a79b68);
+uint8_t arg_0x40ab2520);
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$postTask(void);
-# 74 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-enum /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$__nesc_unnamed4340 {
-#line 74
+static error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$postTask(void );
+# 75 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+enum /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$__nesc_unnamed4342 {
+#line 75
   ArbiterP$1$grantedTask = 13U
 };
-#line 74
+#line 75
 typedef int /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$__nesc_sillytask_grantedTask[/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask];
 #line 67
-enum /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$__nesc_unnamed4341 {
+enum /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$__nesc_unnamed4343 {
 #line 67
   ArbiterP$1$RES_CONTROLLED, ArbiterP$1$RES_GRANTING, ArbiterP$1$RES_IMM_GRANTING, ArbiterP$1$RES_BUSY
 };
 #line 68
-enum /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$__nesc_unnamed4342 {
+enum /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$__nesc_unnamed4344 {
 #line 68
   ArbiterP$1$default_owner_id = 1U
 };
+#line 69
+enum /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$__nesc_unnamed4345 {
+#line 69
+  ArbiterP$1$NO_RES = 0xFF
+};
 uint8_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$state = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$RES_CONTROLLED;
- uint8_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$default_owner_id;
- uint8_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$reqResId;
+uint8_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$default_owner_id;
+uint8_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$reqResId;
+#line 108
+static inline error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$release(uint8_t id);
+#line 129
+static inline error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$release(void );
+#line 186
+static inline void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$runTask(void );
+#line 212
+static inline void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$configure(uint8_t id);
 
-
-
-static inline   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$request(uint8_t id);
-#line 107
-static inline   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$release(uint8_t id);
-#line 126
-static inline   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$release(void);
-#line 173
-static inline  void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$runTask(void);
-#line 187
-static inline    void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceRequested$default$requested(uint8_t id);
-#line 199
-static inline    void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$configure(uint8_t id);
-
-static inline    void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$unconfigure(uint8_t id);
+static inline void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$unconfigure(uint8_t id);
 # 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$start(void);
+static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$start(void );
 #line 109
-static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stop(void);
+static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stop(void );
 # 62 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$startOneShot(uint32_t arg_0x40b279f0);
+static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$startOneShot(uint32_t dt);
 
 
 
 
-static  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$stop(void);
+static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$stop(void );
 # 52 "/opt/tinyos-2.x/tos/lib/power/PowerDownCleanup.nc"
-static   void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$cleanup(void);
+static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$cleanup(void );
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask$postTask(void);
+static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask$postTask(void );
 # 56 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-static   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$release(void);
-# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$startTask$postTask(void);
+static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$release(void );
 # 74 "/opt/tinyos-2.x/tos/interfaces/StdControl.nc"
-static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$start(void);
+static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$start(void );
 
 
 
@@ -6023,9 +6502,9 @@ static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManager
 
 
 
-static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$stop(void);
+static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$stop(void );
 # 69 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
-enum /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$__nesc_unnamed4343 {
+enum /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$__nesc_unnamed4346 {
 #line 69
   DeferredPowerManagerP$0$startTask = 14U
 };
@@ -6037,29 +6516,27 @@ typedef int /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$
 
 
 
-enum /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$__nesc_unnamed4344 {
+enum /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$__nesc_unnamed4347 {
 #line 76
   DeferredPowerManagerP$0$timerTask = 15U
 };
 #line 76
 typedef int /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$__nesc_sillytask_timerTask[/*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask];
 #line 65
- bool /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopping = FALSE;
- bool /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$requested = FALSE;
- bool /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopTimer = FALSE;
+bool /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopping = FALSE;
+bool /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$requested = FALSE;
+bool /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopTimer = FALSE;
 
-static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$startTask$runTask(void);
-
-
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$startTask$runTask(void );
 
 
 
 
-static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask$runTask(void);
 
 
-
-static inline   void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$requested(void);
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask$runTask(void );
+#line 91
+static inline error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$start(void );
 
 
 
@@ -6067,26 +6544,15 @@ static inline   void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerMa
 
 
 
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$startDone(error_t error);
 
 
 
-static inline   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$start(void);
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$granted(void );
 
 
 
-
-
-
-
-static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$startDone(error_t error);
-
-
-
-static inline   void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$granted(void);
-
-
-
-static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$fired(void);
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$fired(void );
 
 
 
@@ -6095,7 +6561,7 @@ static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerMan
 
 
 
-static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stopDone(error_t error);
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stopDone(error_t error);
 
 
 
@@ -6106,7 +6572,7 @@ static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerMan
 
 
 
-static inline   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$stop(void);
+static inline error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$stop(void );
 
 
 
@@ -6114,41 +6580,54 @@ static inline   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowe
 
 
 
-static inline    void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$default$cleanup(void);
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$default$cleanup(void );
 # 59 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
-static   error_t Stm25pSpiP$SpiPacket$send(uint8_t *arg_0x40d43988, uint8_t *arg_0x40d43b30, uint16_t arg_0x40d43cc0);
+static error_t Stm25pSpiP$SpiPacket$send(
+#line 48
+uint8_t * txBuf, 
+
+uint8_t * rxBuf, 
+
+
+
+
+
+
+
+
+uint16_t len);
 # 34 "/opt/tinyos-2.x/tos/interfaces/SpiByte.nc"
-static   uint8_t Stm25pSpiP$SpiByte$write(uint8_t arg_0x40d460f8);
+static uint8_t Stm25pSpiP$SpiByte$write(uint8_t tx);
 # 35 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-static   void Stm25pSpiP$CSN$makeOutput(void);
+static void Stm25pSpiP$CSN$makeOutput(void );
 #line 29
-static   void Stm25pSpiP$CSN$set(void);
-static   void Stm25pSpiP$CSN$clr(void);
+static void Stm25pSpiP$CSN$set(void );
+static void Stm25pSpiP$CSN$clr(void );
 # 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-static   void Stm25pSpiP$Spi$sectorEraseDone(uint8_t arg_0x40cd1a60, error_t arg_0x40cd1be8);
+static void Stm25pSpiP$Spi$sectorEraseDone(uint8_t sector, error_t error);
 #line 77
-static   void Stm25pSpiP$Spi$readDone(stm25p_addr_t arg_0x40cd5088, uint8_t *arg_0x40cd5230, 
-stm25p_len_t arg_0x40cd53d0, error_t arg_0x40cd5558);
+static void Stm25pSpiP$Spi$readDone(stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len, error_t error);
 #line 125
-static   void Stm25pSpiP$Spi$pageProgramDone(stm25p_addr_t arg_0x40cd2970, uint8_t *arg_0x40cd2b18, 
-stm25p_len_t arg_0x40cd2cb8, error_t arg_0x40cd2e40);
+static void Stm25pSpiP$Spi$pageProgramDone(stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len, error_t error);
 #line 101
-static   void Stm25pSpiP$Spi$computeCrcDone(uint16_t arg_0x40cd44f8, stm25p_addr_t arg_0x40cd4688, 
-stm25p_len_t arg_0x40cd4828, error_t arg_0x40cd49b0);
+static void Stm25pSpiP$Spi$computeCrcDone(uint16_t crc, stm25p_addr_t addr, 
+stm25p_len_t len, error_t error);
 #line 159
-static   void Stm25pSpiP$Spi$bulkEraseDone(error_t arg_0x40cd0580);
+static void Stm25pSpiP$Spi$bulkEraseDone(error_t error);
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t Stm25pSpiP$SpiResource$release(void);
+static error_t Stm25pSpiP$SpiResource$release(void );
 #line 78
-static   error_t Stm25pSpiP$SpiResource$request(void);
+static error_t Stm25pSpiP$SpiResource$request(void );
 #line 92
-static  void Stm25pSpiP$ClientResource$granted(void);
+static void Stm25pSpiP$ClientResource$granted(void );
 # 35 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-static   void Stm25pSpiP$Hold$makeOutput(void);
+static void Stm25pSpiP$Hold$makeOutput(void );
 #line 29
-static   void Stm25pSpiP$Hold$set(void);
+static void Stm25pSpiP$Hold$set(void );
 # 56 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-enum Stm25pSpiP$__nesc_unnamed4345 {
+enum Stm25pSpiP$__nesc_unnamed4348 {
   Stm25pSpiP$CRC_BUF_SIZE = 16
 };
 
@@ -6161,7 +6640,7 @@ enum Stm25pSpiP$__nesc_unnamed4345 {
 
 
 #line 60
-typedef enum Stm25pSpiP$__nesc_unnamed4346 {
+typedef enum Stm25pSpiP$__nesc_unnamed4349 {
   Stm25pSpiP$S_READ = 0x3, 
   Stm25pSpiP$S_PAGE_PROGRAM = 0x2, 
   Stm25pSpiP$S_SECTOR_ERASE = 0xd8, 
@@ -6171,25 +6650,25 @@ typedef enum Stm25pSpiP$__nesc_unnamed4346 {
   Stm25pSpiP$S_DEEP_SLEEP = 0xb9
 } Stm25pSpiP$stm25p_cmd_t;
 
- uint8_t Stm25pSpiP$m_cmd[4];
+uint8_t Stm25pSpiP$m_cmd[4];
 
- bool Stm25pSpiP$m_is_writing = FALSE;
- bool Stm25pSpiP$m_computing_crc = FALSE;
+bool Stm25pSpiP$m_is_writing = FALSE;
+bool Stm25pSpiP$m_computing_crc = FALSE;
 
- stm25p_addr_t Stm25pSpiP$m_addr;
- uint8_t *Stm25pSpiP$m_buf;
- stm25p_len_t Stm25pSpiP$m_len;
- stm25p_addr_t Stm25pSpiP$m_cur_addr;
- stm25p_len_t Stm25pSpiP$m_cur_len;
- uint8_t Stm25pSpiP$m_crc_buf[Stm25pSpiP$CRC_BUF_SIZE];
- uint16_t Stm25pSpiP$m_crc;
+stm25p_addr_t Stm25pSpiP$m_addr;
+uint8_t *Stm25pSpiP$m_buf;
+stm25p_len_t Stm25pSpiP$m_len;
+stm25p_addr_t Stm25pSpiP$m_cur_addr;
+stm25p_len_t Stm25pSpiP$m_cur_len;
+uint8_t Stm25pSpiP$m_crc_buf[Stm25pSpiP$CRC_BUF_SIZE];
+uint16_t Stm25pSpiP$m_crc;
 
 static error_t Stm25pSpiP$newRequest(bool write, stm25p_len_t cmd_len);
 static void Stm25pSpiP$signalDone(error_t error);
 
 static uint8_t Stm25pSpiP$sendCmd(uint8_t cmd, uint8_t len);
 #line 100
-static inline  error_t Stm25pSpiP$Init$init(void);
+static inline error_t Stm25pSpiP$Init$init(void );
 
 
 
@@ -6197,7 +6676,7 @@ static inline  error_t Stm25pSpiP$Init$init(void);
 
 
 
-static inline   error_t Stm25pSpiP$ClientResource$request(void);
+static inline error_t Stm25pSpiP$ClientResource$request(void );
 
 
 
@@ -6205,7 +6684,7 @@ static inline   error_t Stm25pSpiP$ClientResource$request(void);
 
 
 
-static inline   error_t Stm25pSpiP$ClientResource$release(void);
+static inline error_t Stm25pSpiP$ClientResource$release(void );
 
 
 
@@ -6213,21 +6692,21 @@ static inline   error_t Stm25pSpiP$ClientResource$release(void);
 
 
 
-static inline stm25p_len_t Stm25pSpiP$calcReadLen(void);
+static inline stm25p_len_t Stm25pSpiP$calcReadLen(void );
 
 
 
-static inline   error_t Stm25pSpiP$Spi$powerDown(void);
-
-
-
-
-static inline   error_t Stm25pSpiP$Spi$powerUp(void);
+static inline error_t Stm25pSpiP$Spi$powerDown(void );
 
 
 
 
-static   error_t Stm25pSpiP$Spi$read(stm25p_addr_t addr, uint8_t *buf, 
+static inline error_t Stm25pSpiP$Spi$powerUp(void );
+
+
+
+
+static error_t Stm25pSpiP$Spi$read(stm25p_addr_t addr, uint8_t *buf, 
 stm25p_len_t len);
 
 
@@ -6236,7 +6715,7 @@ stm25p_len_t len);
 
 
 
-static inline   error_t Stm25pSpiP$Spi$computeCrc(uint16_t crc, stm25p_addr_t addr, 
+static inline error_t Stm25pSpiP$Spi$computeCrc(uint16_t crc, stm25p_addr_t addr, 
 stm25p_len_t len);
 
 
@@ -6245,7 +6724,7 @@ stm25p_len_t len);
 
 
 
-static   error_t Stm25pSpiP$Spi$pageProgram(stm25p_addr_t addr, uint8_t *buf, 
+static error_t Stm25pSpiP$Spi$pageProgram(stm25p_addr_t addr, uint8_t *buf, 
 stm25p_len_t len);
 
 
@@ -6254,7 +6733,7 @@ stm25p_len_t len);
 
 
 
-static   error_t Stm25pSpiP$Spi$sectorErase(uint8_t sector);
+static error_t Stm25pSpiP$Spi$sectorErase(uint8_t sector);
 
 
 
@@ -6276,15 +6755,15 @@ static error_t Stm25pSpiP$newRequest(bool write, stm25p_len_t cmd_len);
 
 
 
-static void Stm25pSpiP$releaseAndRequest(void);
+static void Stm25pSpiP$releaseAndRequest(void );
 
 
 
 
-static   void Stm25pSpiP$SpiPacket$sendDone(uint8_t *tx_buf, uint8_t *rx_buf, 
+static void Stm25pSpiP$SpiPacket$sendDone(uint8_t *tx_buf, uint8_t *rx_buf, 
 uint16_t len, error_t error);
 #line 238
-static inline  void Stm25pSpiP$SpiResource$granted(void);
+static inline void Stm25pSpiP$SpiResource$granted(void );
 
 
 
@@ -6297,192 +6776,179 @@ static inline  void Stm25pSpiP$SpiResource$granted(void);
 
 static void Stm25pSpiP$signalDone(error_t error);
 # 71 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$sendDone(
-# 43 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d90918, 
-# 71 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
-uint8_t *arg_0x40d41610, uint8_t *arg_0x40d417b8, uint16_t arg_0x40d41948, 
-error_t arg_0x40d41ae0);
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$sendDone(
+# 44 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40dad820, 
+# 64 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
+uint8_t * txBuf, 
+uint8_t * rxBuf, 
+
+
+
+
+
+uint16_t len, 
+error_t error);
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiConfigure.nc"
-static   msp430_spi_union_config_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$getConfig(
-# 46 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d8e990);
+static msp430_spi_union_config_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$getConfig(
+# 47 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40daca80);
 # 180 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$enableRxIntr(void);
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$enableRxIntr(void );
 #line 197
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$clrRxIntr(void);
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$clrRxIntr(void );
 #line 97
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$resetUsart(bool arg_0x4070bb78);
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$resetUsart(bool reset);
 #line 177
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$disableRxIntr(void);
-
-
-
-
-
-
-
-
-
-static   bool /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$isTxIntrPending(void);
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$disableRxIntr(void );
 #line 224
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$tx(uint8_t arg_0x4071ae28);
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$tx(uint8_t data);
 #line 168
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$setModeSpi(msp430_spi_union_config_t *arg_0x4071fc40);
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$setModeSpi(msp430_spi_union_config_t *config);
 #line 231
-static   uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$rx(void);
+static uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$rx(void );
 #line 192
-static   bool /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$isRxIntrPending(void);
-
-
-
-
-
-
-
-
-
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$clrTxIntr(void);
+static bool /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$isRxIntrPending(void );
 #line 158
-static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$disableSpi(void);
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$disableSpi(void );
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$release(
-# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d8e030);
+static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$release(
+# 46 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40dac030);
 # 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$request(
-# 45 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d8e030);
+static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$request(
+# 46 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40dac030);
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$granted(
-# 40 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-uint8_t arg_0x40d91548);
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$granted(
+# 41 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+uint8_t arg_0x40daf250);
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_task$postTask(void);
-# 66 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-enum /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$__nesc_unnamed4347 {
-#line 66
+static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_task$postTask(void );
+# 67 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+enum /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$__nesc_unnamed4350 {
+#line 67
   Msp430SpiNoDmaP$0$signalDone_task = 16U
 };
-#line 66
+#line 67
 typedef int /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$__nesc_sillytask_signalDone_task[/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_task];
-#line 55
-enum /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$__nesc_unnamed4348 {
+#line 56
+enum /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$__nesc_unnamed4351 {
   Msp430SpiNoDmaP$0$SPI_ATOMIC_SIZE = 2
 };
 
- uint8_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_tx_buf;
- uint8_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_rx_buf;
- uint16_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_len;
- uint16_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_pos;
- uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_client;
+uint16_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_len;
+uint8_t * /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_tx_buf;
+uint8_t * /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_rx_buf;
+uint16_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_pos;
+uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_client;
 
-static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone(void);
-
-
-
-
-
-
-static inline   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$request(uint8_t id);
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone(void );
 
 
 
 
 
 
-
-static inline   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$release(uint8_t id);
-
-
-
-static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$configure(uint8_t id);
-
-
-
-static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$unconfigure(uint8_t id);
+static inline error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$request(uint8_t id);
 
 
 
 
 
-static inline  void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$granted(uint8_t id);
+
+
+static inline error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$release(uint8_t id);
 
 
 
-static inline   uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiByte$write(uint8_t tx);
-#line 111
-static inline    error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$request(uint8_t id);
-
-static inline    error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$release(uint8_t id);
-static inline    msp430_spi_union_config_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$default$getConfig(uint8_t id);
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$configure(uint8_t id);
 
 
 
-static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$default$granted(uint8_t id);
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$unconfigure(uint8_t id);
 
-static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$continueOp(void);
-#line 146
-static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$send(uint8_t id, uint8_t *tx_buf, 
+
+
+
+
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$granted(uint8_t id);
+
+
+
+static inline uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiByte$write(uint8_t tx);
+#line 112
+static inline error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$request(uint8_t id);
+
+static inline error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$release(uint8_t id);
+static inline msp430_spi_union_config_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$default$getConfig(uint8_t id);
+
+
+
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$default$granted(uint8_t id);
+
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$continueOp(void );
+#line 144
+static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$send(uint8_t id, uint8_t *tx_buf, 
 uint8_t *rx_buf, 
 uint16_t len);
-#line 168
-static inline  void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_task$runTask(void);
+#line 166
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_task$runTask(void );
 
 
 
-static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$rxDone(uint8_t data);
-#line 185
-static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone(void);
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$rxDone(uint8_t data);
+#line 183
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone(void );
 
 
 
 
-static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$txDone(void);
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$txDone(void );
 
-static inline    void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$default$sendDone(uint8_t id, uint8_t *tx_buf, uint8_t *rx_buf, uint16_t len, error_t error);
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$default$sendDone(uint8_t id, uint8_t *tx_buf, uint8_t *rx_buf, uint16_t len, error_t error);
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void HplMsp430Usart0P$UCLK$selectIOFunc(void);
+static void HplMsp430Usart0P$UCLK$selectIOFunc(void );
 #line 78
-static   void HplMsp430Usart0P$UCLK$selectModuleFunc(void);
+static void HplMsp430Usart0P$UCLK$selectModuleFunc(void );
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-static   void HplMsp430Usart0P$Interrupts$rxDone(uint8_t arg_0x40705730);
+static void HplMsp430Usart0P$Interrupts$rxDone(uint8_t data);
 #line 49
-static   void HplMsp430Usart0P$Interrupts$txDone(void);
+static void HplMsp430Usart0P$Interrupts$txDone(void );
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void HplMsp430Usart0P$URXD$selectIOFunc(void);
+static void HplMsp430Usart0P$URXD$selectIOFunc(void );
 #line 85
-static   void HplMsp430Usart0P$UTXD$selectIOFunc(void);
+static void HplMsp430Usart0P$UTXD$selectIOFunc(void );
 # 7 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2C.nc"
-static   void HplMsp430Usart0P$HplI2C$clearModeI2C(void);
+static void HplMsp430Usart0P$HplI2C$clearModeI2C(void );
 #line 6
-static   bool HplMsp430Usart0P$HplI2C$isI2C(void);
+static bool HplMsp430Usart0P$HplI2C$isI2C(void );
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void HplMsp430Usart0P$SOMI$selectIOFunc(void);
+static void HplMsp430Usart0P$SOMI$selectIOFunc(void );
 #line 78
-static   void HplMsp430Usart0P$SOMI$selectModuleFunc(void);
+static void HplMsp430Usart0P$SOMI$selectModuleFunc(void );
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2CInterrupts.nc"
-static   void HplMsp430Usart0P$I2CInterrupts$fired(void);
+static void HplMsp430Usart0P$I2CInterrupts$fired(void );
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void HplMsp430Usart0P$SIMO$selectIOFunc(void);
+static void HplMsp430Usart0P$SIMO$selectIOFunc(void );
 #line 78
-static   void HplMsp430Usart0P$SIMO$selectModuleFunc(void);
+static void HplMsp430Usart0P$SIMO$selectModuleFunc(void );
 # 89 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
- static volatile uint8_t HplMsp430Usart0P$IE1 __asm ("0x0000");
- static volatile uint8_t HplMsp430Usart0P$ME1 __asm ("0x0004");
- static volatile uint8_t HplMsp430Usart0P$IFG1 __asm ("0x0002");
- static volatile uint8_t HplMsp430Usart0P$U0TCTL __asm ("0x0071");
+static volatile uint8_t HplMsp430Usart0P$IE1 __asm ("0x0000");
+static volatile uint8_t HplMsp430Usart0P$ME1 __asm ("0x0004");
+static volatile uint8_t HplMsp430Usart0P$IFG1 __asm ("0x0002");
+static volatile uint8_t HplMsp430Usart0P$U0TCTL __asm ("0x0071");
 
- static volatile uint8_t HplMsp430Usart0P$U0TXBUF __asm ("0x0077");
+static volatile uint8_t HplMsp430Usart0P$U0TXBUF __asm ("0x0077");
 
-void sig_UART0RX_VECTOR(void)  __attribute((wakeup)) __attribute((interrupt(18))) ;
-
-
+void sig_UART0RX_VECTOR(void ) __attribute((wakeup)) __attribute((interrupt(18)))  ;
 
 
-void sig_UART0TX_VECTOR(void)  __attribute((wakeup)) __attribute((interrupt(16))) ;
+
+
+void sig_UART0TX_VECTOR(void ) __attribute((wakeup)) __attribute((interrupt(16)))  ;
 #line 132
-static inline   void HplMsp430Usart0P$Usart$setUbr(uint16_t control);
+static inline void HplMsp430Usart0P$Usart$setUbr(uint16_t control);
 
 
 
@@ -6493,7 +6959,7 @@ static inline   void HplMsp430Usart0P$Usart$setUbr(uint16_t control);
 
 
 
-static inline   void HplMsp430Usart0P$Usart$setUmctl(uint8_t control);
+static inline void HplMsp430Usart0P$Usart$setUmctl(uint8_t control);
 
 
 
@@ -6501,11 +6967,11 @@ static inline   void HplMsp430Usart0P$Usart$setUmctl(uint8_t control);
 
 
 
-static inline   void HplMsp430Usart0P$Usart$resetUsart(bool reset);
+static inline void HplMsp430Usart0P$Usart$resetUsart(bool reset);
 #line 207
-static inline   void HplMsp430Usart0P$Usart$disableUart(void);
+static inline void HplMsp430Usart0P$Usart$disableUart(void );
 #line 238
-static inline   void HplMsp430Usart0P$Usart$enableSpi(void);
+static inline void HplMsp430Usart0P$Usart$enableSpi(void );
 
 
 
@@ -6514,7 +6980,7 @@ static inline   void HplMsp430Usart0P$Usart$enableSpi(void);
 
 
 
-static inline   void HplMsp430Usart0P$Usart$disableSpi(void);
+static void HplMsp430Usart0P$Usart$disableSpi(void );
 
 
 
@@ -6532,30 +6998,9 @@ static inline void HplMsp430Usart0P$configSpi(msp430_spi_union_config_t *config)
 
 
 
-static inline   void HplMsp430Usart0P$Usart$setModeSpi(msp430_spi_union_config_t *config);
-#line 316
-static inline   bool HplMsp430Usart0P$Usart$isTxIntrPending(void);
+static inline void HplMsp430Usart0P$Usart$setModeSpi(msp430_spi_union_config_t *config);
 #line 330
-static inline   bool HplMsp430Usart0P$Usart$isRxIntrPending(void);
-
-
-
-
-
-
-static inline   void HplMsp430Usart0P$Usart$clrTxIntr(void);
-
-
-
-static inline   void HplMsp430Usart0P$Usart$clrRxIntr(void);
-
-
-
-static inline   void HplMsp430Usart0P$Usart$clrIntr(void);
-
-
-
-static inline   void HplMsp430Usart0P$Usart$disableRxIntr(void);
+static inline bool HplMsp430Usart0P$Usart$isRxIntrPending(void );
 
 
 
@@ -6563,19 +7008,38 @@ static inline   void HplMsp430Usart0P$Usart$disableRxIntr(void);
 
 
 
-static inline   void HplMsp430Usart0P$Usart$disableIntr(void);
 
 
 
-static inline   void HplMsp430Usart0P$Usart$enableRxIntr(void);
+static inline void HplMsp430Usart0P$Usart$clrRxIntr(void );
+
+
+
+static inline void HplMsp430Usart0P$Usart$clrIntr(void );
+
+
+
+static inline void HplMsp430Usart0P$Usart$disableRxIntr(void );
+
+
+
+
+
+
+
+static inline void HplMsp430Usart0P$Usart$disableIntr(void );
+
+
+
+static inline void HplMsp430Usart0P$Usart$enableRxIntr(void );
 #line 382
-static inline   void HplMsp430Usart0P$Usart$tx(uint8_t data);
+static inline void HplMsp430Usart0P$Usart$tx(uint8_t data);
 
 
 
-static   uint8_t HplMsp430Usart0P$Usart$rx(void);
+static uint8_t HplMsp430Usart0P$Usart$rx(void );
 # 80 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
-static   bool /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$inUse(void);
+static bool /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$inUse(void );
 
 
 
@@ -6583,21 +7047,21 @@ static   bool /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$
 
 
 
-static   uint8_t /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$userId(void);
+static uint8_t /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$userId(void );
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$rxDone(
+static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$rxDone(
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-uint8_t arg_0x409e8c78, 
+uint8_t arg_0x40a92f08, 
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-uint8_t arg_0x40705730);
+uint8_t data);
 #line 49
-static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$txDone(
+static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$txDone(
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-uint8_t arg_0x409e8c78);
+uint8_t arg_0x40a92f08);
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2CInterrupts.nc"
-static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$fired(
+static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$fired(
 # 40 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-uint8_t arg_0x409e25e8);
+uint8_t arg_0x40a8fed0);
 
 
 
@@ -6606,26 +7070,26 @@ uint8_t arg_0x409e25e8);
 
 
 
-static inline   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$txDone(void);
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$txDone(void );
 
 
 
 
-static inline   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$rxDone(uint8_t data);
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$rxDone(uint8_t data);
 
 
 
 
-static inline   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawI2CInterrupts$fired(void);
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawI2CInterrupts$fired(void );
 
 
 
 
-static inline    void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$txDone(uint8_t id);
-static inline    void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$rxDone(uint8_t id, uint8_t data);
-static inline    void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$default$fired(uint8_t id);
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$txDone(uint8_t id);
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$rxDone(uint8_t id, uint8_t data);
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$default$fired(uint8_t id);
 # 39 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-enum /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$__nesc_unnamed4349 {
+enum /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$__nesc_unnamed4352 {
 #line 39
   FcfsResourceQueueC$2$NO_ENTRY = 0xFF
 };
@@ -6633,468 +7097,569 @@ uint8_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$resQ[1U];
 uint8_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$qHead = /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$NO_ENTRY;
 uint8_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$qTail = /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$NO_ENTRY;
 
-static inline  error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$Init$init(void);
+static inline error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$Init$init(void );
 
 
 
 
-static inline   bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEmpty(void);
+static inline bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEmpty(void );
 
 
 
-static inline   bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEnqueued(resource_client_id_t id);
+static inline bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEnqueued(resource_client_id_t id);
 
 
 
-static inline   resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$dequeue(void);
+static inline resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$dequeue(void );
 #line 72
-static inline   error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$enqueue(resource_client_id_t id);
+static inline error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$enqueue(resource_client_id_t id);
 # 43 "/opt/tinyos-2.x/tos/interfaces/ResourceRequested.nc"
-static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$requested(
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$requested(
 # 55 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a784c8);
+uint8_t arg_0x40ab1010);
 # 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$unconfigure(
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$unconfigure(
 # 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
+uint8_t arg_0x40ab0430);
 # 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$configure(
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$configure(
 # 60 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a77678);
+uint8_t arg_0x40ab0430);
 # 69 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$enqueue(resource_client_id_t arg_0x40a62e88);
+static error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$enqueue(resource_client_id_t id);
 #line 43
-static   bool /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$isEmpty(void);
+static bool /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$isEmpty(void );
 #line 60
-static   resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$dequeue(void);
+static resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$dequeue(void );
 # 73 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$requested(void);
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$requested(void );
 #line 46
-static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$granted(void);
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$granted(void );
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-static  void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$granted(
+static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$granted(
 # 54 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-uint8_t arg_0x40a79b68);
+uint8_t arg_0x40ab2520);
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$postTask(void);
-# 74 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-enum /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$__nesc_unnamed4350 {
-#line 74
+static error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$postTask(void );
+# 75 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+enum /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$__nesc_unnamed4353 {
+#line 75
   ArbiterP$2$grantedTask = 17U
 };
-#line 74
+#line 75
 typedef int /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$__nesc_sillytask_grantedTask[/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask];
 #line 67
-enum /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$__nesc_unnamed4351 {
+enum /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$__nesc_unnamed4354 {
 #line 67
   ArbiterP$2$RES_CONTROLLED, ArbiterP$2$RES_GRANTING, ArbiterP$2$RES_IMM_GRANTING, ArbiterP$2$RES_BUSY
 };
 #line 68
-enum /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$__nesc_unnamed4352 {
+enum /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$__nesc_unnamed4355 {
 #line 68
   ArbiterP$2$default_owner_id = 1U
 };
+#line 69
+enum /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$__nesc_unnamed4356 {
+#line 69
+  ArbiterP$2$NO_RES = 0xFF
+};
 uint8_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_CONTROLLED;
- uint8_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$default_owner_id;
- uint8_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$reqResId;
+uint8_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$default_owner_id;
+uint8_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$reqResId;
 
 
 
-static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$request(uint8_t id);
-#line 107
-static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$release(uint8_t id);
-#line 126
-static inline   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$release(void);
-#line 146
-static inline   bool /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$inUse(void);
+static error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$request(uint8_t id);
+#line 108
+static error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$release(uint8_t id);
+#line 129
+static inline error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$release(void );
+#line 149
+static bool /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$inUse(void );
+#line 162
+static uint8_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$userId(void );
+#line 186
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$runTask(void );
+#line 198
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$default$granted(uint8_t id);
+
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$default$requested(uint8_t id);
 
 
 
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$granted(void );
 
-
-
-
-
-static inline   uint8_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$userId(void);
-#line 173
-static inline  void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$runTask(void);
-#line 185
-static inline   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$default$granted(uint8_t id);
-
-static inline    void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$default$requested(uint8_t id);
-
-
-
-static inline    void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$granted(void);
-
-static inline    void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$requested(void);
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$requested(void );
 
 
 
 
 
-static inline    void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$configure(uint8_t id);
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$configure(uint8_t id);
 
-static inline    void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$unconfigure(uint8_t id);
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$unconfigure(uint8_t id);
 # 97 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-static   void HplMsp430I2C0P$HplUsart$resetUsart(bool arg_0x4070bb78);
+static void HplMsp430I2C0P$HplUsart$resetUsart(bool reset);
 # 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2C0P.nc"
- static volatile uint8_t HplMsp430I2C0P$U0CTL __asm ("0x0070");
+static volatile uint8_t HplMsp430I2C0P$U0CTL __asm ("0x0070");
 
 
 
 
 
-static inline   bool HplMsp430I2C0P$HplI2C$isI2C(void);
+static inline bool HplMsp430I2C0P$HplI2C$isI2C(void );
 
 
 
-static inline   void HplMsp430I2C0P$HplI2C$clearModeI2C(void);
+static inline void HplMsp430I2C0P$HplI2C$clearModeI2C(void );
 # 71 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$makeOutput(void);
+static void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$makeOutput(void );
 #line 34
-static   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$set(void);
+static void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$set(void );
 
 
 
 
-static   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$clr(void);
+static void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$clr(void );
 # 37 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$set(void);
-static inline   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$clr(void);
+static inline void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$set(void );
+static inline void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$clr(void );
 
 
 
 
-static inline   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$makeOutput(void);
+static inline void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$makeOutput(void );
 # 71 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-static   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$HplGeneralIO$makeOutput(void);
+static void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$HplGeneralIO$makeOutput(void );
 #line 34
-static   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$HplGeneralIO$set(void);
+static void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$HplGeneralIO$set(void );
 # 37 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$set(void);
+static inline void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$set(void );
 
 
 
 
 
-static inline   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$makeOutput(void);
+static inline void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$makeOutput(void );
 # 45 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBinderP.nc"
-static inline   volume_id_t /*Lz77AppC.BlockStorageC.BinderP*/Stm25pBinderP$0$Volume$getVolumeId(void);
-# 196 "/opt/tinyos-2.x/tos/chips/msp430/msp430hardware.h"
-static inline void __nesc_enable_interrupt(void )
+static inline volume_id_t /*Lz77AppC.BlockStorageC.BinderP*/Stm25pBinderP$0$Volume$getVolumeId(void );
+# 212 "/opt/tinyos-2.x/tos/chips/msp430/msp430hardware.h"
+static inline  void __nesc_enable_interrupt(void )
 {
    __asm volatile ("eint");}
 
-# 155 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$userId(void)
-#line 155
-{
-  /* atomic removed: atomic calls only */
-#line 156
-  {
-    unsigned char __nesc_temp = 
-#line 156
-    /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId;
-
-#line 156
-    return __nesc_temp;
-  }
-}
-
-# 88 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
-inline static   uint8_t /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$userId(void){
-#line 88
-  unsigned char result;
-#line 88
-
-#line 88
-  result = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$userId();
-#line 88
-
-#line 88
-  return result;
-#line 88
-}
-#line 88
-# 387 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static inline   void SerialP$SerialFrameComm$dataReceived(uint8_t data)
-#line 387
-{
-  SerialP$rx_state_machine(FALSE, data);
-}
-
-# 83 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
-inline static   void HdlcTranslateC$SerialFrameComm$dataReceived(uint8_t arg_0x405fc128){
-#line 83
-  SerialP$SerialFrameComm$dataReceived(arg_0x405fc128);
-#line 83
-}
-#line 83
-# 384 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static inline   void SerialP$SerialFrameComm$delimiterReceived(void)
-#line 384
-{
-  SerialP$rx_state_machine(TRUE, 0);
-}
-
-# 74 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
-inline static   void HdlcTranslateC$SerialFrameComm$delimiterReceived(void){
-#line 74
-  SerialP$SerialFrameComm$delimiterReceived();
-#line 74
-}
-#line 74
-# 61 "/opt/tinyos-2.x/tos/lib/serial/HdlcTranslateC.nc"
-static inline   void HdlcTranslateC$UartStream$receivedByte(uint8_t data)
-#line 61
-{
-
-
-
-
-
-
-  if (data == HDLC_FLAG_BYTE) {
-
-      HdlcTranslateC$SerialFrameComm$delimiterReceived();
-      return;
-    }
-  else {
-#line 73
-    if (data == HDLC_CTLESC_BYTE) {
-
-        HdlcTranslateC$state.receiveEscape = 1;
-        return;
-      }
-    else {
-#line 78
-      if (HdlcTranslateC$state.receiveEscape) {
-
-          HdlcTranslateC$state.receiveEscape = 0;
-          data = data ^ 0x20;
-        }
-      }
-    }
-#line 83
-  HdlcTranslateC$SerialFrameComm$dataReceived(data);
-}
-
-# 79 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
-inline static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receivedByte(uint8_t arg_0x406ad708){
-#line 79
-  HdlcTranslateC$UartStream$receivedByte(arg_0x406ad708);
-#line 79
-}
-#line 79
-# 116 "/opt/tinyos-2.x/tos/lib/serial/HdlcTranslateC.nc"
-static inline   void HdlcTranslateC$UartStream$receiveDone(uint8_t *buf, uint16_t len, error_t error)
-#line 116
+# 185 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+static inline void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Timer$overflow(void )
 {
 }
 
-# 99 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
-inline static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receiveDone(uint8_t *arg_0x406ac4d0, uint16_t arg_0x406ac660, error_t arg_0x406ac7e8){
-#line 99
-  HdlcTranslateC$UartStream$receiveDone(arg_0x406ac4d0, arg_0x406ac660, arg_0x406ac7e8);
-#line 99
-}
-#line 99
-# 123 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static inline   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$rxDone(uint8_t data)
-#line 123
-{
-  if (/*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_buf) {
-      /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_buf[/*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_pos++] = data;
-      if (/*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_pos >= /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_len) {
-          uint8_t *buf = /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_buf;
-
-#line 128
-          /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_buf = (void *)0;
-          /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receiveDone(buf, /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_len, SUCCESS);
-        }
-    }
-  else {
-      /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receivedByte(data);
-    }
-}
-
-# 65 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-static inline    void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$rxDone(uint8_t id, uint8_t data)
-#line 65
+#line 185
+static inline void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Timer$overflow(void )
 {
 }
 
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-inline static   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$rxDone(uint8_t arg_0x409e8c78, uint8_t arg_0x40705730){
-#line 54
-  switch (arg_0x409e8c78) {
-#line 54
-    case /*PlatformSerialC.UartC.UsartC*/Msp430Usart1C$0$CLIENT_ID:
-#line 54
-      /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$rxDone(arg_0x40705730);
-#line 54
+#line 185
+static inline void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Timer$overflow(void )
+{
+}
+
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+inline static void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Timer$overflow(void ){
+#line 37
+  /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Timer$overflow();
+#line 37
+  /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Timer$overflow();
+#line 37
+  /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Timer$overflow();
+#line 37
+}
+#line 37
+# 126 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
+static inline void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Overflow$fired(void )
+{
+  /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Timer$overflow();
+}
+
+
+
+
+
+static inline void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$default$fired(uint8_t n)
+{
+}
+
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+inline static void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$fired(uint8_t arg_0x40686428){
+#line 28
+  switch (arg_0x40686428) {
+#line 28
+    case 0:
+#line 28
+      /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Event$fired();
+#line 28
       break;
-#line 54
+#line 28
+    case 1:
+#line 28
+      /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Event$fired();
+#line 28
+      break;
+#line 28
+    case 2:
+#line 28
+      /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Event$fired();
+#line 28
+      break;
+#line 28
+    case 5:
+#line 28
+      /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Overflow$fired();
+#line 28
+      break;
+#line 28
     default:
-#line 54
-      /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$rxDone(arg_0x409e8c78, arg_0x40705730);
-#line 54
+#line 28
+      /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$default$fired(arg_0x40686428);
+#line 28
       break;
-#line 54
+#line 28
     }
-#line 54
+#line 28
 }
-#line 54
-# 146 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$inUse(void)
-#line 146
+#line 28
+# 115 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
+static inline void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX0$fired(void )
 {
-  return TRUE;
+  /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$fired(0);
 }
 
-# 80 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
-inline static   bool /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$inUse(void){
-#line 80
-  unsigned char result;
-#line 80
-
-#line 80
-  result = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$inUse();
-#line 80
-
-#line 80
-  return result;
-#line 80
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+inline static void Msp430TimerCommonP$VectorTimerA0$fired(void ){
+#line 28
+  /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX0$fired();
+#line 28
 }
-#line 80
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-static inline   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$rxDone(uint8_t data)
-#line 54
+#line 28
+# 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+static inline  /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$int2CC(uint16_t x)
+#line 47
 {
-  if (/*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$inUse()) {
-    /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$rxDone(/*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$userId(), data);
-    }
+#line 47
+  union /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$__nesc_unnamed4357 {
+#line 47
+    uint16_t f;
+#line 47
+    /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t t;
+  } 
+#line 47
+  c = { .f = x };
+
+#line 47
+  return c.t;
 }
 
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-inline static   void HplMsp430Usart1P$Interrupts$rxDone(uint8_t arg_0x40705730){
-#line 54
-  /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$rxDone(arg_0x40705730);
-#line 54
-}
-#line 54
-# 391 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static inline bool SerialP$valid_rx_proto(uint8_t proto)
-#line 391
+#line 74
+static inline /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Control$getControl(void )
 {
-  switch (proto) {
-      case SERIAL_PROTO_PACKET_ACK: 
-        return TRUE;
-      case SERIAL_PROTO_ACK: 
-        case SERIAL_PROTO_PACKET_NOACK: 
-          default: 
-            return FALSE;
-    }
+  return /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$int2CC(* (volatile uint16_t * )354U);
 }
 
-# 197 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$lockCurrentBuffer(void)
-#line 197
+#line 177
+static inline void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$default$captured(uint16_t n)
 {
-  if (/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which) {
-      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.bufOneLocked = 1;
-    }
-  else {
-      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.bufZeroLocked = 1;
-    }
 }
 
-#line 193
-static inline bool /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$isCurrentBufferLocked(void)
-#line 193
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+inline static void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$captured(uint16_t time){
+#line 75
+  /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$default$captured(time);
+#line 75
+}
+#line 75
+# 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+static inline uint16_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$getEvent(void )
 {
-  return /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which ? /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.bufZeroLocked : /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.bufOneLocked;
+  return * (volatile uint16_t * )370U;
 }
 
-#line 220
-static inline   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$startPacket(void)
-#line 220
+#line 181
+static inline void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$default$fired(void )
 {
-  error_t result = SUCCESS;
+}
 
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+inline static void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$fired(void ){
+#line 34
+  /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$default$fired();
+#line 34
+}
+#line 34
+# 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+static inline  /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$int2CC(uint16_t x)
+#line 47
+{
+#line 47
+  union /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$__nesc_unnamed4358 {
+#line 47
+    uint16_t f;
+#line 47
+    /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t t;
+  } 
+#line 47
+  c = { .f = x };
+
+#line 47
+  return c.t;
+}
+
+#line 74
+static inline /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Control$getControl(void )
+{
+  return /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$int2CC(* (volatile uint16_t * )356U);
+}
+
+#line 177
+static inline void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$default$captured(uint16_t n)
+{
+}
+
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+inline static void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$captured(uint16_t time){
+#line 75
+  /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$default$captured(time);
+#line 75
+}
+#line 75
+# 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+static inline uint16_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$getEvent(void )
+{
+  return * (volatile uint16_t * )372U;
+}
+
+#line 181
+static inline void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$default$fired(void )
+{
+}
+
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+inline static void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$fired(void ){
+#line 34
+  /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$default$fired();
+#line 34
+}
+#line 34
+# 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+static inline  /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$int2CC(uint16_t x)
+#line 47
+{
+#line 47
+  union /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$__nesc_unnamed4359 {
+#line 47
+    uint16_t f;
+#line 47
+    /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t t;
+  } 
+#line 47
+  c = { .f = x };
+
+#line 47
+  return c.t;
+}
+
+#line 74
+static inline /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Control$getControl(void )
+{
+  return /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$int2CC(* (volatile uint16_t * )358U);
+}
+
+#line 177
+static inline void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$default$captured(uint16_t n)
+{
+}
+
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+inline static void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$captured(uint16_t time){
+#line 75
+  /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$default$captured(time);
+#line 75
+}
+#line 75
+# 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+static inline uint16_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$getEvent(void )
+{
+  return * (volatile uint16_t * )374U;
+}
+
+#line 181
+static inline void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$default$fired(void )
+{
+}
+
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+inline static void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$fired(void ){
+#line 34
+  /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$default$fired();
+#line 34
+}
+#line 34
+# 120 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
+static inline void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX1$fired(void )
+{
+  uint8_t n = * (volatile uint16_t * )302U;
+
+#line 123
+  /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$fired(n >> 1);
+}
+
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+inline static void Msp430TimerCommonP$VectorTimerA1$fired(void ){
+#line 28
+  /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX1$fired();
+#line 28
+}
+#line 28
+# 115 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
+static inline void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX0$fired(void )
+{
+  /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$fired(0);
+}
+
+# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
+inline static void Msp430TimerCommonP$VectorTimerB0$fired(void ){
+#line 28
+  /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX0$fired();
+#line 28
+}
+#line 28
+# 185 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+static inline void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Timer$overflow(void )
+{
+}
+
+#line 185
+static inline void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Timer$overflow(void )
+{
+}
+
+#line 185
+static inline void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Timer$overflow(void )
+{
+}
+
+#line 185
+static inline void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Timer$overflow(void )
+{
+}
+
+#line 185
+static inline void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Timer$overflow(void )
+{
+}
+
+#line 185
+static inline void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Timer$overflow(void )
+{
+}
+
+#line 185
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$overflow(void )
+{
+}
+
+# 208 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$Counter$overflow(void )
+#line 208
+{
+}
+
+# 47 "/opt/tinyos-2.x/tos/lib/timer/CounterToLocalTimeC.nc"
+static inline void /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter$overflow(void )
+{
+}
+
+# 166 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
+static inline void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$overflow(void )
+{
+}
+
+# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
+inline static void /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$overflow(void ){
+#line 71
+  /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$overflow();
+#line 71
+  /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter$overflow();
+#line 71
+}
+#line 71
+# 122 "/opt/tinyos-2.x/tos/lib/timer/TransformCounterC.nc"
+static inline void /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$overflow(void )
+{
   /* atomic removed: atomic calls only */
-#line 222
   {
-    if (!/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$isCurrentBufferLocked()) {
-
-
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$lockCurrentBuffer();
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.state = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_BEGIN;
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex = 0;
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvType = TOS_SERIAL_UNKNOWN_ID;
-      }
-    else {
-        result = EBUSY;
+    /*CounterMilli32C.Transform*/TransformCounterC$0$m_upper++;
+    if ((/*CounterMilli32C.Transform*/TransformCounterC$0$m_upper & /*CounterMilli32C.Transform*/TransformCounterC$0$OVERFLOW_MASK) == 0) {
+      /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$overflow();
       }
   }
-  return result;
 }
 
-# 51 "/opt/tinyos-2.x/tos/lib/serial/ReceiveBytePacket.nc"
-inline static   error_t SerialP$ReceiveBytePacket$startPacket(void){
-#line 51
-  unsigned char result;
-#line 51
-
-#line 51
-  result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$startPacket();
-#line 51
-
-#line 51
-  return result;
-#line 51
+# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
+inline static void /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$overflow(void ){
+#line 71
+  /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$overflow();
+#line 71
+  /*Msp430Uart1P.UartP*/Msp430UartP$0$Counter$overflow();
+#line 71
 }
-#line 51
-# 309 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static __inline uint16_t SerialP$rx_current_crc(void)
-#line 309
+#line 71
+# 53 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430CounterC.nc"
+static inline void /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$overflow(void )
 {
-  uint16_t crc;
-  uint8_t tmp = SerialP$rxBuf.writePtr;
-
-#line 312
-  tmp = tmp == 0 ? SerialP$RX_DATA_BUFFER_SIZE : tmp - 1;
-  crc = SerialP$rxBuf.buf[tmp] & 0x00ff;
-  crc = (crc << 8) & 0xFF00;
-  tmp = tmp == 0 ? SerialP$RX_DATA_BUFFER_SIZE : tmp - 1;
-  crc |= SerialP$rxBuf.buf[tmp] & 0x00FF;
-  return crc;
+  /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$overflow();
 }
 
-# 69 "/opt/tinyos-2.x/tos/lib/serial/ReceiveBytePacket.nc"
-inline static   void SerialP$ReceiveBytePacket$endPacket(error_t arg_0x40602cb8){
-#line 69
-  /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$endPacket(arg_0x40602cb8);
-#line 69
-}
-#line 69
-# 215 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBufferSwap(void)
-#line 215
+# 103 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430AlarmC.nc"
+static inline void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$overflow(void )
 {
-  /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which ? 0 : 1;
-  /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBuffer = (uint8_t *)/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messagePtrs[/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which];
+}
+
+# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
+inline static void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$overflow(void ){
+#line 37
+  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$overflow();
+#line 37
+  /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$overflow();
+#line 37
+  /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$overflow();
+#line 37
+  /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Timer$overflow();
+#line 37
+  /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Timer$overflow();
+#line 37
+  /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Timer$overflow();
+#line 37
+  /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Timer$overflow();
+#line 37
+  /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Timer$overflow();
+#line 37
+  /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Timer$overflow();
+#line 37
+}
+#line 37
+# 126 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
+static inline void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Overflow$fired(void )
+{
+  /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$overflow();
 }
 
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$postTask(void){
+inline static error_t /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$postTask(void ){
 #line 56
   unsigned char result;
 #line 56
 
 #line 56
-  result = SchedulerBasicP$TaskBasic$postTask(/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask);
+  result = SchedulerBasicP$TaskBasic$postTask(/*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired);
 #line 56
 
 #line 56
@@ -7102,6 +7667,124 @@ inline static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP
 #line 56
 }
 #line 56
+# 70 "/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc"
+static inline void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$fired(void )
+{
+#line 71
+  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$postTask();
+}
+
+# 67 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
+inline static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$fired(void ){
+#line 67
+  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$fired();
+#line 67
+}
+#line 67
+# 151 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
+static inline void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$fired(void )
+{
+  /* atomic removed: atomic calls only */
+  {
+    if (/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$m_dt == 0) 
+      {
+        /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$fired();
+      }
+    else 
+      {
+        /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$set_alarm();
+      }
+  }
+}
+
+# 67 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
+inline static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$fired(void ){
+#line 67
+  /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$fired();
+#line 67
+}
+#line 67
+# 124 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$disableEvents(void )
+{
+  * (volatile uint16_t * )386U &= ~0x0010;
+}
+
+# 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+inline static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$disableEvents(void ){
+#line 47
+  /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$disableEvents();
+#line 47
+}
+#line 47
+# 59 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430AlarmC.nc"
+static inline void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$fired(void )
+{
+  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$disableEvents();
+  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$fired();
+}
+
+# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
+inline static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$fired(void ){
+#line 34
+  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$fired();
+#line 34
+}
+#line 34
+# 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+static inline uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$getEvent(void )
+{
+  return * (volatile uint16_t * )402U;
+}
+
+#line 177
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$default$captured(uint16_t n)
+{
+}
+
+# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
+inline static void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$captured(uint16_t time){
+#line 75
+  /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$default$captured(time);
+#line 75
+}
+#line 75
+# 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
+static inline  /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$int2CC(uint16_t x)
+#line 47
+{
+#line 47
+  union /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$__nesc_unnamed4360 {
+#line 47
+    uint16_t f;
+#line 47
+    /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t t;
+  } 
+#line 47
+  c = { .f = x };
+
+#line 47
+  return c.t;
+}
+
+#line 74
+static inline /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$getControl(void )
+{
+  return /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$int2CC(* (volatile uint16_t * )386U);
+}
+
+#line 169
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Event$fired(void )
+{
+  if (/*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$getControl().cap) {
+    /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$captured(/*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$getEvent());
+    }
+  else {
+#line 174
+    /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$fired();
+    }
+}
+
 # 86 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
 static inline bool SchedulerBasicP$isWaiting(uint8_t id)
 {
@@ -7130,1066 +7813,8 @@ static inline bool SchedulerBasicP$pushTask(uint8_t id)
     }
 }
 
-# 232 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static __inline bool SerialP$ack_queue_is_full(void)
-#line 232
-{
-  uint8_t tmp;
-#line 233
-  uint8_t tmp2;
-
-  /* atomic removed: atomic calls only */
-#line 234
-  {
-    tmp = SerialP$ackQ.writePtr;
-    tmp2 = SerialP$ackQ.readPtr;
-  }
-  if (++tmp > SerialP$ACK_QUEUE_SIZE) {
-#line 238
-    tmp = 0;
-    }
-#line 239
-  return tmp == tmp2;
-}
-
-
-
-
-
-
-
-static __inline void SerialP$ack_queue_push(uint8_t token)
-#line 248
-{
-  if (!SerialP$ack_queue_is_full()) {
-      /* atomic removed: atomic calls only */
-#line 250
-      {
-        SerialP$ackQ.buf[SerialP$ackQ.writePtr] = token;
-        if (++ SerialP$ackQ.writePtr > SerialP$ACK_QUEUE_SIZE) {
-#line 252
-          SerialP$ackQ.writePtr = 0;
-          }
-      }
-#line 254
-      SerialP$MaybeScheduleTx();
-    }
-}
-
-# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t SerialP$RunTx$postTask(void){
-#line 56
-  unsigned char result;
-#line 56
-
-#line 56
-  result = SchedulerBasicP$TaskBasic$postTask(SerialP$RunTx);
-#line 56
-
-#line 56
-  return result;
-#line 56
-}
-#line 56
-# 40 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfoActiveMessageP.nc"
-static inline   uint8_t SerialPacketInfoActiveMessageP$Info$offset(void)
-#line 40
-{
-  return (uint8_t )(sizeof(message_header_t ) - sizeof(serial_header_t ));
-}
-
-# 349 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline    uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$offset(uart_id_t id)
-#line 349
-{
-  return 0;
-}
-
-# 15 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-inline static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$offset(uart_id_t arg_0x40671460){
-#line 15
-  unsigned char result;
-#line 15
-
-#line 15
-  switch (arg_0x40671460) {
-#line 15
-    case TOS_SERIAL_ACTIVE_MESSAGE_ID:
-#line 15
-      result = SerialPacketInfoActiveMessageP$Info$offset();
-#line 15
-      break;
-#line 15
-    default:
-#line 15
-      result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$offset(arg_0x40671460);
-#line 15
-      break;
-#line 15
-    }
-#line 15
-
-#line 15
-  return result;
-#line 15
-}
-#line 15
-# 238 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline   void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$byteReceived(uint8_t b)
-#line 238
-{
-  /* atomic removed: atomic calls only */
-#line 239
-  {
-    switch (/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.state) {
-        case /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_BEGIN: 
-          /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.state = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_DATA;
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$offset(b);
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvType = b;
-        break;
-
-        case /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_DATA: 
-          if (/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex < sizeof(message_t )) {
-              /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBuffer[/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex] = b;
-              /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex++;
-            }
-          else {
-            }
-
-
-
-
-        break;
-
-        case /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_IDLE: 
-          default: 
-#line 260
-            ;
-      }
-  }
-}
-
-# 58 "/opt/tinyos-2.x/tos/lib/serial/ReceiveBytePacket.nc"
-inline static   void SerialP$ReceiveBytePacket$byteReceived(uint8_t arg_0x406026e8){
-#line 58
-  /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$byteReceived(arg_0x406026e8);
-#line 58
-}
-#line 58
-# 299 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static __inline uint8_t SerialP$rx_buffer_top(void)
-#line 299
-{
-  uint8_t tmp = SerialP$rxBuf.buf[SerialP$rxBuf.readPtr];
-
-#line 301
-  return tmp;
-}
-
-#line 303
-static __inline uint8_t SerialP$rx_buffer_pop(void)
-#line 303
-{
-  uint8_t tmp = SerialP$rxBuf.buf[SerialP$rxBuf.readPtr];
-
-#line 305
-  if (++ SerialP$rxBuf.readPtr > SerialP$RX_DATA_BUFFER_SIZE) {
-#line 305
-    SerialP$rxBuf.readPtr = 0;
-    }
-#line 306
-  return tmp;
-}
-
-#line 295
-static __inline void SerialP$rx_buffer_push(uint8_t data)
-#line 295
-{
-  SerialP$rxBuf.buf[SerialP$rxBuf.writePtr] = data;
-  if (++ SerialP$rxBuf.writePtr > SerialP$RX_DATA_BUFFER_SIZE) {
-#line 297
-    SerialP$rxBuf.writePtr = 0;
-    }
-}
-
-# 55 "/opt/tinyos-2.x/tos/lib/serial/HdlcTranslateC.nc"
-static inline   void HdlcTranslateC$SerialFrameComm$resetReceive(void)
-#line 55
-{
-  HdlcTranslateC$state.receiveEscape = 0;
-}
-
-# 68 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
-inline static   void SerialP$SerialFrameComm$resetReceive(void){
-#line 68
-  HdlcTranslateC$SerialFrameComm$resetReceive();
-#line 68
-}
-#line 68
-# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t SerialP$stopDoneTask$postTask(void){
-#line 56
-  unsigned char result;
-#line 56
-
-#line 56
-  result = SchedulerBasicP$TaskBasic$postTask(SerialP$stopDoneTask);
-#line 56
-
-#line 56
-  return result;
-#line 56
-}
-#line 56
-# 45 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
-inline static   error_t SerialP$SerialFrameComm$putDelimiter(void){
-#line 45
-  unsigned char result;
-#line 45
-
-#line 45
-  result = HdlcTranslateC$SerialFrameComm$putDelimiter();
-#line 45
-
-#line 45
-  return result;
-#line 45
-}
-#line 45
-
-
-
-
-
-
-
-
-
-inline static   error_t SerialP$SerialFrameComm$putData(uint8_t arg_0x405feed8){
-#line 54
-  unsigned char result;
-#line 54
-
-#line 54
-  result = HdlcTranslateC$SerialFrameComm$putData(arg_0x405feed8);
-#line 54
-
-#line 54
-  return result;
-#line 54
-}
-#line 54
-# 513 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static inline   error_t SerialP$SendBytePacket$completeSend(void)
-#line 513
-{
-  bool ret = FAIL;
-
-  /* atomic removed: atomic calls only */
-#line 515
-  {
-    SerialP$txBuf[SerialP$TX_DATA_INDEX].state = SerialP$BUFFER_COMPLETE;
-    ret = SUCCESS;
-  }
-  return ret;
-}
-
-# 60 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
-inline static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$completeSend(void){
-#line 60
-  unsigned char result;
-#line 60
-
-#line 60
-  result = SerialP$SendBytePacket$completeSend();
-#line 60
-
-#line 60
-  return result;
-#line 60
-}
-#line 60
-# 172 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$nextByte(void)
-#line 172
-{
-  uint8_t b;
-  uint8_t indx;
-
-  /* atomic removed: atomic calls only */
-#line 175
-  {
-    b = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendBuffer[/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendIndex];
-    /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendIndex++;
-    indx = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendIndex;
-  }
-  if (indx > /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendLen) {
-      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$completeSend();
-      return 0;
-    }
-  else {
-      return b;
-    }
-}
-
-# 70 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
-inline static   uint8_t SerialP$SendBytePacket$nextByte(void){
-#line 70
-  unsigned char result;
-#line 70
-
-#line 70
-  result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$nextByte();
-#line 70
-
-#line 70
-  return result;
-#line 70
-}
-#line 70
-# 642 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static inline   void SerialP$SerialFrameComm$putDone(void)
-#line 642
-{
-  {
-    error_t txResult = SUCCESS;
-
-    switch (SerialP$txState) {
-
-        case SerialP$TXSTATE_PROTO: 
-
-          txResult = SerialP$SerialFrameComm$putData(SerialP$txProto);
-
-        SerialP$txState = SerialP$TXSTATE_INFO;
-
-
-
-        SerialP$txCRC = crcByte(SerialP$txCRC, SerialP$txProto);
-        break;
-
-        case SerialP$TXSTATE_SEQNO: 
-          txResult = SerialP$SerialFrameComm$putData(SerialP$txSeqno);
-        SerialP$txState = SerialP$TXSTATE_INFO;
-        SerialP$txCRC = crcByte(SerialP$txCRC, SerialP$txSeqno);
-        break;
-
-        case SerialP$TXSTATE_INFO: /* atomic removed: atomic calls only */
-          {
-            txResult = SerialP$SerialFrameComm$putData(SerialP$txBuf[SerialP$txIndex].buf);
-            SerialP$txCRC = crcByte(SerialP$txCRC, SerialP$txBuf[SerialP$txIndex].buf);
-            ++SerialP$txByteCnt;
-
-            if (SerialP$txIndex == SerialP$TX_DATA_INDEX) {
-                uint8_t nextByte;
-
-#line 673
-                nextByte = SerialP$SendBytePacket$nextByte();
-                if (SerialP$txBuf[SerialP$txIndex].state == SerialP$BUFFER_COMPLETE || SerialP$txByteCnt >= SerialP$SERIAL_MTU) {
-                    SerialP$txState = SerialP$TXSTATE_FCS1;
-                  }
-                else {
-                    SerialP$txBuf[SerialP$txIndex].buf = nextByte;
-                  }
-              }
-            else {
-                SerialP$txState = SerialP$TXSTATE_FCS1;
-              }
-          }
-        break;
-
-        case SerialP$TXSTATE_FCS1: 
-          txResult = SerialP$SerialFrameComm$putData(SerialP$txCRC & 0xff);
-        SerialP$txState = SerialP$TXSTATE_FCS2;
-        break;
-
-        case SerialP$TXSTATE_FCS2: 
-          txResult = SerialP$SerialFrameComm$putData((SerialP$txCRC >> 8) & 0xff);
-        SerialP$txState = SerialP$TXSTATE_ENDFLAG;
-        break;
-
-        case SerialP$TXSTATE_ENDFLAG: 
-          txResult = SerialP$SerialFrameComm$putDelimiter();
-        SerialP$txState = SerialP$TXSTATE_ENDWAIT;
-        break;
-
-        case SerialP$TXSTATE_ENDWAIT: 
-          SerialP$txState = SerialP$TXSTATE_FINISH;
-        case SerialP$TXSTATE_FINISH: 
-          SerialP$MaybeScheduleTx();
-        break;
-        case SerialP$TXSTATE_ERROR: 
-          default: 
-            txResult = FAIL;
-        break;
-      }
-
-    if (txResult != SUCCESS) {
-        SerialP$txState = SerialP$TXSTATE_ERROR;
-        SerialP$MaybeScheduleTx();
-      }
-  }
-}
-
-# 89 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
-inline static   void HdlcTranslateC$SerialFrameComm$putDone(void){
-#line 89
-  SerialP$SerialFrameComm$putDone();
-#line 89
-}
-#line 89
-# 48 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
-inline static   error_t HdlcTranslateC$UartStream$send(uint8_t *arg_0x406b0e40, uint16_t arg_0x406af010){
-#line 48
-  unsigned char result;
-#line 48
-
-#line 48
-  result = /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$send(arg_0x406b0e40, arg_0x406af010);
-#line 48
-
-#line 48
-  return result;
-#line 48
-}
-#line 48
-# 104 "/opt/tinyos-2.x/tos/lib/serial/HdlcTranslateC.nc"
-static inline   void HdlcTranslateC$UartStream$sendDone(uint8_t *buf, uint16_t len, 
-error_t error)
-#line 105
-{
-  if (HdlcTranslateC$state.sendEscape) {
-      HdlcTranslateC$state.sendEscape = 0;
-      HdlcTranslateC$m_data = HdlcTranslateC$txTemp;
-      HdlcTranslateC$UartStream$send(&HdlcTranslateC$m_data, 1);
-    }
-  else {
-      HdlcTranslateC$SerialFrameComm$putDone();
-    }
-}
-
-# 57 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
-inline static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$sendDone(uint8_t *arg_0x406af618, uint16_t arg_0x406af7a8, error_t arg_0x406af930){
-#line 57
-  HdlcTranslateC$UartStream$sendDone(arg_0x406af618, arg_0x406af7a8, arg_0x406af930);
-#line 57
-}
-#line 57
-# 384 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
-static inline   void HplMsp430Usart1P$Usart$tx(uint8_t data)
-#line 384
-{
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 385
-    HplMsp430Usart1P$U1TXBUF = data;
-#line 385
-    __nesc_atomic_end(__nesc_atomic); }
-}
-
-# 224 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$tx(uint8_t arg_0x4071ae28){
-#line 224
-  HplMsp430Usart1P$Usart$tx(arg_0x4071ae28);
-#line 224
-}
-#line 224
-# 149 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static inline   void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$txDone(void)
-#line 149
-{
-  if (/*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_pos < /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_len) {
-      /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$tx(/*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf[/*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_pos++]);
-    }
-  else {
-      uint8_t *buf = /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf;
-
-#line 155
-      /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf = (void *)0;
-      /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$sendDone(buf, /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_len, SUCCESS);
-    }
-}
-
-# 64 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-static inline    void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$txDone(uint8_t id)
-#line 64
-{
-}
-
-# 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-inline static   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$txDone(uint8_t arg_0x409e8c78){
-#line 49
-  switch (arg_0x409e8c78) {
-#line 49
-    case /*PlatformSerialC.UartC.UsartC*/Msp430Usart1C$0$CLIENT_ID:
-#line 49
-      /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$txDone();
-#line 49
-      break;
-#line 49
-    default:
-#line 49
-      /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$txDone(arg_0x409e8c78);
-#line 49
-      break;
-#line 49
-    }
-#line 49
-}
-#line 49
-# 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-static inline   void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$txDone(void)
-#line 49
-{
-  if (/*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$inUse()) {
-    /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$txDone(/*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$userId());
-    }
-}
-
-# 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-inline static   void HplMsp430Usart1P$Interrupts$txDone(void){
-#line 49
-  /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$txDone();
-#line 49
-}
-#line 49
-# 185 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Timer$overflow(void)
-{
-}
-
-#line 185
-static inline   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Timer$overflow(void)
-{
-}
-
-#line 185
-static inline   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Timer$overflow(void)
-{
-}
-
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-inline static   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Timer$overflow(void){
-#line 37
-  /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Timer$overflow();
-#line 37
-  /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Timer$overflow();
-#line 37
-  /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Timer$overflow();
-#line 37
-}
-#line 37
-# 126 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Overflow$fired(void)
-{
-  /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Timer$overflow();
-}
-
-
-
-
-
-static inline    void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$default$fired(uint8_t n)
-{
-}
-
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-inline static   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$fired(uint8_t arg_0x40903ef0){
-#line 28
-  switch (arg_0x40903ef0) {
-#line 28
-    case 0:
-#line 28
-      /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Event$fired();
-#line 28
-      break;
-#line 28
-    case 1:
-#line 28
-      /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Event$fired();
-#line 28
-      break;
-#line 28
-    case 2:
-#line 28
-      /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Event$fired();
-#line 28
-      break;
-#line 28
-    case 5:
-#line 28
-      /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Overflow$fired();
-#line 28
-      break;
-#line 28
-    default:
-#line 28
-      /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$default$fired(arg_0x40903ef0);
-#line 28
-      break;
-#line 28
-    }
-#line 28
-}
-#line 28
-# 115 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX0$fired(void)
-{
-  /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$fired(0);
-}
-
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-inline static   void Msp430TimerCommonP$VectorTimerA0$fired(void){
-#line 28
-  /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX0$fired();
-#line 28
-}
-#line 28
-# 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$int2CC(uint16_t x)
-#line 47
-{
-#line 47
-  union /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$__nesc_unnamed4353 {
-#line 47
-    uint16_t f;
-#line 47
-    /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t t;
-  } 
-#line 47
-  c = { .f = x };
-
-#line 47
-  return c.t;
-}
-
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$cc_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Control$getControl(void)
-{
-  return /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$int2CC(* (volatile uint16_t *)354U);
-}
-
-#line 177
-static inline    void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$default$captured(uint16_t n)
-{
-}
-
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-inline static   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$captured(uint16_t arg_0x408df8a8){
-#line 75
-  /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$default$captured(arg_0x408df8a8);
-#line 75
-}
-#line 75
-# 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   uint16_t /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$getEvent(void)
-{
-  return * (volatile uint16_t *)370U;
-}
-
-#line 181
-static inline    void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$default$fired(void)
-{
-}
-
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$fired(void){
-#line 34
-  /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Compare$default$fired();
-#line 34
-}
-#line 34
-# 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$int2CC(uint16_t x)
-#line 47
-{
-#line 47
-  union /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$__nesc_unnamed4354 {
-#line 47
-    uint16_t f;
-#line 47
-    /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t t;
-  } 
-#line 47
-  c = { .f = x };
-
-#line 47
-  return c.t;
-}
-
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$cc_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Control$getControl(void)
-{
-  return /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$int2CC(* (volatile uint16_t *)356U);
-}
-
-#line 177
-static inline    void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$default$captured(uint16_t n)
-{
-}
-
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-inline static   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$captured(uint16_t arg_0x408df8a8){
-#line 75
-  /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$default$captured(arg_0x408df8a8);
-#line 75
-}
-#line 75
-# 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   uint16_t /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$getEvent(void)
-{
-  return * (volatile uint16_t *)372U;
-}
-
-#line 181
-static inline    void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$default$fired(void)
-{
-}
-
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$fired(void){
-#line 34
-  /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Compare$default$fired();
-#line 34
-}
-#line 34
-# 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$int2CC(uint16_t x)
-#line 47
-{
-#line 47
-  union /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$__nesc_unnamed4355 {
-#line 47
-    uint16_t f;
-#line 47
-    /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t t;
-  } 
-#line 47
-  c = { .f = x };
-
-#line 47
-  return c.t;
-}
-
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$cc_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Control$getControl(void)
-{
-  return /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$int2CC(* (volatile uint16_t *)358U);
-}
-
-#line 177
-static inline    void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$default$captured(uint16_t n)
-{
-}
-
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-inline static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$captured(uint16_t arg_0x408df8a8){
-#line 75
-  /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$default$captured(arg_0x408df8a8);
-#line 75
-}
-#line 75
-# 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   uint16_t /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$getEvent(void)
-{
-  return * (volatile uint16_t *)374U;
-}
-
-#line 181
-static inline    void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$default$fired(void)
-{
-}
-
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$fired(void){
-#line 34
-  /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Compare$default$fired();
-#line 34
-}
-#line 34
-# 120 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX1$fired(void)
-{
-  uint8_t n = * (volatile uint16_t *)302U;
-
-#line 123
-  /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$Event$fired(n >> 1);
-}
-
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-inline static   void Msp430TimerCommonP$VectorTimerA1$fired(void){
-#line 28
-  /*Msp430TimerC.Msp430TimerA*/Msp430TimerP$0$VectorTimerX1$fired();
-#line 28
-}
-#line 28
-# 115 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX0$fired(void)
-{
-  /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$fired(0);
-}
-
-# 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-inline static   void Msp430TimerCommonP$VectorTimerB0$fired(void){
-#line 28
-  /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX0$fired();
-#line 28
-}
-#line 28
-# 185 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Timer$overflow(void)
-{
-}
-
-#line 185
-static inline   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Timer$overflow(void)
-{
-}
-
-#line 185
-static inline   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Timer$overflow(void)
-{
-}
-
-#line 185
-static inline   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Timer$overflow(void)
-{
-}
-
-#line 185
-static inline   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Timer$overflow(void)
-{
-}
-
-#line 185
-static inline   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Timer$overflow(void)
-{
-}
-
-#line 185
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$overflow(void)
-{
-}
-
-# 186 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static inline   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Counter$overflow(void)
-#line 186
-{
-}
-
-# 47 "/opt/tinyos-2.x/tos/lib/timer/CounterToLocalTimeC.nc"
-static inline   void /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter$overflow(void)
-{
-}
-
-# 166 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
-static inline   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$overflow(void)
-{
-}
-
-# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-inline static   void /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$overflow(void){
-#line 71
-  /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$overflow();
-#line 71
-  /*HilTimerMilliC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter$overflow();
-#line 71
-}
-#line 71
-# 122 "/opt/tinyos-2.x/tos/lib/timer/TransformCounterC.nc"
-static inline   void /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$overflow(void)
-{
-  /* atomic removed: atomic calls only */
-  {
-    /*CounterMilli32C.Transform*/TransformCounterC$0$m_upper++;
-    if ((/*CounterMilli32C.Transform*/TransformCounterC$0$m_upper & /*CounterMilli32C.Transform*/TransformCounterC$0$OVERFLOW_MASK) == 0) {
-      /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$overflow();
-      }
-  }
-}
-
-# 71 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-inline static   void /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$overflow(void){
-#line 71
-  /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$overflow();
-#line 71
-  /*Msp430Uart1P.UartP*/Msp430UartP$0$Counter$overflow();
-#line 71
-}
-#line 71
-# 53 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430CounterC.nc"
-static inline   void /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$overflow(void)
-{
-  /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$overflow();
-}
-
-# 103 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430AlarmC.nc"
-static inline   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$overflow(void)
-{
-}
-
-# 37 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$overflow(void){
-#line 37
-  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$overflow();
-#line 37
-  /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$overflow();
-#line 37
-  /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$overflow();
-#line 37
-  /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Timer$overflow();
-#line 37
-  /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Timer$overflow();
-#line 37
-  /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Timer$overflow();
-#line 37
-  /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Timer$overflow();
-#line 37
-  /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Timer$overflow();
-#line 37
-  /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Timer$overflow();
-#line 37
-}
-#line 37
-# 126 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Overflow$fired(void)
-{
-  /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$overflow();
-}
-
-# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$postTask(void){
-#line 56
-  unsigned char result;
-#line 56
-
-#line 56
-  result = SchedulerBasicP$TaskBasic$postTask(/*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired);
-#line 56
-
-#line 56
-  return result;
-#line 56
-}
-#line 56
-# 70 "/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc"
-static inline   void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$fired(void)
-{
-#line 71
-  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$postTask();
-}
-
-# 67 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-inline static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$fired(void){
-#line 67
-  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$fired();
-#line 67
-}
-#line 67
-# 151 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
-static inline   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$fired(void)
-{
-  /* atomic removed: atomic calls only */
-  {
-    if (/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$m_dt == 0) 
-      {
-        /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$fired();
-      }
-    else 
-      {
-        /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$set_alarm();
-      }
-  }
-}
-
-# 67 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-inline static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$fired(void){
-#line 67
-  /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$fired();
-#line 67
-}
-#line 67
-# 124 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$disableEvents(void)
-{
-  * (volatile uint16_t *)386U &= ~0x0010;
-}
-
-# 40 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-inline static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$disableEvents(void){
-#line 40
-  /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$disableEvents();
-#line 40
-}
-#line 40
-# 59 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430AlarmC.nc"
-static inline   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$fired(void)
-{
-  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$disableEvents();
-  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$fired();
-}
-
-# 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$fired(void){
-#line 34
-  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$fired();
-#line 34
-}
-#line 34
-# 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$getEvent(void)
-{
-  return * (volatile uint16_t *)402U;
-}
-
-#line 177
-static inline    void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$default$captured(uint16_t n)
-{
-}
-
-# 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$captured(uint16_t arg_0x408df8a8){
-#line 75
-  /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$default$captured(arg_0x408df8a8);
-#line 75
-}
-#line 75
-# 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$int2CC(uint16_t x)
-#line 47
-{
-#line 47
-  union /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$__nesc_unnamed4356 {
-#line 47
-    uint16_t f;
-#line 47
-    /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t t;
-  } 
-#line 47
-  c = { .f = x };
-
-#line 47
-  return c.t;
-}
-
-#line 74
-static inline   /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$getControl(void)
-{
-  return /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$int2CC(* (volatile uint16_t *)386U);
-}
-
-#line 169
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Event$fired(void)
-{
-  if (/*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$getControl().cap) {
-    /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$captured(/*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Capture$getEvent());
-    }
-  else {
-#line 174
-    /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$fired();
-    }
-}
-
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-inline static   uint16_t /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$get(void){
+inline static uint16_t /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$get(void ){
 #line 34
   unsigned int result;
 #line 34
@@ -8204,13 +7829,13 @@ inline static   uint16_t /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430T
 }
 #line 34
 # 38 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430CounterC.nc"
-static inline   uint16_t /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$get(void)
+static inline uint16_t /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$get(void )
 {
   return /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$get();
 }
 
 # 53 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-inline static   /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$size_type /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$get(void){
+inline static /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$size_type /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$get(void ){
 #line 53
   unsigned int result;
 #line 53
@@ -8225,13 +7850,13 @@ inline static   /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$siz
 }
 #line 53
 # 70 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-static inline   bool /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$isOverflowPending(void)
+static inline bool /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$isOverflowPending(void )
 {
-  return * (volatile uint16_t *)384U & 1U;
+  return * (volatile uint16_t * )384U & 1U;
 }
 
 # 35 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-inline static   bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$isOverflowPending(void){
+inline static bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$isOverflowPending(void ){
 #line 35
   unsigned char result;
 #line 35
@@ -8246,13 +7871,13 @@ inline static   bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer
 }
 #line 35
 # 43 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430CounterC.nc"
-static inline   bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$isOverflowPending(void)
+static inline bool /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Counter$isOverflowPending(void )
 {
   return /*Msp430Counter32khzC.Counter*/Msp430CounterC$0$Msp430Timer$isOverflowPending();
 }
 
 # 60 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-inline static   bool /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$isOverflowPending(void){
+inline static bool /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFrom$isOverflowPending(void ){
 #line 60
   unsigned char result;
 #line 60
@@ -8267,46 +7892,46 @@ inline static   bool /*CounterMilli32C.Transform*/TransformCounterC$0$CounterFro
 }
 #line 60
 # 119 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$enableEvents(void)
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$enableEvents(void )
 {
-  * (volatile uint16_t *)386U |= 0x0010;
+  * (volatile uint16_t * )386U |= 0x0010;
 }
 
-# 39 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-inline static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$enableEvents(void){
-#line 39
+# 46 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
+inline static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$enableEvents(void ){
+#line 46
   /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$enableEvents();
-#line 39
+#line 46
 }
-#line 39
+#line 46
 # 84 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$clearPendingInterrupt(void)
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$clearPendingInterrupt(void )
 {
-  * (volatile uint16_t *)386U &= ~0x0001;
+  * (volatile uint16_t * )386U &= ~0x0001;
 }
 
 # 33 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-inline static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$clearPendingInterrupt(void){
+inline static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$clearPendingInterrupt(void ){
 #line 33
   /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$clearPendingInterrupt();
 #line 33
 }
 #line 33
 # 144 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEvent(uint16_t x)
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEvent(uint16_t x)
 {
-  * (volatile uint16_t *)402U = x;
+  * (volatile uint16_t * )402U = x;
 }
 
 # 30 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$setEvent(uint16_t arg_0x408c97f8){
+inline static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$setEvent(uint16_t time){
 #line 30
-  /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEvent(arg_0x408c97f8);
+  /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEvent(time);
 #line 30
 }
 #line 30
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-inline static   uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$get(void){
+inline static uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$get(void ){
 #line 34
   unsigned int result;
 #line 34
@@ -8321,20 +7946,20 @@ inline static   uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Time
 }
 #line 34
 # 154 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEventFromNow(uint16_t x)
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEventFromNow(uint16_t x)
 {
-  * (volatile uint16_t *)402U = /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$get() + x;
+  * (volatile uint16_t * )402U = /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Timer$get() + x;
 }
 
 # 32 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$setEventFromNow(uint16_t arg_0x408e5170){
+inline static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Compare$setEventFromNow(uint16_t delta){
 #line 32
-  /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEventFromNow(arg_0x408e5170);
+  /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Compare$setEventFromNow(delta);
 #line 32
 }
 #line 32
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Timer.nc"
-inline static   uint16_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$get(void){
+inline static uint16_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430Timer$get(void ){
 #line 34
   unsigned int result;
 #line 34
@@ -8349,7 +7974,7 @@ inline static   uint16_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/M
 }
 #line 34
 # 70 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430AlarmC.nc"
-static inline   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$startAt(uint16_t t0, uint16_t dt)
+static inline void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$startAt(uint16_t t0, uint16_t dt)
 {
   /* atomic removed: atomic calls only */
   {
@@ -8381,48 +8006,48 @@ static inline   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp43
 }
 
 # 92 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-inline static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$startAt(/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$size_type arg_0x40b89350, /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$size_type arg_0x40b894e0){
+inline static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$startAt(/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$size_type t0, /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$size_type dt){
 #line 92
-  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$startAt(arg_0x40b89350, arg_0x40b894e0);
+  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$startAt(t0, dt);
 #line 92
 }
 #line 92
 # 181 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline    void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Compare$default$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Compare$default$fired(void )
 {
 }
 
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Compare$fired(void){
+inline static void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Compare$fired(void ){
 #line 34
   /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Compare$default$fired();
 #line 34
 }
 #line 34
 # 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$getEvent(void)
+static inline uint16_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$getEvent(void )
 {
-  return * (volatile uint16_t *)404U;
+  return * (volatile uint16_t * )404U;
 }
 
 #line 177
-static inline    void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$default$captured(uint16_t n)
+static inline void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$default$captured(uint16_t n)
 {
 }
 
 # 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$captured(uint16_t arg_0x408df8a8){
+inline static void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$captured(uint16_t time){
 #line 75
-  /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$default$captured(arg_0x408df8a8);
+  /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$default$captured(time);
 #line 75
 }
 #line 75
 # 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$cc_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$int2CC(uint16_t x)
+static inline  /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$cc_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$int2CC(uint16_t x)
 #line 47
 {
 #line 47
-  union /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$__nesc_unnamed4357 {
+  union /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$__nesc_unnamed4361 {
 #line 47
     uint16_t f;
 #line 47
@@ -8436,13 +8061,13 @@ static inline /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$cc_t /*Msp430Ti
 }
 
 #line 74
-static inline   /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$cc_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Control$getControl(void)
+static inline /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$cc_t /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Control$getControl(void )
 {
-  return /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$int2CC(* (volatile uint16_t *)388U);
+  return /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$int2CC(* (volatile uint16_t * )388U);
 }
 
 #line 169
-static inline   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Event$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Event$fired(void )
 {
   if (/*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Control$getControl().cap) {
     /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$captured(/*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Capture$getEvent());
@@ -8456,41 +8081,41 @@ static inline   void /*Msp430TimerC.Msp430TimerB1*/Msp430TimerCapComP$4$Event$fi
 
 
 
-static inline    void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Compare$default$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Compare$default$fired(void )
 {
 }
 
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Compare$fired(void){
+inline static void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Compare$fired(void ){
 #line 34
   /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Compare$default$fired();
 #line 34
 }
 #line 34
 # 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$getEvent(void)
+static inline uint16_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$getEvent(void )
 {
-  return * (volatile uint16_t *)406U;
+  return * (volatile uint16_t * )406U;
 }
 
 #line 177
-static inline    void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$default$captured(uint16_t n)
+static inline void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$default$captured(uint16_t n)
 {
 }
 
 # 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$captured(uint16_t arg_0x408df8a8){
+inline static void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$captured(uint16_t time){
 #line 75
-  /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$default$captured(arg_0x408df8a8);
+  /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$default$captured(time);
 #line 75
 }
 #line 75
 # 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$cc_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$int2CC(uint16_t x)
+static inline  /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$cc_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$int2CC(uint16_t x)
 #line 47
 {
 #line 47
-  union /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$__nesc_unnamed4358 {
+  union /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$__nesc_unnamed4362 {
 #line 47
     uint16_t f;
 #line 47
@@ -8504,13 +8129,13 @@ static inline /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$cc_t /*Msp430Ti
 }
 
 #line 74
-static inline   /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$cc_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Control$getControl(void)
+static inline /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$cc_t /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Control$getControl(void )
 {
-  return /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$int2CC(* (volatile uint16_t *)390U);
+  return /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$int2CC(* (volatile uint16_t * )390U);
 }
 
 #line 169
-static inline   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Event$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Event$fired(void )
 {
   if (/*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Control$getControl().cap) {
     /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$captured(/*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Capture$getEvent());
@@ -8524,41 +8149,41 @@ static inline   void /*Msp430TimerC.Msp430TimerB2*/Msp430TimerCapComP$5$Event$fi
 
 
 
-static inline    void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Compare$default$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Compare$default$fired(void )
 {
 }
 
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Compare$fired(void){
+inline static void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Compare$fired(void ){
 #line 34
   /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Compare$default$fired();
 #line 34
 }
 #line 34
 # 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$getEvent(void)
+static inline uint16_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$getEvent(void )
 {
-  return * (volatile uint16_t *)408U;
+  return * (volatile uint16_t * )408U;
 }
 
 #line 177
-static inline    void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$default$captured(uint16_t n)
+static inline void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$default$captured(uint16_t n)
 {
 }
 
 # 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$captured(uint16_t arg_0x408df8a8){
+inline static void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$captured(uint16_t time){
 #line 75
-  /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$default$captured(arg_0x408df8a8);
+  /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$default$captured(time);
 #line 75
 }
 #line 75
 # 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$cc_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$int2CC(uint16_t x)
+static inline  /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$cc_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$int2CC(uint16_t x)
 #line 47
 {
 #line 47
-  union /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$__nesc_unnamed4359 {
+  union /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$__nesc_unnamed4363 {
 #line 47
     uint16_t f;
 #line 47
@@ -8572,13 +8197,13 @@ static inline /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$cc_t /*Msp430Ti
 }
 
 #line 74
-static inline   /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$cc_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Control$getControl(void)
+static inline /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$cc_t /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Control$getControl(void )
 {
-  return /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$int2CC(* (volatile uint16_t *)392U);
+  return /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$int2CC(* (volatile uint16_t * )392U);
 }
 
 #line 169
-static inline   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Event$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Event$fired(void )
 {
   if (/*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Control$getControl().cap) {
     /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$captured(/*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Capture$getEvent());
@@ -8592,41 +8217,41 @@ static inline   void /*Msp430TimerC.Msp430TimerB3*/Msp430TimerCapComP$6$Event$fi
 
 
 
-static inline    void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Compare$default$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Compare$default$fired(void )
 {
 }
 
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Compare$fired(void){
+inline static void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Compare$fired(void ){
 #line 34
   /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Compare$default$fired();
 #line 34
 }
 #line 34
 # 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$getEvent(void)
+static inline uint16_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$getEvent(void )
 {
-  return * (volatile uint16_t *)410U;
+  return * (volatile uint16_t * )410U;
 }
 
 #line 177
-static inline    void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$default$captured(uint16_t n)
+static inline void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$default$captured(uint16_t n)
 {
 }
 
 # 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$captured(uint16_t arg_0x408df8a8){
+inline static void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$captured(uint16_t time){
 #line 75
-  /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$default$captured(arg_0x408df8a8);
+  /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$default$captured(time);
 #line 75
 }
 #line 75
 # 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$cc_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$int2CC(uint16_t x)
+static inline  /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$cc_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$int2CC(uint16_t x)
 #line 47
 {
 #line 47
-  union /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$__nesc_unnamed4360 {
+  union /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$__nesc_unnamed4364 {
 #line 47
     uint16_t f;
 #line 47
@@ -8640,13 +8265,13 @@ static inline /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$cc_t /*Msp430Ti
 }
 
 #line 74
-static inline   /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$cc_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Control$getControl(void)
+static inline /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$cc_t /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Control$getControl(void )
 {
-  return /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$int2CC(* (volatile uint16_t *)394U);
+  return /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$int2CC(* (volatile uint16_t * )394U);
 }
 
 #line 169
-static inline   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Event$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Event$fired(void )
 {
   if (/*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Control$getControl().cap) {
     /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$captured(/*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Capture$getEvent());
@@ -8660,41 +8285,41 @@ static inline   void /*Msp430TimerC.Msp430TimerB4*/Msp430TimerCapComP$7$Event$fi
 
 
 
-static inline    void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Compare$default$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Compare$default$fired(void )
 {
 }
 
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Compare$fired(void){
+inline static void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Compare$fired(void ){
 #line 34
   /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Compare$default$fired();
 #line 34
 }
 #line 34
 # 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$getEvent(void)
+static inline uint16_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$getEvent(void )
 {
-  return * (volatile uint16_t *)412U;
+  return * (volatile uint16_t * )412U;
 }
 
 #line 177
-static inline    void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$default$captured(uint16_t n)
+static inline void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$default$captured(uint16_t n)
 {
 }
 
 # 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$captured(uint16_t arg_0x408df8a8){
+inline static void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$captured(uint16_t time){
 #line 75
-  /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$default$captured(arg_0x408df8a8);
+  /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$default$captured(time);
 #line 75
 }
 #line 75
 # 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$cc_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$int2CC(uint16_t x)
+static inline  /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$cc_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$int2CC(uint16_t x)
 #line 47
 {
 #line 47
-  union /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$__nesc_unnamed4361 {
+  union /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$__nesc_unnamed4365 {
 #line 47
     uint16_t f;
 #line 47
@@ -8708,13 +8333,13 @@ static inline /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$cc_t /*Msp430Ti
 }
 
 #line 74
-static inline   /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$cc_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Control$getControl(void)
+static inline /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$cc_t /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Control$getControl(void )
 {
-  return /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$int2CC(* (volatile uint16_t *)396U);
+  return /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$int2CC(* (volatile uint16_t * )396U);
 }
 
 #line 169
-static inline   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Event$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Event$fired(void )
 {
   if (/*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Control$getControl().cap) {
     /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$captured(/*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Capture$getEvent());
@@ -8728,41 +8353,41 @@ static inline   void /*Msp430TimerC.Msp430TimerB5*/Msp430TimerCapComP$8$Event$fi
 
 
 
-static inline    void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Compare$default$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Compare$default$fired(void )
 {
 }
 
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Compare.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Compare$fired(void){
+inline static void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Compare$fired(void ){
 #line 34
   /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Compare$default$fired();
 #line 34
 }
 #line 34
 # 139 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline   uint16_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$getEvent(void)
+static inline uint16_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$getEvent(void )
 {
-  return * (volatile uint16_t *)414U;
+  return * (volatile uint16_t * )414U;
 }
 
 #line 177
-static inline    void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$default$captured(uint16_t n)
+static inline void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$default$captured(uint16_t n)
 {
 }
 
 # 75 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430Capture.nc"
-inline static   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$captured(uint16_t arg_0x408df8a8){
+inline static void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$captured(uint16_t time){
 #line 75
-  /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$default$captured(arg_0x408df8a8);
+  /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$default$captured(time);
 #line 75
 }
 #line 75
 # 47 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$cc_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$int2CC(uint16_t x)
+static inline  /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$cc_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$int2CC(uint16_t x)
 #line 47
 {
 #line 47
-  union /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$__nesc_unnamed4362 {
+  union /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$__nesc_unnamed4366 {
 #line 47
     uint16_t f;
 #line 47
@@ -8776,13 +8401,13 @@ static inline /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$cc_t /*Msp430Ti
 }
 
 #line 74
-static inline   /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$cc_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Control$getControl(void)
+static inline /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$cc_t /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Control$getControl(void )
 {
-  return /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$int2CC(* (volatile uint16_t *)398U);
+  return /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$int2CC(* (volatile uint16_t * )398U);
 }
 
 #line 169
-static inline   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Event$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Event$fired(void )
 {
   if (/*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Control$getControl().cap) {
     /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$captured(/*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Capture$getEvent());
@@ -8794,23 +8419,23 @@ static inline   void /*Msp430TimerC.Msp430TimerB6*/Msp430TimerCapComP$9$Event$fi
 }
 
 # 120 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-static inline   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX1$fired(void)
+static inline void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX1$fired(void )
 {
-  uint8_t n = * (volatile uint16_t *)286U;
+  uint8_t n = * (volatile uint16_t * )286U;
 
 #line 123
   /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$fired(n >> 1);
 }
 
 # 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-inline static   void Msp430TimerCommonP$VectorTimerB1$fired(void){
+inline static void Msp430TimerCommonP$VectorTimerB1$fired(void ){
 #line 28
   /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$VectorTimerX1$fired();
 #line 28
 }
 #line 28
 # 113 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
-static inline  void SchedulerBasicP$Scheduler$init(void)
+static inline void SchedulerBasicP$Scheduler$init(void )
 {
   /* atomic removed: atomic calls only */
   {
@@ -8821,30 +8446,30 @@ static inline  void SchedulerBasicP$Scheduler$init(void)
 }
 
 # 46 "/opt/tinyos-2.x/tos/interfaces/Scheduler.nc"
-inline static  void RealMainP$Scheduler$init(void){
+inline static void RealMainP$Scheduler$init(void ){
 #line 46
   SchedulerBasicP$Scheduler$init();
 #line 46
 }
 #line 46
 # 45 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$set(void)
+static inline void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$set(void )
 #line 45
 {
   /* atomic removed: atomic calls only */
 #line 45
-  * (volatile uint8_t *)49U |= 0x01 << 6;
+  * (volatile uint8_t * )49U |= 0x01 << 6;
 }
 
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$HplGeneralIO$set(void){
+inline static void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$HplGeneralIO$set(void ){
 #line 34
   /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$set();
 #line 34
 }
 #line 34
 # 37 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$set(void)
+static inline void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$set(void )
 #line 37
 {
 #line 37
@@ -8852,30 +8477,30 @@ static inline   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$set(void)
 }
 
 # 29 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void LedsP$Led2$set(void){
+inline static void LedsP$Led2$set(void ){
 #line 29
   /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$set();
 #line 29
 }
 #line 29
 # 45 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$set(void)
+static inline void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$set(void )
 #line 45
 {
   /* atomic removed: atomic calls only */
 #line 45
-  * (volatile uint8_t *)49U |= 0x01 << 5;
+  * (volatile uint8_t * )49U |= 0x01 << 5;
 }
 
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$HplGeneralIO$set(void){
+inline static void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$HplGeneralIO$set(void ){
 #line 34
   /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$set();
 #line 34
 }
 #line 34
 # 37 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$set(void)
+static inline void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$set(void )
 #line 37
 {
 #line 37
@@ -8883,30 +8508,30 @@ static inline   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$set(void)
 }
 
 # 29 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void LedsP$Led1$set(void){
+inline static void LedsP$Led1$set(void ){
 #line 29
   /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$set();
 #line 29
 }
 #line 29
 # 45 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$set(void)
+static inline void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$set(void )
 #line 45
 {
   /* atomic removed: atomic calls only */
 #line 45
-  * (volatile uint8_t *)49U |= 0x01 << 4;
+  * (volatile uint8_t * )49U |= 0x01 << 4;
 }
 
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$set(void){
+inline static void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$set(void ){
 #line 34
   /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$set();
 #line 34
 }
 #line 34
 # 37 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$set(void)
+static inline void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$set(void )
 #line 37
 {
 #line 37
@@ -8914,30 +8539,30 @@ static inline   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$set(void)
 }
 
 # 29 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void LedsP$Led0$set(void){
+inline static void LedsP$Led0$set(void ){
 #line 29
   /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$set();
 #line 29
 }
 #line 29
 # 52 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$makeOutput(void)
+static inline void /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$makeOutput(void )
 #line 52
 {
   /* atomic removed: atomic calls only */
 #line 52
-  * (volatile uint8_t *)50U |= 0x01 << 6;
+  * (volatile uint8_t * )50U |= 0x01 << 6;
 }
 
 # 71 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$HplGeneralIO$makeOutput(void){
+inline static void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$HplGeneralIO$makeOutput(void ){
 #line 71
   /*HplMsp430GeneralIOC.P56*/HplMsp430GeneralIOP$38$IO$makeOutput();
 #line 71
 }
 #line 71
 # 43 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$makeOutput(void)
+static inline void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$makeOutput(void )
 #line 43
 {
 #line 43
@@ -8945,30 +8570,30 @@ static inline   void /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$makeOutpu
 }
 
 # 35 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void LedsP$Led2$makeOutput(void){
+inline static void LedsP$Led2$makeOutput(void ){
 #line 35
   /*PlatformLedsC.Led2Impl*/Msp430GpioC$2$GeneralIO$makeOutput();
 #line 35
 }
 #line 35
 # 52 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$makeOutput(void)
+static inline void /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$makeOutput(void )
 #line 52
 {
   /* atomic removed: atomic calls only */
 #line 52
-  * (volatile uint8_t *)50U |= 0x01 << 5;
+  * (volatile uint8_t * )50U |= 0x01 << 5;
 }
 
 # 71 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$HplGeneralIO$makeOutput(void){
+inline static void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$HplGeneralIO$makeOutput(void ){
 #line 71
   /*HplMsp430GeneralIOC.P55*/HplMsp430GeneralIOP$37$IO$makeOutput();
 #line 71
 }
 #line 71
 # 43 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$makeOutput(void)
+static inline void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$makeOutput(void )
 #line 43
 {
 #line 43
@@ -8976,30 +8601,30 @@ static inline   void /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$makeOutpu
 }
 
 # 35 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void LedsP$Led1$makeOutput(void){
+inline static void LedsP$Led1$makeOutput(void ){
 #line 35
   /*PlatformLedsC.Led1Impl*/Msp430GpioC$1$GeneralIO$makeOutput();
 #line 35
 }
 #line 35
 # 52 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$makeOutput(void)
+static inline void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$makeOutput(void )
 #line 52
 {
   /* atomic removed: atomic calls only */
 #line 52
-  * (volatile uint8_t *)50U |= 0x01 << 4;
+  * (volatile uint8_t * )50U |= 0x01 << 4;
 }
 
 # 71 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$makeOutput(void){
+inline static void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$makeOutput(void ){
 #line 71
   /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$makeOutput();
 #line 71
 }
 #line 71
 # 43 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$makeOutput(void)
+static inline void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$makeOutput(void )
 #line 43
 {
 #line 43
@@ -9007,14 +8632,14 @@ static inline   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$makeOutpu
 }
 
 # 35 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void LedsP$Led0$makeOutput(void){
+inline static void LedsP$Led0$makeOutput(void ){
 #line 35
   /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$makeOutput();
 #line 35
 }
 #line 35
 # 45 "/opt/tinyos-2.x/tos/system/LedsP.nc"
-static inline  error_t LedsP$Init$init(void)
+static inline error_t LedsP$Init$init(void )
 #line 45
 {
   /* atomic removed: atomic calls only */
@@ -9032,7 +8657,7 @@ static inline  error_t LedsP$Init$init(void)
 }
 
 # 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-inline static  error_t PlatformP$LedsInit$init(void){
+inline static error_t PlatformP$LedsInit$init(void ){
 #line 51
   unsigned char result;
 #line 51
@@ -9047,123 +8672,123 @@ inline static  error_t PlatformP$LedsInit$init(void){
 }
 #line 51
 # 33 "/opt/tinyos-2.x/tos/platforms/telosb/hardware.h"
-static inline void TOSH_SET_SIMO0_PIN(void)
+static inline  void TOSH_SET_SIMO0_PIN()
 #line 33
 {
 #line 33
-   static volatile uint8_t r __asm ("0x0019");
+  static volatile uint8_t r __asm ("0x0019");
 
 #line 33
   r |= 1 << 1;
 }
 
 #line 34
-static inline void TOSH_SET_UCLK0_PIN(void)
+static inline  void TOSH_SET_UCLK0_PIN()
 #line 34
 {
 #line 34
-   static volatile uint8_t r __asm ("0x0019");
+  static volatile uint8_t r __asm ("0x0019");
 
 #line 34
   r |= 1 << 3;
 }
 
 #line 85
-static inline void TOSH_SET_FLASH_CS_PIN(void)
+static inline  void TOSH_SET_FLASH_CS_PIN()
 #line 85
 {
 #line 85
-   static volatile uint8_t r __asm ("0x001D");
+  static volatile uint8_t r __asm ("0x001D");
 
 #line 85
   r |= 1 << 4;
 }
 
 #line 34
-static inline void TOSH_CLR_UCLK0_PIN(void)
+static inline  void TOSH_CLR_UCLK0_PIN()
 #line 34
 {
 #line 34
-   static volatile uint8_t r __asm ("0x0019");
+  static volatile uint8_t r __asm ("0x0019");
 
 #line 34
   r &= ~(1 << 3);
 }
 
 #line 85
-static inline void TOSH_CLR_FLASH_CS_PIN(void)
+static inline  void TOSH_CLR_FLASH_CS_PIN()
 #line 85
 {
 #line 85
-   static volatile uint8_t r __asm ("0x001D");
+  static volatile uint8_t r __asm ("0x001D");
 
 #line 85
   r &= ~(1 << 4);
 }
 
 # 11 "/opt/tinyos-2.x/tos/platforms/telosb/MotePlatformC.nc"
-static __inline void MotePlatformC$TOSH_wait(void)
+static __inline void MotePlatformC$TOSH_wait(void )
 #line 11
 {
    __asm volatile ("nop"); __asm volatile ("nop");}
 
 # 86 "/opt/tinyos-2.x/tos/platforms/telosb/hardware.h"
-static inline void TOSH_SET_FLASH_HOLD_PIN(void)
+static inline  void TOSH_SET_FLASH_HOLD_PIN()
 #line 86
 {
 #line 86
-   static volatile uint8_t r __asm ("0x001D");
+  static volatile uint8_t r __asm ("0x001D");
 
 #line 86
   r |= 1 << 7;
 }
 
 #line 85
-static inline void TOSH_MAKE_FLASH_CS_OUTPUT(void)
+static inline  void TOSH_MAKE_FLASH_CS_OUTPUT()
 #line 85
 {
 #line 85
-   static volatile uint8_t r __asm ("0x001E");
+  static volatile uint8_t r __asm ("0x001E");
 
 #line 85
   r |= 1 << 4;
 }
 
 #line 86
-static inline void TOSH_MAKE_FLASH_HOLD_OUTPUT(void)
+static inline  void TOSH_MAKE_FLASH_HOLD_OUTPUT()
 #line 86
 {
 #line 86
-   static volatile uint8_t r __asm ("0x001E");
+  static volatile uint8_t r __asm ("0x001E");
 
 #line 86
   r |= 1 << 7;
 }
 
 #line 34
-static inline void TOSH_MAKE_UCLK0_OUTPUT(void)
+static inline  void TOSH_MAKE_UCLK0_OUTPUT()
 #line 34
 {
 #line 34
-   static volatile uint8_t r __asm ("0x001A");
+  static volatile uint8_t r __asm ("0x001A");
 
 #line 34
   r |= 1 << 3;
 }
 
 #line 33
-static inline void TOSH_MAKE_SIMO0_OUTPUT(void)
+static inline  void TOSH_MAKE_SIMO0_OUTPUT()
 #line 33
 {
 #line 33
-   static volatile uint8_t r __asm ("0x001A");
+  static volatile uint8_t r __asm ("0x001A");
 
 #line 33
   r |= 1 << 1;
 }
 
 # 27 "/opt/tinyos-2.x/tos/platforms/telosb/MotePlatformC.nc"
-static inline void MotePlatformC$TOSH_FLASH_M25P_DP(void)
+static inline void MotePlatformC$TOSH_FLASH_M25P_DP(void )
 #line 27
 {
 
@@ -9205,7 +8830,7 @@ static __inline void MotePlatformC$uwait(uint16_t u)
 }
 
 #line 56
-static inline  error_t MotePlatformC$Init$init(void)
+static inline error_t MotePlatformC$Init$init(void )
 #line 56
 {
   /* atomic removed: atomic calls only */
@@ -9218,23 +8843,23 @@ static inline  error_t MotePlatformC$Init$init(void)
     P5SEL = 0;
     P6SEL = 0;
 
-    P1DIR = 0xe0;
     P1OUT = 0x00;
+    P1DIR = 0xe0;
 
-    P2DIR = 0x7b;
     P2OUT = 0x30;
+    P2DIR = 0x7b;
 
-    P3DIR = 0xf1;
     P3OUT = 0x00;
+    P3DIR = 0xf1;
 
-    P4DIR = 0xfd;
     P4OUT = 0xdd;
+    P4DIR = 0xfd;
 
-    P5DIR = 0xff;
     P5OUT = 0xff;
+    P5DIR = 0xff;
 
-    P6DIR = 0xff;
     P6OUT = 0x00;
+    P6DIR = 0xff;
 
     P1IE = 0;
     P2IE = 0;
@@ -9253,7 +8878,7 @@ static inline  error_t MotePlatformC$Init$init(void)
 }
 
 # 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-inline static  error_t PlatformP$MoteInit$init(void){
+inline static error_t PlatformP$MoteInit$init(void ){
 #line 51
   unsigned char result;
 #line 51
@@ -9268,21 +8893,21 @@ inline static  error_t PlatformP$MoteInit$init(void){
 }
 #line 51
 # 148 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockP.nc"
-static inline void Msp430ClockP$startTimerB(void)
+static inline void Msp430ClockP$startTimerB(void )
 {
 
   Msp430ClockP$TBCTL = 0x0020 | (Msp430ClockP$TBCTL & ~(0x0020 | 0x0010));
 }
 
 #line 136
-static inline void Msp430ClockP$startTimerA(void)
+static inline void Msp430ClockP$startTimerA(void )
 {
 
   Msp430ClockP$TA0CTL = 0x0020 | (Msp430ClockP$TA0CTL & ~(0x0020 | 0x0010));
 }
 
 #line 100
-static inline  void Msp430ClockP$Msp430ClockInit$defaultInitTimerB(void)
+static inline void Msp430ClockP$Msp430ClockInit$defaultInitTimerB(void )
 {
   TBR = 0;
 
@@ -9298,20 +8923,20 @@ static inline  void Msp430ClockP$Msp430ClockInit$defaultInitTimerB(void)
 }
 
 #line 130
-static inline   void Msp430ClockP$Msp430ClockInit$default$initTimerB(void)
+static inline void Msp430ClockP$Msp430ClockInit$default$initTimerB(void )
 {
   Msp430ClockP$Msp430ClockInit$defaultInitTimerB();
 }
 
 # 32 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockInit.nc"
-inline static  void Msp430ClockP$Msp430ClockInit$initTimerB(void){
+inline static void Msp430ClockP$Msp430ClockInit$initTimerB(void ){
 #line 32
   Msp430ClockP$Msp430ClockInit$default$initTimerB();
 #line 32
 }
 #line 32
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockP.nc"
-static inline  void Msp430ClockP$Msp430ClockInit$defaultInitTimerA(void)
+static inline void Msp430ClockP$Msp430ClockInit$defaultInitTimerA(void )
 {
   TA0R = 0;
 
@@ -9327,20 +8952,20 @@ static inline  void Msp430ClockP$Msp430ClockInit$defaultInitTimerA(void)
 }
 
 #line 125
-static inline   void Msp430ClockP$Msp430ClockInit$default$initTimerA(void)
+static inline void Msp430ClockP$Msp430ClockInit$default$initTimerA(void )
 {
   Msp430ClockP$Msp430ClockInit$defaultInitTimerA();
 }
 
 # 31 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockInit.nc"
-inline static  void Msp430ClockP$Msp430ClockInit$initTimerA(void){
+inline static void Msp430ClockP$Msp430ClockInit$initTimerA(void ){
 #line 31
   Msp430ClockP$Msp430ClockInit$default$initTimerA();
 #line 31
 }
 #line 31
 # 64 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockP.nc"
-static inline  void Msp430ClockP$Msp430ClockInit$defaultInitClocks(void)
+static inline void Msp430ClockP$Msp430ClockInit$defaultInitClocks(void )
 {
 
 
@@ -9362,13 +8987,13 @@ static inline  void Msp430ClockP$Msp430ClockInit$defaultInitClocks(void)
 }
 
 #line 120
-static inline   void Msp430ClockP$Msp430ClockInit$default$initClocks(void)
+static inline void Msp430ClockP$Msp430ClockInit$default$initClocks(void )
 {
   Msp430ClockP$Msp430ClockInit$defaultInitClocks();
 }
 
 # 30 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockInit.nc"
-inline static  void Msp430ClockP$Msp430ClockInit$initClocks(void){
+inline static void Msp430ClockP$Msp430ClockInit$initClocks(void ){
 #line 30
   Msp430ClockP$Msp430ClockInit$default$initClocks();
 #line 30
@@ -9398,7 +9023,7 @@ static inline uint16_t Msp430ClockP$test_calib_busywait_delta(int calib)
 
 
 
-static inline void Msp430ClockP$busyCalibrateDco(void)
+static inline void Msp430ClockP$busyCalibrateDco(void )
 {
 
   int calib;
@@ -9424,7 +9049,7 @@ static inline void Msp430ClockP$busyCalibrateDco(void)
 }
 
 #line 52
-static inline  void Msp430ClockP$Msp430ClockInit$defaultSetupDcoCalibrate(void)
+static inline void Msp430ClockP$Msp430ClockInit$defaultSetupDcoCalibrate(void )
 {
 
 
@@ -9437,20 +9062,20 @@ static inline  void Msp430ClockP$Msp430ClockInit$defaultSetupDcoCalibrate(void)
 }
 
 #line 115
-static inline   void Msp430ClockP$Msp430ClockInit$default$setupDcoCalibrate(void)
+static inline void Msp430ClockP$Msp430ClockInit$default$setupDcoCalibrate(void )
 {
   Msp430ClockP$Msp430ClockInit$defaultSetupDcoCalibrate();
 }
 
 # 29 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockInit.nc"
-inline static  void Msp430ClockP$Msp430ClockInit$setupDcoCalibrate(void){
+inline static void Msp430ClockP$Msp430ClockInit$setupDcoCalibrate(void ){
 #line 29
   Msp430ClockP$Msp430ClockInit$default$setupDcoCalibrate();
 #line 29
 }
 #line 29
 # 214 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430ClockP.nc"
-static inline  error_t Msp430ClockP$Init$init(void)
+static inline error_t Msp430ClockP$Init$init(void )
 {
 
   Msp430ClockP$TA0CTL = 0x0004;
@@ -9473,7 +9098,7 @@ static inline  error_t Msp430ClockP$Init$init(void)
 }
 
 # 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-inline static  error_t PlatformP$MoteClockInit$init(void){
+inline static error_t PlatformP$MoteClockInit$init(void ){
 #line 51
   unsigned char result;
 #line 51
@@ -9488,7 +9113,7 @@ inline static  error_t PlatformP$MoteClockInit$init(void){
 }
 #line 51
 # 10 "/opt/tinyos-2.x/tos/platforms/telosa/PlatformP.nc"
-static inline  error_t PlatformP$Init$init(void)
+static inline error_t PlatformP$Init$init(void )
 #line 10
 {
   PlatformP$MoteClockInit$init();
@@ -9498,7 +9123,7 @@ static inline  error_t PlatformP$Init$init(void)
 }
 
 # 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-inline static  error_t RealMainP$PlatformInit$init(void){
+inline static error_t RealMainP$PlatformInit$init(void ){
 #line 51
   unsigned char result;
 #line 51
@@ -9513,18 +9138,18 @@ inline static  error_t RealMainP$PlatformInit$init(void){
 }
 #line 51
 # 33 "/opt/tinyos-2.x/tos/platforms/telosb/hardware.h"
-static inline void TOSH_CLR_SIMO0_PIN(void)
+static inline  void TOSH_CLR_SIMO0_PIN()
 #line 33
 {
 #line 33
-   static volatile uint8_t r __asm ("0x0019");
+  static volatile uint8_t r __asm ("0x0019");
 
 #line 33
   r &= ~(1 << 1);
 }
 
 # 54 "/opt/tinyos-2.x/tos/interfaces/Scheduler.nc"
-inline static  bool RealMainP$Scheduler$runNextTask(void){
+inline static bool RealMainP$Scheduler$runNextTask(void ){
 #line 54
   unsigned char result;
 #line 54
@@ -9539,15 +9164,15 @@ inline static  bool RealMainP$Scheduler$runNextTask(void){
 }
 #line 54
 # 284 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline   void Stm25pSectorP$ClientResource$default$granted(uint8_t id)
+static inline void Stm25pSectorP$ClientResource$default$granted(uint8_t id)
 #line 284
 {
 }
 
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static  void Stm25pSectorP$ClientResource$granted(uint8_t arg_0x40cdf350){
+inline static void Stm25pSectorP$ClientResource$granted(uint8_t arg_0x40cf3930){
 #line 92
-  switch (arg_0x40cdf350) {
+  switch (arg_0x40cf3930) {
 #line 92
     case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID:
 #line 92
@@ -9557,7 +9182,7 @@ inline static  void Stm25pSectorP$ClientResource$granted(uint8_t arg_0x40cdf350)
 #line 92
     default:
 #line 92
-      Stm25pSectorP$ClientResource$default$granted(arg_0x40cdf350);
+      Stm25pSectorP$ClientResource$default$granted(arg_0x40cf3930);
 #line 92
       break;
 #line 92
@@ -9566,7 +9191,7 @@ inline static  void Stm25pSectorP$ClientResource$granted(uint8_t arg_0x40cdf350)
 }
 #line 92
 # 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-inline static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$start(void){
+inline static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$start(void ){
 #line 83
   unsigned char result;
 #line 83
@@ -9581,14 +9206,14 @@ inline static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPower
 }
 #line 83
 # 91 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
-static inline   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$start(void)
+static inline error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$start(void )
 #line 91
 {
   return SUCCESS;
 }
 
 # 74 "/opt/tinyos-2.x/tos/interfaces/StdControl.nc"
-inline static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$start(void){
+inline static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$start(void ){
 #line 74
   unsigned char result;
 #line 74
@@ -9603,7 +9228,7 @@ inline static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPower
 }
 #line 74
 # 116 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
-static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stopDone(error_t error)
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stopDone(error_t error)
 #line 116
 {
   if (/*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$requested == TRUE) {
@@ -9621,28 +9246,28 @@ static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerMan
 }
 
 # 117 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-inline static  void Stm25pSectorP$SplitControl$stopDone(error_t arg_0x4056aa78){
+inline static void Stm25pSectorP$SplitControl$stopDone(error_t error){
 #line 117
-  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stopDone(arg_0x4056aa78);
+  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stopDone(error);
 #line 117
 }
 #line 117
-# 113 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline    error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$release(uint8_t id)
-#line 113
+# 114 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$release(uint8_t id)
+#line 114
 {
-#line 113
+#line 114
   return FAIL;
 }
 
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$release(uint8_t arg_0x40d8e030){
+inline static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$release(uint8_t arg_0x40dac030){
 #line 110
   unsigned char result;
 #line 110
 
 #line 110
-  switch (arg_0x40d8e030) {
+  switch (arg_0x40dac030) {
 #line 110
     case /*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$CLIENT_ID:
 #line 110
@@ -9652,7 +9277,7 @@ inline static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource
 #line 110
     default:
 #line 110
-      result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$release(arg_0x40d8e030);
+      result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$release(arg_0x40dac030);
 #line 110
       break;
 #line 110
@@ -9664,15 +9289,15 @@ inline static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource
 #line 110
 }
 #line 110
-# 80 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$release(uint8_t id)
-#line 80
+# 81 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$release(uint8_t id)
+#line 81
 {
   return /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$release(id);
 }
 
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t Stm25pSpiP$SpiResource$release(void){
+inline static error_t Stm25pSpiP$SpiResource$release(void ){
 #line 110
   unsigned char result;
 #line 110
@@ -9687,14 +9312,14 @@ inline static   error_t Stm25pSpiP$SpiResource$release(void){
 }
 #line 110
 # 116 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-static inline   error_t Stm25pSpiP$ClientResource$release(void)
+static inline error_t Stm25pSpiP$ClientResource$release(void )
 #line 116
 {
   return Stm25pSpiP$SpiResource$release();
 }
 
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t Stm25pSectorP$SpiResource$release(void){
+inline static error_t Stm25pSectorP$SpiResource$release(void ){
 #line 110
   unsigned char result;
 #line 110
@@ -9709,7 +9334,7 @@ inline static   error_t Stm25pSectorP$SpiResource$release(void){
 }
 #line 110
 # 128 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-static inline   error_t Stm25pSpiP$Spi$powerDown(void)
+static inline error_t Stm25pSpiP$Spi$powerDown(void )
 #line 128
 {
   Stm25pSpiP$sendCmd(Stm25pSpiP$S_DEEP_SLEEP, 1);
@@ -9717,7 +9342,7 @@ static inline   error_t Stm25pSpiP$Spi$powerDown(void)
 }
 
 # 47 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-inline static   error_t Stm25pSectorP$Spi$powerDown(void){
+inline static error_t Stm25pSectorP$Spi$powerDown(void ){
 #line 47
   unsigned char result;
 #line 47
@@ -9732,7 +9357,7 @@ inline static   error_t Stm25pSectorP$Spi$powerDown(void){
 }
 #line 47
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$postTask(void){
+inline static error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$postTask(void ){
 #line 56
   unsigned char result;
 #line 56
@@ -9746,43 +9371,43 @@ inline static   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask
 #line 56
 }
 #line 56
-# 126 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$release(void)
-#line 126
+# 129 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$release(void )
+#line 129
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 127
+#line 130
     {
       if (/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId == /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$default_owner_id) {
           if (/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$state == /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$RES_GRANTING) {
               /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$postTask();
               {
                 unsigned char __nesc_temp = 
-#line 131
+#line 134
                 SUCCESS;
 
                 {
-#line 131
+#line 134
                   __nesc_atomic_end(__nesc_atomic); 
-#line 131
+#line 134
                   return __nesc_temp;
                 }
               }
             }
           else {
-#line 133
+#line 136
             if (/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$state == /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$RES_IMM_GRANTING) {
                 /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$reqResId;
                 /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$state = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$RES_BUSY;
                 {
                   unsigned char __nesc_temp = 
-#line 136
+#line 139
                   SUCCESS;
 
                   {
-#line 136
+#line 139
                     __nesc_atomic_end(__nesc_atomic); 
-#line 136
+#line 139
                     return __nesc_temp;
                   }
                 }
@@ -9790,14 +9415,14 @@ static inline   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDef
             }
         }
     }
-#line 142
+#line 145
     __nesc_atomic_end(__nesc_atomic); }
-#line 140
+#line 143
   return FAIL;
 }
 
 # 56 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-inline static   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$release(void){
+inline static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$release(void ){
 #line 56
   unsigned char result;
 #line 56
@@ -9812,21 +9437,21 @@ inline static   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowe
 }
 #line 56
 # 99 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
-static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$startDone(error_t error)
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$startDone(error_t error)
 #line 99
 {
   /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$release();
 }
 
 # 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-inline static  void Stm25pSectorP$SplitControl$startDone(error_t arg_0x4056be70){
+inline static void Stm25pSectorP$SplitControl$startDone(error_t error){
 #line 92
-  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$startDone(arg_0x4056be70);
+  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$startDone(error);
 #line 92
 }
 #line 92
 # 133 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-static inline   error_t Stm25pSpiP$Spi$powerUp(void)
+static inline error_t Stm25pSpiP$Spi$powerUp(void )
 #line 133
 {
   Stm25pSpiP$sendCmd(Stm25pSpiP$S_POWER_ON, 5);
@@ -9834,7 +9459,7 @@ static inline   error_t Stm25pSpiP$Spi$powerUp(void)
 }
 
 # 55 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-inline static   error_t Stm25pSectorP$Spi$powerUp(void){
+inline static error_t Stm25pSectorP$Spi$powerUp(void ){
 #line 55
   unsigned char result;
 #line 55
@@ -9849,7 +9474,7 @@ inline static   error_t Stm25pSectorP$Spi$powerUp(void){
 }
 #line 55
 # 130 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline  void Stm25pSectorP$SpiResource$granted(void)
+static inline void Stm25pSectorP$SpiResource$granted(void )
 #line 130
 {
   error_t error;
@@ -9877,14 +9502,14 @@ static inline  void Stm25pSectorP$SpiResource$granted(void)
 }
 
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static  void Stm25pSpiP$ClientResource$granted(void){
+inline static void Stm25pSpiP$ClientResource$granted(void ){
 #line 92
   Stm25pSectorP$SpiResource$granted();
 #line 92
 }
 #line 92
 # 238 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-static inline  void Stm25pSpiP$SpiResource$granted(void)
+static inline void Stm25pSpiP$SpiResource$granted(void )
 #line 238
 {
 
@@ -9903,16 +9528,16 @@ static inline  void Stm25pSpiP$SpiResource$granted(void)
     }
 }
 
-# 118 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$default$granted(uint8_t id)
-#line 118
+# 119 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$default$granted(uint8_t id)
+#line 119
 {
 }
 
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static  void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$granted(uint8_t arg_0x40d91548){
+inline static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$granted(uint8_t arg_0x40daf250){
 #line 92
-  switch (arg_0x40d91548) {
+  switch (arg_0x40daf250) {
 #line 92
     case /*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$CLIENT_ID:
 #line 92
@@ -9922,7 +9547,7 @@ inline static  void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$granted(
 #line 92
     default:
 #line 92
-      /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$default$granted(arg_0x40d91548);
+      /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$default$granted(arg_0x40daf250);
 #line 92
       break;
 #line 92
@@ -9930,23 +9555,23 @@ inline static  void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$granted(
 #line 92
 }
 #line 92
-# 94 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline  void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$granted(uint8_t id)
-#line 94
+# 95 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$granted(uint8_t id)
+#line 95
 {
   /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$granted(id);
 }
 
-# 185 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$default$granted(uint8_t id)
-#line 185
+# 198 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$default$granted(uint8_t id)
+#line 198
 {
 }
 
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static  void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$granted(uint8_t arg_0x40a79b68){
+inline static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$granted(uint8_t arg_0x40ab2520){
 #line 92
-  switch (arg_0x40a79b68) {
+  switch (arg_0x40ab2520) {
 #line 92
     case /*HplStm25pSpiC.SpiC.UsartC*/Msp430Usart0C$0$CLIENT_ID:
 #line 92
@@ -9956,7 +9581,7 @@ inline static  void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$g
 #line 92
     default:
 #line 92
-      /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$default$granted(arg_0x40a79b68);
+      /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$default$granted(arg_0x40ab2520);
 #line 92
       break;
 #line 92
@@ -9964,21 +9589,21 @@ inline static  void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$g
 #line 92
 }
 #line 92
-# 114 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline    msp430_spi_union_config_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$default$getConfig(uint8_t id)
-#line 114
+# 115 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline msp430_spi_union_config_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$default$getConfig(uint8_t id)
+#line 115
 {
   return &msp430_spi_default_config;
 }
 
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiConfigure.nc"
-inline static   msp430_spi_union_config_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$getConfig(uint8_t arg_0x40d8e990){
+inline static msp430_spi_union_config_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$getConfig(uint8_t arg_0x40daca80){
 #line 39
-  union __nesc_unnamed4275 *result;
+  union __nesc_unnamed4283 *result;
 #line 39
 
 #line 39
-    result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$default$getConfig(arg_0x40d8e990);
+    result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$default$getConfig(arg_0x40daca80);
 #line 39
 
 #line 39
@@ -9987,21 +9612,21 @@ inline static   msp430_spi_union_config_t */*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoD
 }
 #line 39
 # 357 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   void HplMsp430Usart0P$Usart$disableIntr(void)
+static inline void HplMsp430Usart0P$Usart$disableIntr(void )
 #line 357
 {
   HplMsp430Usart0P$IE1 &= ~((1 << 7) | (1 << 6));
 }
 
 #line 345
-static inline   void HplMsp430Usart0P$Usart$clrIntr(void)
+static inline void HplMsp430Usart0P$Usart$clrIntr(void )
 #line 345
 {
   HplMsp430Usart0P$IFG1 &= ~((1 << 7) | (1 << 6));
 }
 
 #line 151
-static inline   void HplMsp430Usart0P$Usart$resetUsart(bool reset)
+static inline void HplMsp430Usart0P$Usart$resetUsart(bool reset)
 #line 151
 {
   if (reset) {
@@ -10013,55 +9638,55 @@ static inline   void HplMsp430Usart0P$Usart$resetUsart(bool reset)
 }
 
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectModuleFunc(void)
+static inline void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectModuleFunc(void )
 #line 54
 {
   /* atomic removed: atomic calls only */
 #line 54
-  * (volatile uint8_t *)27U |= 0x01 << 3;
+  * (volatile uint8_t * )27U |= 0x01 << 3;
 }
 
 # 78 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart0P$UCLK$selectModuleFunc(void){
+inline static void HplMsp430Usart0P$UCLK$selectModuleFunc(void ){
 #line 78
   /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectModuleFunc();
 #line 78
 }
 #line 78
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectModuleFunc(void)
+static inline void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectModuleFunc(void )
 #line 54
 {
   /* atomic removed: atomic calls only */
 #line 54
-  * (volatile uint8_t *)27U |= 0x01 << 2;
+  * (volatile uint8_t * )27U |= 0x01 << 2;
 }
 
 # 78 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart0P$SOMI$selectModuleFunc(void){
+inline static void HplMsp430Usart0P$SOMI$selectModuleFunc(void ){
 #line 78
   /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectModuleFunc();
 #line 78
 }
 #line 78
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectModuleFunc(void)
+static inline void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectModuleFunc(void )
 #line 54
 {
   /* atomic removed: atomic calls only */
 #line 54
-  * (volatile uint8_t *)27U |= 0x01 << 1;
+  * (volatile uint8_t * )27U |= 0x01 << 1;
 }
 
 # 78 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart0P$SIMO$selectModuleFunc(void){
+inline static void HplMsp430Usart0P$SIMO$selectModuleFunc(void ){
 #line 78
   /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectModuleFunc();
 #line 78
 }
 #line 78
 # 238 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   void HplMsp430Usart0P$Usart$enableSpi(void)
+static inline void HplMsp430Usart0P$Usart$enableSpi(void )
 #line 238
 {
   /* atomic removed: atomic calls only */
@@ -10075,14 +9700,14 @@ static inline   void HplMsp430Usart0P$Usart$enableSpi(void)
 }
 
 #line 143
-static inline   void HplMsp430Usart0P$Usart$setUmctl(uint8_t control)
+static inline void HplMsp430Usart0P$Usart$setUmctl(uint8_t control)
 #line 143
 {
   U0MCTL = control;
 }
 
 #line 132
-static inline   void HplMsp430Usart0P$Usart$setUbr(uint16_t control)
+static inline void HplMsp430Usart0P$Usart$setUbr(uint16_t control)
 #line 132
 {
   /* atomic removed: atomic calls only */
@@ -10106,39 +9731,39 @@ static inline void HplMsp430Usart0P$configSpi(msp430_spi_union_config_t *config)
 }
 
 # 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P35*/HplMsp430GeneralIOP$21$IO$selectIOFunc(void)
+static inline void /*HplMsp430GeneralIOC.P35*/HplMsp430GeneralIOP$21$IO$selectIOFunc(void )
 #line 56
 {
   /* atomic removed: atomic calls only */
 #line 56
-  * (volatile uint8_t *)27U &= ~(0x01 << 5);
+  * (volatile uint8_t * )27U &= ~(0x01 << 5);
 }
 
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart0P$URXD$selectIOFunc(void){
+inline static void HplMsp430Usart0P$URXD$selectIOFunc(void ){
 #line 85
   /*HplMsp430GeneralIOC.P35*/HplMsp430GeneralIOP$21$IO$selectIOFunc();
 #line 85
 }
 #line 85
 # 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P34*/HplMsp430GeneralIOP$20$IO$selectIOFunc(void)
+static inline void /*HplMsp430GeneralIOC.P34*/HplMsp430GeneralIOP$20$IO$selectIOFunc(void )
 #line 56
 {
   /* atomic removed: atomic calls only */
 #line 56
-  * (volatile uint8_t *)27U &= ~(0x01 << 4);
+  * (volatile uint8_t * )27U &= ~(0x01 << 4);
 }
 
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart0P$UTXD$selectIOFunc(void){
+inline static void HplMsp430Usart0P$UTXD$selectIOFunc(void ){
 #line 85
   /*HplMsp430GeneralIOC.P34*/HplMsp430GeneralIOP$20$IO$selectIOFunc();
 #line 85
 }
 #line 85
 # 207 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   void HplMsp430Usart0P$Usart$disableUart(void)
+static inline void HplMsp430Usart0P$Usart$disableUart(void )
 #line 207
 {
   /* atomic removed: atomic calls only */
@@ -10151,14 +9776,14 @@ static inline   void HplMsp430Usart0P$Usart$disableUart(void)
 }
 
 # 97 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void HplMsp430I2C0P$HplUsart$resetUsart(bool arg_0x4070bb78){
+inline static void HplMsp430I2C0P$HplUsart$resetUsart(bool reset){
 #line 97
-  HplMsp430Usart0P$Usart$resetUsart(arg_0x4070bb78);
+  HplMsp430Usart0P$Usart$resetUsart(reset);
 #line 97
 }
 #line 97
 # 59 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2C0P.nc"
-static inline   void HplMsp430I2C0P$HplI2C$clearModeI2C(void)
+static inline void HplMsp430I2C0P$HplI2C$clearModeI2C(void )
 #line 59
 {
   /* atomic removed: atomic calls only */
@@ -10170,14 +9795,14 @@ static inline   void HplMsp430I2C0P$HplI2C$clearModeI2C(void)
 }
 
 # 7 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2C.nc"
-inline static   void HplMsp430Usart0P$HplI2C$clearModeI2C(void){
+inline static void HplMsp430Usart0P$HplI2C$clearModeI2C(void ){
 #line 7
   HplMsp430I2C0P$HplI2C$clearModeI2C();
 #line 7
 }
 #line 7
 # 265 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   void HplMsp430Usart0P$Usart$setModeSpi(msp430_spi_union_config_t *config)
+static inline void HplMsp430Usart0P$Usart$setModeSpi(msp430_spi_union_config_t *config)
 #line 265
 {
 
@@ -10199,29 +9824,29 @@ static inline   void HplMsp430Usart0P$Usart$setModeSpi(msp430_spi_union_config_t
 }
 
 # 168 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$setModeSpi(msp430_spi_union_config_t *arg_0x4071fc40){
+inline static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$setModeSpi(msp430_spi_union_config_t *config){
 #line 168
-  HplMsp430Usart0P$Usart$setModeSpi(arg_0x4071fc40);
+  HplMsp430Usart0P$Usart$setModeSpi(config);
 #line 168
 }
 #line 168
-# 84 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$configure(uint8_t id)
-#line 84
+# 85 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$configure(uint8_t id)
+#line 85
 {
   /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$setModeSpi(/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Msp430SpiConfigure$getConfig(id));
 }
 
-# 199 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline    void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$configure(uint8_t id)
-#line 199
+# 212 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$configure(uint8_t id)
+#line 212
 {
 }
 
 # 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-inline static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$configure(uint8_t arg_0x40a77678){
+inline static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$configure(uint8_t arg_0x40ab0430){
 #line 49
-  switch (arg_0x40a77678) {
+  switch (arg_0x40ab0430) {
 #line 49
     case /*HplStm25pSpiC.SpiC.UsartC*/Msp430Usart0C$0$CLIENT_ID:
 #line 49
@@ -10231,7 +9856,7 @@ inline static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceC
 #line 49
     default:
 #line 49
-      /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$configure(arg_0x40a77678);
+      /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$configure(arg_0x40ab0430);
 #line 49
       break;
 #line 49
@@ -10239,31 +9864,31 @@ inline static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceC
 #line 49
 }
 #line 49
-# 173 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline  void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$runTask(void)
-#line 173
+# 186 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$runTask(void )
+#line 186
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 174
+#line 187
     {
       /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$reqResId;
       /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_BUSY;
     }
-#line 177
+#line 190
     __nesc_atomic_end(__nesc_atomic); }
   /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$configure(/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId);
   /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$granted(/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId);
 }
 
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$clr(void){
+inline static void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$clr(void ){
 #line 39
   /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$clr();
 #line 39
 }
 #line 39
 # 38 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$clr(void)
+static inline void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$clr(void )
 #line 38
 {
 #line 38
@@ -10271,14 +9896,14 @@ static inline   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$clr(void)
 }
 
 # 30 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void Stm25pSpiP$CSN$clr(void){
+inline static void Stm25pSpiP$CSN$clr(void ){
 #line 30
   /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$clr();
 #line 30
 }
 #line 30
 # 231 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$rx(void){
+inline static uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$rx(void ){
 #line 231
   unsigned char result;
 #line 231
@@ -10293,21 +9918,21 @@ inline static   uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$rx(void
 }
 #line 231
 # 341 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   void HplMsp430Usart0P$Usart$clrRxIntr(void)
+static inline void HplMsp430Usart0P$Usart$clrRxIntr(void )
 #line 341
 {
   HplMsp430Usart0P$IFG1 &= ~(1 << 6);
 }
 
 # 197 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$clrRxIntr(void){
+inline static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$clrRxIntr(void ){
 #line 197
   HplMsp430Usart0P$Usart$clrRxIntr();
 #line 197
 }
 #line 197
 # 330 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   bool HplMsp430Usart0P$Usart$isRxIntrPending(void)
+static inline bool HplMsp430Usart0P$Usart$isRxIntrPending(void )
 #line 330
 {
   if (HplMsp430Usart0P$IFG1 & (1 << 6)) {
@@ -10317,7 +9942,7 @@ static inline   bool HplMsp430Usart0P$Usart$isRxIntrPending(void)
 }
 
 # 192 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   bool /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$isRxIntrPending(void){
+inline static bool /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$isRxIntrPending(void ){
 #line 192
   unsigned char result;
 #line 192
@@ -10332,7 +9957,7 @@ inline static   bool /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$isRxIntrPe
 }
 #line 192
 # 382 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   void HplMsp430Usart0P$Usart$tx(uint8_t data)
+static inline void HplMsp430Usart0P$Usart$tx(uint8_t data)
 #line 382
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
@@ -10343,15 +9968,15 @@ static inline   void HplMsp430Usart0P$Usart$tx(uint8_t data)
 }
 
 # 224 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$tx(uint8_t arg_0x4071ae28){
+inline static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$tx(uint8_t data){
 #line 224
-  HplMsp430Usart0P$Usart$tx(arg_0x4071ae28);
+  HplMsp430Usart0P$Usart$tx(data);
 #line 224
 }
 #line 224
-# 98 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline   uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiByte$write(uint8_t tx)
-#line 98
+# 99 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiByte$write(uint8_t tx)
+#line 99
 {
   uint8_t byte;
 
@@ -10365,13 +9990,13 @@ static inline   uint8_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiByte$write
 }
 
 # 34 "/opt/tinyos-2.x/tos/interfaces/SpiByte.nc"
-inline static   uint8_t Stm25pSpiP$SpiByte$write(uint8_t arg_0x40d460f8){
+inline static uint8_t Stm25pSpiP$SpiByte$write(uint8_t tx){
 #line 34
   unsigned char result;
 #line 34
 
 #line 34
-  result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiByte$write(arg_0x40d460f8);
+  result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiByte$write(tx);
 #line 34
 
 #line 34
@@ -10380,14 +10005,14 @@ inline static   uint8_t Stm25pSpiP$SpiByte$write(uint8_t arg_0x40d460f8){
 }
 #line 34
 # 50 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-static inline   bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEmpty(void)
+static inline bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEmpty(void )
 #line 50
 {
   return /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$qHead == /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$NO_ENTRY;
 }
 
 # 43 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-inline static   bool /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$isEmpty(void){
+inline static bool /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$isEmpty(void ){
 #line 43
   unsigned char result;
 #line 43
@@ -10402,7 +10027,7 @@ inline static   bool /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$isE
 }
 #line 43
 # 58 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-static inline   resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$dequeue(void)
+static inline resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$dequeue(void )
 #line 58
 {
   /* atomic removed: atomic calls only */
@@ -10440,7 +10065,7 @@ static inline   resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsRe
 }
 
 # 60 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-inline static   resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$dequeue(void){
+inline static resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$dequeue(void ){
 #line 60
   unsigned char result;
 #line 60
@@ -10454,114 +10079,39 @@ inline static   resource_client_id_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/Arbi
 #line 60
 }
 #line 60
-# 191 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline    void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$granted(void)
-#line 191
-{
-}
-
-# 46 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-inline static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$granted(void){
-#line 46
-  /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$granted();
-#line 46
-}
-#line 46
 # 97 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$resetUsart(bool arg_0x4070bb78){
+inline static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$resetUsart(bool reset){
 #line 97
-  HplMsp430Usart0P$Usart$resetUsart(arg_0x4070bb78);
+  HplMsp430Usart0P$Usart$resetUsart(reset);
 #line 97
 }
 #line 97
-# 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectIOFunc(void)
-#line 56
-{
-  /* atomic removed: atomic calls only */
-#line 56
-  * (volatile uint8_t *)27U &= ~(0x01 << 3);
-}
-
-# 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart0P$UCLK$selectIOFunc(void){
-#line 85
-  /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectIOFunc();
-#line 85
-}
-#line 85
-# 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectIOFunc(void)
-#line 56
-{
-  /* atomic removed: atomic calls only */
-#line 56
-  * (volatile uint8_t *)27U &= ~(0x01 << 2);
-}
-
-# 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart0P$SOMI$selectIOFunc(void){
-#line 85
-  /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectIOFunc();
-#line 85
-}
-#line 85
-# 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectIOFunc(void)
-#line 56
-{
-  /* atomic removed: atomic calls only */
-#line 56
-  * (volatile uint8_t *)27U &= ~(0x01 << 1);
-}
-
-# 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart0P$SIMO$selectIOFunc(void){
-#line 85
-  /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectIOFunc();
-#line 85
-}
-#line 85
-# 247 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   void HplMsp430Usart0P$Usart$disableSpi(void)
-#line 247
-{
-  /* atomic removed: atomic calls only */
-#line 248
-  {
-    HplMsp430Usart0P$ME1 &= ~(1 << 6);
-    HplMsp430Usart0P$SIMO$selectIOFunc();
-    HplMsp430Usart0P$SOMI$selectIOFunc();
-    HplMsp430Usart0P$UCLK$selectIOFunc();
-  }
-}
-
-# 158 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$disableSpi(void){
+#line 158
+inline static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$disableSpi(void ){
 #line 158
   HplMsp430Usart0P$Usart$disableSpi();
 #line 158
 }
 #line 158
-# 88 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$unconfigure(uint8_t id)
-#line 88
+# 89 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$ResourceConfigure$unconfigure(uint8_t id)
+#line 89
 {
   /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$resetUsart(TRUE);
   /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$disableSpi();
   /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$resetUsart(FALSE);
 }
 
-# 201 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline    void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$unconfigure(uint8_t id)
-#line 201
+# 214 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$unconfigure(uint8_t id)
+#line 214
 {
 }
 
 # 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-inline static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$unconfigure(uint8_t arg_0x40a77678){
+inline static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$unconfigure(uint8_t arg_0x40ab0430){
 #line 55
-  switch (arg_0x40a77678) {
+  switch (arg_0x40ab0430) {
 #line 55
     case /*HplStm25pSpiC.SpiC.UsartC*/Msp430Usart0C$0$CLIENT_ID:
 #line 55
@@ -10571,7 +10121,7 @@ inline static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceC
 #line 55
     default:
 #line 55
-      /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$unconfigure(arg_0x40a77678);
+      /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$default$unconfigure(arg_0x40ab0430);
 #line 55
       break;
 #line 55
@@ -10579,28 +10129,89 @@ inline static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceC
 #line 55
 }
 #line 55
-# 187 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline    void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$default$requested(uint8_t id)
-#line 187
+# 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
+static inline void /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectIOFunc(void )
+#line 56
+{
+  /* atomic removed: atomic calls only */
+#line 56
+  * (volatile uint8_t * )27U &= ~(0x01 << 1);
+}
+
+# 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
+inline static void HplMsp430Usart0P$SIMO$selectIOFunc(void ){
+#line 85
+  /*HplMsp430GeneralIOC.P31*/HplMsp430GeneralIOP$17$IO$selectIOFunc();
+#line 85
+}
+#line 85
+# 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
+static inline void /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectIOFunc(void )
+#line 56
+{
+  /* atomic removed: atomic calls only */
+#line 56
+  * (volatile uint8_t * )27U &= ~(0x01 << 2);
+}
+
+# 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
+inline static void HplMsp430Usart0P$SOMI$selectIOFunc(void ){
+#line 85
+  /*HplMsp430GeneralIOC.P32*/HplMsp430GeneralIOP$18$IO$selectIOFunc();
+#line 85
+}
+#line 85
+# 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
+static inline void /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectIOFunc(void )
+#line 56
+{
+  /* atomic removed: atomic calls only */
+#line 56
+  * (volatile uint8_t * )27U &= ~(0x01 << 3);
+}
+
+# 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
+inline static void HplMsp430Usart0P$UCLK$selectIOFunc(void ){
+#line 85
+  /*HplMsp430GeneralIOC.P33*/HplMsp430GeneralIOP$19$IO$selectIOFunc();
+#line 85
+}
+#line 85
+# 204 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$granted(void )
+#line 204
+{
+}
+
+# 46 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
+inline static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$granted(void ){
+#line 46
+  /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$granted();
+#line 46
+}
+#line 46
+# 200 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$default$requested(uint8_t id)
+#line 200
 {
 }
 
 # 43 "/opt/tinyos-2.x/tos/interfaces/ResourceRequested.nc"
-inline static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$requested(uint8_t arg_0x40a784c8){
+inline static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$requested(uint8_t arg_0x40ab1010){
 #line 43
-    /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$default$requested(arg_0x40a784c8);
+    /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$default$requested(arg_0x40ab1010);
 #line 43
 }
 #line 43
 # 54 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-static inline   bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEnqueued(resource_client_id_t id)
+static inline bool /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$isEnqueued(resource_client_id_t id)
 #line 54
 {
   return /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$resQ[id] != /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$NO_ENTRY || /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$qTail == id;
 }
 
 #line 72
-static inline   error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$enqueue(resource_client_id_t id)
+static inline error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$enqueue(resource_client_id_t id)
 #line 72
 {
   /* atomic removed: atomic calls only */
@@ -10638,13 +10249,13 @@ static inline   error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$
 }
 
 # 69 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-inline static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$enqueue(resource_client_id_t arg_0x40a62e88){
+inline static error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$enqueue(resource_client_id_t id){
 #line 69
   unsigned char result;
 #line 69
 
 #line 69
-  result = /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$enqueue(arg_0x40a62e88);
+  result = /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$FcfsQueue$enqueue(id);
 #line 69
 
 #line 69
@@ -10653,7 +10264,7 @@ inline static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$
 }
 #line 69
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$postTask(void){
+inline static error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$postTask(void ){
 #line 56
   unsigned char result;
 #line 56
@@ -10667,43 +10278,43 @@ inline static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grante
 #line 56
 }
 #line 56
-# 126 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$release(void)
-#line 126
+# 129 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$release(void )
+#line 129
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 127
+#line 130
     {
       if (/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId == /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$default_owner_id) {
           if (/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state == /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_GRANTING) {
               /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$postTask();
               {
                 unsigned char __nesc_temp = 
-#line 131
+#line 134
                 SUCCESS;
 
                 {
-#line 131
+#line 134
                   __nesc_atomic_end(__nesc_atomic); 
-#line 131
+#line 134
                   return __nesc_temp;
                 }
               }
             }
           else {
-#line 133
+#line 136
             if (/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state == /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_IMM_GRANTING) {
                 /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$reqResId;
                 /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_BUSY;
                 {
                   unsigned char __nesc_temp = 
-#line 136
+#line 139
                   SUCCESS;
 
                   {
-#line 136
+#line 139
                     __nesc_atomic_end(__nesc_atomic); 
-#line 136
+#line 139
                     return __nesc_temp;
                   }
                 }
@@ -10711,35 +10322,35 @@ static inline   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resour
             }
         }
     }
-#line 142
+#line 145
     __nesc_atomic_end(__nesc_atomic); }
-#line 140
+#line 143
   return FAIL;
 }
 
-#line 193
-static inline    void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$requested(void)
-#line 193
+#line 206
+static inline void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$requested(void )
+#line 206
 {
   /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$release();
 }
 
 # 73 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-inline static   void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$requested(void){
+inline static void /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$requested(void ){
 #line 73
   /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$default$requested();
 #line 73
 }
 #line 73
 # 45 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBinderP.nc"
-static inline   volume_id_t /*Lz77AppC.BlockStorageC.BinderP*/Stm25pBinderP$0$Volume$getVolumeId(void)
+static inline volume_id_t /*Lz77AppC.BlockStorageC.BinderP*/Stm25pBinderP$0$Volume$getVolumeId(void )
 #line 45
 {
   return 0;
 }
 
 # 289 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline    volume_id_t Stm25pSectorP$Volume$default$getVolumeId(uint8_t id)
+static inline volume_id_t Stm25pSectorP$Volume$default$getVolumeId(uint8_t id)
 #line 289
 {
 #line 289
@@ -10747,13 +10358,13 @@ static inline    volume_id_t Stm25pSectorP$Volume$default$getVolumeId(uint8_t id
 }
 
 # 48 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pVolume.nc"
-inline static   volume_id_t Stm25pSectorP$Volume$getVolumeId(uint8_t arg_0x40cdeb28){
+inline static volume_id_t Stm25pSectorP$Volume$getVolumeId(uint8_t arg_0x40cf1330){
 #line 48
   unsigned char result;
 #line 48
 
 #line 48
-  switch (arg_0x40cdeb28) {
+  switch (arg_0x40cf1330) {
 #line 48
     case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID:
 #line 48
@@ -10763,7 +10374,7 @@ inline static   volume_id_t Stm25pSectorP$Volume$getVolumeId(uint8_t arg_0x40cde
 #line 48
     default:
 #line 48
-      result = Stm25pSectorP$Volume$default$getVolumeId(arg_0x40cdeb28);
+      result = Stm25pSectorP$Volume$default$getVolumeId(arg_0x40cf1330);
 #line 48
       break;
 #line 48
@@ -10791,13 +10402,13 @@ static inline stm25p_addr_t Stm25pSectorP$physicalAddr(uint8_t id, stm25p_addr_t
 }
 
 # 66 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-inline static   error_t Stm25pSectorP$Spi$read(stm25p_addr_t arg_0x40cd6708, uint8_t *arg_0x40cd68b0, stm25p_len_t arg_0x40cd6a50){
+inline static error_t Stm25pSectorP$Spi$read(stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len){
 #line 66
   unsigned char result;
 #line 66
 
 #line 66
-  result = Stm25pSpiP$Spi$read(arg_0x40cd6708, arg_0x40cd68b0, arg_0x40cd6a50);
+  result = Stm25pSpiP$Spi$read(addr, buf, len);
 #line 66
 
 #line 66
@@ -10806,7 +10417,7 @@ inline static   error_t Stm25pSectorP$Spi$read(stm25p_addr_t arg_0x40cd6708, uin
 }
 #line 66
 # 171 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline  error_t Stm25pSectorP$Sector$read(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
+static inline error_t Stm25pSectorP$Sector$read(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
 stm25p_len_t len)
 #line 172
 {
@@ -10820,7 +10431,7 @@ stm25p_len_t len)
 }
 
 # 230 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline   error_t Stm25pBlockP$Sector$default$read(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len)
+static inline error_t Stm25pBlockP$Sector$default$read(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len)
 #line 230
 {
 #line 230
@@ -10828,23 +10439,23 @@ static inline   error_t Stm25pBlockP$Sector$default$read(uint8_t id, stm25p_addr
 }
 
 # 68 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-inline static  error_t Stm25pBlockP$Sector$read(uint8_t arg_0x40c9a4e0, stm25p_addr_t arg_0x40c75770, uint8_t *arg_0x40c75918, stm25p_len_t arg_0x40c75aa8){
+inline static error_t Stm25pBlockP$Sector$read(uint8_t arg_0x40cac408, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len){
 #line 68
   unsigned char result;
 #line 68
 
 #line 68
-  switch (arg_0x40c9a4e0) {
+  switch (arg_0x40cac408) {
 #line 68
     case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID:
 #line 68
-      result = Stm25pSectorP$Sector$read(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID, arg_0x40c75770, arg_0x40c75918, arg_0x40c75aa8);
+      result = Stm25pSectorP$Sector$read(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID, addr, buf, len);
 #line 68
       break;
 #line 68
     default:
 #line 68
-      result = Stm25pBlockP$Sector$default$read(arg_0x40c9a4e0, arg_0x40c75770, arg_0x40c75918, arg_0x40c75aa8);
+      result = Stm25pBlockP$Sector$default$read(arg_0x40cac408, addr, buf, len);
 #line 68
       break;
 #line 68
@@ -10857,13 +10468,13 @@ inline static  error_t Stm25pBlockP$Sector$read(uint8_t arg_0x40c9a4e0, stm25p_a
 }
 #line 68
 # 59 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
-inline static   error_t Stm25pSpiP$SpiPacket$send(uint8_t *arg_0x40d43988, uint8_t *arg_0x40d43b30, uint16_t arg_0x40d43cc0){
+inline static error_t Stm25pSpiP$SpiPacket$send(uint8_t * txBuf, uint8_t * rxBuf, uint16_t len){
 #line 59
   unsigned char result;
 #line 59
 
 #line 59
-  result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$send(/*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$CLIENT_ID, arg_0x40d43988, arg_0x40d43b30, arg_0x40d43cc0);
+  result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$send(/*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$CLIENT_ID, txBuf, rxBuf, len);
 #line 59
 
 #line 59
@@ -10872,7 +10483,7 @@ inline static   error_t Stm25pSpiP$SpiPacket$send(uint8_t *arg_0x40d43988, uint8
 }
 #line 59
 # 361 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   void HplMsp430Usart0P$Usart$enableRxIntr(void)
+static inline void HplMsp430Usart0P$Usart$enableRxIntr(void )
 #line 361
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
@@ -10886,53 +10497,14 @@ static inline   void HplMsp430Usart0P$Usart$enableRxIntr(void)
 }
 
 # 180 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$enableRxIntr(void){
+inline static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$enableRxIntr(void ){
 #line 180
   HplMsp430Usart0P$Usart$enableRxIntr();
 #line 180
 }
 #line 180
-# 316 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   bool HplMsp430Usart0P$Usart$isTxIntrPending(void)
-#line 316
-{
-  if (HplMsp430Usart0P$IFG1 & (1 << 7)) {
-      return TRUE;
-    }
-  return FALSE;
-}
-
-# 187 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   bool /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$isTxIntrPending(void){
-#line 187
-  unsigned char result;
-#line 187
-
-#line 187
-  result = HplMsp430Usart0P$Usart$isTxIntrPending();
-#line 187
-
-#line 187
-  return result;
-#line 187
-}
-#line 187
-# 337 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   void HplMsp430Usart0P$Usart$clrTxIntr(void)
-#line 337
-{
-  HplMsp430Usart0P$IFG1 &= ~(1 << 7);
-}
-
-# 202 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$clrTxIntr(void){
-#line 202
-  HplMsp430Usart0P$Usart$clrTxIntr();
-#line 202
-}
-#line 202
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_task$postTask(void){
+inline static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_task$postTask(void ){
 #line 56
   unsigned char result;
 #line 56
@@ -10947,14 +10519,14 @@ inline static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_ta
 }
 #line 56
 # 124 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-static inline stm25p_len_t Stm25pSpiP$calcReadLen(void)
+static inline stm25p_len_t Stm25pSpiP$calcReadLen(void )
 #line 124
 {
   return Stm25pSpiP$m_cur_len < Stm25pSpiP$CRC_BUF_SIZE ? Stm25pSpiP$m_cur_len : Stm25pSpiP$CRC_BUF_SIZE;
 }
 
 #line 147
-static inline   error_t Stm25pSpiP$Spi$computeCrc(uint16_t crc, stm25p_addr_t addr, 
+static inline error_t Stm25pSpiP$Spi$computeCrc(uint16_t crc, stm25p_addr_t addr, 
 stm25p_len_t len)
 #line 148
 {
@@ -10966,13 +10538,13 @@ stm25p_len_t len)
 }
 
 # 90 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-inline static   error_t Stm25pSectorP$Spi$computeCrc(uint16_t arg_0x40cd5b30, stm25p_addr_t arg_0x40cd5cc0, stm25p_len_t arg_0x40cd5e60){
+inline static error_t Stm25pSectorP$Spi$computeCrc(uint16_t crc, stm25p_addr_t addr, stm25p_len_t len){
 #line 90
   unsigned char result;
 #line 90
 
 #line 90
-  result = Stm25pSpiP$Spi$computeCrc(arg_0x40cd5b30, arg_0x40cd5cc0, arg_0x40cd5e60);
+  result = Stm25pSpiP$Spi$computeCrc(crc, addr, len);
 #line 90
 
 #line 90
@@ -10981,7 +10553,7 @@ inline static   error_t Stm25pSectorP$Spi$computeCrc(uint16_t arg_0x40cd5b30, st
 }
 #line 90
 # 234 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline  error_t Stm25pSectorP$Sector$computeCrc(uint8_t id, uint16_t crc, 
+static inline error_t Stm25pSectorP$Sector$computeCrc(uint8_t id, uint16_t crc, 
 stm25p_addr_t addr, 
 stm25p_len_t len)
 #line 236
@@ -10991,11 +10563,11 @@ stm25p_len_t len)
   Stm25pSectorP$m_addr = addr;
   Stm25pSectorP$m_len = len;
 
-  return Stm25pSectorP$Spi$computeCrc(crc, Stm25pSectorP$m_addr, Stm25pSectorP$m_len);
+  return Stm25pSectorP$Spi$computeCrc(crc, Stm25pSectorP$physicalAddr(id, addr), Stm25pSectorP$m_len);
 }
 
 # 233 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline   error_t Stm25pBlockP$Sector$default$computeCrc(uint8_t id, uint16_t crc, storage_addr_t addr, storage_len_t len)
+static inline error_t Stm25pBlockP$Sector$default$computeCrc(uint8_t id, uint16_t crc, storage_addr_t addr, storage_len_t len)
 #line 233
 {
 #line 233
@@ -11003,23 +10575,23 @@ static inline   error_t Stm25pBlockP$Sector$default$computeCrc(uint8_t id, uint1
 }
 
 # 133 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-inline static  error_t Stm25pBlockP$Sector$computeCrc(uint8_t arg_0x40c9a4e0, uint16_t arg_0x40c9c068, stm25p_addr_t arg_0x40c9c1f8, stm25p_len_t arg_0x40c9c398){
+inline static error_t Stm25pBlockP$Sector$computeCrc(uint8_t arg_0x40cac408, uint16_t crc, stm25p_addr_t addr, stm25p_len_t len){
 #line 133
   unsigned char result;
 #line 133
 
 #line 133
-  switch (arg_0x40c9a4e0) {
+  switch (arg_0x40cac408) {
 #line 133
     case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID:
 #line 133
-      result = Stm25pSectorP$Sector$computeCrc(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID, arg_0x40c9c068, arg_0x40c9c1f8, arg_0x40c9c398);
+      result = Stm25pSectorP$Sector$computeCrc(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID, crc, addr, len);
 #line 133
       break;
 #line 133
     default:
 #line 133
-      result = Stm25pBlockP$Sector$default$computeCrc(arg_0x40c9a4e0, arg_0x40c9c068, arg_0x40c9c1f8, arg_0x40c9c398);
+      result = Stm25pBlockP$Sector$default$computeCrc(arg_0x40cac408, crc, addr, len);
 #line 133
       break;
 #line 133
@@ -11032,13 +10604,13 @@ inline static  error_t Stm25pBlockP$Sector$computeCrc(uint8_t arg_0x40c9a4e0, ui
 }
 #line 133
 # 114 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-inline static   error_t Stm25pSectorP$Spi$pageProgram(stm25p_addr_t arg_0x40cd2010, uint8_t *arg_0x40cd21b8, stm25p_len_t arg_0x40cd2358){
+inline static error_t Stm25pSectorP$Spi$pageProgram(stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len){
 #line 114
   unsigned char result;
 #line 114
 
 #line 114
-  result = Stm25pSpiP$Spi$pageProgram(arg_0x40cd2010, arg_0x40cd21b8, arg_0x40cd2358);
+  result = Stm25pSpiP$Spi$pageProgram(addr, buf, len);
 #line 114
 
 #line 114
@@ -11047,7 +10619,7 @@ inline static   error_t Stm25pSectorP$Spi$pageProgram(stm25p_addr_t arg_0x40cd20
 }
 #line 114
 # 188 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline  error_t Stm25pSectorP$Sector$write(uint8_t id, stm25p_addr_t addr, 
+static inline error_t Stm25pSectorP$Sector$write(uint8_t id, stm25p_addr_t addr, 
 uint8_t *buf, 
 stm25p_len_t len)
 #line 190
@@ -11063,7 +10635,7 @@ stm25p_len_t len)
 }
 
 # 231 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline   error_t Stm25pBlockP$Sector$default$write(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len)
+static inline error_t Stm25pBlockP$Sector$default$write(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len)
 #line 231
 {
 #line 231
@@ -11071,23 +10643,23 @@ static inline   error_t Stm25pBlockP$Sector$default$write(uint8_t id, stm25p_add
 }
 
 # 91 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-inline static  error_t Stm25pBlockP$Sector$write(uint8_t arg_0x40c9a4e0, stm25p_addr_t arg_0x40c73b68, uint8_t *arg_0x40c73d10, stm25p_len_t arg_0x40c73ea0){
+inline static error_t Stm25pBlockP$Sector$write(uint8_t arg_0x40cac408, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len){
 #line 91
   unsigned char result;
 #line 91
 
 #line 91
-  switch (arg_0x40c9a4e0) {
+  switch (arg_0x40cac408) {
 #line 91
     case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID:
 #line 91
-      result = Stm25pSectorP$Sector$write(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID, arg_0x40c73b68, arg_0x40c73d10, arg_0x40c73ea0);
+      result = Stm25pSectorP$Sector$write(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID, addr, buf, len);
 #line 91
       break;
 #line 91
     default:
 #line 91
-      result = Stm25pBlockP$Sector$default$write(arg_0x40c9a4e0, arg_0x40c73b68, arg_0x40c73d10, arg_0x40c73ea0);
+      result = Stm25pBlockP$Sector$default$write(arg_0x40cac408, addr, buf, len);
 #line 91
       break;
 #line 91
@@ -11100,13 +10672,13 @@ inline static  error_t Stm25pBlockP$Sector$write(uint8_t arg_0x40c9a4e0, stm25p_
 }
 #line 91
 # 136 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-inline static   error_t Stm25pSectorP$Spi$sectorErase(uint8_t arg_0x40cd14a8){
+inline static error_t Stm25pSectorP$Spi$sectorErase(uint8_t sector){
 #line 136
   unsigned char result;
 #line 136
 
 #line 136
-  result = Stm25pSpiP$Spi$sectorErase(arg_0x40cd14a8);
+  result = Stm25pSpiP$Spi$sectorErase(sector);
 #line 136
 
 #line 136
@@ -11115,7 +10687,7 @@ inline static   error_t Stm25pSectorP$Spi$sectorErase(uint8_t arg_0x40cd14a8){
 }
 #line 136
 # 213 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline  error_t Stm25pSectorP$Sector$erase(uint8_t id, uint8_t sector, 
+static inline error_t Stm25pSectorP$Sector$erase(uint8_t id, uint8_t sector, 
 uint8_t num_sectors)
 #line 214
 {
@@ -11130,7 +10702,7 @@ uint8_t num_sectors)
 }
 
 # 232 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline   error_t Stm25pBlockP$Sector$default$erase(uint8_t id, uint8_t sector, uint8_t num_sectors)
+static inline error_t Stm25pBlockP$Sector$default$erase(uint8_t id, uint8_t sector, uint8_t num_sectors)
 #line 232
 {
 #line 232
@@ -11138,23 +10710,23 @@ static inline   error_t Stm25pBlockP$Sector$default$erase(uint8_t id, uint8_t se
 }
 
 # 112 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-inline static  error_t Stm25pBlockP$Sector$erase(uint8_t arg_0x40c9a4e0, uint8_t arg_0x40c71010, uint8_t arg_0x40c711a0){
+inline static error_t Stm25pBlockP$Sector$erase(uint8_t arg_0x40cac408, uint8_t sector, uint8_t num_sectors){
 #line 112
   unsigned char result;
 #line 112
 
 #line 112
-  switch (arg_0x40c9a4e0) {
+  switch (arg_0x40cac408) {
 #line 112
     case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID:
 #line 112
-      result = Stm25pSectorP$Sector$erase(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID, arg_0x40c71010, arg_0x40c711a0);
+      result = Stm25pSectorP$Sector$erase(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID, sector, num_sectors);
 #line 112
       break;
 #line 112
     default:
 #line 112
-      result = Stm25pBlockP$Sector$default$erase(arg_0x40c9a4e0, arg_0x40c71010, arg_0x40c711a0);
+      result = Stm25pBlockP$Sector$default$erase(arg_0x40cac408, sector, num_sectors);
 #line 112
       break;
 #line 112
@@ -11167,14 +10739,14 @@ inline static  error_t Stm25pBlockP$Sector$erase(uint8_t arg_0x40c9a4e0, uint8_t
 }
 #line 112
 # 167 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline  uint8_t Stm25pSectorP$Sector$getNumSectors(uint8_t id)
+static inline uint8_t Stm25pSectorP$Sector$getNumSectors(uint8_t id)
 #line 167
 {
   return STM25P_VMAP[Stm25pSectorP$getVolumeId(id)].size;
 }
 
 # 229 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline   uint8_t Stm25pBlockP$Sector$default$getNumSectors(uint8_t id)
+static inline uint8_t Stm25pBlockP$Sector$default$getNumSectors(uint8_t id)
 #line 229
 {
 #line 229
@@ -11182,13 +10754,13 @@ static inline   uint8_t Stm25pBlockP$Sector$default$getNumSectors(uint8_t id)
 }
 
 # 56 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-inline static  uint8_t Stm25pBlockP$Sector$getNumSectors(uint8_t arg_0x40c9a4e0){
+inline static uint8_t Stm25pBlockP$Sector$getNumSectors(uint8_t arg_0x40cac408){
 #line 56
   unsigned char result;
 #line 56
 
 #line 56
-  switch (arg_0x40c9a4e0) {
+  switch (arg_0x40cac408) {
 #line 56
     case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID:
 #line 56
@@ -11198,7 +10770,7 @@ inline static  uint8_t Stm25pBlockP$Sector$getNumSectors(uint8_t arg_0x40c9a4e0)
 #line 56
     default:
 #line 56
-      result = Stm25pBlockP$Sector$default$getNumSectors(arg_0x40c9a4e0);
+      result = Stm25pBlockP$Sector$default$getNumSectors(arg_0x40cac408);
 #line 56
       break;
 #line 56
@@ -11210,21 +10782,8 @@ inline static  uint8_t Stm25pBlockP$Sector$getNumSectors(uint8_t arg_0x40c9a4e0)
 #line 56
 }
 #line 56
-# 201 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline    void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$unconfigure(uint8_t id)
-#line 201
-{
-}
-
-# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-inline static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$unconfigure(uint8_t arg_0x40a77678){
-#line 55
-    /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$unconfigure(arg_0x40a77678);
-#line 55
-}
-#line 55
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask$postTask(void){
+inline static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask$postTask(void ){
 #line 56
   unsigned char result;
 #line 56
@@ -11239,21 +10798,34 @@ inline static   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowe
 }
 #line 56
 # 103 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
-static inline   void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$granted(void)
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$granted(void )
 #line 103
 {
   /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask$postTask();
 }
 
 # 46 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-inline static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$granted(void){
+inline static void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$granted(void ){
 #line 46
   /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$granted();
 #line 46
 }
 #line 46
+# 214 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$unconfigure(uint8_t id)
+#line 214
+{
+}
+
+# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+inline static void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$unconfigure(uint8_t arg_0x40ab0430){
+#line 55
+    /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$unconfigure(arg_0x40ab0430);
+#line 55
+}
+#line 55
 # 58 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-static inline   resource_client_id_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$dequeue(void)
+static inline resource_client_id_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$dequeue(void )
 #line 58
 {
   /* atomic removed: atomic calls only */
@@ -11291,7 +10863,7 @@ static inline   resource_client_id_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourc
 }
 
 # 60 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-inline static   resource_client_id_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$dequeue(void){
+inline static resource_client_id_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$dequeue(void ){
 #line 60
   unsigned char result;
 #line 60
@@ -11306,14 +10878,14 @@ inline static   resource_client_id_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$
 }
 #line 60
 # 50 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-static inline   bool /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$isEmpty(void)
+static inline bool /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$isEmpty(void )
 #line 50
 {
   return /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$qHead == /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$NO_ENTRY;
 }
 
 # 43 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-inline static   bool /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$isEmpty(void){
+inline static bool /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$isEmpty(void ){
 #line 43
   unsigned char result;
 #line 43
@@ -11327,40 +10899,54 @@ inline static   bool /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$isEmpty(
 #line 43
 }
 #line 43
-# 107 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$release(uint8_t id)
-#line 107
+# 108 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$release(uint8_t id)
+#line 108
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 108
+#line 109
     {
       if (/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$state == /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$RES_BUSY && /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId == id) {
           if (/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$isEmpty() == FALSE) {
               /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$reqResId = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$dequeue();
               /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$state = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$RES_GRANTING;
               /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$postTask();
+              /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$unconfigure(id);
             }
           else {
               /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$default_owner_id;
               /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$state = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$RES_CONTROLLED;
+              /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$unconfigure(id);
               /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$granted();
             }
-          /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$unconfigure(id);
+          {
+            unsigned char __nesc_temp = 
+#line 123
+            SUCCESS;
+
+            {
+#line 123
+              __nesc_atomic_end(__nesc_atomic); 
+#line 123
+              return __nesc_temp;
+            }
+          }
         }
     }
-#line 122
+#line 127
     __nesc_atomic_end(__nesc_atomic); }
+#line 126
   return FAIL;
 }
 
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t Stm25pSectorP$Stm25pResource$release(uint8_t arg_0x40cdd168){
+inline static error_t Stm25pSectorP$Stm25pResource$release(uint8_t arg_0x40cf1a50){
 #line 110
   unsigned char result;
 #line 110
 
 #line 110
-  result = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$release(arg_0x40cdd168);
+  result = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$release(arg_0x40cf1a50);
 #line 110
 
 #line 110
@@ -11369,7 +10955,7 @@ inline static   error_t Stm25pSectorP$Stm25pResource$release(uint8_t arg_0x40cdd
 }
 #line 110
 # 110 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline   error_t Stm25pSectorP$ClientResource$release(uint8_t id)
+static inline error_t Stm25pSectorP$ClientResource$release(uint8_t id)
 #line 110
 {
   if (Stm25pSectorP$m_client == id) {
@@ -11383,7 +10969,7 @@ static inline   error_t Stm25pSectorP$ClientResource$release(uint8_t id)
 }
 
 # 235 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline    error_t Stm25pBlockP$ClientResource$default$release(uint8_t id)
+static inline error_t Stm25pBlockP$ClientResource$default$release(uint8_t id)
 #line 235
 {
 #line 235
@@ -11391,13 +10977,13 @@ static inline    error_t Stm25pBlockP$ClientResource$default$release(uint8_t id)
 }
 
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t Stm25pBlockP$ClientResource$release(uint8_t arg_0x40c7a350){
+inline static error_t Stm25pBlockP$ClientResource$release(uint8_t arg_0x40c8b358){
 #line 110
   unsigned char result;
 #line 110
 
 #line 110
-  switch (arg_0x40c7a350) {
+  switch (arg_0x40c8b358) {
 #line 110
     case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID:
 #line 110
@@ -11407,7 +10993,7 @@ inline static   error_t Stm25pBlockP$ClientResource$release(uint8_t arg_0x40c7a3
 #line 110
     default:
 #line 110
-      result = Stm25pBlockP$ClientResource$default$release(arg_0x40c7a350);
+      result = Stm25pBlockP$ClientResource$default$release(arg_0x40c8b358);
 #line 110
       break;
 #line 110
@@ -11419,182 +11005,14 @@ inline static   error_t Stm25pBlockP$ClientResource$release(uint8_t arg_0x40c7a3
 #line 110
 }
 #line 110
-# 56 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-inline static  error_t TestC$BlockRead$read(storage_addr_t arg_0x40b4d950, void *arg_0x40b4daf0, storage_len_t arg_0x40b4dc80){
-#line 56
-  unsigned char result;
-#line 56
-
-#line 56
-  result = Stm25pBlockP$Read$read(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID, arg_0x40b4d950, arg_0x40b4daf0, arg_0x40b4dc80);
-#line 56
-
-#line 56
-  return result;
-#line 56
-}
-#line 56
-# 74 "TestC.nc"
-static inline  error_t TestC$Lz77Compression$Lz77EncodeDone(error_t err)
-{
-  if (err == SUCCESS) {
-    TestC$BlockRead$read(TestC$addr, TestC$buf, sizeof TestC$buf);
-    }
-}
-
-# 5 "Lz77Compression.nc"
-inline static  error_t LZ77M$Lz77Compression$Lz77EncodeDone(error_t arg_0x40b2da98){
-#line 5
-  unsigned char result;
-#line 5
-
-#line 5
-  result = TestC$Lz77Compression$Lz77EncodeDone(arg_0x40b2da98);
-#line 5
-
-#line 5
-  return result;
-#line 5
-}
-#line 5
-# 95 "LZ77M.nc"
-static inline void LZ77M$findMaxmatch(void)
-
-{
-
-  int n = 0;
-#line 99
-  int m;
-#line 99
-  int p;
-  int nindex = 1;
-
-#line 101
-  do {
-      for (m = 0, p = 0; m < LZ77M$nextlinklen; m++) 
-        {
-          if (LZ77M$nextlink[m] == 250 - 1) {
-            break;
-            }
-          else {
-
-              if (LZ77M$brr[nindex] == LZ77M$dict[LZ77M$nextlink[m] + nindex]) 
-                {
-
-                  LZ77M$nextlink[p++] = LZ77M$nextlink[m];
-                }
-            }
-        }
-
-      nindex++;
-      LZ77M$nextlinklen = p;
-    }
-  while (p != 0);
-  LZ77M$matchpos = LZ77M$nextlink[0];
-  LZ77M$matchlen = nindex - 1;
-}
-
-#line 28
-static inline int8_t LZ77M$search(int a)
-{
-  int c;
-#line 30
-  int nextlinklen1 = 0;
-
-#line 31
-  for (c = 0; c < 250; c++) 
-    {
-      if (LZ77M$dict[c] == a) 
-        {
-          LZ77M$nextlink[nextlinklen1++] = c;
-          LZ77M$matchlen = 1;
-          LZ77M$FLAG++;
-        }
-      else 
-
-        {
-          LZ77M$matchlen = 0;
-          LZ77M$matchpos = 0;
-        }
-    }
-
-  LZ77M$nextlinklen = nextlinklen1;
-  nextlinklen1 = 0;
-  if (LZ77M$FLAG > 0) {
-    return 1;
-    }
-  else {
-#line 51
-    return 0;
-    }
-}
-
-#line 124
-static inline  error_t LZ77M$Lz77Compression$Lz77Encode(int *arr1)
-{
-
-  int i;
-#line 127
-  int j;
-#line 127
-  int k;
-#line 127
-  int m;
-
-#line 128
-  LZ77M$brr = arr1;
-  LZ77M$start_time = LZ77M$Timer$getNow();
-  for (j = 0; j < 250; j++) 
-    LZ77M$dict[j] = 0xff;
-  for (i = 0; i < 256; i++) 
-    {
-
-      k = LZ77M$search(LZ77M$brr[0]);
-
-
-      if (k == 1) 
-        {
-          for (m = 0; m < LZ77M$nextlinklen; m++) 
-            LZ77M$findMaxmatch();
-          if (LZ77M$matchlen >= 2) {
-            LZ77M$encode(LZ77M$matchlen, LZ77M$matchpos, k, LZ77M$brr[0]);
-            }
-          else {
-#line 145
-            LZ77M$encode(LZ77M$matchlen, LZ77M$matchpos, 0, LZ77M$brr[0]);
-            }
-          LZ77M$shift(LZ77M$matchlen);
-          i = i + LZ77M$matchlen - 1;
-          LZ77M$matchlen = 0;
-        }
-      else 
-
-
-
-        {
-          LZ77M$encode(LZ77M$matchlen, LZ77M$matchpos, k, LZ77M$brr[0]);
-          LZ77M$shift(1);
-          LZ77M$matchlen = 0;
-        }
-    }
-
-
-
-  LZ77M$end_time = LZ77M$Timer$getNow();
-  LZ77M$timetaken = LZ77M$end_time - LZ77M$start_time;
-  LZ77M$Lz77Compression$Lz77EncodeDone(SUCCESS);
-
-  return SUCCESS;
-}
-
 # 4 "Lz77Compression.nc"
-inline static  error_t TestC$Lz77Compression$Lz77Encode(int *arg_0x40b2d608){
+inline static error_t TestC$Lz77Compression$Lz77Encode(int *arg_0x405faad0){
 #line 4
   unsigned char result;
 #line 4
 
 #line 4
-  result = LZ77M$Lz77Compression$Lz77Encode(arg_0x40b2d608);
+  result = LZ77M$Lz77Compression$Lz77Encode(arg_0x405faad0);
 #line 4
 
 #line 4
@@ -11602,91 +11020,27 @@ inline static  error_t TestC$Lz77Compression$Lz77Encode(int *arg_0x40b2d608){
 #line 4
 }
 #line 4
-# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t SerialP$startDoneTask$postTask(void){
-#line 56
-  unsigned char result;
-#line 56
-
-#line 56
-  result = SchedulerBasicP$TaskBasic$postTask(SerialP$startDoneTask);
-#line 56
-
-#line 56
-  return result;
-#line 56
-}
-#line 56
-# 342 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static inline  error_t SerialP$SplitControl$start(void)
-#line 342
-{
-  SerialP$startDoneTask$postTask();
-  return SUCCESS;
-}
-
-# 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-inline static  error_t PrintfP$SerialControl$start(void){
-#line 83
-  unsigned char result;
-#line 83
-
-#line 83
-  result = SerialP$SplitControl$start();
-#line 83
-
-#line 83
-  return result;
-#line 83
-}
-#line 83
-# 99 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
-static inline  error_t PrintfP$PrintfControl$start(void)
-#line 99
-{
-  if (PrintfP$state == PrintfP$S_STOPPED) {
-    return PrintfP$SerialControl$start();
-    }
-#line 102
-  return FAIL;
-}
-
-# 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-inline static  error_t TestC$PrintfControl$start(void){
-#line 83
-  unsigned char result;
-#line 83
-
-#line 83
-  result = PrintfP$PrintfControl$start();
-#line 83
-
-#line 83
-  return result;
-#line 83
-}
-#line 83
 # 47 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$toggle(void)
+static inline void /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$toggle(void )
 #line 47
 {
 #line 47
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
 #line 47
-    * (volatile uint8_t *)49U ^= 0x01 << 4;
+    * (volatile uint8_t * )49U ^= 0x01 << 4;
 #line 47
     __nesc_atomic_end(__nesc_atomic); }
 }
 
 # 44 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$toggle(void){
+inline static void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$HplGeneralIO$toggle(void ){
 #line 44
   /*HplMsp430GeneralIOC.P54*/HplMsp430GeneralIOP$36$IO$toggle();
 #line 44
 }
 #line 44
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$toggle(void)
+static inline void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$toggle(void )
 #line 39
 {
 #line 39
@@ -11694,14 +11048,14 @@ static inline   void /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$toggle(vo
 }
 
 # 31 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void LedsP$Led0$toggle(void){
+inline static void LedsP$Led0$toggle(void ){
 #line 31
   /*PlatformLedsC.Led0Impl*/Msp430GpioC$0$GeneralIO$toggle();
 #line 31
 }
 #line 31
 # 73 "/opt/tinyos-2.x/tos/system/LedsP.nc"
-static inline   void LedsP$Leds$led0Toggle(void)
+static inline void LedsP$Leds$led0Toggle(void )
 #line 73
 {
   LedsP$Led0$toggle();
@@ -11711,14 +11065,14 @@ static inline   void LedsP$Leds$led0Toggle(void)
 }
 
 # 56 "/opt/tinyos-2.x/tos/interfaces/Leds.nc"
-inline static   void TestC$Leds$led0Toggle(void){
+inline static void TestC$Leds$led0Toggle(void ){
 #line 56
   LedsP$Leds$led0Toggle();
 #line 56
 }
 #line 56
 # 53 "/opt/tinyos-2.x/tos/lib/timer/Counter.nc"
-inline static   /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$get(void){
+inline static /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$get(void ){
 #line 53
   unsigned long result;
 #line 53
@@ -11733,13 +11087,13 @@ inline static   /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Coun
 }
 #line 53
 # 75 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
-static inline   /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getNow(void)
+static inline /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getNow(void )
 {
   return /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$get();
 }
 
 # 98 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-inline static   /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$getNow(void){
+inline static /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$getNow(void ){
 #line 98
   unsigned long result;
 #line 98
@@ -11754,14 +11108,14 @@ inline static   /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type 
 }
 #line 98
 # 85 "/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc"
-static inline  uint32_t /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$getNow(void)
+static inline uint32_t /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$getNow(void )
 {
 #line 86
   return /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$getNow();
 }
 
 # 125 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-inline static  uint32_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$getNow(void){
+inline static uint32_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$getNow(void ){
 #line 125
   unsigned long result;
 #line 125
@@ -11775,14 +11129,14 @@ inline static  uint32_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Ti
 #line 125
 }
 #line 125
-# 177 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
-static inline  uint32_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$getNow(uint8_t num)
+# 178 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
+static inline uint32_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$getNow(uint8_t num)
 {
   return /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$getNow();
 }
 
 # 125 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-inline static  uint32_t TestC$Timer$getNow(void){
+inline static uint32_t TestC$Timer$getNow(void ){
 #line 125
   unsigned long result;
 #line 125
@@ -11796,21 +11150,23 @@ inline static  uint32_t TestC$Timer$getNow(void){
 #line 125
 }
 #line 125
-# 46 "TestC.nc"
-static inline  void TestC$BlockRead$readDone(storage_addr_t addr1, void *buf1, storage_len_t len1, error_t error)
+# 38 "TestC.nc"
+static inline void TestC$BlockRead$readDone(storage_addr_t addr1, void *buf1, storage_len_t len1, error_t error)
 {
-  if (error == SUCCESS) 
-    {
+  printf("Entered readDone\n");
+  printfflush();
+  if (error == SUCCESS) {
+      printf("Addr: %u\n", TestC$addr);
+      printfflush();
       TestC$addr = TestC$addr + sizeof TestC$buf;
       TestC$arr[TestC$i++] = TestC$addr;
-      if (++TestC$count == TestC$NUMR) 
-        {
+      if (++TestC$count == TestC$NUMR) {
           TestC$end_time = TestC$Timer$getNow();
           TestC$Leds$led0Toggle();
           TestC$time_taken = TestC$end_time - TestC$start_time;
-          TestC$PrintfControl$start();
         }
       else 
+#line 51
         {
           TestC$Lz77Compression$Lz77Encode(TestC$buf);
         }
@@ -11818,25 +11174,25 @@ static inline  void TestC$BlockRead$readDone(storage_addr_t addr1, void *buf1, s
 }
 
 # 222 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline   void Stm25pBlockP$Read$default$readDone(uint8_t id, storage_addr_t addr, void *buf, storage_len_t len, error_t error)
+static inline void Stm25pBlockP$Read$default$readDone(uint8_t id, storage_addr_t addr, void *buf, storage_len_t len, error_t error)
 #line 222
 {
 }
 
 # 67 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-inline static  void Stm25pBlockP$Read$readDone(uint8_t arg_0x40c7dba8, storage_addr_t arg_0x40b4c338, void *arg_0x40b4c4d8, storage_len_t arg_0x40b4c668, error_t arg_0x40b4c800){
+inline static void Stm25pBlockP$Read$readDone(uint8_t arg_0x40c96d48, storage_addr_t addr, void * buf, storage_len_t len, error_t error){
 #line 67
-  switch (arg_0x40c7dba8) {
+  switch (arg_0x40c96d48) {
 #line 67
     case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID:
 #line 67
-      TestC$BlockRead$readDone(arg_0x40b4c338, arg_0x40b4c4d8, arg_0x40b4c668, arg_0x40b4c800);
+      TestC$BlockRead$readDone(addr, buf, len, error);
 #line 67
       break;
 #line 67
     default:
 #line 67
-      Stm25pBlockP$Read$default$readDone(arg_0x40c7dba8, arg_0x40b4c338, arg_0x40b4c4d8, arg_0x40b4c668, arg_0x40b4c800);
+      Stm25pBlockP$Read$default$readDone(arg_0x40c96d48, addr, buf, len, error);
 #line 67
       break;
 #line 67
@@ -11844,1155 +11200,123 @@ inline static  void Stm25pBlockP$Read$readDone(uint8_t arg_0x40c7dba8, storage_a
 #line 67
 }
 #line 67
-# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$startTask$postTask(void){
-#line 56
+# 53 "/opt/tinyos-2.x/tos/system/QueueC.nc"
+static inline bool /*PrintfC.QueueC*/QueueC$0$Queue$empty(void )
+#line 53
+{
+  return /*PrintfC.QueueC*/QueueC$0$size == 0;
+}
+
+# 50 "/opt/tinyos-2.x/tos/interfaces/Queue.nc"
+inline static bool PrintfP$Queue$empty(void ){
+#line 50
   unsigned char result;
-#line 56
+#line 50
 
-#line 56
-  result = SchedulerBasicP$TaskBasic$postTask(/*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$startTask);
-#line 56
+#line 50
+  result = /*PrintfC.QueueC*/QueueC$0$Queue$empty();
+#line 50
 
-#line 56
+#line 50
   return result;
-#line 56
+#line 50
 }
-#line 56
-# 80 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
-static inline   void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$requested(void)
-#line 80
+#line 50
+# 115 "/opt/tinyos-2.x/tos/interfaces/Packet.nc"
+inline static void * PrintfP$Packet$getPayload(message_t * msg, uint8_t len){
+#line 115
+  void *result;
+#line 115
+
+#line 115
+  result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(msg, len);
+#line 115
+
+#line 115
+  return result;
+#line 115
+}
+#line 115
+# 115 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
+static inline uint8_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$maxPayloadLength(void )
+#line 115
 {
-  if (/*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopping == FALSE) {
-      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopTimer = TRUE;
-      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$startTask$postTask();
-    }
-  else {
-#line 85
-    { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 85
-      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$requested = TRUE;
-#line 85
-      __nesc_atomic_end(__nesc_atomic); }
-    }
+  return 28;
 }
 
-# 73 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-inline static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$requested(void){
-#line 73
-  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$ResourceDefaultOwner$requested();
-#line 73
-}
-#line 73
-# 54 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-static inline   bool /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$isEnqueued(resource_client_id_t id)
-#line 54
+# 57 "/opt/tinyos-2.x/tos/system/QueueC.nc"
+static inline uint8_t /*PrintfC.QueueC*/QueueC$0$Queue$size(void )
+#line 57
 {
-  return /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$resQ[id] != /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$NO_ENTRY || /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$qTail == id;
+  return /*PrintfC.QueueC*/QueueC$0$size;
 }
 
-#line 72
-static inline   error_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$enqueue(resource_client_id_t id)
-#line 72
-{
-  /* atomic removed: atomic calls only */
-#line 73
-  {
-    if (!/*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$isEnqueued(id)) {
-        if (/*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$qHead == /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$NO_ENTRY) {
-          /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$qHead = id;
-          }
-        else {
-#line 78
-          /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$resQ[/*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$qTail] = id;
-          }
-#line 79
-        /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$qTail = id;
-        {
-          unsigned char __nesc_temp = 
-#line 80
-          SUCCESS;
+# 58 "/opt/tinyos-2.x/tos/interfaces/Queue.nc"
+inline static uint8_t PrintfP$Queue$size(void ){
+#line 58
+  unsigned char result;
+#line 58
 
-#line 80
-          return __nesc_temp;
+#line 58
+  result = /*PrintfC.QueueC*/QueueC$0$Queue$size();
+#line 58
+
+#line 58
+  return result;
+#line 58
+}
+#line 58
+# 69 "/opt/tinyos-2.x/tos/system/QueueC.nc"
+static inline void /*PrintfC.QueueC*/QueueC$0$printQueue(void )
+#line 69
+{
+}
+
+#line 65
+static inline /*PrintfC.QueueC*/QueueC$0$queue_t /*PrintfC.QueueC*/QueueC$0$Queue$head(void )
+#line 65
+{
+  return /*PrintfC.QueueC*/QueueC$0$queue[/*PrintfC.QueueC*/QueueC$0$head];
+}
+
+#line 85
+static inline /*PrintfC.QueueC*/QueueC$0$queue_t /*PrintfC.QueueC*/QueueC$0$Queue$dequeue(void )
+#line 85
+{
+  /*PrintfC.QueueC*/QueueC$0$queue_t t = /*PrintfC.QueueC*/QueueC$0$Queue$head();
+
+#line 87
+  ;
+  if (!/*PrintfC.QueueC*/QueueC$0$Queue$empty()) {
+      /*PrintfC.QueueC*/QueueC$0$head++;
+      if (/*PrintfC.QueueC*/QueueC$0$head == 250) {
+#line 90
+        /*PrintfC.QueueC*/QueueC$0$head = 0;
         }
-      }
-#line 82
-    {
-      unsigned char __nesc_temp = 
-#line 82
-      EBUSY;
-
-#line 82
-      return __nesc_temp;
-    }
-  }
-}
-
-# 69 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-inline static   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$enqueue(resource_client_id_t arg_0x40a62e88){
-#line 69
-  unsigned char result;
-#line 69
-
-#line 69
-  result = /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQueue$enqueue(arg_0x40a62e88);
-#line 69
-
-#line 69
-  return result;
-#line 69
-}
-#line 69
-# 187 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline    void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceRequested$default$requested(uint8_t id)
-#line 187
-{
-}
-
-# 43 "/opt/tinyos-2.x/tos/interfaces/ResourceRequested.nc"
-inline static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceRequested$requested(uint8_t arg_0x40a784c8){
-#line 43
-    /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceRequested$default$requested(arg_0x40a784c8);
-#line 43
-}
-#line 43
-# 76 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   error_t /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$request(uint8_t id)
-#line 76
-{
-  /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceRequested$requested(/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId);
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 78
-    {
-      if (/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$state == /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$RES_CONTROLLED) {
-          /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$state = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$RES_GRANTING;
-          /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$reqResId = id;
-        }
-      else {
-          unsigned char __nesc_temp = 
-#line 83
-          /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Queue$enqueue(id);
-
-          {
-#line 83
-            __nesc_atomic_end(__nesc_atomic); 
-#line 83
-            return __nesc_temp;
-          }
-        }
-    }
-#line 86
-    __nesc_atomic_end(__nesc_atomic); }
-#line 85
-  /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceDefaultOwner$requested();
-  return SUCCESS;
-}
-
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t Stm25pSectorP$Stm25pResource$request(uint8_t arg_0x40cdd168){
-#line 78
-  unsigned char result;
-#line 78
-
-#line 78
-  result = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$request(arg_0x40cdd168);
-#line 78
-
-#line 78
-  return result;
-#line 78
-}
-#line 78
-# 102 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline   error_t Stm25pSectorP$ClientResource$request(uint8_t id)
-#line 102
-{
-  return Stm25pSectorP$Stm25pResource$request(id);
-}
-
-# 234 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline    error_t Stm25pBlockP$ClientResource$default$request(uint8_t id)
-#line 234
-{
-#line 234
-  return FAIL;
-}
-
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t Stm25pBlockP$ClientResource$request(uint8_t arg_0x40c7a350){
-#line 78
-  unsigned char result;
-#line 78
-
-#line 78
-  switch (arg_0x40c7a350) {
-#line 78
-    case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID:
-#line 78
-      result = Stm25pSectorP$ClientResource$request(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID);
-#line 78
-      break;
-#line 78
-    default:
-#line 78
-      result = Stm25pBlockP$ClientResource$default$request(arg_0x40c7a350);
-#line 78
-      break;
-#line 78
-    }
-#line 78
-
-#line 78
-  return result;
-#line 78
-}
-#line 78
-# 124 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline error_t Stm25pBlockP$newRequest(uint8_t client)
-#line 124
-{
-
-  if (Stm25pBlockP$m_block_state[client].req != Stm25pBlockP$S_IDLE) {
-    return FAIL;
-    }
-  Stm25pBlockP$ClientResource$request(client);
-  Stm25pBlockP$m_block_state[client] = Stm25pBlockP$m_req;
-
-  return SUCCESS;
-}
-
-# 79 "TestC.nc"
-static inline  void TestC$BlockRead$computeCrcDone(storage_addr_t x, storage_len_t y, uint16_t z, error_t result)
-#line 79
-{
-}
-
-# 223 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline   void Stm25pBlockP$Read$default$computeCrcDone(uint8_t id, storage_addr_t addr, storage_len_t len, uint16_t crc, error_t error)
-#line 223
-{
-}
-
-# 95 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
-inline static  void Stm25pBlockP$Read$computeCrcDone(uint8_t arg_0x40c7dba8, storage_addr_t arg_0x40b72800, storage_len_t arg_0x40b72990, uint16_t arg_0x40b72b30, error_t arg_0x40b72cb8){
-#line 95
-  switch (arg_0x40c7dba8) {
-#line 95
-    case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID:
-#line 95
-      TestC$BlockRead$computeCrcDone(arg_0x40b72800, arg_0x40b72990, arg_0x40b72b30, arg_0x40b72cb8);
-#line 95
-      break;
-#line 95
-    default:
-#line 95
-      Stm25pBlockP$Read$default$computeCrcDone(arg_0x40c7dba8, arg_0x40b72800, arg_0x40b72990, arg_0x40b72b30, arg_0x40b72cb8);
-#line 95
-      break;
-#line 95
-    }
-#line 95
-}
-#line 95
-# 224 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline   void Stm25pBlockP$Write$default$writeDone(uint8_t id, storage_addr_t addr, void *buf, storage_len_t len, error_t error)
-#line 224
-{
-}
-
-# 71 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
-inline static  void Stm25pBlockP$Write$writeDone(uint8_t arg_0x40c7c5e8, storage_addr_t arg_0x40c5c860, void *arg_0x40c5ca00, storage_len_t arg_0x40c5cb90, error_t arg_0x40c5cd28){
-#line 71
-    Stm25pBlockP$Write$default$writeDone(arg_0x40c7c5e8, arg_0x40c5c860, arg_0x40c5ca00, arg_0x40c5cb90, arg_0x40c5cd28);
-#line 71
-}
-#line 71
-# 226 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline   void Stm25pBlockP$Write$default$syncDone(uint8_t id, error_t error)
-#line 226
-{
-}
-
-# 113 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
-inline static  void Stm25pBlockP$Write$syncDone(uint8_t arg_0x40c7c5e8, error_t arg_0x40c861b0){
-#line 113
-    Stm25pBlockP$Write$default$syncDone(arg_0x40c7c5e8, arg_0x40c861b0);
-#line 113
-}
-#line 113
-# 225 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline   void Stm25pBlockP$Write$default$eraseDone(uint8_t id, error_t error)
-#line 225
-{
-}
-
-# 91 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
-inline static  void Stm25pBlockP$Write$eraseDone(uint8_t arg_0x40c7c5e8, error_t arg_0x40c5b798){
 #line 91
-    Stm25pBlockP$Write$default$eraseDone(arg_0x40c7c5e8, arg_0x40c5b798);
-#line 91
-}
-#line 91
-# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t Stm25pSectorP$signalDone_task$postTask(void){
-#line 56
-  unsigned char result;
-#line 56
-
-#line 56
-  result = SchedulerBasicP$TaskBasic$postTask(Stm25pSectorP$signalDone_task);
-#line 56
-
-#line 56
-  return result;
-#line 56
-}
-#line 56
-# 256 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline void Stm25pSectorP$signalDone(error_t error)
-#line 256
-{
-  Stm25pSectorP$m_error = error;
-  Stm25pSectorP$signalDone_task$postTask();
-}
-
-#line 246
-static inline   void Stm25pSectorP$Spi$computeCrcDone(uint16_t crc, stm25p_addr_t addr, 
-stm25p_len_t len, error_t error)
-#line 247
-{
-  Stm25pSectorP$m_crc = crc;
-  Stm25pSectorP$signalDone(SUCCESS);
-}
-
-# 101 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-inline static   void Stm25pSpiP$Spi$computeCrcDone(uint16_t arg_0x40cd44f8, stm25p_addr_t arg_0x40cd4688, stm25p_len_t arg_0x40cd4828, error_t arg_0x40cd49b0){
-#line 101
-  Stm25pSectorP$Spi$computeCrcDone(arg_0x40cd44f8, arg_0x40cd4688, arg_0x40cd4828, arg_0x40cd49b0);
-#line 101
-}
-#line 101
-# 183 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline   void Stm25pSectorP$Spi$readDone(stm25p_addr_t addr, uint8_t *buf, 
-stm25p_len_t len, error_t error)
-#line 184
-{
-  Stm25pSectorP$signalDone(error);
-}
-
-# 77 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-inline static   void Stm25pSpiP$Spi$readDone(stm25p_addr_t arg_0x40cd5088, uint8_t *arg_0x40cd5230, stm25p_len_t arg_0x40cd53d0, error_t arg_0x40cd5558){
-#line 77
-  Stm25pSectorP$Spi$readDone(arg_0x40cd5088, arg_0x40cd5230, arg_0x40cd53d0, arg_0x40cd5558);
-#line 77
-}
-#line 77
-# 202 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline   void Stm25pSectorP$Spi$pageProgramDone(stm25p_addr_t addr, uint8_t *buf, 
-stm25p_len_t len, error_t error)
-#line 203
-{
-  addr += len;
-  buf += len;
-  Stm25pSectorP$m_cur_len -= len;
-  if (!Stm25pSectorP$m_cur_len) {
-    Stm25pSectorP$signalDone(SUCCESS);
+      /*PrintfC.QueueC*/QueueC$0$size--;
+      /*PrintfC.QueueC*/QueueC$0$printQueue();
     }
-  else {
-#line 210
-    Stm25pSectorP$Spi$pageProgram(addr, buf, Stm25pSectorP$calcWriteLen(addr));
-    }
+  return t;
 }
 
-# 125 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-inline static   void Stm25pSpiP$Spi$pageProgramDone(stm25p_addr_t arg_0x40cd2970, uint8_t *arg_0x40cd2b18, stm25p_len_t arg_0x40cd2cb8, error_t arg_0x40cd2e40){
-#line 125
-  Stm25pSectorP$Spi$pageProgramDone(arg_0x40cd2970, arg_0x40cd2b18, arg_0x40cd2cb8, arg_0x40cd2e40);
-#line 125
-}
-#line 125
-# 226 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline   void Stm25pSectorP$Spi$sectorEraseDone(uint8_t sector, error_t error)
-#line 226
-{
-  if (++Stm25pSectorP$m_cur_len < Stm25pSectorP$m_len) {
-    Stm25pSectorP$Spi$sectorErase(STM25P_VMAP[Stm25pSectorP$getVolumeId(Stm25pSectorP$m_client)].base + Stm25pSectorP$m_addr + 
-    Stm25pSectorP$m_cur_len);
-    }
-  else {
-#line 231
-    Stm25pSectorP$signalDone(error);
-    }
-}
-
-# 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-inline static   void Stm25pSpiP$Spi$sectorEraseDone(uint8_t arg_0x40cd1a60, error_t arg_0x40cd1be8){
-#line 144
-  Stm25pSectorP$Spi$sectorEraseDone(arg_0x40cd1a60, arg_0x40cd1be8);
-#line 144
-}
-#line 144
-# 252 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline   void Stm25pSectorP$Spi$bulkEraseDone(error_t error)
-#line 252
-{
-}
-
-# 159 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
-inline static   void Stm25pSpiP$Spi$bulkEraseDone(error_t arg_0x40cd0580){
-#line 159
-  Stm25pSectorP$Spi$bulkEraseDone(arg_0x40cd0580);
-#line 159
-}
-#line 159
-# 192 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline    void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$default$sendDone(uint8_t id, uint8_t *tx_buf, uint8_t *rx_buf, uint16_t len, error_t error)
-#line 192
-{
-}
-
-# 71 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
-inline static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$sendDone(uint8_t arg_0x40d90918, uint8_t *arg_0x40d41610, uint8_t *arg_0x40d417b8, uint16_t arg_0x40d41948, error_t arg_0x40d41ae0){
-#line 71
-  switch (arg_0x40d90918) {
-#line 71
-    case /*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$CLIENT_ID:
-#line 71
-      Stm25pSpiP$SpiPacket$sendDone(arg_0x40d41610, arg_0x40d417b8, arg_0x40d41948, arg_0x40d41ae0);
-#line 71
-      break;
-#line 71
-    default:
-#line 71
-      /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$default$sendDone(arg_0x40d90918, arg_0x40d41610, arg_0x40d417b8, arg_0x40d41948, arg_0x40d41ae0);
-#line 71
-      break;
-#line 71
-    }
-#line 71
-}
-#line 71
-# 185 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone(void)
-#line 185
-{
-  /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$sendDone(/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_client, /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_tx_buf, /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_rx_buf, /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_len, 
-  SUCCESS);
-}
-
-#line 168
-static inline  void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_task$runTask(void)
-#line 168
-{
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 169
-    /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone();
-#line 169
-    __nesc_atomic_end(__nesc_atomic); }
-}
-
-# 152 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
-static inline  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$stop(uint8_t num)
-{
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$m_timers[num].isrunning = FALSE;
-}
-
-# 67 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-inline static  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$stop(void){
-#line 67
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$stop(1U);
-#line 67
-}
-#line 67
-# 69 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
-static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$startTask$runTask(void)
-#line 69
-{
-  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$stop();
-  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopTimer = FALSE;
-  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$start();
-  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$start();
-}
-
-# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$postTask(void){
-#line 56
-  unsigned char result;
-#line 56
-
-#line 56
-  result = SchedulerBasicP$TaskBasic$postTask(/*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer);
-#line 56
-
-#line 56
-  return result;
-#line 56
-}
-#line 56
-# 132 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
-static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$startTimer(uint8_t num, uint32_t t0, uint32_t dt, bool isoneshot)
-{
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer_t *timer = &/*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$m_timers[num];
-
-#line 135
-  timer->t0 = t0;
-  timer->dt = dt;
-  timer->isoneshot = isoneshot;
-  timer->isrunning = TRUE;
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$postTask();
-}
-
-
-
-
-
-
-static inline  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startOneShot(uint8_t num, uint32_t dt)
-{
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$startTimer(num, /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$getNow(), dt, TRUE);
-}
-
-# 62 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-inline static  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$startOneShot(uint32_t arg_0x40b279f0){
-#line 62
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startOneShot(1U, arg_0x40b279f0);
-#line 62
-}
-#line 62
-# 76 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
-static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask$runTask(void)
-#line 76
-{
-  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$startOneShot(1024);
-}
-
-# 111 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline    error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$request(uint8_t id)
-#line 111
-{
-#line 111
-  return FAIL;
-}
-
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$request(uint8_t arg_0x40d8e030){
-#line 78
-  unsigned char result;
-#line 78
-
-#line 78
-  switch (arg_0x40d8e030) {
-#line 78
-    case /*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$CLIENT_ID:
-#line 78
-      result = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$request(/*HplStm25pSpiC.SpiC.UsartC*/Msp430Usart0C$0$CLIENT_ID);
-#line 78
-      break;
-#line 78
-    default:
-#line 78
-      result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$request(arg_0x40d8e030);
-#line 78
-      break;
-#line 78
-    }
-#line 78
-
-#line 78
-  return result;
-#line 78
-}
-#line 78
-# 72 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$request(uint8_t id)
-#line 72
-{
-  return /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$request(id);
-}
-
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t Stm25pSpiP$SpiResource$request(void){
-#line 78
-  unsigned char result;
-#line 78
-
-#line 78
-  result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$request(/*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$CLIENT_ID);
-#line 78
-
-#line 78
-  return result;
-#line 78
-}
-#line 78
-# 108 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-static inline   error_t Stm25pSpiP$ClientResource$request(void)
-#line 108
-{
-  return Stm25pSpiP$SpiResource$request();
-}
-
-# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t Stm25pSectorP$SpiResource$request(void){
-#line 78
-  unsigned char result;
-#line 78
-
-#line 78
-  result = Stm25pSpiP$ClientResource$request();
-#line 78
-
-#line 78
-  return result;
-#line 78
-}
-#line 78
-# 121 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline  void Stm25pSectorP$Stm25pResource$granted(uint8_t id)
-#line 121
-{
-  Stm25pSectorP$m_client = id;
-  Stm25pSectorP$SpiResource$request();
-}
-
-# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static  void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$granted(uint8_t arg_0x40a79b68){
-#line 92
-  Stm25pSectorP$Stm25pResource$granted(arg_0x40a79b68);
-#line 92
-}
-#line 92
-# 199 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline    void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$configure(uint8_t id)
-#line 199
-{
-}
-
-# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-inline static   void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$configure(uint8_t arg_0x40a77678){
-#line 49
-    /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$configure(arg_0x40a77678);
-#line 49
-}
-#line 49
-# 173 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline  void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$runTask(void)
-#line 173
-{
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 174
-    {
-      /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$reqResId;
-      /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$state = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$RES_BUSY;
-    }
-#line 177
-    __nesc_atomic_end(__nesc_atomic); }
-  /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$configure(/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId);
-  /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$granted(/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId);
-}
-
-# 176 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline  void Stm25pBlockP$Sector$eraseDone(uint8_t id, uint8_t sector, 
-uint8_t num_sectors, 
-error_t error)
-#line 178
-{
-  Stm25pBlockP$signalDone(id, 0, error);
-}
-
-# 287 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline   void Stm25pSectorP$Sector$default$eraseDone(uint8_t id, uint8_t sector, uint8_t num_sectors, error_t error)
-#line 287
-{
-}
-
-# 121 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-inline static  void Stm25pSectorP$Sector$eraseDone(uint8_t arg_0x40cdfcd0, uint8_t arg_0x40c71768, uint8_t arg_0x40c718f8, error_t arg_0x40c71a80){
-#line 121
-  switch (arg_0x40cdfcd0) {
-#line 121
-    case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID:
-#line 121
-      Stm25pBlockP$Sector$eraseDone(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID, arg_0x40c71768, arg_0x40c718f8, arg_0x40c71a80);
-#line 121
-      break;
-#line 121
-    default:
-#line 121
-      Stm25pSectorP$Sector$default$eraseDone(arg_0x40cdfcd0, arg_0x40c71768, arg_0x40c718f8, arg_0x40c71a80);
-#line 121
-      break;
-#line 121
-    }
-#line 121
-}
-#line 121
-# 171 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline  void Stm25pBlockP$Sector$writeDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
-stm25p_len_t len, error_t error)
-#line 172
-{
-  Stm25pBlockP$signalDone(id, 0, error);
-}
-
-# 286 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline   void Stm25pSectorP$Sector$default$writeDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error)
-#line 286
-{
-}
-
-# 101 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-inline static  void Stm25pSectorP$Sector$writeDone(uint8_t arg_0x40cdfcd0, stm25p_addr_t arg_0x40c724c0, uint8_t *arg_0x40c72668, stm25p_len_t arg_0x40c727f8, error_t arg_0x40c72990){
-#line 101
-  switch (arg_0x40cdfcd0) {
-#line 101
-    case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID:
-#line 101
-      Stm25pBlockP$Sector$writeDone(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID, arg_0x40c724c0, arg_0x40c72668, arg_0x40c727f8, arg_0x40c72990);
-#line 101
-      break;
-#line 101
-    default:
-#line 101
-      Stm25pSectorP$Sector$default$writeDone(arg_0x40cdfcd0, arg_0x40c724c0, arg_0x40c72668, arg_0x40c727f8, arg_0x40c72990);
-#line 101
-      break;
-#line 101
-    }
-#line 101
-}
-#line 101
-# 182 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline  void Stm25pBlockP$Sector$computeCrcDone(uint8_t id, stm25p_addr_t addr, 
-stm25p_len_t len, 
-uint16_t crc, 
-error_t error)
-#line 185
-{
-  Stm25pBlockP$signalDone(id, crc, error);
-}
-
-# 288 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline   void Stm25pSectorP$Sector$default$computeCrcDone(uint8_t id, stm25p_addr_t addr, stm25p_len_t len, uint16_t crc, error_t error)
-#line 288
-{
-}
-
-# 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-inline static  void Stm25pSectorP$Sector$computeCrcDone(uint8_t arg_0x40cdfcd0, stm25p_addr_t arg_0x40c9c9c0, stm25p_len_t arg_0x40c9cb50, uint16_t arg_0x40c9ccf0, error_t arg_0x40c9ce78){
-#line 144
-  switch (arg_0x40cdfcd0) {
-#line 144
-    case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID:
-#line 144
-      Stm25pBlockP$Sector$computeCrcDone(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID, arg_0x40c9c9c0, arg_0x40c9cb50, arg_0x40c9ccf0, arg_0x40c9ce78);
-#line 144
-      break;
-#line 144
-    default:
-#line 144
-      Stm25pSectorP$Sector$default$computeCrcDone(arg_0x40cdfcd0, arg_0x40c9c9c0, arg_0x40c9cb50, arg_0x40c9ccf0, arg_0x40c9ce78);
-#line 144
-      break;
-#line 144
-    }
-#line 144
-}
-#line 144
-# 166 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static inline  void Stm25pBlockP$Sector$readDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
-stm25p_len_t len, error_t error)
-#line 167
-{
-  Stm25pBlockP$signalDone(id, 0, error);
-}
-
-# 285 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline   void Stm25pSectorP$Sector$default$readDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error)
-#line 285
-{
-}
-
-# 78 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
-inline static  void Stm25pSectorP$Sector$readDone(uint8_t arg_0x40cdfcd0, stm25p_addr_t arg_0x40c730c0, uint8_t *arg_0x40c73268, stm25p_len_t arg_0x40c733f8, error_t arg_0x40c73590){
-#line 78
-  switch (arg_0x40cdfcd0) {
-#line 78
-    case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID:
-#line 78
-      Stm25pBlockP$Sector$readDone(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID, arg_0x40c730c0, arg_0x40c73268, arg_0x40c733f8, arg_0x40c73590);
-#line 78
-      break;
-#line 78
-    default:
-#line 78
-      Stm25pSectorP$Sector$default$readDone(arg_0x40cdfcd0, arg_0x40c730c0, arg_0x40c73268, arg_0x40c733f8, arg_0x40c73590);
-#line 78
-      break;
-#line 78
-    }
-#line 78
-}
-#line 78
-# 261 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline  void Stm25pSectorP$signalDone_task$runTask(void)
-#line 261
-{
-  switch (Stm25pSectorP$m_state) {
-      case Stm25pSectorP$S_IDLE: 
-        Stm25pSectorP$ClientResource$granted(Stm25pSectorP$m_client);
-      break;
-      case Stm25pSectorP$S_READ: 
-        Stm25pSectorP$Sector$readDone(Stm25pSectorP$m_client, Stm25pSectorP$m_addr, Stm25pSectorP$m_buf, Stm25pSectorP$m_len, Stm25pSectorP$m_error);
-      break;
-      case Stm25pSectorP$S_CRC: 
-        Stm25pSectorP$Sector$computeCrcDone(Stm25pSectorP$m_client, Stm25pSectorP$m_addr, Stm25pSectorP$m_len, 
-        Stm25pSectorP$m_crc, Stm25pSectorP$m_error);
-      break;
-      case Stm25pSectorP$S_WRITE: 
-        Stm25pSectorP$Sector$writeDone(Stm25pSectorP$m_client, Stm25pSectorP$m_addr, Stm25pSectorP$m_buf, Stm25pSectorP$m_len, Stm25pSectorP$m_error);
-      break;
-      case Stm25pSectorP$S_ERASE: 
-        Stm25pSectorP$Sector$eraseDone(Stm25pSectorP$m_client, Stm25pSectorP$m_addr, Stm25pSectorP$m_len, Stm25pSectorP$m_error);
-      break;
-      default: 
-        break;
-    }
-}
-
-# 92 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-inline static   void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$startAt(/*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type arg_0x40b89350, /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type arg_0x40b894e0){
-#line 92
-  /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$startAt(arg_0x40b89350, arg_0x40b894e0);
-#line 92
-}
-#line 92
-# 47 "/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc"
-static inline void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$start(uint32_t t0, uint32_t dt, bool oneshot)
-{
-  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$m_dt = dt;
-  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$m_oneshot = oneshot;
-  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$startAt(t0, dt);
-}
-
-#line 82
-static inline  void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$startOneShotAt(uint32_t t0, uint32_t dt)
-{
-#line 83
-  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$start(t0, dt, TRUE);
-}
-
-# 118 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-inline static  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$startOneShotAt(uint32_t arg_0x40b25738, uint32_t arg_0x40b258c8){
-#line 118
-  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$startOneShotAt(arg_0x40b25738, arg_0x40b258c8);
-#line 118
-}
-#line 118
-# 54 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430AlarmC.nc"
-static inline   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$stop(void)
-{
-  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$disableEvents();
-}
-
-# 62 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-inline static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$stop(void){
-#line 62
-  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$stop();
-#line 62
-}
-#line 62
-# 91 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
-static inline   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$stop(void)
-{
-  /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$stop();
-}
-
-# 62 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-inline static   void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$stop(void){
-#line 62
-  /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$stop();
-#line 62
-}
-#line 62
-# 60 "/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc"
-static inline  void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$stop(void)
-{
-#line 61
-  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$stop();
-}
-
-# 67 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-inline static  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$stop(void){
-#line 67
-  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$stop();
-#line 67
-}
-#line 67
-# 88 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
-static inline  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$runTask(void)
-{
-
-
-
-
-  uint32_t now = /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$getNow();
-  int32_t min_remaining = (1UL << 31) - 1;
-  bool min_remaining_isset = FALSE;
-  uint8_t num;
-
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$stop();
-
-  for (num = 0; num < /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$NUM_TIMERS; num++) 
-    {
-      /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer_t *timer = &/*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$m_timers[num];
-
-      if (timer->isrunning) 
-        {
-          uint32_t elapsed = now - timer->t0;
-          int32_t remaining = timer->dt - elapsed;
-
-          if (remaining < min_remaining) 
-            {
-              min_remaining = remaining;
-              min_remaining_isset = TRUE;
-            }
-        }
-    }
-
-  if (min_remaining_isset) 
-    {
-      if (min_remaining <= 0) {
-        /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$fireTimers(now);
-        }
-      else {
-#line 123
-        /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$startOneShotAt(now, min_remaining);
-        }
-    }
-}
-
-# 192 "LZ77M.nc"
-static inline  void LZ77M$Timer$fired(void)
-{
-}
-
-# 71 "TestC.nc"
-static inline  void TestC$Timer$fired(void)
-{
-}
-
-# 95 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static inline  error_t Stm25pSectorP$SplitControl$stop(void)
-#line 95
-{
-  error_t error = Stm25pSectorP$SpiResource$request();
-
-#line 97
-  if (error == SUCCESS) {
-    Stm25pSectorP$m_power_state = Stm25pSectorP$S_STOP;
-    }
-#line 99
-  return error;
-}
-
-# 109 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-inline static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stop(void){
-#line 109
-  unsigned char result;
-#line 109
-
-#line 109
-  result = Stm25pSectorP$SplitControl$stop();
-#line 109
-
-#line 109
-  return result;
-#line 109
-}
-#line 109
-# 127 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
-static inline   error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$stop(void)
-#line 127
-{
-  return SUCCESS;
-}
-
-# 84 "/opt/tinyos-2.x/tos/interfaces/StdControl.nc"
-inline static  error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$stop(void){
-#line 84
-  unsigned char result;
-#line 84
-
-#line 84
-  result = /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$stop();
-#line 84
-
-#line 84
-  return result;
-#line 84
-}
-#line 84
-# 135 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
-static inline    void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$default$cleanup(void)
-#line 135
-{
-}
-
-# 52 "/opt/tinyos-2.x/tos/lib/power/PowerDownCleanup.nc"
-inline static   void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$cleanup(void){
-#line 52
-  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$default$cleanup();
-#line 52
-}
-#line 52
-# 107 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
-static inline  void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$fired(void)
-#line 107
-{
-  if (/*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopTimer == FALSE) {
-      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopping = TRUE;
-      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$cleanup();
-      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$stop();
-      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stop();
-    }
-}
-
-# 192 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
-static inline   void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(uint8_t num)
-{
-}
-
-# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-inline static  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$fired(uint8_t arg_0x40c428a8){
-#line 72
-  switch (arg_0x40c428a8) {
-#line 72
-    case 0U:
-#line 72
-      TestC$Timer$fired();
-#line 72
-      LZ77M$Timer$fired();
-#line 72
-      break;
-#line 72
-    case 1U:
-#line 72
-      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$fired();
-#line 72
-      break;
-#line 72
-    default:
-#line 72
-      /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(arg_0x40c428a8);
-#line 72
-      break;
-#line 72
-    }
-#line 72
-}
-#line 72
-# 127 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
-static inline  void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$fired(void)
-{
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$fireTimers(/*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$getNow());
-}
-
-# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-inline static  void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$fired(void){
-#line 72
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$fired();
-#line 72
-}
-#line 72
-# 80 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
-static inline   /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getAlarm(void)
-{
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 82
-    {
-      /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type __nesc_temp = 
-#line 82
-      /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$m_t0 + /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$m_dt;
-
-      {
-#line 82
-        __nesc_atomic_end(__nesc_atomic); 
-#line 82
-        return __nesc_temp;
-      }
-    }
-#line 84
-    __nesc_atomic_end(__nesc_atomic); }
-}
-
-# 105 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
-inline static   /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$getAlarm(void){
-#line 105
-  unsigned long result;
-#line 105
-
-#line 105
-  result = /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getAlarm();
-#line 105
-
-#line 105
-  return result;
-#line 105
-}
-#line 105
-# 63 "/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc"
-static inline  void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$runTask(void)
-{
-  if (/*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$m_oneshot == FALSE) {
-    /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$start(/*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$getAlarm(), /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$m_dt, FALSE);
-    }
-#line 67
-  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$fired();
-}
-
-# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t PrintfP$retrySend$postTask(void){
-#line 56
-  unsigned char result;
-#line 56
-
-#line 56
-  result = SchedulerBasicP$TaskBasic$postTask(PrintfP$retrySend);
-#line 56
-
-#line 56
-  return result;
-#line 56
-}
-#line 56
-# 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-inline static  error_t PrintfP$AMSend$send(am_addr_t arg_0x4057cad0, message_t *arg_0x4057cc80, uint8_t arg_0x4057ce08){
-#line 69
-  unsigned char result;
-#line 69
-
-#line 69
-  result = /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$send(arg_0x4057cad0, arg_0x4057cc80, arg_0x4057ce08);
-#line 69
-
-#line 69
-  return result;
-#line 69
-}
-#line 69
-# 81 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
-static inline  void PrintfP$retrySend$runTask(void)
+# 81 "/opt/tinyos-2.x/tos/interfaces/Queue.nc"
+inline static PrintfP$Queue$t  PrintfP$Queue$dequeue(void ){
 #line 81
-{
-  if (PrintfP$AMSend$send(AM_BROADCAST_ADDR, &PrintfP$printfMsg, sizeof(printf_msg_t )) != SUCCESS) {
-    PrintfP$retrySend$postTask();
-    }
-}
+  unsigned char result;
+#line 81
 
+#line 81
+  result = /*PrintfC.QueueC*/QueueC$0$Queue$dequeue();
+#line 81
+
+#line 81
+  return result;
+#line 81
+}
+#line 81
 # 269 "/usr/lib/ncc/nesc_nx.h"
-static __inline uint16_t __nesc_hton_uint16(void *target, uint16_t value)
+static __inline  uint16_t __nesc_hton_uint16(void * target, uint16_t value)
 #line 269
 {
   uint8_t *base = target;
@@ -13004,31 +11328,31 @@ static __inline uint16_t __nesc_hton_uint16(void *target, uint16_t value)
 }
 
 # 49 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-static inline serial_header_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(message_t *msg)
+static inline serial_header_t * /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(message_t * msg)
 #line 49
 {
-  return (serial_header_t *)(msg->data - sizeof(serial_header_t ));
+  return (serial_header_t * )((uint8_t *)msg + (size_t )& ((message_t *)0)->data - sizeof(serial_header_t ));
 }
 
-#line 144
-static inline  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setDestination(message_t *amsg, am_addr_t addr)
-#line 144
+#line 142
+static inline void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setDestination(message_t *amsg, am_addr_t addr)
+#line 142
 {
   serial_header_t *header = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(amsg);
 
-#line 146
-  __nesc_hton_uint16((unsigned char *)&header->dest, addr);
+#line 144
+  __nesc_hton_uint16(header->dest.data, addr);
 }
 
 # 92 "/opt/tinyos-2.x/tos/interfaces/AMPacket.nc"
-inline static  void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setDestination(message_t *arg_0x40586670, am_addr_t arg_0x40586800){
+inline static void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setDestination(message_t * amsg, am_addr_t addr){
 #line 92
-  /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setDestination(arg_0x40586670, arg_0x40586800);
+  /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setDestination(amsg, addr);
 #line 92
 }
 #line 92
 # 240 "/usr/lib/ncc/nesc_nx.h"
-static __inline uint8_t __nesc_hton_uint8(void *target, uint8_t value)
+static __inline  uint8_t __nesc_hton_uint8(void * target, uint8_t value)
 #line 240
 {
   uint8_t *base = target;
@@ -13038,31 +11362,31 @@ static __inline uint8_t __nesc_hton_uint8(void *target, uint8_t value)
   return value;
 }
 
-# 163 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-static inline  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setType(message_t *amsg, am_id_t type)
-#line 163
+# 161 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
+static inline void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setType(message_t *amsg, am_id_t type)
+#line 161
 {
   serial_header_t *header = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(amsg);
 
-#line 165
-  __nesc_hton_uint8((unsigned char *)&header->type, type);
+#line 163
+  __nesc_hton_uint8(header->type.data, type);
 }
 
 # 151 "/opt/tinyos-2.x/tos/interfaces/AMPacket.nc"
-inline static  void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setType(message_t *arg_0x40595598, am_id_t arg_0x40595720){
+inline static void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setType(message_t * amsg, am_id_t t){
 #line 151
-  /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setType(arg_0x40595598, arg_0x40595720);
+  /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$setType(amsg, t);
 #line 151
 }
 #line 151
 # 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-inline static  error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(am_id_t arg_0x40adfc28, am_addr_t arg_0x4057cad0, message_t *arg_0x4057cc80, uint8_t arg_0x4057ce08){
+inline static error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(am_id_t arg_0x40b27a70, am_addr_t addr, message_t * msg, uint8_t len){
 #line 69
   unsigned char result;
 #line 69
 
 #line 69
-  result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$send(arg_0x40adfc28, arg_0x4057cad0, arg_0x4057cc80, arg_0x4057ce08);
+  result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$send(arg_0x40b27a70, addr, msg, len);
 #line 69
 
 #line 69
@@ -13071,13 +11395,13 @@ inline static  error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send
 }
 #line 69
 # 67 "/opt/tinyos-2.x/tos/interfaces/AMPacket.nc"
-inline static  am_addr_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$destination(message_t *arg_0x40588aa8){
+inline static am_addr_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$destination(message_t * amsg){
 #line 67
   unsigned int result;
 #line 67
 
 #line 67
-  result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$destination(arg_0x40588aa8);
+  result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$destination(amsg);
 #line 67
 
 #line 67
@@ -13086,13 +11410,13 @@ inline static  am_addr_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$
 }
 #line 67
 #line 136
-inline static  am_id_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$type(message_t *arg_0x40595010){
+inline static am_id_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$type(message_t * amsg){
 #line 136
   unsigned char result;
 #line 136
 
 #line 136
-  result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$type(arg_0x40595010);
+  result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$type(amsg);
 #line 136
 
 #line 136
@@ -13100,22 +11424,22 @@ inline static  am_id_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$ty
 #line 136
 }
 #line 136
-# 115 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-static inline  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$setPayloadLength(message_t *msg, uint8_t len)
-#line 115
+# 111 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
+static inline void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$setPayloadLength(message_t *msg, uint8_t len)
+#line 111
 {
-  __nesc_hton_uint8((unsigned char *)&/*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(msg)->length, len);
+  __nesc_hton_uint8(/*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(msg)->length.data, len);
 }
 
 # 83 "/opt/tinyos-2.x/tos/interfaces/Packet.nc"
-inline static  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Packet$setPayloadLength(message_t *arg_0x4058d190, uint8_t arg_0x4058d318){
+inline static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Packet$setPayloadLength(message_t * msg, uint8_t len){
 #line 83
-  /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$setPayloadLength(arg_0x4058d190, arg_0x4058d318);
+  /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$setPayloadLength(msg, len);
 #line 83
 }
 #line 83
 # 82 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-static inline  error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$send(uint8_t clientId, message_t *msg, 
+static inline error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$send(uint8_t clientId, message_t *msg, 
 uint8_t len)
 #line 83
 {
@@ -13154,13 +11478,13 @@ uint8_t len)
 }
 
 # 64 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-inline static  error_t /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$send(message_t *arg_0x405afb80, uint8_t arg_0x405afd08){
+inline static error_t /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$send(message_t * msg, uint8_t len){
 #line 64
   unsigned char result;
 #line 64
 
 #line 64
-  result = /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$send(0U, arg_0x405afb80, arg_0x405afd08);
+  result = /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$send(0U, msg, len);
 #line 64
 
 #line 64
@@ -13168,18 +11492,8 @@ inline static  error_t /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$
 #line 64
 }
 #line 64
-# 235 "/usr/lib/ncc/nesc_nx.h"
-static __inline uint8_t __nesc_ntoh_uint8(const void *source)
-#line 235
-{
-  const uint8_t *base = source;
-
-#line 237
-  return base[0];
-}
-
-#line 264
-static __inline uint16_t __nesc_ntoh_uint16(const void *source)
+# 264 "/usr/lib/ncc/nesc_nx.h"
+static __inline  uint16_t __nesc_ntoh_uint16(const void * source)
 #line 264
 {
   const uint8_t *base = source;
@@ -13189,7 +11503,7 @@ static __inline uint16_t __nesc_ntoh_uint16(const void *source)
 }
 
 # 522 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static inline   error_t SerialP$SendBytePacket$startSend(uint8_t b)
+static inline error_t SerialP$SendBytePacket$startSend(uint8_t b)
 #line 522
 {
   bool not_busy = FALSE;
@@ -13214,13 +11528,13 @@ static inline   error_t SerialP$SendBytePacket$startSend(uint8_t b)
 }
 
 # 51 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
-inline static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$startSend(uint8_t arg_0x405f5558){
+inline static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$startSend(uint8_t first_byte){
 #line 51
   unsigned char result;
 #line 51
 
 #line 51
-  result = SerialP$SendBytePacket$startSend(arg_0x405f5558);
+  result = SerialP$SendBytePacket$startSend(first_byte);
 #line 51
 
 #line 51
@@ -13229,38 +11543,38 @@ inline static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP
 }
 #line 51
 # 43 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfoActiveMessageP.nc"
-static inline   uint8_t SerialPacketInfoActiveMessageP$Info$dataLinkLength(message_t *msg, uint8_t upperLen)
+static inline uint8_t SerialPacketInfoActiveMessageP$Info$dataLinkLength(message_t *msg, uint8_t upperLen)
 #line 43
 {
   return upperLen + sizeof(serial_header_t );
 }
 
-# 352 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline    uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$dataLinkLength(uart_id_t id, message_t *msg, 
+# 347 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$dataLinkLength(uart_id_t id, message_t *msg, 
 uint8_t upperLen)
-#line 353
+#line 348
 {
   return 0;
 }
 
 # 23 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-inline static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$dataLinkLength(uart_id_t arg_0x40671460, message_t *arg_0x405f12a8, uint8_t arg_0x405f1438){
+inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$dataLinkLength(uart_id_t arg_0x407f8b10, message_t *msg, uint8_t upperLen){
 #line 23
   unsigned char result;
 #line 23
 
 #line 23
-  switch (arg_0x40671460) {
+  switch (arg_0x407f8b10) {
 #line 23
     case TOS_SERIAL_ACTIVE_MESSAGE_ID:
 #line 23
-      result = SerialPacketInfoActiveMessageP$Info$dataLinkLength(arg_0x405f12a8, arg_0x405f1438);
+      result = SerialPacketInfoActiveMessageP$Info$dataLinkLength(msg, upperLen);
 #line 23
       break;
 #line 23
     default:
 #line 23
-      result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$dataLinkLength(arg_0x40671460, arg_0x405f12a8, arg_0x405f1438);
+      result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$dataLinkLength(arg_0x407f8b10, msg, upperLen);
 #line 23
       break;
 #line 23
@@ -13272,8 +11586,51 @@ inline static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP
 #line 23
 }
 #line 23
+# 40 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfoActiveMessageP.nc"
+static inline uint8_t SerialPacketInfoActiveMessageP$Info$offset(void )
+#line 40
+{
+  return (uint8_t )(sizeof(message_header_t ) - sizeof(serial_header_t ));
+}
+
+# 344 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$offset(uart_id_t id)
+#line 344
+{
+  return 0;
+}
+
+# 15 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
+inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$offset(uart_id_t arg_0x407f8b10){
+#line 15
+  unsigned char result;
+#line 15
+
+#line 15
+  switch (arg_0x407f8b10) {
+#line 15
+    case TOS_SERIAL_ACTIVE_MESSAGE_ID:
+#line 15
+      result = SerialPacketInfoActiveMessageP$Info$offset();
+#line 15
+      break;
+#line 15
+    default:
+#line 15
+      result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$offset(arg_0x407f8b10);
+#line 15
+      break;
+#line 15
+    }
+#line 15
+
+#line 15
+  return result;
+#line 15
+}
+#line 15
 # 100 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline  error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$send(uint8_t id, message_t *msg, uint8_t len)
+static inline error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$send(uint8_t id, message_t *msg, uint8_t len)
 #line 100
 {
   if (/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendState != /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SEND_STATE_IDLE) {
@@ -13324,13 +11681,13 @@ static inline  error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$
 }
 
 # 64 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-inline static  error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$send(message_t *arg_0x405afb80, uint8_t arg_0x405afd08){
+inline static error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$send(message_t * msg, uint8_t len){
 #line 64
   unsigned char result;
 #line 64
 
 #line 64
-  result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$send(TOS_SERIAL_ACTIVE_MESSAGE_ID, arg_0x405afb80, arg_0x405afd08);
+  result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$send(TOS_SERIAL_ACTIVE_MESSAGE_ID, msg, len);
 #line 64
 
 #line 64
@@ -13338,40 +11695,1085 @@ inline static  error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend
 #line 64
 }
 #line 64
-# 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-inline static  void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$sendDone(message_t *arg_0x4057beb8, error_t arg_0x4057a068){
+# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+inline static error_t SerialP$RunTx$postTask(void ){
+#line 56
+  unsigned char result;
+#line 56
+
+#line 56
+  result = SchedulerBasicP$TaskBasic$postTask(SerialP$RunTx);
+#line 56
+
+#line 56
+  return result;
+#line 56
+}
+#line 56
+# 27 "LZ77M.nc"
+static inline int8_t LZ77M$search(int a)
+#line 27
+{
+  int c;
+#line 28
+  int nextlinklen1 = 0;
+
+#line 29
+  for (c = 0; c < 250; c++) {
+      if (LZ77M$dict[c] == a) {
+          LZ77M$nextlink[nextlinklen1++] = c;
+          LZ77M$matchlen = 1;
+          LZ77M$FLAG++;
+        }
+      else {
+          LZ77M$matchlen = 0;
+          LZ77M$matchpos = 0;
+        }
+    }
+
+  LZ77M$nextlinklen = nextlinklen1;
+  nextlinklen1 = 0;
+
+  if (LZ77M$FLAG > 0) {
+    return 1;
+    }
+  else {
+#line 47
+    return 0;
+    }
+}
+
+#line 95
+static inline void LZ77M$findMaxmatch(void )
+#line 95
+{
+
+  int n = 0;
+#line 97
+  int m;
+#line 97
+  int p;
+  int nindex = 1;
+
 #line 99
-  PrintfP$AMSend$sendDone(arg_0x4057beb8, arg_0x4057a068);
+  do {
+      for (m = 0, p = 0; m < LZ77M$nextlinklen; m++) 
+        {
+          if (LZ77M$nextlink[m] == 250 - 1) {
+            break;
+            }
+          else {
+
+              if (LZ77M$brr[nindex] == LZ77M$dict[LZ77M$nextlink[m] + nindex]) 
+                {
+
+                  LZ77M$nextlink[p++] = LZ77M$nextlink[m];
+                }
+            }
+        }
+
+      nindex++;
+      LZ77M$nextlinklen = p;
+    }
+  while (p != 0);
+  LZ77M$matchpos = LZ77M$nextlink[0];
+  LZ77M$matchlen = nindex - 1;
+}
+
+# 62 "TestC.nc"
+static inline error_t TestC$Lz77Compression$Lz77EncodeDone(error_t err, int *Outbuffer)
+{
+  if (err == SUCCESS) {
+      int i = 0;
+
+
+      for (i = 0; i < 256; i++) {
+        }
+
+
+
+      printfflush();
+    }
+}
+
+# 5 "Lz77Compression.nc"
+inline static error_t LZ77M$Lz77Compression$Lz77EncodeDone(error_t success, int *Outbuffer){
+#line 5
+  unsigned char result;
+#line 5
+
+#line 5
+  result = TestC$Lz77Compression$Lz77EncodeDone(success, Outbuffer);
+#line 5
+
+#line 5
+  return result;
+#line 5
+}
+#line 5
+# 76 "TestC.nc"
+static inline void TestC$BlockRead$computeCrcDone(storage_addr_t x, storage_len_t y, uint16_t z, error_t result)
+#line 76
+{
+}
+
+# 223 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+static inline void Stm25pBlockP$Read$default$computeCrcDone(uint8_t id, storage_addr_t addr, storage_len_t len, uint16_t crc, error_t error)
+#line 223
+{
+}
+
+# 95 "/opt/tinyos-2.x/tos/interfaces/BlockRead.nc"
+inline static void Stm25pBlockP$Read$computeCrcDone(uint8_t arg_0x40c96d48, storage_addr_t addr, storage_len_t len, uint16_t crc, error_t error){
+#line 95
+  switch (arg_0x40c96d48) {
+#line 95
+    case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID:
+#line 95
+      TestC$BlockRead$computeCrcDone(addr, len, crc, error);
+#line 95
+      break;
+#line 95
+    default:
+#line 95
+      Stm25pBlockP$Read$default$computeCrcDone(arg_0x40c96d48, addr, len, crc, error);
+#line 95
+      break;
+#line 95
+    }
+#line 95
+}
+#line 95
+# 224 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+static inline void Stm25pBlockP$Write$default$writeDone(uint8_t id, storage_addr_t addr, void *buf, storage_len_t len, error_t error)
+#line 224
+{
+}
+
+# 71 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
+inline static void Stm25pBlockP$Write$writeDone(uint8_t arg_0x40c8d7e0, storage_addr_t addr, void * buf, storage_len_t len, error_t error){
+#line 71
+    Stm25pBlockP$Write$default$writeDone(arg_0x40c8d7e0, addr, buf, len, error);
+#line 71
+}
+#line 71
+# 226 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+static inline void Stm25pBlockP$Write$default$syncDone(uint8_t id, error_t error)
+#line 226
+{
+}
+
+# 112 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
+inline static void Stm25pBlockP$Write$syncDone(uint8_t arg_0x40c8d7e0, error_t error){
+#line 112
+    Stm25pBlockP$Write$default$syncDone(arg_0x40c8d7e0, error);
+#line 112
+}
+#line 112
+# 225 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+static inline void Stm25pBlockP$Write$default$eraseDone(uint8_t id, error_t error)
+#line 225
+{
+}
+
+# 91 "/opt/tinyos-2.x/tos/interfaces/BlockWrite.nc"
+inline static void Stm25pBlockP$Write$eraseDone(uint8_t arg_0x40c8d7e0, error_t error){
+#line 91
+    Stm25pBlockP$Write$default$eraseDone(arg_0x40c8d7e0, error);
+#line 91
+}
+#line 91
+# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+inline static error_t Stm25pSectorP$signalDone_task$postTask(void ){
+#line 56
+  unsigned char result;
+#line 56
+
+#line 56
+  result = SchedulerBasicP$TaskBasic$postTask(Stm25pSectorP$signalDone_task);
+#line 56
+
+#line 56
+  return result;
+#line 56
+}
+#line 56
+# 256 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline void Stm25pSectorP$signalDone(error_t error)
+#line 256
+{
+  Stm25pSectorP$m_error = error;
+  Stm25pSectorP$signalDone_task$postTask();
+}
+
+#line 246
+static inline void Stm25pSectorP$Spi$computeCrcDone(uint16_t crc, stm25p_addr_t addr, 
+stm25p_len_t len, error_t error)
+#line 247
+{
+  Stm25pSectorP$m_crc = crc;
+  Stm25pSectorP$signalDone(SUCCESS);
+}
+
+# 101 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
+inline static void Stm25pSpiP$Spi$computeCrcDone(uint16_t crc, stm25p_addr_t addr, stm25p_len_t len, error_t error){
+#line 101
+  Stm25pSectorP$Spi$computeCrcDone(crc, addr, len, error);
+#line 101
+}
+#line 101
+# 183 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline void Stm25pSectorP$Spi$readDone(stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len, error_t error)
+#line 184
+{
+  Stm25pSectorP$signalDone(error);
+}
+
+# 77 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
+inline static void Stm25pSpiP$Spi$readDone(stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error){
+#line 77
+  Stm25pSectorP$Spi$readDone(addr, buf, len, error);
+#line 77
+}
+#line 77
+# 202 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline void Stm25pSectorP$Spi$pageProgramDone(stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len, error_t error)
+#line 203
+{
+  addr += len;
+  buf += len;
+  Stm25pSectorP$m_cur_len -= len;
+  if (!Stm25pSectorP$m_cur_len) {
+    Stm25pSectorP$signalDone(SUCCESS);
+    }
+  else {
+#line 210
+    Stm25pSectorP$Spi$pageProgram(addr, buf, Stm25pSectorP$calcWriteLen(addr));
+    }
+}
+
+# 125 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
+inline static void Stm25pSpiP$Spi$pageProgramDone(stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error){
+#line 125
+  Stm25pSectorP$Spi$pageProgramDone(addr, buf, len, error);
+#line 125
+}
+#line 125
+# 226 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline void Stm25pSectorP$Spi$sectorEraseDone(uint8_t sector, error_t error)
+#line 226
+{
+  if (++Stm25pSectorP$m_cur_len < Stm25pSectorP$m_len) {
+    Stm25pSectorP$Spi$sectorErase(STM25P_VMAP[Stm25pSectorP$getVolumeId(Stm25pSectorP$m_client)].base + Stm25pSectorP$m_addr + 
+    Stm25pSectorP$m_cur_len);
+    }
+  else {
+#line 231
+    Stm25pSectorP$signalDone(error);
+    }
+}
+
+# 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
+inline static void Stm25pSpiP$Spi$sectorEraseDone(uint8_t sector, error_t error){
+#line 144
+  Stm25pSectorP$Spi$sectorEraseDone(sector, error);
+#line 144
+}
+#line 144
+# 252 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline void Stm25pSectorP$Spi$bulkEraseDone(error_t error)
+#line 252
+{
+}
+
+# 159 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpi.nc"
+inline static void Stm25pSpiP$Spi$bulkEraseDone(error_t error){
+#line 159
+  Stm25pSectorP$Spi$bulkEraseDone(error);
+#line 159
+}
+#line 159
+# 190 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$default$sendDone(uint8_t id, uint8_t *tx_buf, uint8_t *rx_buf, uint16_t len, error_t error)
+#line 190
+{
+}
+
+# 71 "/opt/tinyos-2.x/tos/interfaces/SpiPacket.nc"
+inline static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$sendDone(uint8_t arg_0x40dad820, uint8_t * txBuf, uint8_t * rxBuf, uint16_t len, error_t error){
+#line 71
+  switch (arg_0x40dad820) {
+#line 71
+    case /*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$CLIENT_ID:
+#line 71
+      Stm25pSpiP$SpiPacket$sendDone(txBuf, rxBuf, len, error);
+#line 71
+      break;
+#line 71
+    default:
+#line 71
+      /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$default$sendDone(arg_0x40dad820, txBuf, rxBuf, len, error);
+#line 71
+      break;
+#line 71
+    }
+#line 71
+}
+#line 71
+# 183 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone(void )
+#line 183
+{
+  /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$sendDone(/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_client, /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_tx_buf, /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_rx_buf, /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_len, 
+  SUCCESS);
+}
+
+#line 166
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone_task$runTask(void )
+#line 166
+{
+  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 167
+    /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone();
+#line 167
+    __nesc_atomic_end(__nesc_atomic); }
+}
+
+# 153 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
+static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$stop(uint8_t num)
+{
+  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$m_timers[num].isrunning = FALSE;
+}
+
+# 67 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+inline static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$stop(void ){
+#line 67
+  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$stop(1U);
+#line 67
+}
+#line 67
+# 69 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$startTask$runTask(void )
+#line 69
+{
+  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$stop();
+  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopTimer = FALSE;
+  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$start();
+  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$start();
+}
+
+# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+inline static error_t /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$postTask(void ){
+#line 56
+  unsigned char result;
+#line 56
+
+#line 56
+  result = SchedulerBasicP$TaskBasic$postTask(/*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer);
+#line 56
+
+#line 56
+  return result;
+#line 56
+}
+#line 56
+# 133 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
+static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$startTimer(uint8_t num, uint32_t t0, uint32_t dt, bool isoneshot)
+{
+  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer_t *timer = &/*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$m_timers[num];
+
+#line 136
+  timer->t0 = t0;
+  timer->dt = dt;
+  timer->isoneshot = isoneshot;
+  timer->isrunning = TRUE;
+  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$postTask();
+}
+
+
+
+
+
+
+static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startOneShot(uint8_t num, uint32_t dt)
+{
+  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$startTimer(num, /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$getNow(), dt, TRUE);
+}
+
+# 62 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+inline static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$startOneShot(uint32_t dt){
+#line 62
+  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startOneShot(1U, dt);
+#line 62
+}
+#line 62
+# 76 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$timerTask$runTask(void )
+#line 76
+{
+  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$startOneShot(1024);
+}
+
+# 112 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$request(uint8_t id)
+#line 112
+{
+#line 112
+  return FAIL;
+}
+
+# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+inline static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$request(uint8_t arg_0x40dac030){
+#line 78
+  unsigned char result;
+#line 78
+
+#line 78
+  switch (arg_0x40dac030) {
+#line 78
+    case /*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$CLIENT_ID:
+#line 78
+      result = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$request(/*HplStm25pSpiC.SpiC.UsartC*/Msp430Usart0C$0$CLIENT_ID);
+#line 78
+      break;
+#line 78
+    default:
+#line 78
+      result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$default$request(arg_0x40dac030);
+#line 78
+      break;
+#line 78
+    }
+#line 78
+
+#line 78
+  return result;
+#line 78
+}
+#line 78
+# 73 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$request(uint8_t id)
+#line 73
+{
+  return /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartResource$request(id);
+}
+
+# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+inline static error_t Stm25pSpiP$SpiResource$request(void ){
+#line 78
+  unsigned char result;
+#line 78
+
+#line 78
+  result = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Resource$request(/*HplStm25pSpiC.SpiC*/Msp430Spi0C$0$CLIENT_ID);
+#line 78
+
+#line 78
+  return result;
+#line 78
+}
+#line 78
+# 108 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
+static inline error_t Stm25pSpiP$ClientResource$request(void )
+#line 108
+{
+  return Stm25pSpiP$SpiResource$request();
+}
+
+# 78 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+inline static error_t Stm25pSectorP$SpiResource$request(void ){
+#line 78
+  unsigned char result;
+#line 78
+
+#line 78
+  result = Stm25pSpiP$ClientResource$request();
+#line 78
+
+#line 78
+  return result;
+#line 78
+}
+#line 78
+# 121 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline void Stm25pSectorP$Stm25pResource$granted(uint8_t id)
+#line 121
+{
+  Stm25pSectorP$m_client = id;
+  Stm25pSectorP$SpiResource$request();
+}
+
+# 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+inline static void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$granted(uint8_t arg_0x40ab2520){
+#line 92
+  Stm25pSectorP$Stm25pResource$granted(arg_0x40ab2520);
+#line 92
+}
+#line 92
+# 212 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$configure(uint8_t id)
+#line 212
+{
+}
+
+# 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+inline static void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$configure(uint8_t arg_0x40ab0430){
+#line 49
+    /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$default$configure(arg_0x40ab0430);
+#line 49
+}
+#line 49
+# 186 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$grantedTask$runTask(void )
+#line 186
+{
+  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 187
+    {
+      /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$reqResId;
+      /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$state = /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$RES_BUSY;
+    }
+#line 190
+    __nesc_atomic_end(__nesc_atomic); }
+  /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$ResourceConfigure$configure(/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId);
+  /*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$Resource$granted(/*Stm25pSectorC.ArbiterC.Arbiter*/ArbiterP$1$resId);
+}
+
+# 176 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+static inline void Stm25pBlockP$Sector$eraseDone(uint8_t id, uint8_t sector, 
+uint8_t num_sectors, 
+error_t error)
+#line 178
+{
+  Stm25pBlockP$signalDone(id, 0, error);
+}
+
+# 287 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline void Stm25pSectorP$Sector$default$eraseDone(uint8_t id, uint8_t sector, uint8_t num_sectors, error_t error)
+#line 287
+{
+}
+
+# 121 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+inline static void Stm25pSectorP$Sector$eraseDone(uint8_t arg_0x40cf2440, uint8_t sector, uint8_t num_sectors, error_t error){
+#line 121
+  switch (arg_0x40cf2440) {
+#line 121
+    case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID:
+#line 121
+      Stm25pBlockP$Sector$eraseDone(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID, sector, num_sectors, error);
+#line 121
+      break;
+#line 121
+    default:
+#line 121
+      Stm25pSectorP$Sector$default$eraseDone(arg_0x40cf2440, sector, num_sectors, error);
+#line 121
+      break;
+#line 121
+    }
+#line 121
+}
+#line 121
+# 171 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+static inline void Stm25pBlockP$Sector$writeDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len, error_t error)
+#line 172
+{
+  Stm25pBlockP$signalDone(id, 0, error);
+}
+
+# 286 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline void Stm25pSectorP$Sector$default$writeDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error)
+#line 286
+{
+}
+
+# 101 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+inline static void Stm25pSectorP$Sector$writeDone(uint8_t arg_0x40cf2440, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error){
+#line 101
+  switch (arg_0x40cf2440) {
+#line 101
+    case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID:
+#line 101
+      Stm25pBlockP$Sector$writeDone(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID, addr, buf, len, error);
+#line 101
+      break;
+#line 101
+    default:
+#line 101
+      Stm25pSectorP$Sector$default$writeDone(arg_0x40cf2440, addr, buf, len, error);
+#line 101
+      break;
+#line 101
+    }
+#line 101
+}
+#line 101
+# 182 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+static inline void Stm25pBlockP$Sector$computeCrcDone(uint8_t id, stm25p_addr_t addr, 
+stm25p_len_t len, 
+uint16_t crc, 
+error_t error)
+#line 185
+{
+  Stm25pBlockP$signalDone(id, crc, error);
+}
+
+# 288 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline void Stm25pSectorP$Sector$default$computeCrcDone(uint8_t id, stm25p_addr_t addr, stm25p_len_t len, uint16_t crc, error_t error)
+#line 288
+{
+}
+
+# 144 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+inline static void Stm25pSectorP$Sector$computeCrcDone(uint8_t arg_0x40cf2440, stm25p_addr_t addr, stm25p_len_t len, uint16_t crc, error_t error){
+#line 144
+  switch (arg_0x40cf2440) {
+#line 144
+    case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID:
+#line 144
+      Stm25pBlockP$Sector$computeCrcDone(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID, addr, len, crc, error);
+#line 144
+      break;
+#line 144
+    default:
+#line 144
+      Stm25pSectorP$Sector$default$computeCrcDone(arg_0x40cf2440, addr, len, crc, error);
+#line 144
+      break;
+#line 144
+    }
+#line 144
+}
+#line 144
+# 166 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
+static inline void Stm25pBlockP$Sector$readDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, 
+stm25p_len_t len, error_t error)
+#line 167
+{
+  Stm25pBlockP$signalDone(id, 0, error);
+}
+
+# 285 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline void Stm25pSectorP$Sector$default$readDone(uint8_t id, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error)
+#line 285
+{
+}
+
+# 78 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSector.nc"
+inline static void Stm25pSectorP$Sector$readDone(uint8_t arg_0x40cf2440, stm25p_addr_t addr, uint8_t *buf, stm25p_len_t len, error_t error){
+#line 78
+  switch (arg_0x40cf2440) {
+#line 78
+    case /*Lz77AppC.BlockStorageC*/BlockStorageC$0$VOLUME_ID:
+#line 78
+      Stm25pBlockP$Sector$readDone(/*Lz77AppC.BlockStorageC*/BlockStorageC$0$BLOCK_ID, addr, buf, len, error);
+#line 78
+      break;
+#line 78
+    default:
+#line 78
+      Stm25pSectorP$Sector$default$readDone(arg_0x40cf2440, addr, buf, len, error);
+#line 78
+      break;
+#line 78
+    }
+#line 78
+}
+#line 78
+# 261 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline void Stm25pSectorP$signalDone_task$runTask(void )
+#line 261
+{
+  switch (Stm25pSectorP$m_state) {
+      case Stm25pSectorP$S_IDLE: 
+        Stm25pSectorP$ClientResource$granted(Stm25pSectorP$m_client);
+      break;
+      case Stm25pSectorP$S_READ: 
+        Stm25pSectorP$Sector$readDone(Stm25pSectorP$m_client, Stm25pSectorP$m_addr, Stm25pSectorP$m_buf, Stm25pSectorP$m_len, Stm25pSectorP$m_error);
+      break;
+      case Stm25pSectorP$S_CRC: 
+        Stm25pSectorP$Sector$computeCrcDone(Stm25pSectorP$m_client, Stm25pSectorP$m_addr, Stm25pSectorP$m_len, 
+        Stm25pSectorP$m_crc, Stm25pSectorP$m_error);
+      break;
+      case Stm25pSectorP$S_WRITE: 
+        Stm25pSectorP$Sector$writeDone(Stm25pSectorP$m_client, Stm25pSectorP$m_addr, Stm25pSectorP$m_buf, Stm25pSectorP$m_len, Stm25pSectorP$m_error);
+      break;
+      case Stm25pSectorP$S_ERASE: 
+        Stm25pSectorP$Sector$eraseDone(Stm25pSectorP$m_client, Stm25pSectorP$m_addr, Stm25pSectorP$m_len, Stm25pSectorP$m_error);
+      break;
+      default: 
+        break;
+    }
+}
+
+# 92 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
+inline static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$startAt(/*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type t0, /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type dt){
+#line 92
+  /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$startAt(t0, dt);
+#line 92
+}
+#line 92
+# 47 "/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc"
+static inline void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$start(uint32_t t0, uint32_t dt, bool oneshot)
+{
+  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$m_dt = dt;
+  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$m_oneshot = oneshot;
+  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$startAt(t0, dt);
+}
+
+#line 82
+static inline void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$startOneShotAt(uint32_t t0, uint32_t dt)
+{
+#line 83
+  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$start(t0, dt, TRUE);
+}
+
+# 118 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$startOneShotAt(uint32_t t0, uint32_t dt){
+#line 118
+  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$startOneShotAt(t0, dt);
+#line 118
+}
+#line 118
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430AlarmC.nc"
+static inline void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$stop(void )
+{
+  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$disableEvents();
+}
+
+# 62 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
+inline static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$stop(void ){
+#line 62
+  /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Alarm$stop();
+#line 62
+}
+#line 62
+# 91 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
+static inline void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$stop(void )
+{
+  /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$AlarmFrom$stop();
+}
+
+# 62 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
+inline static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$stop(void ){
+#line 62
+  /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$stop();
+#line 62
+}
+#line 62
+# 60 "/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc"
+static inline void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$stop(void )
+{
+#line 61
+  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$stop();
+}
+
+# 67 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$stop(void ){
+#line 67
+  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$stop();
+#line 67
+}
+#line 67
+# 89 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
+static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$updateFromTimer$runTask(void )
+{
+
+
+
+
+  uint32_t now = /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$getNow();
+  int32_t min_remaining = (1UL << 31) - 1;
+  bool min_remaining_isset = FALSE;
+  uint8_t num;
+
+  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$stop();
+
+  for (num = 0; num < /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$NUM_TIMERS; num++) 
+    {
+      /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer_t *timer = &/*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$m_timers[num];
+
+      if (timer->isrunning) 
+        {
+          uint32_t elapsed = now - timer->t0;
+          int32_t remaining = timer->dt - elapsed;
+
+          if (remaining < min_remaining) 
+            {
+              min_remaining = remaining;
+              min_remaining_isset = TRUE;
+            }
+        }
+    }
+
+  if (min_remaining_isset) 
+    {
+      if (min_remaining <= 0) {
+        /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$fireTimers(now);
+        }
+      else {
+#line 124
+        /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$startOneShotAt(now, min_remaining);
+        }
+    }
+}
+
+# 169 "LZ77M.nc"
+static inline void LZ77M$Timer$fired(void )
+{
+}
+
+# 59 "TestC.nc"
+static inline void TestC$Timer$fired(void )
+{
+}
+
+# 95 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
+static inline error_t Stm25pSectorP$SplitControl$stop(void )
+#line 95
+{
+  error_t error = Stm25pSectorP$SpiResource$request();
+
+#line 97
+  if (error == SUCCESS) {
+    Stm25pSectorP$m_power_state = Stm25pSectorP$S_STOP;
+    }
+#line 99
+  return error;
+}
+
+# 109 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
+inline static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stop(void ){
+#line 109
+  unsigned char result;
+#line 109
+
+#line 109
+  result = Stm25pSectorP$SplitControl$stop();
+#line 109
+
+#line 109
+  return result;
+#line 109
+}
+#line 109
+# 127 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
+static inline error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$stop(void )
+#line 127
+{
+  return SUCCESS;
+}
+
+# 84 "/opt/tinyos-2.x/tos/interfaces/StdControl.nc"
+inline static error_t /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$stop(void ){
+#line 84
+  unsigned char result;
+#line 84
+
+#line 84
+  result = /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$default$stop();
+#line 84
+
+#line 84
+  return result;
+#line 84
+}
+#line 84
+# 135 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$default$cleanup(void )
+#line 135
+{
+}
+
+# 52 "/opt/tinyos-2.x/tos/lib/power/PowerDownCleanup.nc"
+inline static void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$cleanup(void ){
+#line 52
+  /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$default$cleanup();
+#line 52
+}
+#line 52
+# 107 "/opt/tinyos-2.x/tos/lib/power/DeferredPowerManagerP.nc"
+static inline void /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$fired(void )
+#line 107
+{
+  if (/*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopTimer == FALSE) {
+      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$stopping = TRUE;
+      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$PowerDownCleanup$cleanup();
+      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$StdControl$stop();
+      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$SplitControl$stop();
+    }
+}
+
+# 193 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
+static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(uint8_t num)
+{
+}
+
+# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$fired(uint8_t arg_0x40c4c2d8){
+#line 72
+  switch (arg_0x40c4c2d8) {
+#line 72
+    case 0U:
+#line 72
+      TestC$Timer$fired();
+#line 72
+      LZ77M$Timer$fired();
+#line 72
+      break;
+#line 72
+    case 1U:
+#line 72
+      /*Stm25pSectorC.PowerManagerC.PowerManager*/DeferredPowerManagerP$0$TimerMilli$fired();
+#line 72
+      break;
+#line 72
+    default:
+#line 72
+      /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(arg_0x40c4c2d8);
+#line 72
+      break;
+#line 72
+    }
+#line 72
+}
+#line 72
+# 128 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
+static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$fired(void )
+{
+  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$fireTimers(/*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$getNow());
+}
+
+# 72 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
+inline static void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$fired(void ){
+#line 72
+  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$fired();
+#line 72
+}
+#line 72
+# 80 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
+static inline /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getAlarm(void )
+{
+  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 82
+    {
+      /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type __nesc_temp = 
+#line 82
+      /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$m_t0 + /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$m_dt;
+
+      {
+#line 82
+        __nesc_atomic_end(__nesc_atomic); 
+#line 82
+        return __nesc_temp;
+      }
+    }
+#line 84
+    __nesc_atomic_end(__nesc_atomic); }
+}
+
+# 105 "/opt/tinyos-2.x/tos/lib/timer/Alarm.nc"
+inline static /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$size_type /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$getAlarm(void ){
+#line 105
+  unsigned long result;
+#line 105
+
+#line 105
+  result = /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$getAlarm();
+#line 105
+
+#line 105
+  return result;
+#line 105
+}
+#line 105
+# 63 "/opt/tinyos-2.x/tos/lib/timer/AlarmToTimerC.nc"
+static inline void /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$fired$runTask(void )
+{
+  if (/*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$m_oneshot == FALSE) {
+    /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$start(/*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Alarm$getAlarm(), /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$m_dt, FALSE);
+    }
+#line 67
+  /*HilTimerMilliC.AlarmToTimerC*/AlarmToTimerC$0$Timer$fired();
+}
+
+# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+inline static error_t PrintfP$retrySend$postTask(void ){
+#line 56
+  unsigned char result;
+#line 56
+
+#line 56
+  result = SchedulerBasicP$TaskBasic$postTask(PrintfP$retrySend);
+#line 56
+
+#line 56
+  return result;
+#line 56
+}
+#line 56
+# 69 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
+inline static error_t PrintfP$AMSend$send(am_addr_t addr, message_t * msg, uint8_t len){
+#line 69
+  unsigned char result;
+#line 69
+
+#line 69
+  result = /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$send(addr, msg, len);
+#line 69
+
+#line 69
+  return result;
+#line 69
+}
+#line 69
+# 127 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
+static inline void PrintfP$retrySend$runTask(void )
+#line 127
+{
+  if (PrintfP$AMSend$send(AM_BROADCAST_ADDR, &PrintfP$printfMsg, sizeof(printf_msg_t )) != SUCCESS) {
+    PrintfP$retrySend$postTask();
+    }
+}
+
+# 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
+inline static void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$sendDone(message_t * msg, error_t error){
+#line 99
+  PrintfP$AMSend$sendDone(msg, error);
 #line 99
 }
 #line 99
 # 57 "/opt/tinyos-2.x/tos/system/AMQueueEntryP.nc"
-static inline  void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$sendDone(message_t *m, error_t err)
+static inline void /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$sendDone(message_t *m, error_t err)
 #line 57
 {
   /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$sendDone(m, err);
 }
 
 # 207 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-static inline   void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(uint8_t id, message_t *msg, error_t err)
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(uint8_t id, message_t *msg, error_t err)
 #line 207
 {
 }
 
 # 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-inline static  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(uint8_t arg_0x40adf2c8, message_t *arg_0x405aedf0, error_t arg_0x405ad010){
+inline static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(uint8_t arg_0x40b27088, message_t * msg, error_t error){
 #line 89
-  switch (arg_0x40adf2c8) {
+  switch (arg_0x40b27088) {
 #line 89
     case 0U:
 #line 89
-      /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$sendDone(arg_0x405aedf0, arg_0x405ad010);
+      /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$sendDone(msg, error);
 #line 89
       break;
 #line 89
     default:
 #line 89
-      /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(arg_0x40adf2c8, arg_0x405aedf0, arg_0x405ad010);
+      /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(arg_0x40b27088, msg, error);
 #line 89
       break;
 #line 89
@@ -13380,7 +12782,7 @@ inline static  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(
 }
 #line 89
 # 118 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-static inline  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$CancelTask$runTask(void)
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$CancelTask$runTask(void )
 #line 118
 {
   uint8_t i;
@@ -13409,49 +12811,15 @@ static inline  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$CancelTask$run
     }
 }
 
-# 108 "/opt/tinyos-2.x/tos/interfaces/Packet.nc"
-inline static  void *PrintfP$Packet$getPayload(message_t *arg_0x4058dee0, uint8_t *arg_0x4058c0a8){
-#line 108
-  void *result;
-#line 108
-
-#line 108
-  result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(arg_0x4058dee0, arg_0x4058c0a8);
-#line 108
-
-#line 108
-  return result;
-#line 108
-}
-#line 108
-# 189 "LZ77M.nc"
-static inline  void LZ77M$PrintfFlush$flushDone(error_t err)
-{
-}
-
-# 68 "TestC.nc"
-static inline  void TestC$PrintfFlush$flushDone(error_t err)
-{
-}
-
-# 35 "/opt/tinyos-2.x/tos/lib/printf/PrintfFlush.nc"
-inline static  void PrintfP$PrintfFlush$flushDone(error_t arg_0x40566b38){
-#line 35
-  TestC$PrintfFlush$flushDone(arg_0x40566b38);
-#line 35
-  LZ77M$PrintfFlush$flushDone(arg_0x40566b38);
-#line 35
-}
-#line 35
-# 161 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-static inline  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$runTask(void)
+#line 161
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$runTask(void )
 #line 161
 {
   /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$sendDone(/*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$current, /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[/*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$current].msg, FAIL);
 }
 
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$postTask(void){
+inline static error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$postTask(void ){
 #line 56
   unsigned char result;
 #line 56
@@ -13465,14 +12833,34 @@ inline static   error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$
 #line 56
 }
 #line 56
+# 235 "/usr/lib/ncc/nesc_nx.h"
+static __inline  uint8_t __nesc_ntoh_uint8(const void * source)
+#line 235
+{
+  const uint8_t *base = source;
+
+#line 237
+  return base[0];
+}
+
+# 106 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
+static inline uint8_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$payloadLength(message_t *msg)
+#line 106
+{
+  serial_header_t *header = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(msg);
+
+#line 108
+  return __nesc_ntoh_uint8(header->length.data);
+}
+
 # 67 "/opt/tinyos-2.x/tos/interfaces/Packet.nc"
-inline static  uint8_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Packet$payloadLength(message_t *arg_0x4057eb10){
+inline static uint8_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Packet$payloadLength(message_t * msg){
 #line 67
   unsigned char result;
 #line 67
 
 #line 67
-  result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$payloadLength(arg_0x4057eb10);
+  result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$payloadLength(msg);
 #line 67
 
 #line 67
@@ -13481,7 +12869,7 @@ inline static  uint8_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Packet$payl
 }
 #line 67
 # 57 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$nextPacket(void)
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$nextPacket(void )
 #line 57
 {
   uint8_t i;
@@ -13505,7 +12893,7 @@ static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$nextPacket(void
 }
 
 #line 166
-static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$tryToSend(void)
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$tryToSend(void )
 #line 166
 {
   /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$nextPacket();
@@ -13525,21 +12913,21 @@ static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$tryToSend(void)
 }
 
 # 17 "/opt/tinyos-2.x/tos/platforms/telosa/TelosSerialP.nc"
-static inline  void TelosSerialP$Resource$granted(void)
+static inline void TelosSerialP$Resource$granted(void )
 #line 17
 {
 }
 
-# 196 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static inline   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$default$granted(uint8_t id)
-#line 196
+# 218 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$default$granted(uint8_t id)
+#line 218
 {
 }
 
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static  void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$granted(uint8_t arg_0x40700128){
+inline static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$granted(uint8_t arg_0x40893bc8){
 #line 92
-  switch (arg_0x40700128) {
+  switch (arg_0x40893bc8) {
 #line 92
     case /*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID:
 #line 92
@@ -13549,7 +12937,7 @@ inline static  void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$granted(uint8_t
 #line 92
     default:
 #line 92
-      /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$default$granted(arg_0x40700128);
+      /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$default$granted(arg_0x40893bc8);
 #line 92
       break;
 #line 92
@@ -13557,23 +12945,23 @@ inline static  void /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$granted(uint8_t
 #line 92
 }
 #line 92
-# 96 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static inline  void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$granted(uint8_t id)
-#line 96
+# 101 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$granted(uint8_t id)
+#line 101
 {
   /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$granted(id);
 }
 
-# 185 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$granted(uint8_t id)
-#line 185
+# 198 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$granted(uint8_t id)
+#line 198
 {
 }
 
 # 92 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static  void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$granted(uint8_t arg_0x40a79b68){
+inline static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$granted(uint8_t arg_0x40ab2520){
 #line 92
-  switch (arg_0x40a79b68) {
+  switch (arg_0x40ab2520) {
 #line 92
     case /*PlatformSerialC.UartC.UsartC*/Msp430Usart1C$0$CLIENT_ID:
 #line 92
@@ -13583,7 +12971,7 @@ inline static  void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$g
 #line 92
     default:
 #line 92
-      /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$granted(arg_0x40a79b68);
+      /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$granted(arg_0x40ab2520);
 #line 92
       break;
 #line 92
@@ -13591,16 +12979,16 @@ inline static  void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$g
 #line 92
 }
 #line 92
-# 199 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline    void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$configure(uint8_t id)
-#line 199
+# 212 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$configure(uint8_t id)
+#line 212
 {
 }
 
 # 49 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-inline static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$configure(uint8_t arg_0x40a77678){
+inline static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$configure(uint8_t arg_0x40ab0430){
 #line 49
-  switch (arg_0x40a77678) {
+  switch (arg_0x40ab0430) {
 #line 49
     case /*PlatformSerialC.UartC.UsartC*/Msp430Usart1C$0$CLIENT_ID:
 #line 49
@@ -13610,7 +12998,7 @@ inline static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceC
 #line 49
     default:
 #line 49
-      /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$configure(arg_0x40a77678);
+      /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$configure(arg_0x40ab0430);
 #line 49
       break;
 #line 49
@@ -13618,44 +13006,44 @@ inline static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceC
 #line 49
 }
 #line 49
-# 173 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline  void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$runTask(void)
-#line 173
+# 186 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$runTask(void )
+#line 186
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 174
+#line 187
     {
       /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$reqResId;
       /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_BUSY;
     }
-#line 177
+#line 190
     __nesc_atomic_end(__nesc_atomic); }
   /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$configure(/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId);
   /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$granted(/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId);
 }
 
 # 19 "/opt/tinyos-2.x/tos/platforms/telosa/TelosSerialP.nc"
-static inline   msp430_uart_union_config_t *TelosSerialP$Msp430UartConfigure$getConfig(void)
+static inline msp430_uart_union_config_t *TelosSerialP$Msp430UartConfigure$getConfig(void )
 #line 19
 {
   return &TelosSerialP$msp430_uart_telos_config;
 }
 
-# 192 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static inline    msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$default$getConfig(uint8_t id)
-#line 192
+# 214 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$default$getConfig(uint8_t id)
+#line 214
 {
   return &msp430_uart_default_config;
 }
 
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartConfigure.nc"
-inline static   msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$getConfig(uint8_t arg_0x40714880){
+inline static msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$getConfig(uint8_t arg_0x408a8c40){
 #line 39
-  union __nesc_unnamed4279 *result;
+  union __nesc_unnamed4287 *result;
 #line 39
 
 #line 39
-  switch (arg_0x40714880) {
+  switch (arg_0x408a8c40) {
 #line 39
     case /*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID:
 #line 39
@@ -13665,7 +13053,7 @@ inline static   msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$
 #line 39
     default:
 #line 39
-      result = /*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$default$getConfig(arg_0x40714880);
+      result = /*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$default$getConfig(arg_0x408a8c40);
 #line 39
       break;
 #line 39
@@ -13678,21 +13066,21 @@ inline static   msp430_uart_union_config_t */*Msp430Uart1P.UartP*/Msp430UartP$0$
 }
 #line 39
 # 359 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
-static inline   void HplMsp430Usart1P$Usart$disableIntr(void)
+static inline void HplMsp430Usart1P$Usart$disableIntr(void )
 #line 359
 {
   HplMsp430Usart1P$IE2 &= ~((1 << 5) | (1 << 4));
 }
 
 #line 347
-static inline   void HplMsp430Usart1P$Usart$clrIntr(void)
+static inline void HplMsp430Usart1P$Usart$clrIntr(void )
 #line 347
 {
   HplMsp430Usart1P$IFG2 &= ~((1 << 5) | (1 << 4));
 }
 
 #line 159
-static inline   void HplMsp430Usart1P$Usart$resetUsart(bool reset)
+static inline void HplMsp430Usart1P$Usart$resetUsart(bool reset)
 #line 159
 {
   if (reset) {
@@ -13705,23 +13093,23 @@ static inline   void HplMsp430Usart1P$Usart$resetUsart(bool reset)
 }
 
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectModuleFunc(void)
+static inline void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectModuleFunc(void )
 #line 54
 {
   /* atomic removed: atomic calls only */
 #line 54
-  * (volatile uint8_t *)27U |= 0x01 << 6;
+  * (volatile uint8_t * )27U |= 0x01 << 6;
 }
 
 # 78 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart1P$UTXD$selectModuleFunc(void){
+inline static void HplMsp430Usart1P$UTXD$selectModuleFunc(void ){
 #line 78
   /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectModuleFunc();
 #line 78
 }
 #line 78
 # 220 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
-static inline   void HplMsp430Usart1P$Usart$enableUartTx(void)
+static inline void HplMsp430Usart1P$Usart$enableUartTx(void )
 #line 220
 {
   HplMsp430Usart1P$UTXD$selectModuleFunc();
@@ -13729,23 +13117,23 @@ static inline   void HplMsp430Usart1P$Usart$enableUartTx(void)
 }
 
 # 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectIOFunc(void)
+static inline void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectIOFunc(void )
 #line 56
 {
   /* atomic removed: atomic calls only */
 #line 56
-  * (volatile uint8_t *)27U &= ~(0x01 << 7);
+  * (volatile uint8_t * )27U &= ~(0x01 << 7);
 }
 
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart1P$URXD$selectIOFunc(void){
+inline static void HplMsp430Usart1P$URXD$selectIOFunc(void ){
 #line 85
   /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectIOFunc();
 #line 85
 }
 #line 85
 # 236 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
-static inline   void HplMsp430Usart1P$Usart$disableUartRx(void)
+static inline void HplMsp430Usart1P$Usart$disableUartRx(void )
 #line 236
 {
   HplMsp430Usart1P$ME2 &= ~(1 << 4);
@@ -13753,23 +13141,23 @@ static inline   void HplMsp430Usart1P$Usart$disableUartRx(void)
 }
 
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectModuleFunc(void)
+static inline void /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectModuleFunc(void )
 #line 54
 {
   /* atomic removed: atomic calls only */
 #line 54
-  * (volatile uint8_t *)27U |= 0x01 << 7;
+  * (volatile uint8_t * )27U |= 0x01 << 7;
 }
 
 # 78 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart1P$URXD$selectModuleFunc(void){
+inline static void HplMsp430Usart1P$URXD$selectModuleFunc(void ){
 #line 78
   /*HplMsp430GeneralIOC.P37*/HplMsp430GeneralIOP$23$IO$selectModuleFunc();
 #line 78
 }
 #line 78
 # 231 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
-static inline   void HplMsp430Usart1P$Usart$enableUartRx(void)
+static inline void HplMsp430Usart1P$Usart$enableUartRx(void )
 #line 231
 {
   HplMsp430Usart1P$URXD$selectModuleFunc();
@@ -13777,23 +13165,23 @@ static inline   void HplMsp430Usart1P$Usart$enableUartRx(void)
 }
 
 # 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectIOFunc(void)
+static inline void /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectIOFunc(void )
 #line 56
 {
   /* atomic removed: atomic calls only */
 #line 56
-  * (volatile uint8_t *)27U &= ~(0x01 << 6);
+  * (volatile uint8_t * )27U &= ~(0x01 << 6);
 }
 
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart1P$UTXD$selectIOFunc(void){
+inline static void HplMsp430Usart1P$UTXD$selectIOFunc(void ){
 #line 85
   /*HplMsp430GeneralIOC.P36*/HplMsp430GeneralIOP$22$IO$selectIOFunc();
 #line 85
 }
 #line 85
 # 225 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
-static inline   void HplMsp430Usart1P$Usart$disableUartTx(void)
+static inline void HplMsp430Usart1P$Usart$disableUartTx(void )
 #line 225
 {
   HplMsp430Usart1P$ME2 &= ~(1 << 5);
@@ -13801,7 +13189,7 @@ static inline   void HplMsp430Usart1P$Usart$disableUartTx(void)
 }
 
 #line 203
-static inline   void HplMsp430Usart1P$Usart$enableUart(void)
+static inline void HplMsp430Usart1P$Usart$enableUart(void )
 #line 203
 {
   /* atomic removed: atomic calls only */
@@ -13814,14 +13202,14 @@ static inline   void HplMsp430Usart1P$Usart$enableUart(void)
 }
 
 #line 151
-static inline   void HplMsp430Usart1P$Usart$setUmctl(uint8_t control)
+static inline void HplMsp430Usart1P$Usart$setUmctl(uint8_t control)
 #line 151
 {
   U1MCTL = control;
 }
 
 #line 140
-static inline   void HplMsp430Usart1P$Usart$setUbr(uint16_t control)
+static inline void HplMsp430Usart1P$Usart$setUbr(uint16_t control)
 #line 140
 {
   /* atomic removed: atomic calls only */
@@ -13845,7 +13233,7 @@ static inline void HplMsp430Usart1P$configUart(msp430_uart_union_config_t *confi
   HplMsp430Usart1P$Usart$setUmctl(config->uartRegisters.umctl);
 }
 
-static inline   void HplMsp430Usart1P$Usart$setModeUart(msp430_uart_union_config_t *config)
+static inline void HplMsp430Usart1P$Usart$setModeUart(msp430_uart_union_config_t *config)
 #line 293
 {
 
@@ -13889,62 +13277,62 @@ static inline   void HplMsp430Usart1P$Usart$setModeUart(msp430_uart_union_config
 }
 
 # 174 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$setModeUart(msp430_uart_union_config_t *arg_0x4071d258){
+inline static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$setModeUart(msp430_uart_union_config_t *config){
 #line 174
-  HplMsp430Usart1P$Usart$setModeUart(arg_0x4071d258);
+  HplMsp430Usart1P$Usart$setModeUart(config);
 #line 174
 }
 #line 174
 # 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P51*/HplMsp430GeneralIOP$33$IO$selectIOFunc(void)
+static inline void /*HplMsp430GeneralIOC.P51*/HplMsp430GeneralIOP$33$IO$selectIOFunc(void )
 #line 56
 {
   /* atomic removed: atomic calls only */
 #line 56
-  * (volatile uint8_t *)51U &= ~(0x01 << 1);
+  * (volatile uint8_t * )51U &= ~(0x01 << 1);
 }
 
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart1P$SIMO$selectIOFunc(void){
+inline static void HplMsp430Usart1P$SIMO$selectIOFunc(void ){
 #line 85
   /*HplMsp430GeneralIOC.P51*/HplMsp430GeneralIOP$33$IO$selectIOFunc();
 #line 85
 }
 #line 85
 # 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P52*/HplMsp430GeneralIOP$34$IO$selectIOFunc(void)
+static inline void /*HplMsp430GeneralIOC.P52*/HplMsp430GeneralIOP$34$IO$selectIOFunc(void )
 #line 56
 {
   /* atomic removed: atomic calls only */
 #line 56
-  * (volatile uint8_t *)51U &= ~(0x01 << 2);
+  * (volatile uint8_t * )51U &= ~(0x01 << 2);
 }
 
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart1P$SOMI$selectIOFunc(void){
+inline static void HplMsp430Usart1P$SOMI$selectIOFunc(void ){
 #line 85
   /*HplMsp430GeneralIOC.P52*/HplMsp430GeneralIOP$34$IO$selectIOFunc();
 #line 85
 }
 #line 85
 # 56 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P53*/HplMsp430GeneralIOP$35$IO$selectIOFunc(void)
+static inline void /*HplMsp430GeneralIOC.P53*/HplMsp430GeneralIOP$35$IO$selectIOFunc(void )
 #line 56
 {
   /* atomic removed: atomic calls only */
 #line 56
-  * (volatile uint8_t *)51U &= ~(0x01 << 3);
+  * (volatile uint8_t * )51U &= ~(0x01 << 3);
 }
 
 # 85 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void HplMsp430Usart1P$UCLK$selectIOFunc(void){
+inline static void HplMsp430Usart1P$UCLK$selectIOFunc(void ){
 #line 85
   /*HplMsp430GeneralIOC.P53*/HplMsp430GeneralIOP$35$IO$selectIOFunc();
 #line 85
 }
 #line 85
 # 377 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
-static inline   void HplMsp430Usart1P$Usart$enableIntr(void)
+static inline void HplMsp430Usart1P$Usart$enableIntr(void )
 #line 377
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
@@ -13958,14 +13346,14 @@ static inline   void HplMsp430Usart1P$Usart$enableIntr(void)
 }
 
 # 182 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$enableIntr(void){
+inline static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$enableIntr(void ){
 #line 182
   HplMsp430Usart1P$Usart$enableIntr();
 #line 182
 }
 #line 182
 # 181 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-static inline  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(am_id_t id, message_t *msg, error_t err)
+static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(am_id_t id, message_t *msg, error_t err)
 #line 181
 {
 
@@ -13985,40 +13373,40 @@ static inline  void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDon
 }
 
 # 99 "/opt/tinyos-2.x/tos/interfaces/AMSend.nc"
-inline static  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$sendDone(am_id_t arg_0x405a5c40, message_t *arg_0x4057beb8, error_t arg_0x4057a068){
+inline static void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$sendDone(am_id_t arg_0x40753598, message_t * msg, error_t error){
 #line 99
-  /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(arg_0x405a5c40, arg_0x4057beb8, arg_0x4057a068);
+  /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(arg_0x40753598, msg, error);
 #line 99
 }
 #line 99
-# 81 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-static inline  void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$sendDone(message_t *msg, error_t result)
-#line 81
+# 85 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
+static inline void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$sendDone(message_t *msg, error_t result)
+#line 85
 {
   /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$sendDone(/*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$type(msg), msg, result);
 }
 
-# 367 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline   void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$default$sendDone(uart_id_t idxxx, message_t *msg, error_t error)
-#line 367
+# 362 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$default$sendDone(uart_id_t idxxx, message_t *msg, error_t error)
+#line 362
 {
   return;
 }
 
 # 89 "/opt/tinyos-2.x/tos/interfaces/Send.nc"
-inline static  void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$sendDone(uart_id_t arg_0x4065ea78, message_t *arg_0x405aedf0, error_t arg_0x405ad010){
+inline static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$sendDone(uart_id_t arg_0x407f8010, message_t * msg, error_t error){
 #line 89
-  switch (arg_0x4065ea78) {
+  switch (arg_0x407f8010) {
 #line 89
     case TOS_SERIAL_ACTIVE_MESSAGE_ID:
 #line 89
-      /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$sendDone(arg_0x405aedf0, arg_0x405ad010);
+      /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$sendDone(msg, error);
 #line 89
       break;
 #line 89
     default:
 #line 89
-      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$default$sendDone(arg_0x4065ea78, arg_0x405aedf0, arg_0x405ad010);
+      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$default$sendDone(arg_0x407f8010, msg, error);
 #line 89
       break;
 #line 89
@@ -14026,30 +13414,30 @@ inline static  void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$S
 #line 89
 }
 #line 89
-# 152 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline  void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone$runTask(void)
-#line 152
+# 147 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone$runTask(void )
+#line 147
 {
   error_t error;
 
   /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendState = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SEND_STATE_IDLE;
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 156
+#line 151
     error = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendError;
-#line 156
+#line 151
     __nesc_atomic_end(__nesc_atomic); }
 
   if (/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendCancelled) {
-#line 158
+#line 153
     error = ECANCEL;
     }
-#line 159
+#line 154
   /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$sendDone(/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendId, (message_t *)/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendBuffer, error);
 }
 
-#line 206
+#line 201
 static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$unlockBuffer(uint8_t which)
-#line 206
+#line 201
 {
   if (which) {
       /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.bufOneLocked = 0;
@@ -14059,21 +13447,21 @@ static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$un
     }
 }
 
-# 89 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-static inline   message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$default$receive(uint8_t id, message_t *msg, void *payload, uint8_t len)
-#line 89
+# 93 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
+static inline message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$default$receive(uint8_t id, message_t *msg, void *payload, uint8_t len)
+#line 93
 {
   return msg;
 }
 
 # 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-inline static  message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$receive(am_id_t arg_0x405a4598, message_t *arg_0x40584190, void *arg_0x40584330, uint8_t arg_0x405844b8){
+inline static message_t * /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$receive(am_id_t arg_0x40751010, message_t * msg, void * payload, uint8_t len){
 #line 67
   nx_struct message_t *result;
 #line 67
 
 #line 67
-    result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$default$receive(arg_0x405a4598, arg_0x40584190, arg_0x40584330, arg_0x405844b8);
+    result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$default$receive(arg_0x40751010, msg, payload, len);
 #line 67
 
 #line 67
@@ -14081,40 +13469,40 @@ inline static  message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Rece
 #line 67
 }
 #line 67
-# 102 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-static inline  message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubReceive$receive(message_t *msg, void *payload, uint8_t len)
-#line 102
+# 97 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
+static inline message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubReceive$receive(message_t *msg, void *payload, uint8_t len)
+#line 97
 {
   return /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$receive(/*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$type(msg), msg, msg->data, len);
 }
 
-# 362 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline   message_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$default$receive(uart_id_t idxxx, message_t *msg, 
+# 357 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline message_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$default$receive(uart_id_t idxxx, message_t *msg, 
 void *payload, 
 uint8_t len)
-#line 364
+#line 359
 {
   return msg;
 }
 
 # 67 "/opt/tinyos-2.x/tos/interfaces/Receive.nc"
-inline static  message_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$receive(uart_id_t arg_0x4065e300, message_t *arg_0x40584190, void *arg_0x40584330, uint8_t arg_0x405844b8){
+inline static message_t * /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$receive(uart_id_t arg_0x407fb918, message_t * msg, void * payload, uint8_t len){
 #line 67
   nx_struct message_t *result;
 #line 67
 
 #line 67
-  switch (arg_0x4065e300) {
+  switch (arg_0x407fb918) {
 #line 67
     case TOS_SERIAL_ACTIVE_MESSAGE_ID:
 #line 67
-      result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubReceive$receive(arg_0x40584190, arg_0x40584330, arg_0x405844b8);
+      result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubReceive$receive(msg, payload, len);
 #line 67
       break;
 #line 67
     default:
 #line 67
-      result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$default$receive(arg_0x4065e300, arg_0x40584190, arg_0x40584330, arg_0x405844b8);
+      result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$default$receive(arg_0x407fb918, msg, payload, len);
 #line 67
       break;
 #line 67
@@ -14127,38 +13515,38 @@ inline static  message_t */*SerialDispatcherC.SerialDispatcherP*/SerialDispatche
 }
 #line 67
 # 46 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfoActiveMessageP.nc"
-static inline   uint8_t SerialPacketInfoActiveMessageP$Info$upperLength(message_t *msg, uint8_t dataLinkLen)
+static inline uint8_t SerialPacketInfoActiveMessageP$Info$upperLength(message_t *msg, uint8_t dataLinkLen)
 #line 46
 {
   return dataLinkLen - sizeof(serial_header_t );
 }
 
-# 356 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline    uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$upperLength(uart_id_t id, message_t *msg, 
+# 351 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$upperLength(uart_id_t id, message_t *msg, 
 uint8_t dataLinkLen)
-#line 357
+#line 352
 {
   return 0;
 }
 
 # 31 "/opt/tinyos-2.x/tos/lib/serial/SerialPacketInfo.nc"
-inline static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$upperLength(uart_id_t arg_0x40671460, message_t *arg_0x405f1aa0, uint8_t arg_0x405f1c30){
+inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$upperLength(uart_id_t arg_0x407f8b10, message_t *msg, uint8_t dataLinkLen){
 #line 31
   unsigned char result;
 #line 31
 
 #line 31
-  switch (arg_0x40671460) {
+  switch (arg_0x407f8b10) {
 #line 31
     case TOS_SERIAL_ACTIVE_MESSAGE_ID:
 #line 31
-      result = SerialPacketInfoActiveMessageP$Info$upperLength(arg_0x405f1aa0, arg_0x405f1c30);
+      result = SerialPacketInfoActiveMessageP$Info$upperLength(msg, dataLinkLen);
 #line 31
       break;
 #line 31
     default:
 #line 31
-      result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$upperLength(arg_0x40671460, arg_0x405f1aa0, arg_0x405f1c30);
+      result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$upperLength(arg_0x407f8b10, msg, dataLinkLen);
 #line 31
       break;
 #line 31
@@ -14170,142 +13558,60 @@ inline static   uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP
 #line 31
 }
 #line 31
-# 269 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline  void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$runTask(void)
-#line 269
+# 264 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$runTask(void )
+#line 264
 {
   uart_id_t myType;
   message_t *myBuf;
   uint8_t mySize;
   uint8_t myWhich;
 
-#line 274
+#line 269
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 274
+#line 269
     {
       myType = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskType;
       myBuf = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskBuf;
       mySize = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskSize;
       myWhich = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskWhich;
     }
-#line 279
+#line 274
     __nesc_atomic_end(__nesc_atomic); }
   mySize -= /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$offset(myType);
   mySize = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$upperLength(myType, myBuf, mySize);
   myBuf = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$receive(myType, myBuf, myBuf, mySize);
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 283
+#line 278
     {
       /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messagePtrs[myWhich] = myBuf;
       /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$unlockBuffer(myWhich);
       /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskPending = FALSE;
     }
-#line 287
+#line 282
     __nesc_atomic_end(__nesc_atomic); }
 }
 
-# 186 "LZ77M.nc"
-static inline  void LZ77M$PrintfControl$stopDone(error_t err)
+# 123 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
+static inline void PrintfP$SerialControl$stopDone(error_t error)
+#line 123
 {
-}
-
-# 42 "TestC.nc"
-static inline  void TestC$PrintfControl$stopDone(error_t err)
-{
-}
-
-# 117 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-inline static  void PrintfP$PrintfControl$stopDone(error_t arg_0x4056aa78){
-#line 117
-  TestC$PrintfControl$stopDone(arg_0x4056aa78);
-#line 117
-  LZ77M$PrintfControl$stopDone(arg_0x4056aa78);
-#line 117
-}
-#line 117
-# 129 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
-static inline  void PrintfP$SerialControl$stopDone(error_t error)
-#line 129
-{
-  if (error != SUCCESS) {
-      PrintfP$PrintfControl$stopDone(error);
-      return;
-    }
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 134
+#line 124
     PrintfP$state = PrintfP$S_STOPPED;
-#line 134
+#line 124
     __nesc_atomic_end(__nesc_atomic); }
-  PrintfP$PrintfControl$stopDone(error);
 }
 
 # 117 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-inline static  void SerialP$SplitControl$stopDone(error_t arg_0x4056aa78){
+inline static void SerialP$SplitControl$stopDone(error_t error){
 #line 117
-  PrintfP$SerialControl$stopDone(arg_0x4056aa78);
+  PrintfP$SerialControl$stopDone(error);
 #line 117
 }
 #line 117
-# 97 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$resetUsart(bool arg_0x4070bb78){
-#line 97
-  HplMsp430Usart1P$Usart$resetUsart(arg_0x4070bb78);
-#line 97
-}
-#line 97
-#line 128
-inline static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableUart(void){
-#line 128
-  HplMsp430Usart1P$Usart$disableUart();
-#line 128
-}
-#line 128
-#line 179
-inline static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableIntr(void){
-#line 179
-  HplMsp430Usart1P$Usart$disableIntr();
-#line 179
-}
-#line 179
-# 89 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static inline   void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$unconfigure(uint8_t id)
-#line 89
-{
-  /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$resetUsart(TRUE);
-  /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableIntr();
-  /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableUart();
-  /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$resetUsart(FALSE);
-}
-
-# 201 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline    void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$unconfigure(uint8_t id)
-#line 201
-{
-}
-
-# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
-inline static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$unconfigure(uint8_t arg_0x40a77678){
-#line 55
-  switch (arg_0x40a77678) {
-#line 55
-    case /*PlatformSerialC.UartC.UsartC*/Msp430Usart1C$0$CLIENT_ID:
-#line 55
-      /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$unconfigure(/*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID);
-#line 55
-      break;
-#line 55
-    default:
-#line 55
-      /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$unconfigure(arg_0x40a77678);
-#line 55
-      break;
-#line 55
-    }
-#line 55
-}
-#line 55
 # 109 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
-static inline   error_t HplMsp430Usart1P$AsyncStdControl$stop(void)
+static inline error_t HplMsp430Usart1P$AsyncStdControl$stop(void )
 #line 109
 {
   HplMsp430Usart1P$Usart$disableSpi();
@@ -14314,7 +13620,7 @@ static inline   error_t HplMsp430Usart1P$AsyncStdControl$stop(void)
 }
 
 # 84 "/opt/tinyos-2.x/tos/interfaces/AsyncStdControl.nc"
-inline static   error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$AsyncStdControl$stop(void){
+inline static error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$AsyncStdControl$stop(void ){
 #line 84
   unsigned char result;
 #line 84
@@ -14329,20 +13635,20 @@ inline static   error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPo
 }
 #line 84
 # 74 "/opt/tinyos-2.x/tos/lib/power/AsyncPowerManagerP.nc"
-static inline    void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$default$cleanup(void)
+static inline void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$default$cleanup(void )
 #line 74
 {
 }
 
 # 52 "/opt/tinyos-2.x/tos/lib/power/PowerDownCleanup.nc"
-inline static   void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$cleanup(void){
+inline static void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$cleanup(void ){
 #line 52
   /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$default$cleanup();
 #line 52
 }
 #line 52
 # 69 "/opt/tinyos-2.x/tos/lib/power/AsyncPowerManagerP.nc"
-static inline   void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$granted(void)
+static inline void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$granted(void )
 #line 69
 {
   /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$PowerDownCleanup$cleanup();
@@ -14350,14 +13656,71 @@ static inline   void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPower
 }
 
 # 46 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-inline static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$granted(void){
+inline static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$granted(void ){
 #line 46
   /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$granted();
 #line 46
 }
 #line 46
+# 128 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
+inline static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableUart(void ){
+#line 128
+  HplMsp430Usart1P$Usart$disableUart();
+#line 128
+}
+#line 128
+#line 179
+inline static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableIntr(void ){
+#line 179
+  HplMsp430Usart1P$Usart$disableIntr();
+#line 179
+}
+#line 179
+#line 97
+inline static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$resetUsart(bool reset){
+#line 97
+  HplMsp430Usart1P$Usart$resetUsart(reset);
+#line 97
+}
+#line 97
+# 92 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$unconfigure(uint8_t id)
+#line 92
+{
+  /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$resetUsart(TRUE);
+  /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableIntr();
+  /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$disableUart();
+}
+
+# 214 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$unconfigure(uint8_t id)
+#line 214
+{
+}
+
+# 55 "/opt/tinyos-2.x/tos/interfaces/ResourceConfigure.nc"
+inline static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$unconfigure(uint8_t arg_0x40ab0430){
+#line 55
+  switch (arg_0x40ab0430) {
+#line 55
+    case /*PlatformSerialC.UartC.UsartC*/Msp430Usart1C$0$CLIENT_ID:
+#line 55
+      /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$unconfigure(/*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID);
+#line 55
+      break;
+#line 55
+    default:
+#line 55
+      /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$unconfigure(arg_0x40ab0430);
+#line 55
+      break;
+#line 55
+    }
+#line 55
+}
+#line 55
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$postTask(void){
+inline static error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$postTask(void ){
 #line 56
   unsigned char result;
 #line 56
@@ -14372,7 +13735,7 @@ inline static   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grante
 }
 #line 56
 # 58 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-static inline   resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$dequeue(void)
+static inline resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$dequeue(void )
 #line 58
 {
   /* atomic removed: atomic calls only */
@@ -14410,7 +13773,7 @@ static inline   resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsRe
 }
 
 # 60 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-inline static   resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Queue$dequeue(void){
+inline static resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Queue$dequeue(void ){
 #line 60
   unsigned char result;
 #line 60
@@ -14425,14 +13788,14 @@ inline static   resource_client_id_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/Arbi
 }
 #line 60
 # 50 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-static inline   bool /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$isEmpty(void)
+static inline bool /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$FcfsQueue$isEmpty(void )
 #line 50
 {
   return /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$qHead == /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$NO_ENTRY;
 }
 
 # 43 "/opt/tinyos-2.x/tos/interfaces/ResourceQueue.nc"
-inline static   bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Queue$isEmpty(void){
+inline static bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Queue$isEmpty(void ){
 #line 43
   unsigned char result;
 #line 43
@@ -14446,48 +13809,62 @@ inline static   bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Queue$isE
 #line 43
 }
 #line 43
-# 107 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$release(uint8_t id)
-#line 107
+# 108 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$release(uint8_t id)
+#line 108
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 108
+#line 109
     {
       if (/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state == /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_BUSY && /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId == id) {
           if (/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Queue$isEmpty() == FALSE) {
               /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$reqResId = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Queue$dequeue();
               /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_GRANTING;
               /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$postTask();
+              /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$unconfigure(id);
             }
           else {
               /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$default_owner_id;
               /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_CONTROLLED;
+              /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$unconfigure(id);
               /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$granted();
             }
-          /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$unconfigure(id);
+          {
+            unsigned char __nesc_temp = 
+#line 123
+            SUCCESS;
+
+            {
+#line 123
+              __nesc_atomic_end(__nesc_atomic); 
+#line 123
+              return __nesc_temp;
+            }
+          }
         }
     }
-#line 122
+#line 127
     __nesc_atomic_end(__nesc_atomic); }
+#line 126
   return FAIL;
 }
 
-# 191 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static inline    error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$release(uint8_t id)
-#line 191
+# 213 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$release(uint8_t id)
+#line 213
 {
-#line 191
+#line 213
   return FAIL;
 }
 
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$release(uint8_t arg_0x40715e90){
+inline static error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$release(uint8_t arg_0x408a81e8){
 #line 110
   unsigned char result;
 #line 110
 
 #line 110
-  switch (arg_0x40715e90) {
+  switch (arg_0x408a81e8) {
 #line 110
     case /*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID:
 #line 110
@@ -14497,7 +13874,7 @@ inline static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$releas
 #line 110
     default:
 #line 110
-      result = /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$release(arg_0x40715e90);
+      result = /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$release(arg_0x408a81e8);
 #line 110
       break;
 #line 110
@@ -14509,19 +13886,60 @@ inline static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$releas
 #line 110
 }
 #line 110
-# 76 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static inline   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$release(uint8_t id)
-#line 76
+# 210 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$isOwner(uint8_t id)
+#line 210
 {
+#line 210
+  return FAIL;
+}
+
+# 118 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
+inline static bool /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$isOwner(uint8_t arg_0x408a81e8){
+#line 118
+  unsigned char result;
+#line 118
+
+#line 118
+  switch (arg_0x408a81e8) {
+#line 118
+    case /*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID:
+#line 118
+      result = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$isOwner(/*PlatformSerialC.UartC.UsartC*/Msp430Usart1C$0$CLIENT_ID);
+#line 118
+      break;
+#line 118
+    default:
+#line 118
+      result = /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$isOwner(arg_0x408a81e8);
+#line 118
+      break;
+#line 118
+    }
+#line 118
+
+#line 118
+  return result;
+#line 118
+}
+#line 118
+# 77 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$release(uint8_t id)
+#line 77
+{
+  if (/*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$isOwner(id) == FALSE) {
+    return FAIL;
+    }
+#line 80
   if (/*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_buf || /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf) {
     return EBUSY;
     }
-#line 79
+#line 82
   return /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$release(id);
 }
 
 # 110 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t TelosSerialP$Resource$release(void){
+inline static error_t TelosSerialP$Resource$release(void ){
 #line 110
   unsigned char result;
 #line 110
@@ -14536,7 +13954,7 @@ inline static   error_t TelosSerialP$Resource$release(void){
 }
 #line 110
 # 13 "/opt/tinyos-2.x/tos/platforms/telosa/TelosSerialP.nc"
-static inline  error_t TelosSerialP$StdControl$stop(void)
+static inline error_t TelosSerialP$StdControl$stop(void )
 #line 13
 {
   TelosSerialP$Resource$release();
@@ -14544,7 +13962,7 @@ static inline  error_t TelosSerialP$StdControl$stop(void)
 }
 
 # 84 "/opt/tinyos-2.x/tos/interfaces/StdControl.nc"
-inline static  error_t SerialP$SerialControl$stop(void){
+inline static error_t SerialP$SerialControl$stop(void ){
 #line 84
   unsigned char result;
 #line 84
@@ -14559,21 +13977,21 @@ inline static  error_t SerialP$SerialControl$stop(void){
 }
 #line 84
 # 330 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static inline  void SerialP$SerialFlush$flushDone(void)
+static inline void SerialP$SerialFlush$flushDone(void )
 #line 330
 {
   SerialP$SerialControl$stop();
   SerialP$SplitControl$stopDone(SUCCESS);
 }
 
-static inline  void SerialP$defaultSerialFlushTask$runTask(void)
+static inline void SerialP$defaultSerialFlushTask$runTask(void )
 #line 335
 {
   SerialP$SerialFlush$flushDone();
 }
 
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t SerialP$defaultSerialFlushTask$postTask(void){
+inline static error_t SerialP$defaultSerialFlushTask$postTask(void ){
 #line 56
   unsigned char result;
 #line 56
@@ -14588,104 +14006,113 @@ inline static   error_t SerialP$defaultSerialFlushTask$postTask(void){
 }
 #line 56
 # 338 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static inline   void SerialP$SerialFlush$default$flush(void)
+static inline void SerialP$SerialFlush$default$flush(void )
 #line 338
 {
   SerialP$defaultSerialFlushTask$postTask();
 }
 
 # 38 "/opt/tinyos-2.x/tos/lib/serial/SerialFlush.nc"
-inline static  void SerialP$SerialFlush$flush(void){
+inline static void SerialP$SerialFlush$flush(void ){
 #line 38
   SerialP$SerialFlush$default$flush();
 #line 38
 }
 #line 38
 # 326 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static inline  void SerialP$stopDoneTask$runTask(void)
+static inline void SerialP$stopDoneTask$runTask(void )
 #line 326
 {
   SerialP$SerialFlush$flush();
 }
 
-# 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-inline static  void PrintfP$PrintfControl$startDone(error_t arg_0x4056be70){
-#line 92
-  TestC$PrintfControl$startDone(arg_0x4056be70);
-#line 92
-  LZ77M$PrintfControl$startDone(arg_0x4056be70);
-#line 92
-}
-#line 92
-# 111 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
-static inline  void PrintfP$SerialControl$startDone(error_t error)
-#line 111
+# 21 "TestC.nc"
+static inline void TestC$Boot$booted(void )
+#line 21
 {
-  if (error != SUCCESS) {
-      PrintfP$PrintfControl$startDone(error);
-      return;
+  TestC$i = 0;
+  TestC$count = 0;
+  TestC$NUMR = 3;
+  TestC$addr = 0x00;
+  TestC$start_time = TestC$Timer$getNow();
+
+
+
+
+  for (TestC$i = 0; TestC$i < 256; TestC$i++) {
+      TestC$buf[TestC$i] = 4;
     }
+  TestC$Lz77Compression$Lz77Encode(TestC$buf);
+}
+
+# 49 "/opt/tinyos-2.x/tos/interfaces/Boot.nc"
+inline static void PrintfP$Boot$booted(void ){
+#line 49
+  TestC$Boot$booted();
+#line 49
+}
+#line 49
+# 113 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
+static inline void PrintfP$SerialControl$startDone(error_t error)
+#line 113
+{
+  if (PrintfP$state == PrintfP$S_STOPPED) {
 
 
 
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 119
-    {
-      memset(PrintfP$buffer, 0, sizeof PrintfP$buffer);
-      PrintfP$next_byte = PrintfP$buffer;
-      PrintfP$bytes_left_to_flush = 0;
-      PrintfP$length_to_send = 0;
-      PrintfP$state = PrintfP$S_STARTED;
+      { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 118
+        PrintfP$state = PrintfP$S_STARTED;
+#line 118
+        __nesc_atomic_end(__nesc_atomic); }
+      PrintfP$Boot$booted();
     }
-#line 125
-    __nesc_atomic_end(__nesc_atomic); }
-  PrintfP$PrintfControl$startDone(error);
 }
 
 # 92 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
-inline static  void SerialP$SplitControl$startDone(error_t arg_0x4056be70){
+inline static void SerialP$SplitControl$startDone(error_t error){
 #line 92
-  PrintfP$SerialControl$startDone(arg_0x4056be70);
+  PrintfP$SerialControl$startDone(error);
 #line 92
 }
 #line 92
-# 126 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$release(void)
-#line 126
+# 129 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$release(void )
+#line 129
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 127
+#line 130
     {
       if (/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId == /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$default_owner_id) {
           if (/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state == /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_GRANTING) {
               /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$postTask();
               {
                 unsigned char __nesc_temp = 
-#line 131
+#line 134
                 SUCCESS;
 
                 {
-#line 131
+#line 134
                   __nesc_atomic_end(__nesc_atomic); 
-#line 131
+#line 134
                   return __nesc_temp;
                 }
               }
             }
           else {
-#line 133
+#line 136
             if (/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state == /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_IMM_GRANTING) {
                 /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$reqResId;
                 /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_BUSY;
                 {
                   unsigned char __nesc_temp = 
-#line 136
+#line 139
                   SUCCESS;
 
                   {
-#line 136
+#line 139
                     __nesc_atomic_end(__nesc_atomic); 
-#line 136
+#line 139
                     return __nesc_temp;
                   }
                 }
@@ -14693,14 +14120,14 @@ static inline   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resour
             }
         }
     }
-#line 142
+#line 145
     __nesc_atomic_end(__nesc_atomic); }
-#line 140
+#line 143
   return FAIL;
 }
 
 # 56 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-inline static   error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$release(void){
+inline static error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$release(void ){
 #line 56
   unsigned char result;
 #line 56
@@ -14715,14 +14142,14 @@ inline static   error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPo
 }
 #line 56
 # 105 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
-static inline   error_t HplMsp430Usart1P$AsyncStdControl$start(void)
+static inline error_t HplMsp430Usart1P$AsyncStdControl$start(void )
 #line 105
 {
   return SUCCESS;
 }
 
 # 74 "/opt/tinyos-2.x/tos/interfaces/AsyncStdControl.nc"
-inline static   error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$AsyncStdControl$start(void){
+inline static error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$AsyncStdControl$start(void ){
 #line 74
   unsigned char result;
 #line 74
@@ -14737,7 +14164,7 @@ inline static   error_t /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPo
 }
 #line 74
 # 64 "/opt/tinyos-2.x/tos/lib/power/AsyncPowerManagerP.nc"
-static inline   void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$immediateRequested(void)
+static inline void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$immediateRequested(void )
 #line 64
 {
   /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$AsyncStdControl$start();
@@ -14745,32 +14172,32 @@ static inline   void /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPower
 }
 
 # 81 "/opt/tinyos-2.x/tos/interfaces/ResourceDefaultOwner.nc"
-inline static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$immediateRequested(void){
+inline static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$immediateRequested(void ){
 #line 81
   /*Msp430UsartShare1P.PowerManagerC.PowerManager*/AsyncPowerManagerP$0$ResourceDefaultOwner$immediateRequested();
 #line 81
 }
 #line 81
-# 189 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline    void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$immediateRequested(uint8_t id)
-#line 189
+# 202 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$immediateRequested(uint8_t id)
+#line 202
 {
 }
 
 # 51 "/opt/tinyos-2.x/tos/interfaces/ResourceRequested.nc"
-inline static   void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$immediateRequested(uint8_t arg_0x40a784c8){
+inline static void /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$immediateRequested(uint8_t arg_0x40ab1010){
 #line 51
-    /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$immediateRequested(arg_0x40a784c8);
+    /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$immediateRequested(arg_0x40ab1010);
 #line 51
 }
 #line 51
-# 89 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$immediateRequest(uint8_t id)
-#line 89
+# 90 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static inline error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$immediateRequest(uint8_t id)
+#line 90
 {
   /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$immediateRequested(/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId);
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 91
+#line 92
     {
       if (/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state == /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_CONTROLLED) {
           /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_IMM_GRANTING;
@@ -14778,49 +14205,49 @@ static inline   error_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resour
         }
       else {
           unsigned char __nesc_temp = 
-#line 96
+#line 97
           FAIL;
 
           {
-#line 96
+#line 97
             __nesc_atomic_end(__nesc_atomic); 
-#line 96
+#line 97
             return __nesc_temp;
           }
         }
     }
-#line 99
+#line 100
     __nesc_atomic_end(__nesc_atomic); }
-#line 98
+#line 99
   /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$immediateRequested();
   if (/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId == id) {
       /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$configure(/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId);
       return SUCCESS;
     }
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 103
+#line 104
     /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_CONTROLLED;
-#line 103
+#line 104
     __nesc_atomic_end(__nesc_atomic); }
   return FAIL;
 }
 
-# 190 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static inline    error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$immediateRequest(uint8_t id)
-#line 190
+# 212 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$immediateRequest(uint8_t id)
+#line 212
 {
-#line 190
+#line 212
   return FAIL;
 }
 
 # 87 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$immediateRequest(uint8_t arg_0x40715e90){
+inline static error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$immediateRequest(uint8_t arg_0x408a81e8){
 #line 87
   unsigned char result;
 #line 87
 
 #line 87
-  switch (arg_0x40715e90) {
+  switch (arg_0x408a81e8) {
 #line 87
     case /*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID:
 #line 87
@@ -14830,7 +14257,7 @@ inline static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$immedi
 #line 87
     default:
 #line 87
-      result = /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$immediateRequest(arg_0x40715e90);
+      result = /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$default$immediateRequest(arg_0x408a81e8);
 #line 87
       break;
 #line 87
@@ -14842,15 +14269,15 @@ inline static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$immedi
 #line 87
 }
 #line 87
-# 64 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static inline   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$immediateRequest(uint8_t id)
-#line 64
+# 65 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$Resource$immediateRequest(uint8_t id)
+#line 65
 {
   return /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$immediateRequest(id);
 }
 
 # 87 "/opt/tinyos-2.x/tos/interfaces/Resource.nc"
-inline static   error_t TelosSerialP$Resource$immediateRequest(void){
+inline static error_t TelosSerialP$Resource$immediateRequest(void ){
 #line 87
   unsigned char result;
 #line 87
@@ -14865,14 +14292,14 @@ inline static   error_t TelosSerialP$Resource$immediateRequest(void){
 }
 #line 87
 # 10 "/opt/tinyos-2.x/tos/platforms/telosa/TelosSerialP.nc"
-static inline  error_t TelosSerialP$StdControl$start(void)
+static inline error_t TelosSerialP$StdControl$start(void )
 #line 10
 {
   return TelosSerialP$Resource$immediateRequest();
 }
 
 # 74 "/opt/tinyos-2.x/tos/interfaces/StdControl.nc"
-inline static  error_t SerialP$SerialControl$start(void){
+inline static error_t SerialP$SerialControl$start(void ){
 #line 74
   unsigned char result;
 #line 74
@@ -14887,44 +14314,30 @@ inline static  error_t SerialP$SerialControl$start(void){
 }
 #line 74
 # 320 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static inline  void SerialP$startDoneTask$runTask(void)
+static inline void SerialP$startDoneTask$runTask(void )
 #line 320
 {
   SerialP$SerialControl$start();
   SerialP$SplitControl$startDone(SUCCESS);
 }
 
-# 34 "/opt/tinyos-2.x/tos/lib/printf/PrintfFlush.nc"
-inline static  error_t TestC$PrintfFlush$flush(void){
-#line 34
+# 45 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
+inline static error_t SerialP$SerialFrameComm$putDelimiter(void ){
+#line 45
   unsigned char result;
-#line 34
+#line 45
 
-#line 34
-  result = PrintfP$PrintfFlush$flush();
-#line 34
+#line 45
+  result = HdlcTranslateC$SerialFrameComm$putDelimiter();
+#line 45
 
-#line 34
+#line 45
   return result;
-#line 34
+#line 45
 }
-#line 34
-inline static  error_t LZ77M$PrintfFlush$flush(void){
-#line 34
-  unsigned char result;
-#line 34
-
-#line 34
-  result = PrintfP$PrintfFlush$flush();
-#line 34
-
-#line 34
-  return result;
-#line 34
-}
-#line 34
+#line 45
 # 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-inline static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone$postTask(void){
+inline static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone$postTask(void ){
 #line 56
   unsigned char result;
 #line 56
@@ -14938,27 +14351,27 @@ inline static   error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP
 #line 56
 }
 #line 56
-# 188 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static inline   void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$sendCompleted(error_t error)
-#line 188
+# 183 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$sendCompleted(error_t error)
+#line 183
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 189
+#line 184
     /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendError = error;
-#line 189
+#line 184
     __nesc_atomic_end(__nesc_atomic); }
   /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$signalSendDone$postTask();
 }
 
 # 80 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
-inline static   void SerialP$SendBytePacket$sendCompleted(error_t arg_0x405f3578){
+inline static void SerialP$SendBytePacket$sendCompleted(error_t error){
 #line 80
-  /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$sendCompleted(arg_0x405f3578);
+  /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$sendCompleted(error);
 #line 80
 }
 #line 80
 # 242 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static __inline bool SerialP$ack_queue_is_empty(void)
+static __inline bool SerialP$ack_queue_is_empty(void )
 #line 242
 {
   bool ret;
@@ -14982,7 +14395,7 @@ static __inline bool SerialP$ack_queue_is_empty(void)
 
 
 
-static __inline uint8_t SerialP$ack_queue_top(void)
+static __inline uint8_t SerialP$ack_queue_top(void )
 #line 258
 {
   uint8_t tmp = 0;
@@ -14997,7 +14410,7 @@ static __inline uint8_t SerialP$ack_queue_top(void)
   return tmp;
 }
 
-static inline uint8_t SerialP$ack_queue_pop(void)
+static inline uint8_t SerialP$ack_queue_pop(void )
 #line 268
 {
   uint8_t retval = 0;
@@ -15021,7 +14434,7 @@ static inline uint8_t SerialP$ack_queue_pop(void)
 }
 
 #line 539
-static inline  void SerialP$RunTx$runTask(void)
+static inline void SerialP$RunTx$runTask(void )
 #line 539
 {
   uint8_t idle;
@@ -15159,8 +14572,38 @@ static inline  void SerialP$RunTx$runTask(void)
     }
 }
 
-# 49 "/opt/tinyos-2.x/tos/types/TinyError.h"
-static inline error_t ecombine(error_t r1, error_t r2)
+# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+inline static error_t SerialP$stopDoneTask$postTask(void ){
+#line 56
+  unsigned char result;
+#line 56
+
+#line 56
+  result = SchedulerBasicP$TaskBasic$postTask(SerialP$stopDoneTask);
+#line 56
+
+#line 56
+  return result;
+#line 56
+}
+#line 56
+# 48 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+inline static error_t HdlcTranslateC$UartStream$send(uint8_t * buf, uint16_t len){
+#line 48
+  unsigned char result;
+#line 48
+
+#line 48
+  result = /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$send(/*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID, buf, len);
+#line 48
+
+#line 48
+  return result;
+#line 48
+}
+#line 48
+# 58 "/opt/tinyos-2.x/tos/types/TinyError.h"
+static inline  error_t ecombine(error_t r1, error_t r2)
 
 
 
@@ -15170,14 +14613,14 @@ static inline error_t ecombine(error_t r1, error_t r2)
 }
 
 # 214 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static __inline void SerialP$ackInit(void)
+static __inline void SerialP$ackInit(void )
 #line 214
 {
   SerialP$ackQ.writePtr = SerialP$ackQ.readPtr = 0;
 }
 
 #line 205
-static __inline void SerialP$rxInit(void)
+static __inline void SerialP$rxInit(void )
 #line 205
 {
   SerialP$rxBuf.writePtr = SerialP$rxBuf.readPtr = 0;
@@ -15189,7 +14632,7 @@ static __inline void SerialP$rxInit(void)
 }
 
 #line 193
-static __inline void SerialP$txInit(void)
+static __inline void SerialP$txInit(void )
 #line 193
 {
   uint8_t i;
@@ -15207,7 +14650,7 @@ static __inline void SerialP$txInit(void)
 }
 
 #line 218
-static inline  error_t SerialP$Init$init(void)
+static inline error_t SerialP$Init$init(void )
 #line 218
 {
 
@@ -15219,7 +14662,7 @@ static inline  error_t SerialP$Init$init(void)
 }
 
 # 45 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-static inline  error_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$Init$init(void)
+static inline error_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$Init$init(void )
 #line 45
 {
   memset(/*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$resQ, /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$NO_ENTRY, sizeof /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0$resQ);
@@ -15227,11 +14670,11 @@ static inline  error_t /*Msp430UsartShare1P.ArbiterC.Queue*/FcfsResourceQueueC$0
 }
 
 # 46 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static inline uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$CC2int(/*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t x)
+static inline  uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$CC2int(/*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t x)
 #line 46
 {
 #line 46
-  union /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$__nesc_unnamed4363 {
+  union /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$__nesc_unnamed4367 {
 #line 46
     /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t f;
 #line 46
@@ -15244,7 +14687,7 @@ static inline uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$CC2int
   return c.t;
 }
 
-static inline uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$compareControl(void)
+static inline uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$compareControl(void )
 {
   /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$cc_t x = { 
   .cm = 1, 
@@ -15257,20 +14700,20 @@ static inline uint16_t /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$compar
 }
 
 #line 94
-static inline   void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$setControlAsCompare(void)
+static inline void /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$setControlAsCompare(void )
 {
-  * (volatile uint16_t *)386U = /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$compareControl();
+  * (volatile uint16_t * )386U = /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$compareControl();
 }
 
 # 36 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerControl.nc"
-inline static   void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$setControlAsCompare(void){
+inline static void /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$setControlAsCompare(void ){
 #line 36
   /*Msp430TimerC.Msp430TimerB0*/Msp430TimerCapComP$3$Control$setControlAsCompare();
 #line 36
 }
 #line 36
 # 42 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430AlarmC.nc"
-static inline  error_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Init$init(void)
+static inline error_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Init$init(void )
 {
   /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$disableEvents();
   /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp430AlarmC$0$Msp430TimerControl$setControlAsCompare();
@@ -15278,23 +14721,23 @@ static inline  error_t /*HilTimerMilliC.AlarmMilli32C.AlarmFrom.Msp430Alarm*/Msp
 }
 
 # 45 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$set(void)
+static inline void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$set(void )
 #line 45
 {
   /* atomic removed: atomic calls only */
 #line 45
-  * (volatile uint8_t *)29U |= 0x01 << 7;
+  * (volatile uint8_t * )29U |= 0x01 << 7;
 }
 
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$HplGeneralIO$set(void){
+inline static void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$HplGeneralIO$set(void ){
 #line 34
   /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$set();
 #line 34
 }
 #line 34
 # 37 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$set(void)
+static inline void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$set(void )
 #line 37
 {
 #line 37
@@ -15302,21 +14745,21 @@ static inline   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$set(void)
 }
 
 # 29 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void Stm25pSpiP$Hold$set(void){
+inline static void Stm25pSpiP$Hold$set(void ){
 #line 29
   /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$set();
 #line 29
 }
 #line 29
 # 34 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$set(void){
+inline static void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$set(void ){
 #line 34
   /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$set();
 #line 34
 }
 #line 34
 # 37 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$set(void)
+static inline void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$set(void )
 #line 37
 {
 #line 37
@@ -15324,30 +14767,30 @@ static inline   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$set(void)
 }
 
 # 29 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void Stm25pSpiP$CSN$set(void){
+inline static void Stm25pSpiP$CSN$set(void ){
 #line 29
   /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$set();
 #line 29
 }
 #line 29
 # 52 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$makeOutput(void)
+static inline void /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$makeOutput(void )
 #line 52
 {
   /* atomic removed: atomic calls only */
 #line 52
-  * (volatile uint8_t *)30U |= 0x01 << 7;
+  * (volatile uint8_t * )30U |= 0x01 << 7;
 }
 
 # 71 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$HplGeneralIO$makeOutput(void){
+inline static void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$HplGeneralIO$makeOutput(void ){
 #line 71
   /*HplMsp430GeneralIOC.P47*/HplMsp430GeneralIOP$31$IO$makeOutput();
 #line 71
 }
 #line 71
 # 43 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$makeOutput(void)
+static inline void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$makeOutput(void )
 #line 43
 {
 #line 43
@@ -15355,30 +14798,30 @@ static inline   void /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$makeOutput(
 }
 
 # 35 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void Stm25pSpiP$Hold$makeOutput(void){
+inline static void Stm25pSpiP$Hold$makeOutput(void ){
 #line 35
   /*HplStm25pPinsC.HoldM*/Msp430GpioC$4$GeneralIO$makeOutput();
 #line 35
 }
 #line 35
 # 52 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static inline   void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$makeOutput(void)
+static inline void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$makeOutput(void )
 #line 52
 {
   /* atomic removed: atomic calls only */
 #line 52
-  * (volatile uint8_t *)30U |= 0x01 << 4;
+  * (volatile uint8_t * )30U |= 0x01 << 4;
 }
 
 # 71 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIO.nc"
-inline static   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$makeOutput(void){
+inline static void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$HplGeneralIO$makeOutput(void ){
 #line 71
   /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$makeOutput();
 #line 71
 }
 #line 71
 # 43 "/opt/tinyos-2.x/tos/chips/msp430/pins/Msp430GpioC.nc"
-static inline   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$makeOutput(void)
+static inline void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$makeOutput(void )
 #line 43
 {
 #line 43
@@ -15386,14 +14829,14 @@ static inline   void /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$makeOutput(v
 }
 
 # 35 "/opt/tinyos-2.x/tos/interfaces/GeneralIO.nc"
-inline static   void Stm25pSpiP$CSN$makeOutput(void){
+inline static void Stm25pSpiP$CSN$makeOutput(void ){
 #line 35
   /*HplStm25pPinsC.CSNM*/Msp430GpioC$3$GeneralIO$makeOutput();
 #line 35
 }
 #line 35
 # 100 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-static inline  error_t Stm25pSpiP$Init$init(void)
+static inline error_t Stm25pSpiP$Init$init(void )
 #line 100
 {
   Stm25pSpiP$CSN$makeOutput();
@@ -15404,7 +14847,7 @@ static inline  error_t Stm25pSpiP$Init$init(void)
 }
 
 # 45 "/opt/tinyos-2.x/tos/system/FcfsResourceQueueC.nc"
-static inline  error_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$Init$init(void)
+static inline error_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$Init$init(void )
 #line 45
 {
   memset(/*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$resQ, /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$NO_ENTRY, sizeof /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$resQ);
@@ -15412,7 +14855,7 @@ static inline  error_t /*Stm25pSectorC.ArbiterC.Queue*/FcfsResourceQueueC$1$Init
 }
 
 #line 45
-static inline  error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$Init$init(void)
+static inline error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$Init$init(void )
 #line 45
 {
   memset(/*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$resQ, /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$NO_ENTRY, sizeof /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2$resQ);
@@ -15420,7 +14863,7 @@ static inline  error_t /*Msp430UsartShare0P.ArbiterC.Queue*/FcfsResourceQueueC$2
 }
 
 # 51 "/opt/tinyos-2.x/tos/interfaces/Init.nc"
-inline static  error_t RealMainP$SoftwareInit$init(void){
+inline static error_t RealMainP$SoftwareInit$init(void ){
 #line 51
   unsigned char result;
 #line 51
@@ -15444,41 +14887,73 @@ inline static  error_t RealMainP$SoftwareInit$init(void){
 #line 51
 }
 #line 51
-# 23 "TestC.nc"
-static inline  void TestC$Boot$booted(void)
+# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+inline static error_t SerialP$startDoneTask$postTask(void ){
+#line 56
+  unsigned char result;
+#line 56
+
+#line 56
+  result = SchedulerBasicP$TaskBasic$postTask(SerialP$startDoneTask);
+#line 56
+
+#line 56
+  return result;
+#line 56
+}
+#line 56
+# 342 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static inline error_t SerialP$SplitControl$start(void )
+#line 342
 {
-  TestC$i = 0;
-  TestC$count = 0;
-  TestC$NUMR = 3;
-  TestC$addr = 0x00;
-  TestC$start_time = TestC$Timer$getNow();
+  SerialP$startDoneTask$postTask();
+  return SUCCESS;
+}
 
+# 83 "/opt/tinyos-2.x/tos/interfaces/SplitControl.nc"
+inline static error_t PrintfP$SerialControl$start(void ){
+#line 83
+  unsigned char result;
+#line 83
 
-  TestC$BlockRead$read(TestC$addr, TestC$buf, sizeof TestC$buf);
+#line 83
+  result = SerialP$SplitControl$start();
+#line 83
+
+#line 83
+  return result;
+#line 83
+}
+#line 83
+# 109 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
+static inline void PrintfP$MainBoot$booted(void )
+#line 109
+{
+  PrintfP$SerialControl$start();
 }
 
 # 49 "/opt/tinyos-2.x/tos/interfaces/Boot.nc"
-inline static  void RealMainP$Boot$booted(void){
+inline static void RealMainP$Boot$booted(void ){
 #line 49
-  TestC$Boot$booted();
+  PrintfP$MainBoot$booted();
 #line 49
 }
 #line 49
-# 190 "/opt/tinyos-2.x/tos/chips/msp430/msp430hardware.h"
-static inline void __nesc_disable_interrupt(void )
+# 206 "/opt/tinyos-2.x/tos/chips/msp430/msp430hardware.h"
+static inline  void __nesc_disable_interrupt(void )
 {
    __asm volatile ("dint");
    __asm volatile ("nop");}
 
-# 124 "/opt/tinyos-2.x/tos/chips/msp430/McuSleepC.nc"
-static inline    mcu_power_t McuSleepC$McuPowerOverride$default$lowestState(void)
-#line 124
+# 126 "/opt/tinyos-2.x/tos/chips/msp430/McuSleepC.nc"
+static inline mcu_power_t McuSleepC$McuPowerOverride$default$lowestState(void )
+#line 126
 {
   return MSP430_POWER_LPM4;
 }
 
 # 54 "/opt/tinyos-2.x/tos/interfaces/McuPowerOverride.nc"
-inline static   mcu_power_t McuSleepC$McuPowerOverride$lowestState(void){
+inline static mcu_power_t McuSleepC$McuPowerOverride$lowestState(void ){
 #line 54
   unsigned char result;
 #line 54
@@ -15493,7 +14968,7 @@ inline static   mcu_power_t McuSleepC$McuPowerOverride$lowestState(void){
 }
 #line 54
 # 66 "/opt/tinyos-2.x/tos/chips/msp430/McuSleepC.nc"
-static inline mcu_power_t McuSleepC$getPowerState(void)
+static inline mcu_power_t McuSleepC$getPowerState(void )
 #line 66
 {
   mcu_power_t pState = MSP430_POWER_LPM3;
@@ -15549,22 +15024,22 @@ static inline mcu_power_t McuSleepC$getPowerState(void)
   return pState;
 }
 
-# 178 "/opt/tinyos-2.x/tos/chips/msp430/msp430hardware.h"
-static inline mcu_power_t mcombine(mcu_power_t m1, mcu_power_t m2)
-#line 178
+# 194 "/opt/tinyos-2.x/tos/chips/msp430/msp430hardware.h"
+static inline  mcu_power_t mcombine(mcu_power_t m1, mcu_power_t m2)
+#line 194
 {
   return m1 < m2 ? m1 : m2;
 }
 
 # 104 "/opt/tinyos-2.x/tos/chips/msp430/McuSleepC.nc"
-static inline void McuSleepC$computePowerState(void)
+static inline void McuSleepC$computePowerState(void )
 #line 104
 {
   McuSleepC$powerState = mcombine(McuSleepC$getPowerState(), 
   McuSleepC$McuPowerOverride$lowestState());
 }
 
-static inline   void McuSleepC$McuSleep$sleep(void)
+static inline void McuSleepC$McuSleep$sleep(void )
 #line 109
 {
   uint16_t temp;
@@ -15576,18 +15051,20 @@ static inline   void McuSleepC$McuSleep$sleep(void)
 
   temp = McuSleepC$msp430PowerBits[McuSleepC$powerState] | 0x0008;
    __asm volatile ("bis  %0, r2" :  : "m"(temp));
+
+   __asm volatile ("" :  :  : "memory");
   __nesc_disable_interrupt();
 }
 
 # 59 "/opt/tinyos-2.x/tos/interfaces/McuSleep.nc"
-inline static   void SchedulerBasicP$McuSleep$sleep(void){
+inline static void SchedulerBasicP$McuSleep$sleep(void ){
 #line 59
   McuSleepC$McuSleep$sleep();
 #line 59
 }
 #line 59
 # 67 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
-static __inline uint8_t SchedulerBasicP$popTask(void)
+static __inline uint8_t SchedulerBasicP$popTask(void )
 {
   if (SchedulerBasicP$m_head != SchedulerBasicP$NO_TASK) 
     {
@@ -15609,7 +15086,7 @@ static __inline uint8_t SchedulerBasicP$popTask(void)
 }
 
 #line 138
-static inline  void SchedulerBasicP$Scheduler$taskLoop(void)
+static inline void SchedulerBasicP$Scheduler$taskLoop(void )
 {
   for (; ; ) 
     {
@@ -15629,30 +15106,818 @@ static inline  void SchedulerBasicP$Scheduler$taskLoop(void)
 }
 
 # 61 "/opt/tinyos-2.x/tos/interfaces/Scheduler.nc"
-inline static  void RealMainP$Scheduler$taskLoop(void){
+inline static void RealMainP$Scheduler$taskLoop(void ){
 #line 61
   SchedulerBasicP$Scheduler$taskLoop();
 #line 61
 }
 #line 61
-# 155 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   uint8_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$userId(void)
-#line 155
+# 88 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
+inline static uint8_t /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$userId(void ){
+#line 88
+  unsigned char result;
+#line 88
+
+#line 88
+  result = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$userId();
+#line 88
+
+#line 88
+  return result;
+#line 88
+}
+#line 88
+# 387 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static inline void SerialP$SerialFrameComm$dataReceived(uint8_t data)
+#line 387
+{
+  SerialP$rx_state_machine(FALSE, data);
+}
+
+# 83 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
+inline static void HdlcTranslateC$SerialFrameComm$dataReceived(uint8_t data){
+#line 83
+  SerialP$SerialFrameComm$dataReceived(data);
+#line 83
+}
+#line 83
+# 384 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static inline void SerialP$SerialFrameComm$delimiterReceived(void )
+#line 384
+{
+  SerialP$rx_state_machine(TRUE, 0);
+}
+
+# 74 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
+inline static void HdlcTranslateC$SerialFrameComm$delimiterReceived(void ){
+#line 74
+  SerialP$SerialFrameComm$delimiterReceived();
+#line 74
+}
+#line 74
+# 61 "/opt/tinyos-2.x/tos/lib/serial/HdlcTranslateC.nc"
+static inline void HdlcTranslateC$UartStream$receivedByte(uint8_t data)
+#line 61
+{
+
+
+
+
+
+
+  if (data == HDLC_FLAG_BYTE) {
+
+      HdlcTranslateC$SerialFrameComm$delimiterReceived();
+      return;
+    }
+  else {
+#line 73
+    if (data == HDLC_CTLESC_BYTE) {
+
+        HdlcTranslateC$state.receiveEscape = 1;
+        return;
+      }
+    else {
+#line 78
+      if (HdlcTranslateC$state.receiveEscape) {
+
+          HdlcTranslateC$state.receiveEscape = 0;
+          data = data ^ 0x20;
+        }
+      }
+    }
+#line 83
+  HdlcTranslateC$SerialFrameComm$dataReceived(data);
+}
+
+# 221 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$receivedByte(uint8_t id, uint8_t byte)
+#line 221
+{
+}
+
+# 79 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+inline static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receivedByte(uint8_t arg_0x4088ee10, uint8_t byte){
+#line 79
+  switch (arg_0x4088ee10) {
+#line 79
+    case /*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID:
+#line 79
+      HdlcTranslateC$UartStream$receivedByte(byte);
+#line 79
+      break;
+#line 79
+    default:
+#line 79
+      /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$receivedByte(arg_0x4088ee10, byte);
+#line 79
+      break;
+#line 79
+    }
+#line 79
+}
+#line 79
+# 116 "/opt/tinyos-2.x/tos/lib/serial/HdlcTranslateC.nc"
+static inline void HdlcTranslateC$UartStream$receiveDone(uint8_t *buf, uint16_t len, error_t error)
+#line 116
+{
+}
+
+# 222 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$receiveDone(uint8_t id, uint8_t *buf, uint16_t len, error_t error)
+#line 222
+{
+}
+
+# 99 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+inline static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receiveDone(uint8_t arg_0x4088ee10, uint8_t * buf, uint16_t len, error_t error){
+#line 99
+  switch (arg_0x4088ee10) {
+#line 99
+    case /*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID:
+#line 99
+      HdlcTranslateC$UartStream$receiveDone(buf, len, error);
+#line 99
+      break;
+#line 99
+    default:
+#line 99
+      /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$receiveDone(arg_0x4088ee10, buf, len, error);
+#line 99
+      break;
+#line 99
+    }
+#line 99
+}
+#line 99
+# 134 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$rxDone(uint8_t id, uint8_t data)
+#line 134
+{
+  if (/*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_buf) {
+      /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_buf[/*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_pos++] = data;
+      if (/*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_pos >= /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_len) {
+          uint8_t *buf = /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_buf;
+
+#line 139
+          /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_buf = (void *)0;
+          /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receiveDone(id, buf, /*Msp430Uart1P.UartP*/Msp430UartP$0$m_rx_len, SUCCESS);
+        }
+    }
+  else 
+#line 142
+    {
+      /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$receivedByte(id, data);
+    }
+}
+
+# 65 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
+static inline void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$rxDone(uint8_t id, uint8_t data)
+#line 65
+{
+}
+
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+inline static void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$rxDone(uint8_t arg_0x40a92f08, uint8_t data){
+#line 54
+  switch (arg_0x40a92f08) {
+#line 54
+    case /*PlatformSerialC.UartC.UsartC*/Msp430Usart1C$0$CLIENT_ID:
+#line 54
+      /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$rxDone(/*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID, data);
+#line 54
+      break;
+#line 54
+    default:
+#line 54
+      /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$rxDone(arg_0x40a92f08, data);
+#line 54
+      break;
+#line 54
+    }
+#line 54
+}
+#line 54
+# 80 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
+inline static bool /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$inUse(void ){
+#line 80
+  unsigned char result;
+#line 80
+
+#line 80
+  result = /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$inUse();
+#line 80
+
+#line 80
+  return result;
+#line 80
+}
+#line 80
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
+static inline void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$rxDone(uint8_t data)
+#line 54
+{
+  if (/*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$inUse()) {
+    /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$rxDone(/*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$userId(), data);
+    }
+}
+
+# 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+inline static void HplMsp430Usart1P$Interrupts$rxDone(uint8_t data){
+#line 54
+  /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$rxDone(data);
+#line 54
+}
+#line 54
+# 391 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static inline bool SerialP$valid_rx_proto(uint8_t proto)
+#line 391
+{
+  switch (proto) {
+      case SERIAL_PROTO_PACKET_ACK: 
+        return TRUE;
+      case SERIAL_PROTO_ACK: 
+        case SERIAL_PROTO_PACKET_NOACK: 
+          default: 
+            return FALSE;
+    }
+}
+
+# 192 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$lockCurrentBuffer(void )
+#line 192
+{
+  if (/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which) {
+      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.bufOneLocked = 1;
+    }
+  else {
+      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.bufZeroLocked = 1;
+    }
+}
+
+#line 188
+static inline bool /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$isCurrentBufferLocked(void )
+#line 188
+{
+  return /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which ? /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.bufZeroLocked : /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.bufOneLocked;
+}
+
+#line 215
+static inline error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$startPacket(void )
+#line 215
+{
+  error_t result = SUCCESS;
+
+  /* atomic removed: atomic calls only */
+#line 217
+  {
+    if (!/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$isCurrentBufferLocked()) {
+
+
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$lockCurrentBuffer();
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.state = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_BEGIN;
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex = 0;
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvType = TOS_SERIAL_UNKNOWN_ID;
+      }
+    else {
+        result = EBUSY;
+      }
+  }
+  return result;
+}
+
+# 51 "/opt/tinyos-2.x/tos/lib/serial/ReceiveBytePacket.nc"
+inline static error_t SerialP$ReceiveBytePacket$startPacket(void ){
+#line 51
+  unsigned char result;
+#line 51
+
+#line 51
+  result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$startPacket();
+#line 51
+
+#line 51
+  return result;
+#line 51
+}
+#line 51
+# 309 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static __inline uint16_t SerialP$rx_current_crc(void )
+#line 309
+{
+  uint16_t crc;
+  uint8_t tmp = SerialP$rxBuf.writePtr;
+
+#line 312
+  tmp = tmp == 0 ? SerialP$RX_DATA_BUFFER_SIZE : tmp - 1;
+  crc = SerialP$rxBuf.buf[tmp] & 0x00ff;
+  crc = (crc << 8) & 0xFF00;
+  tmp = tmp == 0 ? SerialP$RX_DATA_BUFFER_SIZE : tmp - 1;
+  crc |= SerialP$rxBuf.buf[tmp] & 0x00FF;
+  return crc;
+}
+
+# 69 "/opt/tinyos-2.x/tos/lib/serial/ReceiveBytePacket.nc"
+inline static void SerialP$ReceiveBytePacket$endPacket(error_t result){
+#line 69
+  /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$endPacket(result);
+#line 69
+}
+#line 69
+# 210 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBufferSwap(void )
+#line 210
+{
+  /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which ? 0 : 1;
+  /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBuffer = (uint8_t *)/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$messagePtrs[/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which];
+}
+
+# 56 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
+inline static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$postTask(void ){
+#line 56
+  unsigned char result;
+#line 56
+
+#line 56
+  result = SchedulerBasicP$TaskBasic$postTask(/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask);
+#line 56
+
+#line 56
+  return result;
+#line 56
+}
+#line 56
+# 232 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static __inline bool SerialP$ack_queue_is_full(void )
+#line 232
+{
+  uint8_t tmp;
+#line 233
+  uint8_t tmp2;
+
+  /* atomic removed: atomic calls only */
+#line 234
+  {
+    tmp = SerialP$ackQ.writePtr;
+    tmp2 = SerialP$ackQ.readPtr;
+  }
+  if (++tmp > SerialP$ACK_QUEUE_SIZE) {
+#line 238
+    tmp = 0;
+    }
+#line 239
+  return tmp == tmp2;
+}
+
+
+
+
+
+
+
+static __inline void SerialP$ack_queue_push(uint8_t token)
+#line 248
+{
+  if (!SerialP$ack_queue_is_full()) {
+      /* atomic removed: atomic calls only */
+#line 250
+      {
+        SerialP$ackQ.buf[SerialP$ackQ.writePtr] = token;
+        if (++ SerialP$ackQ.writePtr > SerialP$ACK_QUEUE_SIZE) {
+#line 252
+          SerialP$ackQ.writePtr = 0;
+          }
+      }
+#line 254
+      SerialP$MaybeScheduleTx();
+    }
+}
+
+# 233 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$byteReceived(uint8_t b)
+#line 233
 {
   /* atomic removed: atomic calls only */
-#line 156
+#line 234
   {
-    unsigned char __nesc_temp = 
-#line 156
-    /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId;
+    switch (/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.state) {
+        case /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_BEGIN: 
+          /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.state = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_DATA;
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$offset(b);
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvType = b;
+        break;
 
-#line 156
-    return __nesc_temp;
+        case /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_DATA: 
+          if (/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex < sizeof(message_t )) {
+              /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBuffer[/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex] = b;
+              /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex++;
+            }
+          else {
+            }
+
+
+
+
+        break;
+
+        case /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_IDLE: 
+          default: 
+#line 255
+            ;
+      }
   }
 }
 
+# 58 "/opt/tinyos-2.x/tos/lib/serial/ReceiveBytePacket.nc"
+inline static void SerialP$ReceiveBytePacket$byteReceived(uint8_t data){
+#line 58
+  /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$byteReceived(data);
+#line 58
+}
+#line 58
+# 299 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static __inline uint8_t SerialP$rx_buffer_top(void )
+#line 299
+{
+  uint8_t tmp = SerialP$rxBuf.buf[SerialP$rxBuf.readPtr];
+
+#line 301
+  return tmp;
+}
+
+#line 303
+static __inline uint8_t SerialP$rx_buffer_pop(void )
+#line 303
+{
+  uint8_t tmp = SerialP$rxBuf.buf[SerialP$rxBuf.readPtr];
+
+#line 305
+  if (++ SerialP$rxBuf.readPtr > SerialP$RX_DATA_BUFFER_SIZE) {
+#line 305
+    SerialP$rxBuf.readPtr = 0;
+    }
+#line 306
+  return tmp;
+}
+
+#line 295
+static __inline void SerialP$rx_buffer_push(uint8_t data)
+#line 295
+{
+  SerialP$rxBuf.buf[SerialP$rxBuf.writePtr] = data;
+  if (++ SerialP$rxBuf.writePtr > SerialP$RX_DATA_BUFFER_SIZE) {
+#line 297
+    SerialP$rxBuf.writePtr = 0;
+    }
+}
+
+# 55 "/opt/tinyos-2.x/tos/lib/serial/HdlcTranslateC.nc"
+static inline void HdlcTranslateC$SerialFrameComm$resetReceive(void )
+#line 55
+{
+  HdlcTranslateC$state.receiveEscape = 0;
+}
+
+# 68 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
+inline static void SerialP$SerialFrameComm$resetReceive(void ){
+#line 68
+  HdlcTranslateC$SerialFrameComm$resetReceive();
+#line 68
+}
+#line 68
+# 220 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$sendDone(uint8_t id, uint8_t *buf, uint16_t len, error_t error)
+#line 220
+{
+}
+
+# 57 "/opt/tinyos-2.x/tos/interfaces/UartStream.nc"
+inline static void /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$sendDone(uint8_t arg_0x4088ee10, uint8_t * buf, uint16_t len, error_t error){
+#line 57
+  switch (arg_0x4088ee10) {
+#line 57
+    case /*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID:
+#line 57
+      HdlcTranslateC$UartStream$sendDone(buf, len, error);
+#line 57
+      break;
+#line 57
+    default:
+#line 57
+      /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$default$sendDone(arg_0x4088ee10, buf, len, error);
+#line 57
+      break;
+#line 57
+    }
+#line 57
+}
+#line 57
+# 384 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
+static inline void HplMsp430Usart1P$Usart$tx(uint8_t data)
+#line 384
+{
+  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 385
+    HplMsp430Usart1P$U1TXBUF = data;
+#line 385
+    __nesc_atomic_end(__nesc_atomic); }
+}
+
+# 224 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
+inline static void /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$tx(uint8_t data){
+#line 224
+  HplMsp430Usart1P$Usart$tx(data);
+#line 224
+}
+#line 224
+# 162 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static inline void /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$txDone(uint8_t id)
+#line 162
+{
+  if (/*Msp430Uart1P.UartP*/Msp430UartP$0$current_owner != id) {
+      uint8_t *buf = /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf;
+
+#line 165
+      /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf = (void *)0;
+      /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$sendDone(id, buf, /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_len, FAIL);
+    }
+  else {
+#line 168
+    if (/*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_pos < /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_len) {
+        /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$tx(/*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf[/*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_pos++]);
+      }
+    else {
+        uint8_t *buf = /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf;
+
+#line 173
+        /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf = (void *)0;
+        /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$sendDone(id, buf, /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_len, SUCCESS);
+      }
+    }
+}
+
+# 64 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
+static inline void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$txDone(uint8_t id)
+#line 64
+{
+}
+
+# 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+inline static void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$txDone(uint8_t arg_0x40a92f08){
+#line 49
+  switch (arg_0x40a92f08) {
+#line 49
+    case /*PlatformSerialC.UartC.UsartC*/Msp430Usart1C$0$CLIENT_ID:
+#line 49
+      /*Msp430Uart1P.UartP*/Msp430UartP$0$UsartInterrupts$txDone(/*PlatformSerialC.UartC*/Msp430Uart1C$0$CLIENT_ID);
+#line 49
+      break;
+#line 49
+    default:
+#line 49
+      /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$default$txDone(arg_0x40a92f08);
+#line 49
+      break;
+#line 49
+    }
+#line 49
+}
+#line 49
+# 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
+static inline void /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$txDone(void )
+#line 49
+{
+  if (/*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$inUse()) {
+    /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$Interrupts$txDone(/*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$ArbiterInfo$userId());
+    }
+}
+
+# 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
+inline static void HplMsp430Usart1P$Interrupts$txDone(void ){
+#line 49
+  /*Msp430UsartShare1P.UsartShareP*/Msp430UsartShareP$0$RawInterrupts$txDone();
+#line 49
+}
+#line 49
+# 54 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
+inline static error_t SerialP$SerialFrameComm$putData(uint8_t data){
+#line 54
+  unsigned char result;
+#line 54
+
+#line 54
+  result = HdlcTranslateC$SerialFrameComm$putData(data);
+#line 54
+
+#line 54
+  return result;
+#line 54
+}
+#line 54
+# 513 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static inline error_t SerialP$SendBytePacket$completeSend(void )
+#line 513
+{
+  bool ret = FAIL;
+
+  /* atomic removed: atomic calls only */
+#line 515
+  {
+    SerialP$txBuf[SerialP$TX_DATA_INDEX].state = SerialP$BUFFER_COMPLETE;
+    ret = SUCCESS;
+  }
+  return ret;
+}
+
+# 60 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
+inline static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$completeSend(void ){
+#line 60
+  unsigned char result;
+#line 60
+
+#line 60
+  result = SerialP$SendBytePacket$completeSend();
+#line 60
+
+#line 60
+  return result;
+#line 60
+}
+#line 60
+# 167 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static inline uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$nextByte(void )
+#line 167
+{
+  uint8_t b;
+  uint8_t indx;
+
+  /* atomic removed: atomic calls only */
+#line 170
+  {
+    b = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendBuffer[/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendIndex];
+    /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendIndex++;
+    indx = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendIndex;
+  }
+  if (indx > /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$sendLen) {
+      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$completeSend();
+      return 0;
+    }
+  else {
+      return b;
+    }
+}
+
+# 70 "/opt/tinyos-2.x/tos/lib/serial/SendBytePacket.nc"
+inline static uint8_t SerialP$SendBytePacket$nextByte(void ){
+#line 70
+  unsigned char result;
+#line 70
+
+#line 70
+  result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$SendBytePacket$nextByte();
+#line 70
+
+#line 70
+  return result;
+#line 70
+}
+#line 70
+# 642 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static inline void SerialP$SerialFrameComm$putDone(void )
+#line 642
+{
+  {
+    error_t txResult = SUCCESS;
+
+    switch (SerialP$txState) {
+
+        case SerialP$TXSTATE_PROTO: 
+
+          txResult = SerialP$SerialFrameComm$putData(SerialP$txProto);
+
+        SerialP$txState = SerialP$TXSTATE_INFO;
+
+
+
+        SerialP$txCRC = crcByte(SerialP$txCRC, SerialP$txProto);
+        break;
+
+        case SerialP$TXSTATE_SEQNO: 
+          txResult = SerialP$SerialFrameComm$putData(SerialP$txSeqno);
+        SerialP$txState = SerialP$TXSTATE_INFO;
+        SerialP$txCRC = crcByte(SerialP$txCRC, SerialP$txSeqno);
+        break;
+
+        case SerialP$TXSTATE_INFO: /* atomic removed: atomic calls only */
+          {
+            txResult = SerialP$SerialFrameComm$putData(SerialP$txBuf[SerialP$txIndex].buf);
+            SerialP$txCRC = crcByte(SerialP$txCRC, SerialP$txBuf[SerialP$txIndex].buf);
+            ++SerialP$txByteCnt;
+
+            if (SerialP$txIndex == SerialP$TX_DATA_INDEX) {
+                uint8_t nextByte;
+
+#line 673
+                nextByte = SerialP$SendBytePacket$nextByte();
+                if (SerialP$txBuf[SerialP$txIndex].state == SerialP$BUFFER_COMPLETE || SerialP$txByteCnt >= SerialP$SERIAL_MTU) {
+                    SerialP$txState = SerialP$TXSTATE_FCS1;
+                  }
+                else {
+                    SerialP$txBuf[SerialP$txIndex].buf = nextByte;
+                  }
+              }
+            else {
+                SerialP$txState = SerialP$TXSTATE_FCS1;
+              }
+          }
+        break;
+
+        case SerialP$TXSTATE_FCS1: 
+          txResult = SerialP$SerialFrameComm$putData(SerialP$txCRC & 0xff);
+        SerialP$txState = SerialP$TXSTATE_FCS2;
+        break;
+
+        case SerialP$TXSTATE_FCS2: 
+          txResult = SerialP$SerialFrameComm$putData((SerialP$txCRC >> 8) & 0xff);
+        SerialP$txState = SerialP$TXSTATE_ENDFLAG;
+        break;
+
+        case SerialP$TXSTATE_ENDFLAG: 
+          txResult = SerialP$SerialFrameComm$putDelimiter();
+        SerialP$txState = SerialP$TXSTATE_ENDWAIT;
+        break;
+
+        case SerialP$TXSTATE_ENDWAIT: 
+          SerialP$txState = SerialP$TXSTATE_FINISH;
+        case SerialP$TXSTATE_FINISH: 
+          SerialP$MaybeScheduleTx();
+        break;
+        case SerialP$TXSTATE_ERROR: 
+          default: 
+            txResult = FAIL;
+        break;
+      }
+
+    if (txResult != SUCCESS) {
+        SerialP$txState = SerialP$TXSTATE_ERROR;
+        SerialP$MaybeScheduleTx();
+      }
+  }
+}
+
+# 89 "/opt/tinyos-2.x/tos/lib/serial/SerialFrameComm.nc"
+inline static void HdlcTranslateC$SerialFrameComm$putDone(void ){
+#line 89
+  SerialP$SerialFrameComm$putDone();
+#line 89
+}
+#line 89
+# 61 "/opt/tinyos-2.x/tos/system/QueueC.nc"
+static inline uint8_t /*PrintfC.QueueC*/QueueC$0$Queue$maxSize(void )
+#line 61
+{
+  return 250;
+}
+
+#line 97
+static inline error_t /*PrintfC.QueueC*/QueueC$0$Queue$enqueue(/*PrintfC.QueueC*/QueueC$0$queue_t newVal)
+#line 97
+{
+  if (/*PrintfC.QueueC*/QueueC$0$Queue$size() < /*PrintfC.QueueC*/QueueC$0$Queue$maxSize()) {
+      ;
+      /*PrintfC.QueueC*/QueueC$0$queue[/*PrintfC.QueueC*/QueueC$0$tail] = newVal;
+      /*PrintfC.QueueC*/QueueC$0$tail++;
+      if (/*PrintfC.QueueC*/QueueC$0$tail == 250) {
+#line 102
+        /*PrintfC.QueueC*/QueueC$0$tail = 0;
+        }
+#line 103
+      /*PrintfC.QueueC*/QueueC$0$size++;
+      /*PrintfC.QueueC*/QueueC$0$printQueue();
+      return SUCCESS;
+    }
+  else {
+      return FAIL;
+    }
+}
+
+# 90 "/opt/tinyos-2.x/tos/interfaces/Queue.nc"
+inline static error_t PrintfP$Queue$enqueue(PrintfP$Queue$t  newVal){
+#line 90
+  unsigned char result;
+#line 90
+
+#line 90
+  result = /*PrintfC.QueueC*/QueueC$0$Queue$enqueue(newVal);
+#line 90
+
+#line 90
+  return result;
+#line 90
+}
+#line 90
 # 88 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
-inline static   uint8_t /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$userId(void){
+inline static uint8_t /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$userId(void ){
 #line 88
   unsigned char result;
 #line 88
@@ -15667,22 +15932,22 @@ inline static   uint8_t /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Ar
 }
 #line 88
 # 349 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static inline   void HplMsp430Usart0P$Usart$disableRxIntr(void)
+static inline void HplMsp430Usart0P$Usart$disableRxIntr(void )
 #line 349
 {
   HplMsp430Usart0P$IE1 &= ~(1 << 6);
 }
 
 # 177 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart.nc"
-inline static   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$disableRxIntr(void){
+inline static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$disableRxIntr(void ){
 #line 177
   HplMsp430Usart0P$Usart$disableRxIntr();
 #line 177
 }
 #line 177
-# 172 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$rxDone(uint8_t data)
-#line 172
+# 170 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$rxDone(uint8_t data)
+#line 170
 {
 
   if (/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_rx_buf) {
@@ -15692,7 +15957,7 @@ static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$
     /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$continueOp();
     }
   else 
-#line 179
+#line 177
     {
       /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$disableRxIntr();
       /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$signalDone();
@@ -15700,25 +15965,25 @@ static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$
 }
 
 # 65 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-static inline    void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$rxDone(uint8_t id, uint8_t data)
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$rxDone(uint8_t id, uint8_t data)
 #line 65
 {
 }
 
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-inline static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$rxDone(uint8_t arg_0x409e8c78, uint8_t arg_0x40705730){
+inline static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$rxDone(uint8_t arg_0x40a92f08, uint8_t data){
 #line 54
-  switch (arg_0x409e8c78) {
+  switch (arg_0x40a92f08) {
 #line 54
     case /*HplStm25pSpiC.SpiC.UsartC*/Msp430Usart0C$0$CLIENT_ID:
 #line 54
-      /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$rxDone(arg_0x40705730);
+      /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$rxDone(data);
 #line 54
       break;
 #line 54
     default:
 #line 54
-      /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$rxDone(arg_0x409e8c78, arg_0x40705730);
+      /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$rxDone(arg_0x40a92f08, data);
 #line 54
       break;
 #line 54
@@ -15726,15 +15991,8 @@ inline static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Inter
 #line 54
 }
 #line 54
-# 146 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static inline   bool /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$inUse(void)
-#line 146
-{
-  return TRUE;
-}
-
 # 80 "/opt/tinyos-2.x/tos/interfaces/ArbiterInfo.nc"
-inline static   bool /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$inUse(void){
+inline static bool /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$inUse(void ){
 #line 80
   unsigned char result;
 #line 80
@@ -15749,7 +16007,7 @@ inline static   bool /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Arbit
 }
 #line 80
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-static inline   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$rxDone(uint8_t data)
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$rxDone(uint8_t data)
 #line 54
 {
   if (/*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$inUse()) {
@@ -15758,14 +16016,14 @@ static inline   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawIn
 }
 
 # 54 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-inline static   void HplMsp430Usart0P$Interrupts$rxDone(uint8_t arg_0x40705730){
+inline static void HplMsp430Usart0P$Interrupts$rxDone(uint8_t data){
 #line 54
-  /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$rxDone(arg_0x40705730);
+  /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$rxDone(data);
 #line 54
 }
 #line 54
 # 55 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2C0P.nc"
-static inline   bool HplMsp430I2C0P$HplI2C$isI2C(void)
+static inline bool HplMsp430I2C0P$HplI2C$isI2C(void )
 #line 55
 {
   /* atomic removed: atomic calls only */
@@ -15781,7 +16039,7 @@ static inline   bool HplMsp430I2C0P$HplI2C$isI2C(void)
 }
 
 # 6 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2C.nc"
-inline static   bool HplMsp430Usart0P$HplI2C$isI2C(void){
+inline static bool HplMsp430Usart0P$HplI2C$isI2C(void ){
 #line 6
   unsigned char result;
 #line 6
@@ -15796,20 +16054,20 @@ inline static   bool HplMsp430Usart0P$HplI2C$isI2C(void){
 }
 #line 6
 # 66 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-static inline    void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$default$fired(uint8_t id)
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$default$fired(uint8_t id)
 #line 66
 {
 }
 
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2CInterrupts.nc"
-inline static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$fired(uint8_t arg_0x409e25e8){
+inline static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$fired(uint8_t arg_0x40a8fed0){
 #line 39
-    /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$default$fired(arg_0x409e25e8);
+    /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$I2CInterrupts$default$fired(arg_0x40a8fed0);
 #line 39
 }
 #line 39
 # 59 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-static inline   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawI2CInterrupts$fired(void)
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawI2CInterrupts$fired(void )
 #line 59
 {
   if (/*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$inUse()) {
@@ -15818,28 +16076,28 @@ static inline   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawI2
 }
 
 # 39 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430I2CInterrupts.nc"
-inline static   void HplMsp430Usart0P$I2CInterrupts$fired(void){
+inline static void HplMsp430Usart0P$I2CInterrupts$fired(void ){
 #line 39
   /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawI2CInterrupts$fired();
 #line 39
 }
 #line 39
-# 190 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static inline   void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$txDone(void)
-#line 190
+# 188 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static inline void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$UsartInterrupts$txDone(void )
+#line 188
 {
 }
 
 # 64 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-static inline    void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$txDone(uint8_t id)
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$txDone(uint8_t id)
 #line 64
 {
 }
 
 # 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-inline static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$txDone(uint8_t arg_0x409e8c78){
+inline static void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$txDone(uint8_t arg_0x40a92f08){
 #line 49
-  switch (arg_0x409e8c78) {
+  switch (arg_0x40a92f08) {
 #line 49
     case /*HplStm25pSpiC.SpiC.UsartC*/Msp430Usart0C$0$CLIENT_ID:
 #line 49
@@ -15849,7 +16107,7 @@ inline static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Inter
 #line 49
     default:
 #line 49
-      /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$txDone(arg_0x409e8c78);
+      /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Interrupts$default$txDone(arg_0x40a92f08);
 #line 49
       break;
 #line 49
@@ -15858,7 +16116,7 @@ inline static   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$Inter
 }
 #line 49
 # 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UsartShareP.nc"
-static inline   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$txDone(void)
+static inline void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$txDone(void )
 #line 49
 {
   if (/*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$ArbiterInfo$inUse()) {
@@ -15867,33 +16125,33 @@ static inline   void /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawIn
 }
 
 # 49 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430UsartInterrupts.nc"
-inline static   void HplMsp430Usart0P$Interrupts$txDone(void){
+inline static void HplMsp430Usart0P$Interrupts$txDone(void ){
 #line 49
   /*Msp430UsartShare0P.UsartShareP*/Msp430UsartShareP$1$RawInterrupts$txDone();
 #line 49
 }
 #line 49
-# 210 "/opt/tinyos-2.x/tos/chips/msp430/msp430hardware.h"
- __nesc_atomic_t __nesc_atomic_start(void )
+# 226 "/opt/tinyos-2.x/tos/chips/msp430/msp430hardware.h"
+  __nesc_atomic_t __nesc_atomic_start(void )
 {
   __nesc_atomic_t result = (({
-#line 212
+#line 228
     uint16_t __x;
 
-#line 212
+#line 228
      __asm volatile ("mov	r2, %0" : "=r"((uint16_t )__x));__x;
   }
   )
-#line 212
+#line 228
    & 0x0008) != 0;
 
-#line 213
+#line 229
   __nesc_disable_interrupt();
    __asm volatile ("" :  :  : "memory");
   return result;
 }
 
- void __nesc_atomic_end(__nesc_atomic_t reenable_interrupts)
+  void __nesc_atomic_end(__nesc_atomic_t reenable_interrupts)
 {
    __asm volatile ("" :  :  : "memory");
   if (reenable_interrupts) {
@@ -15901,279 +16159,8 @@ inline static   void HplMsp430Usart0P$Interrupts$txDone(void){
     }
 }
 
-# 96 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
- __attribute((wakeup)) __attribute((interrupt(6))) void sig_UART1RX_VECTOR(void)
-#line 96
-{
-  uint8_t temp = U1RXBUF;
-
-#line 98
-  HplMsp430Usart1P$Interrupts$rxDone(temp);
-}
-
-# 402 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static void SerialP$rx_state_machine(bool isDelimeter, uint8_t data)
-#line 402
-{
-
-  switch (SerialP$rxState) {
-
-      case SerialP$RXSTATE_NOSYNC: 
-        if (isDelimeter) {
-            SerialP$rxInit();
-            SerialP$rxState = SerialP$RXSTATE_PROTO;
-          }
-      break;
-
-      case SerialP$RXSTATE_PROTO: 
-        if (!isDelimeter) {
-            SerialP$rxCRC = crcByte(SerialP$rxCRC, data);
-            SerialP$rxState = SerialP$RXSTATE_TOKEN;
-            SerialP$rxProto = data;
-            if (!SerialP$valid_rx_proto(SerialP$rxProto)) {
-              goto nosync;
-              }
-            if (SerialP$rxProto != SERIAL_PROTO_PACKET_ACK) {
-                goto nosync;
-              }
-            if (SerialP$ReceiveBytePacket$startPacket() != SUCCESS) {
-                goto nosync;
-              }
-          }
-      break;
-
-      case SerialP$RXSTATE_TOKEN: 
-        if (isDelimeter) {
-            goto nosync;
-          }
-        else {
-            SerialP$rxSeqno = data;
-            SerialP$rxCRC = crcByte(SerialP$rxCRC, SerialP$rxSeqno);
-            SerialP$rxState = SerialP$RXSTATE_INFO;
-          }
-      break;
-
-      case SerialP$RXSTATE_INFO: 
-        if (SerialP$rxByteCnt < SerialP$SERIAL_MTU) {
-            if (isDelimeter) {
-                if (SerialP$rxByteCnt >= 2) {
-                    if (SerialP$rx_current_crc() == SerialP$rxCRC) {
-                        SerialP$ReceiveBytePacket$endPacket(SUCCESS);
-                        SerialP$ack_queue_push(SerialP$rxSeqno);
-                        goto nosync;
-                      }
-                    else {
-                        goto nosync;
-                      }
-                  }
-                else {
-                    goto nosync;
-                  }
-              }
-            else {
-                if (SerialP$rxByteCnt >= 2) {
-                    SerialP$ReceiveBytePacket$byteReceived(SerialP$rx_buffer_top());
-                    SerialP$rxCRC = crcByte(SerialP$rxCRC, SerialP$rx_buffer_pop());
-                  }
-                SerialP$rx_buffer_push(data);
-                SerialP$rxByteCnt++;
-              }
-          }
-        else 
-
-          {
-            goto nosync;
-          }
-      break;
-
-      default: 
-        goto nosync;
-    }
-  goto done;
-
-  nosync: 
-
-    SerialP$rxInit();
-  SerialP$SerialFrameComm$resetReceive();
-  SerialP$ReceiveBytePacket$endPacket(FAIL);
-  if (SerialP$offPending) {
-      SerialP$rxState = SerialP$RXSTATE_INACTIVE;
-      SerialP$testOff();
-    }
-  else {
-    if (isDelimeter) {
-        SerialP$rxState = SerialP$RXSTATE_PROTO;
-      }
-    }
-  done: ;
-}
-
-# 80 "/opt/tinyos-2.x/tos/system/crc.h"
-static uint16_t crcByte(uint16_t crc, uint8_t b)
-#line 80
-{
-  crc = (uint8_t )(crc >> 8) | (crc << 8);
-  crc ^= b;
-  crc ^= (uint8_t )(crc & 0xff) >> 4;
-  crc ^= crc << 12;
-  crc ^= (crc & 0xff) << 5;
-  return crc;
-}
-
-# 290 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
-static   void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$endPacket(error_t result)
-#line 290
-{
-  uint8_t postsignalreceive = FALSE;
-
-  /* atomic removed: atomic calls only */
-#line 292
-  {
-    if (!/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskPending && result == SUCCESS) {
-        postsignalreceive = TRUE;
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskPending = TRUE;
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskType = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvType;
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskWhich = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which;
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskBuf = (message_t *)/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBuffer;
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskSize = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex;
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBufferSwap();
-        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.state = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_IDLE;
-      }
-  }
-  if (postsignalreceive) {
-      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$postTask();
-    }
-}
-
-# 159 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
-static   error_t SchedulerBasicP$TaskBasic$postTask(uint8_t id)
-{
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 161
-    {
-#line 161
-      {
-        unsigned char __nesc_temp = 
-#line 161
-        SchedulerBasicP$pushTask(id) ? SUCCESS : EBUSY;
-
-        {
-#line 161
-          __nesc_atomic_end(__nesc_atomic); 
-#line 161
-          return __nesc_temp;
-        }
-      }
-    }
-#line 164
-    __nesc_atomic_end(__nesc_atomic); }
-}
-
-# 502 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
-static void SerialP$MaybeScheduleTx(void)
-#line 502
-{
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 503
-    {
-      if (SerialP$txPending == 0) {
-          if (SerialP$RunTx$postTask() == SUCCESS) {
-              SerialP$txPending = 1;
-            }
-        }
-    }
-#line 509
-    __nesc_atomic_end(__nesc_atomic); }
-}
-
-#line 347
-static void SerialP$testOff(void)
-#line 347
-{
-  bool turnOff = FALSE;
-
-#line 349
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 349
-    {
-      if (SerialP$txState == SerialP$TXSTATE_INACTIVE && 
-      SerialP$rxState == SerialP$RXSTATE_INACTIVE) {
-          turnOff = TRUE;
-        }
-    }
-#line 354
-    __nesc_atomic_end(__nesc_atomic); }
-  if (turnOff) {
-      SerialP$stopDoneTask$postTask();
-      { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 357
-        SerialP$offPending = FALSE;
-#line 357
-        __nesc_atomic_end(__nesc_atomic); }
-    }
-  else {
-      { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 360
-        SerialP$offPending = TRUE;
-#line 360
-        __nesc_atomic_end(__nesc_atomic); }
-    }
-}
-
-# 101 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
- __attribute((wakeup)) __attribute((interrupt(4))) void sig_UART1TX_VECTOR(void)
-#line 101
-{
-  HplMsp430Usart1P$Interrupts$txDone();
-}
-
-# 137 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static   error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$send(uint8_t *buf, uint16_t len)
-#line 137
-{
-  if (len == 0) {
-    return FAIL;
-    }
-  else {
-#line 140
-    if (/*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf) {
-      return EBUSY;
-      }
-    }
-#line 142
-  /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf = buf;
-  /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_len = len;
-  /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_pos = 0;
-  /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$tx(buf[/*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_pos++]);
-  return SUCCESS;
-}
-
-# 92 "/opt/tinyos-2.x/tos/lib/serial/HdlcTranslateC.nc"
-static   error_t HdlcTranslateC$SerialFrameComm$putData(uint8_t data)
-#line 92
-{
-  if (data == HDLC_CTLESC_BYTE || data == HDLC_FLAG_BYTE) {
-      HdlcTranslateC$state.sendEscape = 1;
-      HdlcTranslateC$txTemp = data ^ 0x20;
-      HdlcTranslateC$m_data = HDLC_CTLESC_BYTE;
-    }
-  else {
-      HdlcTranslateC$m_data = data;
-    }
-  return HdlcTranslateC$UartStream$send(&HdlcTranslateC$m_data, 1);
-}
-
-#line 86
-static   error_t HdlcTranslateC$SerialFrameComm$putDelimiter(void)
-#line 86
-{
-  HdlcTranslateC$state.sendEscape = 0;
-  HdlcTranslateC$m_data = HDLC_FLAG_BYTE;
-  return HdlcTranslateC$UartStream$send(&HdlcTranslateC$m_data, 1);
-}
-
 # 11 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCommonP.nc"
- __attribute((wakeup)) __attribute((interrupt(12))) void sig_TIMERA0_VECTOR(void)
+__attribute((wakeup)) __attribute((interrupt(12)))  void sig_TIMERA0_VECTOR(void )
 #line 11
 {
 #line 11
@@ -16181,7 +16168,7 @@ static   error_t HdlcTranslateC$SerialFrameComm$putDelimiter(void)
 }
 
 # 169 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCapComP.nc"
-static   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Event$fired(void)
+static void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Event$fired(void )
 {
   if (/*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Control$getControl().cap) {
     /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$captured(/*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Capture$getEvent());
@@ -16193,7 +16180,7 @@ static   void /*Msp430TimerC.Msp430TimerA0*/Msp430TimerCapComP$0$Event$fired(voi
 }
 
 #line 169
-static   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Event$fired(void)
+static void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Event$fired(void )
 {
   if (/*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Control$getControl().cap) {
     /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$captured(/*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Capture$getEvent());
@@ -16205,7 +16192,7 @@ static   void /*Msp430TimerC.Msp430TimerA1*/Msp430TimerCapComP$1$Event$fired(voi
 }
 
 #line 169
-static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Event$fired(void)
+static void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Event$fired(void )
 {
   if (/*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Control$getControl().cap) {
     /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$captured(/*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Capture$getEvent());
@@ -16217,7 +16204,7 @@ static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Event$fired(voi
 }
 
 # 12 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCommonP.nc"
- __attribute((wakeup)) __attribute((interrupt(10))) void sig_TIMERA1_VECTOR(void)
+__attribute((wakeup)) __attribute((interrupt(10)))  void sig_TIMERA1_VECTOR(void )
 #line 12
 {
 #line 12
@@ -16225,7 +16212,7 @@ static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Event$fired(voi
 }
 
 #line 13
- __attribute((wakeup)) __attribute((interrupt(26))) void sig_TIMERB0_VECTOR(void)
+__attribute((wakeup)) __attribute((interrupt(26)))  void sig_TIMERB0_VECTOR(void )
 #line 13
 {
 #line 13
@@ -16233,14 +16220,14 @@ static   void /*Msp430TimerC.Msp430TimerA2*/Msp430TimerCapComP$2$Event$fired(voi
 }
 
 # 135 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-static    void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$default$fired(uint8_t n)
+static void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$default$fired(uint8_t n)
 {
 }
 
 # 28 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerEvent.nc"
-static   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$fired(uint8_t arg_0x40903ef0){
+static void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$fired(uint8_t arg_0x40686428){
 #line 28
-  switch (arg_0x40903ef0) {
+  switch (arg_0x40686428) {
 #line 28
     case 0:
 #line 28
@@ -16292,7 +16279,7 @@ static   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$fired(uint8_t ar
 #line 28
     default:
 #line 28
-      /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$default$fired(arg_0x40903ef0);
+      /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$default$fired(arg_0x40686428);
 #line 28
       break;
 #line 28
@@ -16300,8 +16287,32 @@ static   void /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Event$fired(uint8_t ar
 #line 28
 }
 #line 28
+# 159 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
+static error_t SchedulerBasicP$TaskBasic$postTask(uint8_t id)
+{
+  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 161
+    {
+#line 161
+      {
+        unsigned char __nesc_temp = 
+#line 161
+        SchedulerBasicP$pushTask(id) ? SUCCESS : EBUSY;
+
+        {
+#line 161
+          __nesc_atomic_end(__nesc_atomic); 
+#line 161
+          return __nesc_temp;
+        }
+      }
+    }
+#line 164
+    __nesc_atomic_end(__nesc_atomic); }
+}
+
 # 96 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
-static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$set_alarm(void)
+static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$set_alarm(void )
 {
   /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type now = /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Counter$get();
 #line 98
@@ -16348,7 +16359,7 @@ static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$set_alar
 }
 
 # 69 "/opt/tinyos-2.x/tos/lib/timer/TransformCounterC.nc"
-static   /*CounterMilli32C.Transform*/TransformCounterC$0$to_size_type /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$get(void)
+static /*CounterMilli32C.Transform*/TransformCounterC$0$to_size_type /*CounterMilli32C.Transform*/TransformCounterC$0$Counter$get(void )
 {
   /*CounterMilli32C.Transform*/TransformCounterC$0$to_size_type rv = 0;
 
@@ -16384,7 +16395,7 @@ static   /*CounterMilli32C.Transform*/TransformCounterC$0$to_size_type /*Counter
 }
 
 # 51 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerP.nc"
-static   uint16_t /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$get(void)
+static uint16_t /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$get(void )
 {
 
 
@@ -16395,14 +16406,14 @@ static   uint16_t /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$get(void)
 #line 58
       {
         uint16_t t0;
-        uint16_t t1 = * (volatile uint16_t *)400U;
+        uint16_t t1 = * (volatile uint16_t * )400U;
 
 #line 61
         do {
 #line 61
             t0 = t1;
 #line 61
-            t1 = * (volatile uint16_t *)400U;
+            t1 = * (volatile uint16_t * )400U;
           }
         while (
 #line 61
@@ -16420,12 +16431,12 @@ static   uint16_t /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$get(void)
   else 
 #line 65
     {
-      return * (volatile uint16_t *)400U;
+      return * (volatile uint16_t * )400U;
     }
 }
 
 # 14 "/opt/tinyos-2.x/tos/chips/msp430/timer/Msp430TimerCommonP.nc"
- __attribute((wakeup)) __attribute((interrupt(24))) void sig_TIMERB1_VECTOR(void)
+__attribute((wakeup)) __attribute((interrupt(24)))  void sig_TIMERB1_VECTOR(void )
 #line 14
 {
 #line 14
@@ -16433,7 +16444,7 @@ static   uint16_t /*Msp430TimerC.Msp430TimerB*/Msp430TimerP$1$Timer$get(void)
 }
 
 # 52 "/opt/tinyos-2.x/tos/system/RealMainP.nc"
-  int main(void)
+  int main(void )
 #line 52
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
@@ -16505,7 +16516,7 @@ static void MotePlatformC$TOSH_FLASH_M25P_DP_bit(bool set)
 }
 
 # 123 "/opt/tinyos-2.x/tos/system/SchedulerBasicP.nc"
-static  bool SchedulerBasicP$Scheduler$runNextTask(void)
+static bool SchedulerBasicP$Scheduler$runNextTask(void )
 {
   uint8_t nextTask;
 
@@ -16531,14 +16542,14 @@ static  bool SchedulerBasicP$Scheduler$runNextTask(void)
 }
 
 #line 164
-static   void SchedulerBasicP$TaskBasic$default$runTask(uint8_t id)
+static void SchedulerBasicP$TaskBasic$default$runTask(uint8_t id)
 {
 }
 
 # 64 "/opt/tinyos-2.x/tos/interfaces/TaskBasic.nc"
-static  void SchedulerBasicP$TaskBasic$runTask(uint8_t arg_0x40508708){
+static void SchedulerBasicP$TaskBasic$runTask(uint8_t arg_0x405924a0){
 #line 64
-  switch (arg_0x40508708) {
+  switch (arg_0x405924a0) {
 #line 64
     case SerialP$RunTx:
 #line 64
@@ -16650,7 +16661,7 @@ static  void SchedulerBasicP$TaskBasic$runTask(uint8_t arg_0x40508708){
 #line 64
     default:
 #line 64
-      SchedulerBasicP$TaskBasic$default$runTask(arg_0x40508708);
+      SchedulerBasicP$TaskBasic$default$runTask(arg_0x405924a0);
 #line 64
       break;
 #line 64
@@ -16675,19 +16686,19 @@ static uint8_t Stm25pSpiP$sendCmd(uint8_t cmd, uint8_t len)
 }
 
 # 46 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static   void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$clr(void)
+static void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$clr(void )
 #line 46
 {
 #line 46
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
 #line 46
-    * (volatile uint8_t *)29U &= ~(0x01 << 4);
+    * (volatile uint8_t * )29U &= ~(0x01 << 4);
 #line 46
     __nesc_atomic_end(__nesc_atomic); }
 }
 
 # 386 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
-static   uint8_t HplMsp430Usart0P$Usart$rx(void)
+static uint8_t HplMsp430Usart0P$Usart$rx(void )
 #line 386
 {
   uint8_t value;
@@ -16702,45 +16713,73 @@ static   uint8_t HplMsp430Usart0P$Usart$rx(void)
 }
 
 # 45 "/opt/tinyos-2.x/tos/chips/msp430/pins/HplMsp430GeneralIOP.nc"
-static   void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$set(void)
+static void /*HplMsp430GeneralIOC.P44*/HplMsp430GeneralIOP$28$IO$set(void )
 #line 45
 {
 #line 45
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
 #line 45
-    * (volatile uint8_t *)29U |= 0x01 << 4;
+    * (volatile uint8_t * )29U |= 0x01 << 4;
 #line 45
     __nesc_atomic_end(__nesc_atomic); }
 }
 
-# 107 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$release(uint8_t id)
-#line 107
+# 108 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$release(uint8_t id)
+#line 108
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 108
+#line 109
     {
       if (/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state == /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_BUSY && /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId == id) {
           if (/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$isEmpty() == FALSE) {
               /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$reqResId = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$dequeue();
               /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_GRANTING;
               /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$grantedTask$postTask();
+              /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$unconfigure(id);
             }
           else {
               /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$default_owner_id;
               /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_CONTROLLED;
+              /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$unconfigure(id);
               /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$granted();
             }
-          /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceConfigure$unconfigure(id);
+          {
+            unsigned char __nesc_temp = 
+#line 123
+            SUCCESS;
+
+            {
+#line 123
+              __nesc_atomic_end(__nesc_atomic); 
+#line 123
+              return __nesc_temp;
+            }
+          }
         }
     }
-#line 122
+#line 127
     __nesc_atomic_end(__nesc_atomic); }
+#line 126
   return FAIL;
 }
 
+# 247 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
+static void HplMsp430Usart0P$Usart$disableSpi(void )
+#line 247
+{
+  /* atomic removed: atomic calls only */
+#line 248
+  {
+    HplMsp430Usart0P$ME1 &= ~(1 << 6);
+    HplMsp430Usart0P$SIMO$selectIOFunc();
+    HplMsp430Usart0P$SOMI$selectIOFunc();
+    HplMsp430Usart0P$UCLK$selectIOFunc();
+  }
+}
+
 # 88 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSectorP.nc"
-static  error_t Stm25pSectorP$SplitControl$start(void)
+static error_t Stm25pSectorP$SplitControl$start(void )
 #line 88
 {
   error_t error = Stm25pSectorP$SpiResource$request();
@@ -16753,13 +16792,13 @@ static  error_t Stm25pSectorP$SplitControl$start(void)
   return error;
 }
 
-# 76 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
-static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$request(uint8_t id)
-#line 76
+# 77 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$request(uint8_t id)
+#line 77
 {
   /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceRequested$requested(/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId);
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 78
+#line 79
     {
       if (/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state == /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_CONTROLLED) {
           /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state = /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_GRANTING;
@@ -16767,26 +16806,26 @@ static   error_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Resource$requ
         }
       else {
           unsigned char __nesc_temp = 
-#line 83
+#line 84
           /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$Queue$enqueue(id);
 
           {
-#line 83
+#line 84
             __nesc_atomic_end(__nesc_atomic); 
-#line 83
+#line 84
             return __nesc_temp;
           }
         }
     }
-#line 86
+#line 87
     __nesc_atomic_end(__nesc_atomic); }
-#line 85
+#line 86
   /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ResourceDefaultOwner$requested();
   return SUCCESS;
 }
 
 # 136 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static  void Stm25pBlockP$ClientResource$granted(uint8_t id)
+static void Stm25pBlockP$ClientResource$granted(uint8_t id)
 #line 136
 {
 
@@ -16818,7 +16857,7 @@ static  void Stm25pBlockP$ClientResource$granted(uint8_t id)
 }
 
 # 138 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-static   error_t Stm25pSpiP$Spi$read(stm25p_addr_t addr, uint8_t *buf, 
+static error_t Stm25pSpiP$Spi$read(stm25p_addr_t addr, uint8_t *buf, 
 stm25p_len_t len)
 #line 139
 {
@@ -16845,11 +16884,11 @@ static error_t Stm25pSpiP$newRequest(bool write, stm25p_len_t cmd_len)
   return SUCCESS;
 }
 
-# 146 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
-static   error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$send(uint8_t id, uint8_t *tx_buf, 
+# 144 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430SpiNoDmaP.nc"
+static error_t /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$SpiPacket$send(uint8_t id, uint8_t *tx_buf, 
 uint8_t *rx_buf, 
 uint16_t len)
-#line 148
+#line 146
 {
 
   /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_client = id;
@@ -16869,16 +16908,16 @@ uint16_t len)
   return SUCCESS;
 }
 
-#line 120
-static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$continueOp(void)
-#line 120
+#line 121
+static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$continueOp(void )
+#line 121
 {
 
   uint8_t end;
   uint8_t tmp;
 
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 125
+#line 126
     {
       /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$tx(/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_tx_buf ? /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_tx_buf[/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_pos] : 0);
 
@@ -16887,23 +16926,21 @@ static void /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$continueOp(void)
         end = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_len;
         }
       while (++/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_pos < end) {
-          while (!/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$isTxIntrPending()) ;
-          /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$clrTxIntr();
-          /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$tx(/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_tx_buf ? /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_tx_buf[/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_pos] : 0);
           while (!/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$isRxIntrPending()) ;
-          /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$clrRxIntr();
           tmp = /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$rx();
           if (/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_rx_buf) {
             /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_rx_buf[/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_pos - 1] = tmp;
             }
+#line 138
+          /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$Usart$tx(/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_tx_buf ? /*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_tx_buf[/*Msp430SpiNoDma0P.SpiP*/Msp430SpiNoDmaP$0$m_pos] : 0);
         }
     }
-#line 143
+#line 140
     __nesc_atomic_end(__nesc_atomic); }
 }
 
 # 156 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-static   error_t Stm25pSpiP$Spi$pageProgram(stm25p_addr_t addr, uint8_t *buf, 
+static error_t Stm25pSpiP$Spi$pageProgram(stm25p_addr_t addr, uint8_t *buf, 
 stm25p_len_t len)
 #line 157
 {
@@ -16925,7 +16962,7 @@ static stm25p_len_t Stm25pSectorP$calcWriteLen(stm25p_addr_t addr)
 }
 
 # 165 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-static   error_t Stm25pSpiP$Spi$sectorErase(uint8_t sector)
+static error_t Stm25pSpiP$Spi$sectorErase(uint8_t sector)
 #line 165
 {
   Stm25pSpiP$m_cmd[0] = Stm25pSpiP$S_SECTOR_ERASE;
@@ -16968,8 +17005,207 @@ static void Stm25pBlockP$signalDone(uint8_t id, uint16_t crc, error_t error)
     }
 }
 
+# 143 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
+  int printfflush(void )
+#line 143
+{
+  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 144
+    {
+      if (PrintfP$state == PrintfP$S_FLUSHING) 
+        {
+          int __nesc_temp = 
+#line 146
+          SUCCESS;
+
+          {
+#line 146
+            __nesc_atomic_end(__nesc_atomic); 
+#line 146
+            return __nesc_temp;
+          }
+        }
+#line 147
+      if (PrintfP$Queue$empty()) 
+        {
+          int __nesc_temp = 
+#line 148
+          FAIL;
+
+          {
+#line 148
+            __nesc_atomic_end(__nesc_atomic); 
+#line 148
+            return __nesc_temp;
+          }
+        }
+#line 149
+      PrintfP$state = PrintfP$S_FLUSHING;
+    }
+#line 150
+    __nesc_atomic_end(__nesc_atomic); }
+  PrintfP$sendNext();
+  return SUCCESS;
+}
+
+#line 132
+static void PrintfP$sendNext(void )
+#line 132
+{
+  int i;
+  printf_msg_t *m = (printf_msg_t *)PrintfP$Packet$getPayload(&PrintfP$printfMsg, sizeof(printf_msg_t ));
+  uint16_t length_to_send = PrintfP$Queue$size() < sizeof(printf_msg_t ) ? PrintfP$Queue$size() : sizeof(printf_msg_t );
+
+#line 136
+  memset(m->buffer, 0, sizeof(printf_msg_t ));
+  for (i = 0; i < length_to_send; i++) 
+    __nesc_hton_uint8(m->buffer[i].data, PrintfP$Queue$dequeue());
+  if (PrintfP$AMSend$send(AM_BROADCAST_ADDR, &PrintfP$printfMsg, sizeof(printf_msg_t )) != SUCCESS) {
+    PrintfP$retrySend$postTask();
+    }
+}
+
+# 119 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
+static void */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(message_t *msg, uint8_t len)
+#line 119
+{
+  if (len > /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$maxPayloadLength()) {
+      return (void *)0;
+    }
+  else {
+      return (void * )msg->data;
+    }
+}
+
+# 45 "/opt/tinyos-2.x/tos/system/AMQueueEntryP.nc"
+static error_t /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$send(am_addr_t dest, 
+message_t *msg, 
+uint8_t len)
+#line 47
+{
+  /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setDestination(msg, dest);
+  /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setType(msg, 100);
+  return /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$send(msg, len);
+}
+
+# 156 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
+static am_id_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$type(message_t *amsg)
+#line 156
+{
+  serial_header_t *header = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(amsg);
+
+#line 158
+  return __nesc_ntoh_uint8(header->type.data);
+}
+
+#line 132
+static am_addr_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$destination(message_t *amsg)
+#line 132
+{
+  serial_header_t *header = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(amsg);
+
+#line 134
+  return __nesc_ntoh_uint16(header->dest.data);
+}
+
+#line 57
+static error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$send(am_id_t id, am_addr_t dest, 
+message_t *msg, 
+uint8_t len)
+#line 59
+{
+  serial_header_t *header = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(msg);
+
+#line 61
+  __nesc_hton_uint16(header->dest.data, dest);
+
+
+
+
+
+  __nesc_hton_uint8(header->type.data, id);
+  __nesc_hton_uint8(header->length.data, len);
+
+  return /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$send(msg, len);
+}
+
+# 502 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static void SerialP$MaybeScheduleTx(void )
+#line 502
+{
+  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 503
+    {
+      if (SerialP$txPending == 0) {
+          if (SerialP$RunTx$postTask() == SUCCESS) {
+              SerialP$txPending = 1;
+            }
+        }
+    }
+#line 509
+    __nesc_atomic_end(__nesc_atomic); }
+}
+
+# 122 "LZ77M.nc"
+static error_t LZ77M$Lz77Compression$Lz77Encode(int *arr1)
+#line 122
+{
+
+  int i;
+#line 124
+  int j;
+#line 124
+  int k;
+#line 124
+  int m;
+
+  for (i = 0; i < 256 * 3; i++) {
+      LZ77M$Outbuffer[i] = 256;
+    }
+
+
+  LZ77M$brr = arr1;
+  LZ77M$start_time = LZ77M$Timer$getNow();
+  for (j = 0; j < 250; j++) 
+    LZ77M$dict[j] = 0xff;
+  for (i = 0; i < 256; i++) {
+
+      k = LZ77M$search(LZ77M$brr[0]);
+
+
+      if (k == 1) {
+          for (m = 0; m < LZ77M$nextlinklen; m++) 
+            LZ77M$findMaxmatch();
+          if (LZ77M$matchlen >= 2) {
+            LZ77M$encode(LZ77M$matchlen, LZ77M$matchpos, k, LZ77M$brr[0]);
+            }
+          else {
+#line 146
+            LZ77M$encode(LZ77M$matchlen, LZ77M$matchpos, 0, LZ77M$brr[0]);
+            }
+          LZ77M$shift(LZ77M$matchlen);
+          i = i + LZ77M$matchlen - 1;
+          LZ77M$matchlen = 0;
+        }
+      else 
+        {
+          LZ77M$encode(LZ77M$matchlen, LZ77M$matchpos, k, LZ77M$brr[0]);
+          LZ77M$shift(1);
+          LZ77M$matchlen = 0;
+        }
+    }
+
+
+
+  LZ77M$end_time = LZ77M$Timer$getNow();
+  LZ77M$timetaken = LZ77M$end_time - LZ77M$start_time;
+  LZ77M$Lz77Compression$Lz77EncodeDone(SUCCESS, LZ77M$Outbuffer);
+
+  return SUCCESS;
+}
+
 # 125 "/opt/tinyos-2.x/tos/lib/timer/Timer.nc"
-static  uint32_t LZ77M$Timer$getNow(void){
+static uint32_t LZ77M$Timer$getNow(void ){
 #line 125
   unsigned long result;
 #line 125
@@ -16983,20 +17219,29 @@ static  uint32_t LZ77M$Timer$getNow(void){
 #line 125
 }
 #line 125
-# 54 "LZ77M.nc"
+# 50 "LZ77M.nc"
 static void LZ77M$encode(int matchlen1, int matchpos1, int result, int symbol)
-
+#line 50
 {
+
+  printf("encode\n");
+  printf("matchlen1: %d\n", matchlen1);
+  printf("matchpos1: %d\n", matchpos1);
+  printfflush();
+  printf("result: %d\n", result);
+  printf("symbol: %d\n", symbol);
+  printfflush();
+
   if (LZ77M$index1 > 1996) {
     LZ77M$index1 = 0;
     }
-#line 59
-  if (result == 0) 
-    {
+#line 62
+  if (result == 0) {
       LZ77M$Outbuffer[LZ77M$index1++] = 0;
       LZ77M$Outbuffer[LZ77M$index1++] = symbol;
     }
   else 
+#line 65
     {
       LZ77M$Outbuffer[LZ77M$index1++] = 1;
       LZ77M$Outbuffer[LZ77M$index1++] = matchlen1;
@@ -17004,20 +17249,19 @@ static void LZ77M$encode(int matchlen1, int matchpos1, int result, int symbol)
     }
 }
 
-#line 71
 static void LZ77M$shift(int val)
-
+#line 72
 {
 
   int m;
-#line 75
+#line 74
   int n;
-#line 75
+#line 74
   int val2;
-#line 75
+#line 74
   int val3;
 
-#line 76
+#line 75
   val3 = val2 = val;
 
   do {
@@ -17026,6 +17270,7 @@ static void LZ77M$shift(int val)
     }
   while (
   --val2 != 0);
+
   for (n = 0; n < val; n++) 
     LZ77M$dict[250 - val + n] = LZ77M$brr[n];
   do {
@@ -17036,20 +17281,8 @@ static void LZ77M$shift(int val)
   while (--val3 != 0);
 }
 
-# 86 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pBlockP.nc"
-static  error_t Stm25pBlockP$Read$read(uint8_t id, storage_addr_t addr, void *buf, 
-storage_len_t len)
-#line 87
-{
-  Stm25pBlockP$m_req.req = Stm25pBlockP$S_READ;
-  Stm25pBlockP$m_req.addr = addr;
-  Stm25pBlockP$m_req.buf = buf;
-  Stm25pBlockP$m_req.len = len;
-  return Stm25pBlockP$newRequest(id);
-}
-
 # 187 "/opt/tinyos-2.x/tos/chips/stm25p/Stm25pSpiP.nc"
-static void Stm25pSpiP$releaseAndRequest(void)
+static void Stm25pSpiP$releaseAndRequest(void )
 #line 187
 {
   Stm25pSpiP$SpiResource$release();
@@ -17084,7 +17317,7 @@ static void Stm25pSpiP$signalDone(error_t error)
 }
 
 #line 192
-static   void Stm25pSpiP$SpiPacket$sendDone(uint8_t *tx_buf, uint8_t *rx_buf, 
+static void Stm25pSpiP$SpiPacket$sendDone(uint8_t *tx_buf, uint8_t *rx_buf, 
 uint16_t len, error_t error)
 #line 193
 {
@@ -17134,6 +17367,18 @@ uint16_t len, error_t error)
     }
 }
 
+# 80 "/opt/tinyos-2.x/tos/system/crc.h"
+static uint16_t crcByte(uint16_t crc, uint8_t b)
+#line 80
+{
+  crc = (uint8_t )(crc >> 8) | (crc << 8);
+  crc ^= b;
+  crc ^= (uint8_t )(crc & 0xff) >> 4;
+  crc ^= crc << 12;
+  crc ^= (crc & 0xff) << 5;
+  return crc;
+}
+
 # 62 "/opt/tinyos-2.x/tos/lib/timer/VirtualizeTimerC.nc"
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$fireTimers(uint32_t now)
 {
@@ -17157,6 +17402,7 @@ static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$fireTimers(uin
                 timer->t0 += timer->dt;
                 }
               /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$fired(num);
+              break;
             }
         }
     }
@@ -17164,7 +17410,7 @@ static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$fireTimers(uin
 }
 
 # 136 "/opt/tinyos-2.x/tos/lib/timer/TransformAlarmC.nc"
-static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$startAt(/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type t0, /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type dt)
+static void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$startAt(/*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type t0, /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$to_size_type dt)
 {
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
     {
@@ -17176,129 +17422,27 @@ static   void /*HilTimerMilliC.AlarmMilli32C.Transform*/TransformAlarmC$0$Alarm$
     __nesc_atomic_end(__nesc_atomic); }
 }
 
-# 45 "/opt/tinyos-2.x/tos/system/AMQueueEntryP.nc"
-static  error_t /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$send(am_addr_t dest, 
-message_t *msg, 
-uint8_t len)
-#line 47
-{
-  /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setDestination(msg, dest);
-  /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMPacket$setType(msg, 100);
-  return /*PrintfC.SerialAMSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$send(msg, len);
-}
-
-# 158 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-static  am_id_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$type(message_t *amsg)
-#line 158
-{
-  serial_header_t *header = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(amsg);
-
-#line 160
-  return __nesc_ntoh_uint8((unsigned char *)&header->type);
-}
-
-#line 134
-static  am_addr_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMPacket$destination(message_t *amsg)
-#line 134
-{
-  serial_header_t *header = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(amsg);
-
-#line 136
-  return __nesc_ntoh_uint16((unsigned char *)&header->dest);
-}
-
-#line 53
-static  error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$send(am_id_t id, am_addr_t dest, 
-message_t *msg, 
-uint8_t len)
-#line 55
-{
-  serial_header_t *header = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(msg);
-
-#line 57
-  __nesc_hton_uint16((unsigned char *)&header->dest, dest);
-
-
-
-
-
-  __nesc_hton_uint8((unsigned char *)&header->type, id);
-  __nesc_hton_uint8((unsigned char *)&header->length, len);
-
-  return /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$SubSend$send(msg, len);
-}
-
-# 151 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
-static  void PrintfP$AMSend$sendDone(message_t *msg, error_t error)
-#line 151
+# 155 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
+static void PrintfP$AMSend$sendDone(message_t *msg, error_t error)
+#line 155
 {
   if (error == SUCCESS) {
-      if (PrintfP$bytes_left_to_flush > 0) {
+      if (PrintfP$Queue$size() > 0) {
         PrintfP$sendNext();
         }
-      else 
-#line 155
-        {
-          PrintfP$next_byte = PrintfP$buffer;
-          PrintfP$bytes_left_to_flush = 0;
-          PrintfP$length_to_send = 0;
-          { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+      else {
 #line 159
-            PrintfP$state = PrintfP$S_STARTED;
-#line 159
-            __nesc_atomic_end(__nesc_atomic); }
-          PrintfP$PrintfFlush$flushDone(error);
+        PrintfP$state = PrintfP$S_STARTED;
         }
     }
   else {
-#line 163
+#line 161
     PrintfP$retrySend$postTask();
     }
-}
-
-#line 86
-static void PrintfP$sendNext(void)
-#line 86
-{
-  printf_msg_t *m = (printf_msg_t *)PrintfP$Packet$getPayload(&PrintfP$printfMsg, (void *)0);
-
-#line 88
-  PrintfP$length_to_send = PrintfP$bytes_left_to_flush < sizeof(printf_msg_t ) ? PrintfP$bytes_left_to_flush : sizeof(printf_msg_t );
-  memset(m->buffer, 0, sizeof  m->buffer);
-  memcpy(m->buffer, (uint8_t *)PrintfP$next_byte, PrintfP$length_to_send);
-  if (PrintfP$AMSend$send(AM_BROADCAST_ADDR, &PrintfP$printfMsg, sizeof(printf_msg_t )) != SUCCESS) {
-    PrintfP$retrySend$postTask();
-    }
-  else 
-#line 93
-    {
-      PrintfP$bytes_left_to_flush -= PrintfP$length_to_send;
-      PrintfP$next_byte += PrintfP$length_to_send;
-    }
-}
-
-# 123 "/opt/tinyos-2.x/tos/lib/serial/SerialActiveMessageP.nc"
-static  void */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(message_t *msg, uint8_t *len)
-#line 123
-{
-  if (len != (void *)0) {
-      *len = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$payloadLength(msg);
-    }
-  return msg->data;
-}
-
-#line 110
-static  uint8_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$payloadLength(message_t *msg)
-#line 110
-{
-  serial_header_t *header = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$getHeader(msg);
-
-#line 112
-  return __nesc_ntoh_uint8((unsigned char *)&header->length);
 }
 
 # 155 "/opt/tinyos-2.x/tos/system/AMQueueImplP.nc"
-static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$sendDone(uint8_t last, message_t *msg, error_t err)
+static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$sendDone(uint8_t last, message_t * msg, error_t err)
 #line 155
 {
   /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[last].msg = (void *)0;
@@ -17306,20 +17450,20 @@ static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$sendDone(uint8_t last,
   /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(last, msg, err);
 }
 
-# 82 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
-static   void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$configure(uint8_t id)
-#line 82
+# 85 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static void /*Msp430Uart1P.UartP*/Msp430UartP$0$ResourceConfigure$configure(uint8_t id)
+#line 85
 {
   msp430_uart_union_config_t *config = /*Msp430Uart1P.UartP*/Msp430UartP$0$Msp430UartConfigure$getConfig(id);
 
-#line 84
+#line 87
   /*Msp430Uart1P.UartP*/Msp430UartP$0$m_byte_time = config->uartConfig.ubr / 2;
   /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$setModeUart(config);
   /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$enableIntr();
 }
 
 # 251 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
-static   void HplMsp430Usart1P$Usart$disableSpi(void)
+static void HplMsp430Usart1P$Usart$disableSpi(void )
 #line 251
 {
   /* atomic removed: atomic calls only */
@@ -17333,7 +17477,7 @@ static   void HplMsp430Usart1P$Usart$disableSpi(void)
 }
 
 #line 211
-static   void HplMsp430Usart1P$Usart$disableUart(void)
+static void HplMsp430Usart1P$Usart$disableUart(void )
 #line 211
 {
   /* atomic removed: atomic calls only */
@@ -17345,118 +17489,380 @@ static   void HplMsp430Usart1P$Usart$disableUart(void)
   }
 }
 
-# 34 "TestC.nc"
-static  void TestC$PrintfControl$startDone(error_t err)
-{
-  printf("hello i am writing to you");
-  printf("I am taking : %u ms\n", TestC$time_taken);
-  for (TestC$i = 0; TestC$i < 2; TestC$i++) 
-    printf("%d\n", TestC$arr[TestC$i]);
-  TestC$PrintfFlush$flush();
-}
-
-# 138 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
-static  error_t PrintfP$PrintfFlush$flush(void)
-#line 138
-{
-  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 139
-    {
-      if (PrintfP$state == PrintfP$S_STARTED && PrintfP$next_byte > PrintfP$buffer) {
-          PrintfP$state = PrintfP$S_FLUSHING;
-          PrintfP$bytes_left_to_flush = PrintfP$next_byte - PrintfP$buffer;
-          PrintfP$next_byte = PrintfP$buffer;
-        }
-      else {
-          unsigned char __nesc_temp = 
-#line 145
-          FAIL;
-
-          {
-#line 145
-            __nesc_atomic_end(__nesc_atomic); 
-#line 145
-            return __nesc_temp;
-          }
-        }
-    }
-#line 148
-    __nesc_atomic_end(__nesc_atomic); }
-#line 147
-  PrintfP$sendNext();
-  return SUCCESS;
-}
-
-# 171 "LZ77M.nc"
-static  void LZ77M$PrintfControl$startDone(error_t err)
-{
-#line 172
-  int j;
-
+# 173 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$Resource$isOwner(uint8_t id)
 #line 173
-  printf("hello i am writing to u");
-  printf("\n i am processing %d Bytes\n", sizeof LZ77M$brr[0] * 256);
-  printf("\n i am taking : %d seconds", LZ77M$timetaken);
-
-
-
-
-
-  for (j = 0; j < LZ77M$index1; j++) {
-#line 181
-      printf("%d", LZ77M$Outbuffer[j]);
-    }
-  LZ77M$PrintfFlush$flush();
-}
-
-# 167 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
-__attribute((noinline))   int putchar(int c)
-#line 167
 {
-
-
-
-
   { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
-#line 172
+#line 174
     {
-      if (PrintfP$state == PrintfP$S_STARTED && PrintfP$next_byte - PrintfP$buffer + 1 < 250) {
-          __nesc_hton_uint8((unsigned char *)&*PrintfP$next_byte, c);
-          PrintfP$next_byte++;
-          {
-            int __nesc_temp = 
-#line 176
-            0;
+      if (/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId == id && /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state == /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_BUSY) {
+          unsigned char __nesc_temp = 
+#line 175
+          TRUE;
 
-            {
-#line 176
-              __nesc_atomic_end(__nesc_atomic); 
-#line 176
-              return __nesc_temp;
-            }
+          {
+#line 175
+            __nesc_atomic_end(__nesc_atomic); 
+#line 175
+            return __nesc_temp;
           }
         }
       else 
-#line 178
+#line 176
         {
-          int __nesc_temp = 
-#line 178
-          -1;
+          unsigned char __nesc_temp = 
+#line 176
+          FALSE;
 
           {
-#line 178
+#line 176
             __nesc_atomic_end(__nesc_atomic); 
-#line 178
+#line 176
             return __nesc_temp;
           }
         }
     }
-#line 181
+#line 179
+    __nesc_atomic_end(__nesc_atomic); }
+}
+
+# 347 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static void SerialP$testOff(void )
+#line 347
+{
+  bool turnOff = FALSE;
+
+#line 349
+  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 349
+    {
+      if (SerialP$txState == SerialP$TXSTATE_INACTIVE && 
+      SerialP$rxState == SerialP$RXSTATE_INACTIVE) {
+          turnOff = TRUE;
+        }
+    }
+#line 354
+    __nesc_atomic_end(__nesc_atomic); }
+  if (turnOff) {
+      SerialP$stopDoneTask$postTask();
+      { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 357
+        SerialP$offPending = FALSE;
+#line 357
+        __nesc_atomic_end(__nesc_atomic); }
+    }
+  else {
+      { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 360
+        SerialP$offPending = TRUE;
+#line 360
+        __nesc_atomic_end(__nesc_atomic); }
+    }
+}
+
+# 86 "/opt/tinyos-2.x/tos/lib/serial/HdlcTranslateC.nc"
+static error_t HdlcTranslateC$SerialFrameComm$putDelimiter(void )
+#line 86
+{
+  HdlcTranslateC$state.sendEscape = 0;
+  HdlcTranslateC$m_data = HDLC_FLAG_BYTE;
+  return HdlcTranslateC$UartStream$send(&HdlcTranslateC$m_data, 1);
+}
+
+# 147 "/opt/tinyos-2.x/tos/chips/msp430/usart/Msp430UartP.nc"
+static error_t /*Msp430Uart1P.UartP*/Msp430UartP$0$UartStream$send(uint8_t id, uint8_t *buf, uint16_t len)
+#line 147
+{
+  if (/*Msp430Uart1P.UartP*/Msp430UartP$0$UsartResource$isOwner(id) == FALSE) {
+    return FAIL;
+    }
+#line 150
+  if (len == 0) {
+    return FAIL;
+    }
+  else {
+#line 152
+    if (/*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf) {
+      return EBUSY;
+      }
+    }
+#line 154
+  /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_buf = buf;
+  /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_len = len;
+  /*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_pos = 0;
+  /*Msp430Uart1P.UartP*/Msp430UartP$0$current_owner = id;
+  /*Msp430Uart1P.UartP*/Msp430UartP$0$Usart$tx(buf[/*Msp430Uart1P.UartP*/Msp430UartP$0$m_tx_pos++]);
+  return SUCCESS;
+}
+
+# 96 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
+__attribute((wakeup)) __attribute((interrupt(6)))  void sig_UART1RX_VECTOR(void )
+#line 96
+{
+  uint8_t temp = U1RXBUF;
+
+#line 98
+  HplMsp430Usart1P$Interrupts$rxDone(temp);
+}
+
+# 149 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static bool /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$inUse(void )
+#line 149
+{
+  /* atomic removed: atomic calls only */
+#line 150
+  {
+    if (/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state == /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_CONTROLLED) 
+      {
+        unsigned char __nesc_temp = 
+#line 152
+        FALSE;
+
+#line 152
+        return __nesc_temp;
+      }
+  }
+#line 154
+  return TRUE;
+}
+
+# 402 "/opt/tinyos-2.x/tos/lib/serial/SerialP.nc"
+static void SerialP$rx_state_machine(bool isDelimeter, uint8_t data)
+#line 402
+{
+
+  switch (SerialP$rxState) {
+
+      case SerialP$RXSTATE_NOSYNC: 
+        if (isDelimeter) {
+            SerialP$rxInit();
+            SerialP$rxState = SerialP$RXSTATE_PROTO;
+          }
+      break;
+
+      case SerialP$RXSTATE_PROTO: 
+        if (!isDelimeter) {
+            SerialP$rxCRC = crcByte(SerialP$rxCRC, data);
+            SerialP$rxState = SerialP$RXSTATE_TOKEN;
+            SerialP$rxProto = data;
+            if (!SerialP$valid_rx_proto(SerialP$rxProto)) {
+              goto nosync;
+              }
+            if (SerialP$rxProto != SERIAL_PROTO_PACKET_ACK) {
+                goto nosync;
+              }
+            if (SerialP$ReceiveBytePacket$startPacket() != SUCCESS) {
+                goto nosync;
+              }
+          }
+      break;
+
+      case SerialP$RXSTATE_TOKEN: 
+        if (isDelimeter) {
+            goto nosync;
+          }
+        else {
+            SerialP$rxSeqno = data;
+            SerialP$rxCRC = crcByte(SerialP$rxCRC, SerialP$rxSeqno);
+            SerialP$rxState = SerialP$RXSTATE_INFO;
+          }
+      break;
+
+      case SerialP$RXSTATE_INFO: 
+        if (SerialP$rxByteCnt < SerialP$SERIAL_MTU) {
+            if (isDelimeter) {
+                if (SerialP$rxByteCnt >= 2) {
+                    if (SerialP$rx_current_crc() == SerialP$rxCRC) {
+                        SerialP$ReceiveBytePacket$endPacket(SUCCESS);
+                        SerialP$ack_queue_push(SerialP$rxSeqno);
+                        goto nosync;
+                      }
+                    else {
+                        goto nosync;
+                      }
+                  }
+                else {
+                    goto nosync;
+                  }
+              }
+            else {
+                if (SerialP$rxByteCnt >= 2) {
+                    SerialP$ReceiveBytePacket$byteReceived(SerialP$rx_buffer_top());
+                    SerialP$rxCRC = crcByte(SerialP$rxCRC, SerialP$rx_buffer_pop());
+                  }
+                SerialP$rx_buffer_push(data);
+                SerialP$rxByteCnt++;
+              }
+          }
+        else 
+
+          {
+            goto nosync;
+          }
+      break;
+
+      default: 
+        goto nosync;
+    }
+  goto done;
+
+  nosync: 
+
+    SerialP$rxInit();
+  SerialP$SerialFrameComm$resetReceive();
+  SerialP$ReceiveBytePacket$endPacket(FAIL);
+  if (SerialP$offPending) {
+      SerialP$rxState = SerialP$RXSTATE_INACTIVE;
+      SerialP$testOff();
+    }
+  else {
+    if (isDelimeter) {
+        SerialP$rxState = SerialP$RXSTATE_PROTO;
+      }
+    }
+  done: ;
+}
+
+# 285 "/opt/tinyos-2.x/tos/lib/serial/SerialDispatcherP.nc"
+static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$ReceiveBytePacket$endPacket(error_t result)
+#line 285
+{
+  uint8_t postsignalreceive = FALSE;
+
+  /* atomic removed: atomic calls only */
+#line 287
+  {
+    if (!/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskPending && result == SUCCESS) {
+        postsignalreceive = TRUE;
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskPending = TRUE;
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskType = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvType;
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskWhich = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.which;
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskBuf = (message_t *)/*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBuffer;
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTaskSize = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$recvIndex;
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveBufferSwap();
+        /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveState.state = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$RECV_STATE_IDLE;
+      }
+  }
+  if (postsignalreceive) {
+      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTask$postTask();
+    }
+}
+
+# 162 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static uint8_t /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$userId(void )
+#line 162
+{
+  /* atomic removed: atomic calls only */
+#line 163
+  {
+    if (/*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$state != /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$RES_BUSY) 
+      {
+        unsigned char __nesc_temp = 
+#line 165
+        /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$NO_RES;
+
+#line 165
+        return __nesc_temp;
+      }
+#line 166
+    {
+      unsigned char __nesc_temp = 
+#line 166
+      /*Msp430UsartShare1P.ArbiterC.Arbiter*/ArbiterP$0$resId;
+
+#line 166
+      return __nesc_temp;
+    }
+  }
+}
+
+# 101 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart1P.nc"
+__attribute((wakeup)) __attribute((interrupt(4)))  void sig_UART1TX_VECTOR(void )
+#line 101
+{
+  HplMsp430Usart1P$Interrupts$txDone();
+}
+
+# 104 "/opt/tinyos-2.x/tos/lib/serial/HdlcTranslateC.nc"
+static void HdlcTranslateC$UartStream$sendDone(uint8_t *buf, uint16_t len, 
+error_t error)
+#line 105
+{
+  if (HdlcTranslateC$state.sendEscape) {
+      HdlcTranslateC$state.sendEscape = 0;
+      HdlcTranslateC$m_data = HdlcTranslateC$txTemp;
+      HdlcTranslateC$UartStream$send(&HdlcTranslateC$m_data, 1);
+    }
+  else {
+      HdlcTranslateC$SerialFrameComm$putDone();
+    }
+}
+
+#line 92
+static error_t HdlcTranslateC$SerialFrameComm$putData(uint8_t data)
+#line 92
+{
+  if (data == HDLC_CTLESC_BYTE || data == HDLC_FLAG_BYTE) {
+      HdlcTranslateC$state.sendEscape = 1;
+      HdlcTranslateC$txTemp = data ^ 0x20;
+      HdlcTranslateC$m_data = HDLC_CTLESC_BYTE;
+    }
+  else {
+      HdlcTranslateC$m_data = data;
+    }
+  return HdlcTranslateC$UartStream$send(&HdlcTranslateC$m_data, 1);
+}
+
+# 165 "/opt/tinyos-2.x/tos/lib/printf/PrintfP.nc"
+__attribute((noinline))   int putchar(int c)
+#line 165
+{
+
+
+
+
+  if (PrintfP$state == PrintfP$S_STARTED && PrintfP$Queue$size() >= 5 * sizeof(printf_msg_t )) {
+      PrintfP$state = PrintfP$S_FLUSHING;
+      PrintfP$sendNext();
+    }
+  { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
+#line 174
+    {
+      if (PrintfP$Queue$enqueue(c) == SUCCESS) 
+        {
+          int __nesc_temp = 
+#line 176
+          0;
+
+          {
+#line 176
+            __nesc_atomic_end(__nesc_atomic); 
+#line 176
+            return __nesc_temp;
+          }
+        }
+      else 
+#line 177
+        {
+          int __nesc_temp = 
+#line 177
+          -1;
+
+          {
+#line 177
+            __nesc_atomic_end(__nesc_atomic); 
+#line 177
+            return __nesc_temp;
+          }
+        }
+    }
+#line 180
     __nesc_atomic_end(__nesc_atomic); }
 }
 
 # 96 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
- __attribute((wakeup)) __attribute((interrupt(18))) void sig_UART0RX_VECTOR(void)
+__attribute((wakeup)) __attribute((interrupt(18)))  void sig_UART0RX_VECTOR(void )
 #line 96
 {
   uint8_t temp = U0RXBUF;
@@ -17465,7 +17871,61 @@ __attribute((noinline))   int putchar(int c)
   HplMsp430Usart0P$Interrupts$rxDone(temp);
 }
 
- __attribute((wakeup)) __attribute((interrupt(16))) void sig_UART0TX_VECTOR(void)
+# 149 "/opt/tinyos-2.x/tos/system/ArbiterP.nc"
+static bool /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$inUse(void )
+#line 149
+{
+  /* atomic removed: atomic calls only */
+#line 150
+  {
+    if (/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state == /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_CONTROLLED) 
+      {
+        unsigned char __nesc_temp = 
+#line 152
+        FALSE;
+
+#line 152
+        return __nesc_temp;
+      }
+  }
+#line 154
+  return TRUE;
+}
+
+
+
+
+
+
+static uint8_t /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$ArbiterInfo$userId(void )
+#line 162
+{
+  /* atomic removed: atomic calls only */
+#line 163
+  {
+    if (/*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$state != /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$RES_BUSY) 
+      {
+        unsigned char __nesc_temp = 
+#line 165
+        /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$NO_RES;
+
+#line 165
+        return __nesc_temp;
+      }
+#line 166
+    {
+      unsigned char __nesc_temp = 
+#line 166
+      /*Msp430UsartShare0P.ArbiterC.Arbiter*/ArbiterP$2$resId;
+
+#line 166
+      return __nesc_temp;
+    }
+  }
+}
+
+# 101 "/opt/tinyos-2.x/tos/chips/msp430/usart/HplMsp430Usart0P.nc"
+__attribute((wakeup)) __attribute((interrupt(16)))  void sig_UART0TX_VECTOR(void )
 #line 101
 {
   if (HplMsp430Usart0P$HplI2C$isI2C()) {
