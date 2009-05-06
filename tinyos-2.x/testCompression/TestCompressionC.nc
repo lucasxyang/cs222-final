@@ -5,11 +5,8 @@ implementation
 {
     components MainC, new TestCompressionP(uint16_t), LedsC;
 
-    TestCompressonP.Boot -> MainC;
-    TestCompressonP.Leds -> LedsC;
-
-    components new TimerMilliC();
-    TestCompressonP.Timer -> TimerMilliC;
+    TestCompressionP.Boot -> MainC;
+    TestCompressionP.Leds -> LedsC;
 
     components new SamplingC(uint16_t);
     TestCompressionP.Sampling -> SamplingC;
