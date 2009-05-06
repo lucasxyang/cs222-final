@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Wed May 06 13:20:28 GMT-04:00 2009
+onejar.license.required=true
+manifest.mainclass=Main
+jarname=Oscilloscope.jar
+manifest.removesigners=true
+onejar.checkbox=false
+manifest.mergeall=true
+manifest.classpath=
+manifest.file=<createnew>
+onejar.expand=
+excludes=
+jarname.isextern=false
+includes=
