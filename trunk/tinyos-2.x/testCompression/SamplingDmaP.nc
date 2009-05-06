@@ -33,7 +33,7 @@
  */
 
 #include "Sampling.h"
-#include "PrintfUART.h"
+//#include "PrintfUART.h"
 
 generic module SamplingDmaP(typedef sample_type) 
 {
