@@ -1,5 +1,3 @@
-#include "Sampling.h"
-
 configuration TestCompressionC 
 {
 }
