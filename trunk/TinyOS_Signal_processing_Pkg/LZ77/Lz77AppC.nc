@@ -9,16 +9,12 @@ configuration Lz77AppC
 
 implementation
 {
-components PrintfC,LZ77M,MainC,TestC,LedsC;
+components LZ77M,MainC,TestC,LedsC;
 components new TimerMilliC() as Timer;
 components new BlockStorageC(VOLUME_LOGTEST);
 
 TestC.Boot->MainC;
-TestC.PrintfControl->PrintfC;
-TestC.PrintfFlush->PrintfC;
 TestC.Timer->Timer;
-LZ77M.PrintfControl->PrintfC;
-LZ77M.PrintfFlush->PrintfC;
 LZ77M.Timer->Timer;
 TestC.Leds->LedsC;
 
