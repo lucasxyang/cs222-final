@@ -1,0 +1,4 @@
+COMPONENT = TestCompressionC
+
+include $(MAKERULES)
+
