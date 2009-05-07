@@ -1,5 +1,5 @@
 #include "Sampling.h"
-//#include "printf.h"
+#include "printf.h"
 #include "sample.h"
 
 generic module TestCompressionP(typedef sample_type)
@@ -63,9 +63,6 @@ implementation
       pIndex = currPrintIndex;
     }
 
-    //printf("In sendSamples %d %d\n", pIndex, sendBusy);
-    //printfflush();
-
     if (sendBusy == TRUE) {
       post sendSamples();
       return;
@@ -77,7 +74,7 @@ implementation
 
       memcpy(msgPtr, &samplesBuff[pIndex][0], sizeof(sample_msg_t));
 
-      if (call AMSend.send(0xffff, &sendbuf, 
+      if (call AMSend.send(AM_BROADCAST_ADDR, &sendbuf, 
 			   sizeof(sample_msg_t)) == SUCCESS)
         sendBusy = TRUE;
     }
@@ -91,12 +88,12 @@ implementation
     atomic {
       pIndex = currPrintIndex;
     }
-    //printf("samplesBuff[%u] = {", pIndex);
+    printf("samplesBuff[%u] = {", pIndex);
     for (i = 0; i < SAMPLE_MSG_LENGTH; ++i) {
-      //printf(" %u", samplesBuff[pIndex][i]);
+      printf(" %u", samplesBuff[pIndex][i]);
     }
-    //printf(" }\n");
-    //printfflush();
+    printf(" }\n");
+    printfflush();
   }	 
   
   async event sample_type* Sampling.dataReady(sample_type *destAddr, 

@@ -13,17 +13,14 @@ implementation
   TestCompressionP.Leds -> LedsC;
 
   // Serial Communication
-  components SerialActiveMessageC;
-  components new SerialAMSenderC(AM_SAMPLE_MSG);
-  TestCompressionP.AMSend -> SerialAMSenderC;
-  TestCompressionP.AMControl -> SerialActiveMessageC;
+  //components SerialActiveMessageC;
+  //components new SerialAMSenderC(AM_SAMPLE_MSG);
+  //TestCompressionP.AMSend -> SerialAMSenderC;
+  //TestCompressionP.AMControl -> SerialActiveMessageC;
   
   // Radio Communication
-  //components ActiveMessageC;
-  //components new AMSenderC(AM_SAMPLE_MSG);
-  //TestCompressionP.AMSend -> AMSenderC;
-  //TestCompressionP.AMControl -> ActiveMessageC;
+  components ActiveMessageC;
+  components new AMSenderC(AM_SAMPLE_MSG);
+  TestCompressionP.AMSend -> AMSenderC;
+  TestCompressionP.AMControl -> ActiveMessageC;
 }
-
-
-

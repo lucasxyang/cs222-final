@@ -20,12 +20,6 @@ class MsgListener:
     self.mif.sendMsg(self.source, addr, amType, amGroup, msg)
 
 listener = MsgListener()
-msg = RadioCountMsg.RadioCountMsg()
-count = 0
 
 while True:
-  count += 1
-  print "send count %u" % (count)
-  msg.set_counter(count)
-  listener.sendMsg(0, RadioCountMsg.AM_TYPE, 0x22, msg)
   time.sleep(1)
