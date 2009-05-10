@@ -9,6 +9,7 @@ generic module TestCompressionP(typedef sample_type)
   uses interface Sampling<sample_type>;
   uses interface AMSend;
   uses interface SplitControl as AMControl;
+  //uses interface Packet;
 }
 
 implementation 
