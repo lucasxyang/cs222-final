@@ -9,8 +9,10 @@ public class Encoder {
 	int samplesCompressed;
 	int samplesUncompressed;
 	double lastCalculatedCompressionRatio;
+	boolean resultedInNewBlock;
 	
 	public Encoder(int bitsPerSampleUncompressed) {
+		this.resultedInNewBlock = false;
 		this.bitsPerSampleUncompressed = bitsPerSampleUncompressed;
 		dataQueue = new LinkedList<Integer>();
 		workingBlock = new Block(this.bitsPerSampleUncompressed);
@@ -22,6 +24,7 @@ public class Encoder {
 	public Block addElement(Integer element) {
 		if (workingBlock.doesElementFit(element)) {
 			workingBlock.addElement(element);
+			resultedInNewBlock = false;
 			return null;
 		} else {
 			samplesCompressed += workingBlock.getCompressedSamples();
@@ -29,8 +32,13 @@ public class Encoder {
 			lastCalculatedCompressionRatio = workingBlock.getCompressionRatio();
 			Block fullBlock = workingBlock;
 			workingBlock = new Block(bitsPerSampleUncompressed);
+			resultedInNewBlock = true;
 			return fullBlock;
 		}
+	}
+	
+	public boolean resultedInNewBlock() {
+		return resultedInNewBlock;
 	}
 	
 	public double getLastCompressionRatio() {

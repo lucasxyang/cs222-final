@@ -28,6 +28,9 @@ import org.jfree.ui.RefineryUtilities;
  */
 public class Oscilloscope extends ApplicationFrame {
 
+	final double Y_MAX = 1.0;
+	final double Y_MIN = 0.0;
+	
     /** The time series data. */
     private XYSeries series;
     /** The most recent value added. */
@@ -62,9 +65,9 @@ public class Oscilloscope extends ApplicationFrame {
      */
     private JFreeChart createChart(final XYDataset dataset) {
     	final JFreeChart result = ChartFactory.createXYLineChart(
-    			"hey", 
-    			"you", 
-    			"blah", 
+    			"Compression Ratio", 
+    			"time", 
+    			"Compression Ratio", 
     			dataset, 
     			PlotOrientation.VERTICAL, 
     			false,
@@ -77,7 +80,7 @@ public class Oscilloscope extends ApplicationFrame {
         //axis.setAutoRange(true);
         axis.setFixedAutoRange(15.0);  // 60 seconds
         axis = plot.getRangeAxis();
-        axis.setRange(3900, 4000); 
+        axis.setRange(Y_MIN, Y_MAX); 
         return result;
     }
 
