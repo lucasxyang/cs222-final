@@ -5,7 +5,7 @@ BUILD_EXTRA_DEPS = SampleMsg.py
 CFLAGS += -I$(TOSDIR)/lib/printf 
 
 PFLAGS += -DSAMPLING_DMA
-#PFLAGS += -DTOSH_DATA_LENGTH=32
+PFLAGS += -DTOSH_DATA_LENGTH=30
 
 SampleMsg.py: sample.h
 	mig python -target=$(PLATFORM) $(CFLAGS) -python-classname=SampleMsg sample.h sample_msg -o $@
