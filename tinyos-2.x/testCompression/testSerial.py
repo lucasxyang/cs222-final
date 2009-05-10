@@ -14,7 +14,11 @@ class MsgListener:
 
   def receive(self, src, msg):
     if msg.get_amType() == SampleMsg.AM_TYPE:
-      print "received packet:", msg.get_buffer()
+      data = msg.get_buffer()
+      #print data
+      for i in range(0,30,2):
+        print int(data[i]) + (int(data[i+1])<<8)
+      print ""
 
   def sendMsg(self, addr, amType, amGroup, msg):
     self.mif.sendMsg(self.source, addr, amType, amGroup, msg)

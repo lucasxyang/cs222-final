@@ -39,7 +39,7 @@ enum {SAMPLING_MAX_ADCPORTS = 16};
 enum {ADCPORT_INVALID = 255};
 
 // The ports are platform specific
-#ifdef PLATFORM_SHIMMER
+//#ifdef PLATFORM_SHIMMER
 enum {
     ADCPORT_ACCX = 5,
     ADCPORT_ACCY = 4,
@@ -48,9 +48,9 @@ enum {
     ADCPORT_GYROY = 6,
     ADCPORT_GYROZ = 2,
 };
-#else
-    #error "*** Unknown platform in PlatformAdcPorts.h"
-#endif
+//#else
+//    #error "*** Unknown platform in PlatformAdcPorts.h"
+//#endif
 
 
 inline void AdcPorts_init(adcport_t adcPorts[], uint8_t adcPortsSize) 
