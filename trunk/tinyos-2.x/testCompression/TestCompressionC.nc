@@ -23,4 +23,7 @@ implementation
   components new AMSenderC(AM_SAMPLE_MSG);
   TestCompressionP.AMSend -> AMSenderC;
   TestCompressionP.AMControl -> ActiveMessageC;
+
+  //TestCompressionP.Packet -> AMSenderC;
+  
 }
