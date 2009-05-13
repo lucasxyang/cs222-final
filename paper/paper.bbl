@@ -1,3 +1,13 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{lzw}
+T.~A. Welch.
+\newblock A technique for high performance data compression.
+\newblock In {\em IEEE Computer}, volume 17,6, pages 8--19, 1984.
+
+\bibitem{lz77}
+J.~Ziv and A.~Lempel.
+\newblock A universal algorithm for sequential data compression.
+\newblock {\em IEEE Transactions on Information Theory}, 23:337--343, 1977.
 
 \end{thebibliography}

@@ -1,1 +1,129 @@
-\section{Delta Encoding}
+\section{LZ77}
+
+LZ77 \cite{lz77} seemed like a promising algorithm for Wireless Sensor
+Network compression. Unlike LZW \cite{lzw} and other dictionary
+building schemes, LZ77 maintains a constant size back-buffer with
+which it performs matches. Without an upper bound on the dictionary
+size, it is unreasonable to use dictionary based compression
+algorithms because it is very easy to run out of memory on
+motes. LZ77, on the other hand, requires a constant amount of memory,
+and using a pointer based circular buffer, it would be easy to
+implement LZ77 on a mote without having to copy large pieces of
+memory.
+
+However, in practice, LZ77 does not perform as well. Further
+investigation of LZ77 implementations revealed that these
+implementations use large back-buffers, sometimes as big as 64k
+entries. Many times, pure LZ77 is not implemented, but a history
+dictionary is built in order to find matches more quickly. This
+growing dictionary makes LZ77 prohibitive on sensor motes. Without a
+history dictionary, matches can take a long time because the entire
+back buffer must be searched for each new element that comes in. In
+order to quantify how well LZ77 performs on our three data sets, we
+compressed our data using a standard implementation of LZ77.
+
+\begin{table}
+  \begin{center}
+  \begin{tabular}{|l||r|r|r|}
+    \hline
+    & LZ77 & RLE & Huffman \\ \hline
+    Volcano & 99.7\% & 100.1\% & 81.6\% \\ \hline
+    SHIMMER & 88.5\% - 98.8\% & 100.1\% & 70.8\% \\ \hline
+    Marmot chirps & 98.5\% & 100.2\% & 70.2\% \\ \hline
+    
+  \end{tabular}
+  \end{center}
+  \caption{Compression ratios using standard methods}
+  \label{table:compratios}
+\end{table}
+
+Table~\ref{table:compratios} shows the compression ratios for our
+three data sets; high ratios mean bad compression. Note that LZ77
+performs very poorly as the best compression ratio is 88.5\%. We used
+a back-buffer size of 1024, which is a reasonable size for a mote
+implementation. LZ77 performs so poorly for several reasons. First,
+the back-buffer is not large enough to find a large amount of
+matches. Also, the noise in the data make matching very difficult. We
+are not compressing english text, where there is no noise. We are
+compressing sensor readings coming from an ADC, which have an inherent
+amount of noise. 
+
+Table~\ref{table:compratios} also shows the compression ratios of two
+other schemes: Run Length Encoding (RLE) and Huffman encoding. RLE
+works by encoding consecutive duplicates with two numbers: the
+element, and the length of the run. Due to the noise in our data,
+there are very few runs, which is why RLE does so poorly. Huffman
+coding does somewhat better, but it requires building a tree of prefix
+codes. This tree could be very large, depending on how many bits each
+sample has. For this reason, Huffman coding is not useful in a sensor
+network context. 
+
+These experiments have clearly shown that traditional techniques that
+work in traditional computing environments, are not always suitable in
+a sensor network context. We have not exhaustively tested all
+compression schemes, but we have tested a few that are commonly
+used. Moreover, complex algorithms are more difficult to implement on
+sensor motes due to their limited debugging capabilities and lack of
+mature development tools. We realize that the best compression scheme
+for Wireless Sensor Networks is one that requires little computation,
+is not very complex, and of course, has good compression ratios for
+the sensor data.
+
+\section{Variable Block Size Delta Encoding}
+
+Given the inadequacies of standard compression schemes in the sensor
+network context we developed a compression scheme that performs well
+with sensor data, has minimal computation and is easy to implement on
+motes. We decided to exploit the correlation between consequtive
+samples. In sensor data, a sample is very likely to be close to the
+previous sample. This characteristic lends itself nicely to delta
+encoding. Because compression is very tied to data transmission in
+sensor networks, our compression scheme must be designed for radio
+transmission as well as the data we are compression. Whereas data
+payload sizes in 802.11 packets are usually around 1500 bytes, data
+payloads in 802.15.4 packets, which is the protocol used by sensor
+motes, is between 30-100 bytes.
+
+Given these requirements, we developed a variable block size delta
+encoding scheme. For clarity of explanation, we will assume we are
+working with 12 bit data and 30 byte packets. These characteristics
+are those of the SHIMMER platform from which we obtained the
+accelerometer data. However, this scheme works for higher order data
+and large packet sizes. All packets are fixed size, so we want to pack
+as much information into a packet as possible. In addition, we want to
+build some redundancy into the scheme. It might be possible to lose a
+packet in sensor networks. However, since we are using delta encoding,
+if we miss a packet, we still want to be able to decode the rest of
+the data.
+
+Each packet contains a block of data. Each block has a header and a
+delta payload. The first sample in the block is stored in the header
+uncompressed. This is for redundancy so that if a packet is lost, only
+the data in that packet is lost and not any subsequent data. The delta
+is computed for every sample after the first with its previous
+sample. The number of bits required to encode the delta is calculated
+and stored. All of the deltas in the delta payload are encoded using
+the same number of bits. The number of bits to encode the deltas is
+therefore the number of bits needed to encode the largest delta. As
+each sample comes in, the size of the block is calculated. If the
+block still fits in the packet, the delta is added to the block. If
+the block would not fit in the packet, the block is encoded into the
+packet and dispatched. In the header we store the uncompressed first
+element (12 bits), the block size (8 bits), bits per delta (4
+bits). The entire header fits into 3 bytes, leaving 27 bytes for the
+delta payload. There are two reasons why a new sample would not fit in
+the block. First, if the block already has many samples, a new delta
+might simply not fit in the block. Secondly, if a very large delta
+comes in, it would require that all the other deltas be encoded with
+many more bits, which would push the entire block over the packet size
+limit. 
+
+This compression scheme is extremely simple to implement and requires
+very little computation. For each sample, a delta must be calculated,
+it must be compared with the largest delta. When transmitting the
+block, the deltas must be packed into the payload. Compared to LZ77 or
+Huffman coding, this is very little computation. In the following
+section we will evaluate this compression scheme using our data sets
+and determine how well it performs. We will also quantify the effect
+of noise on our scheme.
+
