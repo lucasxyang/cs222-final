@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.4.27)  7 MAY 2009 13:45
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2009.4.27)  13 MAY 2009 15:35
 entering extended mode
  %&-line parsing enabled.
 **paper.tex
@@ -151,6 +151,26 @@ File: babel.def 2005/11/23 v3.8h Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip43
+\subfigcapskip=\skip44
+\subfigcaptopadj=\dimen158
+\subfigbottomskip=\skip45
+\subfigcapmargin=\dimen159
+\subfiglabelskip=\skip46
+\c@subfigure=\count91
+\c@lofdepth=\count92
+\c@subtable=\count93
+\c@lotdepth=\count94
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip47
+\subfig@bottom=\skip48
+)
 (/usr/share/texmf-texlive/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
@@ -161,59 +181,81 @@ Package color Info: Driver file: pdftex.def on input line 130.
 ) (./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 33.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 49.
+(Font)              <12> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 49.
+(Font)              <8> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 49.
+(Font)              <6> on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
  (./intro.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 )
-(./related.tex) (./delta.tex) (./experiments.tex) (./future.tex)
-(./conclusion.tex) (./paper.bbl
+(./related.tex) (./delta.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 27.
+ [1
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./experiments.tex <figur
+es/noise0.png, id=9, 572.1375pt x 434.62375pt>
+File: figures/noise0.png Graphic file (type png)
 
-) [1
+<use figures/noise0.png>
+<figures/noise30.png, id=10, 589.20125pt x 423.5825pt>
+File: figures/noise30.png Graphic file (type png)
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./paper.aux) ) 
+<use figures/noise30.png>
+<figures/noise60.png, id=11, 577.15625pt x 413.545pt>
+File: figures/noise60.png Graphic file (type png)
+
+<use figures/noise60.png>
+<figures/noise100.png, id=12, 582.175pt x 420.57124pt>
+File: figures/noise100.png Graphic file (type png)
+
+<use figures/noise100.png>
+<figures/noiseall.png, id=13, 558.085pt x 424.58624pt>
+File: figures/noiseall.png Graphic file (type png)
+
+<use figures/noiseall.png>) (./future.tex) (./conclusion.tex) (./paper.bbl
+[2]) [3 <./figures/noise0.png (PNG copy)> <./figures/noise30.png (PNG copy)> <.
+/figures/noise60.png (PNG copy)> <./figures/noise100.png (PNG copy)>] [4 <./fig
+ures/noiseall.png (PNG copy)>] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 1494 strings out of 95086
- 16704 string characters out of 1183255
- 69688 words of memory out of 1500000
- 4643 multiletter control sequences out of 10000+50000
- 23979 words of font info for 53 fonts, out of 1200000 for 2000
+ 1707 strings out of 95086
+ 19764 string characters out of 1183255
+ 75046 words of memory out of 1500000
+ 4838 multiletter control sequences out of 10000+50000
+ 28160 words of font info for 58 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
- 32i,6n,24p,213b,201s stack positions out of 5000i,500n,6000p,200000b,5000s
-{/usr/share
-/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type
-1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uh
-vr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share
-/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (1 page, 36057 bytes).
+ 32i,8n,24p,213b,256s stack positions out of 5000i,500n,6000p,200000b,5000s
+{/usr/share/texmf-texlive/fonts/e
+nc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.
+pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/t
+exmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/t
+ype1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on paper.pdf (4 pages, 184899 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
+ 41 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
