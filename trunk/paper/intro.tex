@@ -1,4 +1,5 @@
 \section{Introduction} 
+\label{sec-intro}
 
 Wireless sensor networks involve collections of many battery operated
 nodes that can number in the thousands.  A canonical example of a
@@ -39,13 +40,17 @@ transmission and reception, uses an order of magnitude more power than
 just processing alone~\cite{telos}.  Because of the high energy costs
 to send and receive data, there can be a large potential energy
 savings if the sensor nodes are able to compress their data before
-transmitting.
+transmitting.  As many of the domain scientists who are interested a
+faithful representation of the data collected, we are only considering
+lossless compression techniques in this paper.  As data is typically
+routed to a powered basestation, where it will be decompressed, we are
+not focusing on the decompression side of the algorithm.  
 
 Because most sensor networks are spatially many times larger than
-their radio range, sensor networks often use multi-hop routing to move
-data across the network.  Because of multi-hop routing, compression
-not only obtains a savings of energy at the node level, but also at
-any node that this data passes through on its way to its destination.
+their radio range, sensor networks use multi-hop routing to move data
+across the network.  Because of multi-hop routing, compression not
+only obtains a savings of energy at the node level, but also at any
+node that the data passes through on its way to its destination.
 
 But most sensor networks do not use data compression.  The problem is
 that because of the limited processing power and the extremely
@@ -56,13 +61,31 @@ compression algorithm.  Sensor network nodes, with their extremely
 limited memory budget will not be able to have such a large window,
 and compression ratios will suffer.
 
-In this paper we look at three data sources: seismic volcano data,
-acoustic wildlife data, and motion data collected from a body sensor
-nework which were collected from actual sensor network deployments.
+In this paper we look at three data sources collected from actual
+sensor network deployments: seismic data from volcanos, acoustic
+wildlife data, and motion data collected from a body sensor nework.
 We find that traditional compression schemes such as LZ77 and Huffman
 Encoding, in addition to being difficult to implement on resource
-constrained nodes, did not provide very good compression rations.  
+constrained nodes, did not provide very good compression ratios.  Run
+length encoding, which has the advantage of being easly to implement
+on mote class devices, actually makes the data larger than the
+uncompressed version of the signal.  What we find is, a variable block
+size (VBS) delta encoding, which transmits the offsets of as many
+successive samples that fit in a radio packet, takes advantage of the
+temporal locality of the measured signals.  In the best case, as it is
+with the acoustic data, a compression ratio of 33.1\% is obtained,
+while other data compresses in a range of 42.2\% to 62.8\%.  In
+addition, our VBS delta encoding has low computational overhead and we
+have implemented a demonstration platform that uses our encoding.
 
-
-
-
+The rest of the paper is structured as follows.
+Section~\ref{sec-data} describes the data we are using for our
+compression tests.  Section~\ref{sec-related} discusses the related
+work in the area of compression in wireless sensor networks.
+Section~\ref{sec-lz77} explains our initial attempts at trying to get
+the LZ77 compression algorithm working on the
+motes. Section~\ref{sec-delta} explains the variable block size delta
+encoding that we have implemented.  Section~\ref{sec-experiments}
+explains the experiments we have performed and their results.
+Section~\ref{sec-future} describes our future work and
+section~\ref{sec-conclusion} wraps up with our conclusions.

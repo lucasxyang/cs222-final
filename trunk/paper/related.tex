@@ -1,1 +1,28 @@
 \section{Related Work}
+\label{sec-related}
+Compression is a well studied field outside of sensor networks such as
+string based techniques LZ77~\cite{lz77} and LZW~\cite{lzw} and
+entropy based techniques such as~\cite{cleary} and Huffman
+coding~\cite{huffman}, but the unique challenges in performing
+compressing on such resource constrained devices presents a new design
+space and tradeoffs.
+
+S-LZW~\cite{s-lzw} is a modification of LZW made to run on mote-class
+devices.  They use dictionaries of sizes between 512 and 1024.  One
+assumption they make is that the network is delay tolerant, which is
+often not the case.  Our VBS delta compressing is done on the
+streaming data, making is a good choice for networks that are not
+delay tolerant.  
+
+Barr and Asanovic~\cite{barr} looks at the power trade-off between
+compressing and the transmitting and receiving of the data for PDA
+class devices and 802.11 radios.  They used off the shelf compression
+algorithms, which are too heavyweight to be run on mote class
+devices.  Also, 802.11 radios have different power and data points
+than that of an 802.15.4 radio.  
+
+Strydis and Gaydadjiev~\cite{strydis} look at profiling a collection of
+existing compression algorithms and a simulator for Intel XScale
+cores, for implantable wireless biomedical devices.  As they are
+targeting PDA/smartphone type processors, the compression algorithms
+they evaluate are not designed to be run on mote class devices. 

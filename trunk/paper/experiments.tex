@@ -1,4 +1,5 @@
 \section{Experiments and Results}
+\label{sec-experiments}
 
 \begin{table}
   \begin{center}
@@ -26,7 +27,7 @@ noise, but it records constant movement, so there are longer duration
 events with higher frequencies. However, these results show that our
 delta encoding scheme outperforms LZ77, RLE, and Huffman encoding.
 
-\subsubsection{Noise}
+\subsection{Noise}
 
 We performed a simple experiment to quantify how well our compression
 scheme performs in the presence of noise. We took a constant data set
@@ -72,11 +73,40 @@ would not have been compressed to 33.1\%.
 \label{fig:noiseset}
 \end{figure*}  
 
-\begin{figure}
+\begin{figure}[h]
   \centering
   \includegraphics[width=0.50\textwidth]{figures/noiseall.png} 
   \caption{Compression ratio vs. standard deviation of noise}
   \label{fig:noiseall}
 \end{figure}
 
-\subsubsection{Energy}
+\subsection{Energy}
+
+For our energy analysis we looked at the overhead of the compression
+algorithm and the savings in transmitting costs of the compressed
+data.  Our algorithm, which runs on the streaming data, is being done
+as the data is sampled.  The algorithm is very lightweight, and when
+we looked at the SHIMMER mote under an oscilloscope to determine the
+cost of the algorithm, we could not see any increase in the overhead
+over the sampling.  Even if we could find an the
+overhead,~\cite{s-lzw} shows that sending one byte over the CC2420
+radio is equivalent in energy to executing thousands of instructions
+on the MSP430.  
+
+Using an oscilloscope we determined the cost of sampling the
+accelerometer for three axis (x,y,z) at 100 Hz is 3.4 ma.  We measured
+the average cost of sending a 30 byte packet to be 6 ms * 19.6 ma =
+0.1176 milliamp seconds per packet.  Assuming the mote is powered by a pair of
+AA batteries, the effects of compression ratio and lifetime are
+shown in Figure~\ref{fig:lifetime}.  For example, we see that for a
+compression ratio of 50\%, we see over a 20\% gain in the lifetime of
+the system.  
+
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[width=0.50\textwidth]{figures/lifetime.png} 
+%  \caption{Compression ratio vs. system lifetime}
+%  \label{fig:lifetime}
+%\end{figure}
+
+

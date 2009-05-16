@@ -8,30 +8,22 @@
 \usepackage{program}
 \usepackage{acm-style10} % ACM proceedings formatting
 \usepackage{times}       % Use Adobe Times font set
-\usepackage{epsfig,twocolumn}
+%\usepackage{epsfig,twocolumn}
+\usepackage{epsfig}
 \usepackage{url}
 \usepackage[english]{babel} % mdw: Required to get good hyphenation on RH6.0
                             % (fixed in RH6.1)
 \usepackage{subfigure}
 \usepackage{graphicx} 
 \usepackage{color}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in,nohead]{geometry}
 
-% DO NOT EDIT THE BELOW BLOCK OF CODE
-\def\dsp{\def\baselinestretch{1.10}}
-\dsp
-\newcommand{\XXXnote}[1]{{\bf\color{red} XXX: #1}}
-\setlength{\textheight}{9.25in}
-\setlength{\columnsep}{0.33in}
-\setlength{\textwidth}{7.4in}
-\setlength{\footskip}{0.0in}
-\setlength{\topmargin}{-0.25in}
-\setlength{\headheight}{0.0in}
-\setlength{\headsep}{0.0in}
-\setlength{\oddsidemargin}{-.45in}
-\setlength{\parindent}{1pc}
-\pagestyle{empty}
-\begin{document}
+\newcommand{\XXXnote}[1]{{\bf\textcolor{red}{XXX: #1}}}
+%\newcommand{\XXXnote}[1]{}
 \date{}
+
+\begin{document}
+
 
 %%%%%%%%%%%% THIS IS WHERE WE PUT IN THE TITLE AND AUTHORS %%%%%%%%%%%%
 
@@ -55,7 +47,30 @@
 
 \subsection*{Abstract}
 \begin{small}
-Abstract
+Wireless sensor networks involve collections of many battery operated
+nodes that can number in the thousands.  These nodes are extremely
+resource constrained, and are often powered by only a pair AA
+batteries and are expected to last months or even years on such a
+limited power source.  The primary goal of a sensor networks is to
+sense and report on their surrounding habitat.  A new class of sensor
+network applications have emerged requiring high data rates and high
+data fidelity requirements.  Because of the high energy costs to send
+and receive data, there can be a large potential energy savings if the
+sensor nodes are able to compress their data before transmitting, if a
+compression scheme can be made to run under such resource constrained
+devices.  In this paper we look at three data sources collected from
+actual sensor network deployments: seismic data from volcanos,
+acoustic wildlife data, and motion data collected from a body sensor
+nework.  We find that traditional compression schemes, in addition to
+being difficult to implement on resource constrained nodes, did not
+provide very good compression ratios.  What we find is, a variable
+block size (VBS) delta encoding, which transmits the offsets of as
+many successive samples that fit in a radio packet, takes advantage of
+the temporal locality of the measured signals.  In the best case a
+compression ratio of 33.1\% is obtained, while other data compresses
+in a range of 42.2\% to 62.8\%.  In addition, our VBS delta encoding
+has low computational overhead and we have implemented a demonstration
+platform that uses our encoding.
 \end{small}
 
 %%%%%%%%%%%%%  BODY OF PAPER GOES HERE %%%%%%%%%%%%%%
@@ -63,6 +78,7 @@ Abstract
 % Generally you will want to break the paper into separate sections
 % and use \input{...} to include them, like so:
 \input{intro.tex} 
+\input{data.tex}
 \input{related.tex}
 \input{delta.tex}
 \input{experiments.tex}
