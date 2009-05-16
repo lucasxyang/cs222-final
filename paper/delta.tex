@@ -5,7 +5,7 @@ Network compression. Unlike LZW \cite{lzw} and other dictionary
 building schemes, LZ77 maintains a constant size back-buffer with
 which it performs matches. Without an upper bound on the dictionary
 size, it is unreasonable to use dictionary based compression
-algorithms because it is very easy to run out of memory on
+algorithms because it is very easy to run out of memory on sensor
 motes. LZ77, on the other hand, requires a constant amount of memory,
 and using a pointer based circular buffer, it would be easy to
 implement LZ77 on a mote without having to copy large pieces of
@@ -43,10 +43,10 @@ performs very poorly as the best compression ratio is 88.5\%. We used
 a back-buffer size of 1024, which is a reasonable size for a mote
 implementation. LZ77 performs so poorly for several reasons. First,
 the back-buffer is not large enough to find a large amount of
-matches. Also, the noise in the data make matching very difficult. We
-are not compressing english text, where there is no noise. We are
-compressing sensor readings coming from an ADC, which have an inherent
-amount of noise. 
+matches. Also, the noise in the data makes matching very difficult. We
+are not compressing english text, where there is no noise, instead we
+are compressing sensor readings coming from an ADC, which have an
+inherent amount of noise.
 
 Table~\ref{table:compratios} also shows the compression ratios of two
 other schemes: Run Length Encoding (RLE) and Huffman encoding. RLE
@@ -74,7 +74,7 @@ the sensor data.
 Given the inadequacies of standard compression schemes in the sensor
 network context we developed a compression scheme that performs well
 with sensor data, has minimal computation and is easy to implement on
-motes. We decided to exploit the correlation between consequtive
+motes. We decided to exploit the correlation between consecutive
 samples. In sensor data, a sample is very likely to be close to the
 previous sample. This characteristic lends itself nicely to delta
 encoding. Because compression is very tied to data transmission in
@@ -89,7 +89,7 @@ encoding scheme. For clarity of explanation, we will assume we are
 working with 12 bit data and 30 byte packets. These characteristics
 are those of the SHIMMER platform from which we obtained the
 accelerometer data. However, this scheme works for higher order data
-and large packet sizes. All packets are fixed size, so we want to pack
+and larger packet sizes. All packets are fixed size, so we want to pack
 as much information into a packet as possible. In addition, we want to
 build some redundancy into the scheme. It might be possible to lose a
 packet in sensor networks. However, since we are using delta encoding,
@@ -98,7 +98,7 @@ the data.
 
 Each packet contains a block of data. Each block has a header and a
 delta payload. The first sample in the block is stored in the header
-uncompressed. This is for redundancy so that if a packet is lost, only
+uncompressed. This is for robustness so that if a packet is lost, only
 the data in that packet is lost and not any subsequent data. The delta
 is computed for every sample after the first with its previous
 sample. The number of bits required to encode the delta is calculated
@@ -109,7 +109,7 @@ each sample comes in, the size of the block is calculated. If the
 block still fits in the packet, the delta is added to the block. If
 the block would not fit in the packet, the block is encoded into the
 packet and dispatched. In the header we store the uncompressed first
-element (12 bits), the block size (8 bits), bits per delta (4
+element (12 bits), the block size (8 bits), and bits per delta (4
 bits). The entire header fits into 3 bytes, leaving 27 bytes for the
 delta payload. There are two reasons why a new sample would not fit in
 the block. First, if the block already has many samples, a new delta
@@ -120,7 +120,7 @@ limit.
 
 This compression scheme is extremely simple to implement and requires
 very little computation. For each sample, a delta must be calculated,
-it must be compared with the largest delta. When transmitting the
+and it must be compared with the largest delta. When transmitting the
 block, the deltas must be packed into the payload. Compared to LZ77 or
 Huffman coding, this is very little computation. In the following
 section we will evaluate this compression scheme using our data sets

@@ -23,8 +23,8 @@ addition, there is very little variablility in the data when there are
 no chirps, and the occasional chirp has a short duration. Volcano data
 has more noise and more frequent events. The SHIMMER data also has
 noise, but it records constant movement, so there are longer duration
-events with higher frequencies. However, there results outperform
-LZ77, RLE, and Huffman encoding. 
+events with higher frequencies. However, these results show that our
+delta encoding scheme outperforms LZ77, RLE, and Huffman encoding.
 
 \subsubsection{Noise}
 
@@ -33,8 +33,8 @@ scheme performs in the presence of noise. We took a constant data set
 with a value of 3000 and added random gaussian noise. We varied the
 standard deviation of the noise from 0 to
 100. Figure~\ref{fig:noiseset} show a plot of four of these noise
-intensities. Figure~\ref{fig:noiseall} shows the compression raio as a
-function of the noise standard deviation. When there is no noise the
+intensities. Figure~\ref{fig:noiseall} shows the compression ratio as
+a function of the noise standard deviation. When there is no noise the
 compression ratio is 9.22\%. This is the lower bound compression ratio
 for our scheme. Under perfect conditions (no noise and constant data),
 our scheme is capable of achieving this compression ratio. The maximum
@@ -44,7 +44,8 @@ significant effect on the performances. However, after a certain
 point, our scheme is robust to noise. A standard deviation of 100 for
 12 bit data is quite high, and we don't expect data sets to have
 anywhere near as much noise. For example, the marmot chirp data could
-not have noise of any more than 4 standard deviation, otherwise it would not have been compressed to 33.1\%. 
+not have noise of any more than 4 standard deviation, otherwise it
+would not have been compressed to 33.1\%.
 
 \begin{figure*}[ht]
 \centering
@@ -74,8 +75,8 @@ not have noise of any more than 4 standard deviation, otherwise it would not hav
 \begin{figure}
   \centering
   \includegraphics[width=0.95\textwidth]{figures/noiseall.png} 
-  \label{fig:noiseall}
   \caption{Compression ratio vs. standard deviation of noise}
+  \label{fig:noiseall}
 \end{figure}
 
 \subsubsection{Energy}
